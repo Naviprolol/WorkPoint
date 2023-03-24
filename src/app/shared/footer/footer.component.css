@@ -1,0 +1,78 @@
+.footer-container {
+  display: flex;
+  width: 100%;
+  height: 300px;
+  background: #A7A7A7;
+}
+
+.footer-logo-container {
+  padding-top: 79px;
+  padding-left: 160px;
+  margin-right: 237px;
+}
+
+.politics {
+  margin-top: 23px;
+  margin-bottom: 10px;
+}
+
+.footer-logo-container p {
+  font-size: 10px;
+  color: #FFFFFF;
+}
+
+.footer-part-one {
+  padding-top: 77px;
+  font-size: 15px;
+  margin-right: 64px;
+}
+
+.footer-part-one li {
+  margin-bottom: 13px;
+}
+
+.footer-part-one li:last-child {
+  margin-bottom: 0;
+}
+
+.footer-part-one .main-page {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.footer-part-two {
+  padding-top: 77px;
+  font-size: 15px;
+  margin-right: 493px;
+}
+
+.footer-part-two li {
+  margin-bottom: 13px;
+}
+
+.footer-part-two li:last-child {
+  margin-bottom: 0;
+}
+
+.footer-part-two .profile {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.footer-part-three {
+  padding-top: 77px;
+  font-size: 15px;
+}
+
+.footer-part-three .contacts {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.footer-part-three li {
+  margin-bottom: 13px;
+}
+
+.footer-part-three li:last-child {
+  margin-bottom: 0;
+}
