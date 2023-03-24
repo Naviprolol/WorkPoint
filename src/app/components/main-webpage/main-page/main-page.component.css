@@ -1,0 +1,12 @@
+.count-coworkings {
+  color: rgba(27, 31, 59, 0.8);
+  font-weight: 700;
+  font-size: 19px;
+  margin-left: 652px;
+  margin-top: 53px;
+  margin-bottom: 19px;
+}
+
+.filter-and-coworkings {
+  display: flex;
+}
