@@ -10,5 +10,8 @@ import { ICoworking } from 'src/app/interfaces/interfaces';
 })
 
 export class MainPageComponent {
+  term = ''
+
   coworkings: ICoworking[] = data
+  length = this.coworkings.filter(p => p.title.toLowerCase().includes(this.term.toLowerCase()));
 }

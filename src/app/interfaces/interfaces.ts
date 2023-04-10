@@ -9,3 +9,10 @@ export interface ICoworking {
   time: string
   isFavorite: boolean
 }
+
+export interface User {
+  name: string
+  lastName: string
+  phone: string
+  password: string
+}

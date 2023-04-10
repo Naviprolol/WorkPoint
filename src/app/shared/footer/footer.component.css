@@ -2,7 +2,7 @@
   display: flex;
   width: 100%;
   height: 300px;
-  background: #A7A7A7;
+  background: #E0E0D6;
 }
 
 .footer-logo-container {
@@ -23,11 +23,12 @@
 
 .footer-part-one {
   padding-top: 77px;
-  font-size: 15px;
   margin-right: 64px;
 }
 
 .footer-part-one li {
+  font-weight: 300;
+  font-size: 15px;
   margin-bottom: 13px;
 }
 
@@ -36,7 +37,8 @@
 }
 
 .footer-part-one .main-page {
-  font-weight: 600;
+  font-weight: 400;
+  line-height: 30px;
   font-size: 22px;
 }
 
@@ -47,6 +49,8 @@
 }
 
 .footer-part-two li {
+  font-weight: 300;
+  font-size: 15px;
   margin-bottom: 13px;
 }
 
@@ -55,8 +59,9 @@
 }
 
 .footer-part-two .profile {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 22px;
+  line-height: 30px;
 }
 
 .footer-part-three {
@@ -64,15 +69,18 @@
   font-size: 15px;
 }
 
-.footer-part-three .contacts {
-  font-weight: 600;
-  font-size: 22px;
-}
-
 .footer-part-three li {
+  font-weight: 300;
+  font-size: 15px;
   margin-bottom: 13px;
 }
 
 .footer-part-three li:last-child {
   margin-bottom: 0;
+}
+
+.footer-part-three .contacts {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 30px;
 }

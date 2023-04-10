@@ -1,0 +1,53 @@
+<div class="header-container">
+  <div class="logo-img1"></div>
+  <span>WorkPoint</span>
+</div>
+
+<form class="card" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="card-left-side">
+    <span>Добро пожаловать на</span>
+    <br>
+    <div class="logo-img2"></div>
+    <span class="title">WorkPoint</span>
+  </div>
+
+  <div class="card-right-side">
+
+    <div class="input-field phone" [ngClass]="{'invalid': form.get('phone')?.invalid && form.get('phone')?.touched}">
+      <input id="phone" placeholder="Введите Ваш номер телефона" type="phone" formControlName="phone">
+      <label for="phone"></label>
+      <span class="helper-text red-text" *ngIf="form.get('phone')?.invalid && form.get('phone')?.touched">
+        <span *ngIf="form.get('phone')?.errors?.['required']">Телефон не должен быть пустым</span>
+        <span *ngIf="form.get('phone')?.errors?.['pattern']">Введите корректный телефон (через 8)</span>
+        <span *ngIf="form.get('phone')?.errors?.['minlength'] && !form.get('phone')?.errors?.['pattern']">
+          Телефон должен быть из 11 символов.
+        </span>
+        <span *ngIf="form.get('phone')?.errors?.['maxlength'] && !form.get('phone')?.errors?.['pattern']">
+          Телефон должен быть из 11 символов.
+        </span>
+      </span>
+    </div>
+    <div class="input-field password"
+      [ngClass]="{'invalid': form.get('password')?.invalid && form.get('password')?.touched}">
+      <input id="password" placeholder="Введите Ваш пароль" type="password" formControlName="password">
+      <label for="password"></label>
+      <span class="helper-text red-text" *ngIf="form.get('password')?.invalid && form.get('password')?.touched">
+        <span *ngIf="form.get('password')?.errors?.['required']">Пароль не должен быть пустым</span>
+        <span
+          *ngIf="form.get('password')?.errors?.['minlength'] && form.get('password')?.errors?.['minlength']['requiredLength']">
+          Пароль должен быть больше {{form.get('password')?.errors?.['minlength']['requiredLength']}} символов.
+          Сейчас {{form.get('password')?.errors?.['minlength']['actualLength']}}.
+        </span>
+      </span>
+    </div>
+
+    <div class="sign-in" [ngClass]="{'clear': form.get('phone')?.invalid || form.get('password')?.invalid}">
+      <button class="btn-sign-in" type="submit" [disabled]="form.invalid || form.disabled">Войти в аккаунт</button>
+    </div>
+
+    <div class="container-sign-up">
+      <span>У вас нет учетной записи?</span><a routerLink="/registration">Зарегистрироваться</a>
+    </div>
+
+  </div>
+</form>

@@ -1,7 +1,4 @@
-<div class="max-w-2xl container mx-auto pt-5">
+<p *ngIf="loading" class="text-center text-lg">Loading...</p>
 
-  <p *ngIf="loading" class="text-center text-lg">Loading...</p>
 
-  <app-main-page></app-main-page>
-
-</div>
+<router-outlet></router-outlet>

@@ -23,11 +23,24 @@
 }
 
 .title {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
+  font-family: 'Open Sans';
+  font-weight: 300;
   font-size: 48px;
+  line-height: 65px;
   margin-right: 19px;
+}
+
+.logo-img {
+  position: absolute;
+  width: 50px;
+  height: 49.74px;
+  left: 153px;
+  top: 60px;
+
+  background: linear-gradient(341.04deg, #BEDAC3 10.49%, rgba(255, 255, 255, 0) 100.29%);
+  filter: drop-shadow(0px 7.935px 19.8375px rgba(250, 196, 201, 0.2));
+  transform: rotate(117.88deg);
+  border-radius: 50%;
 }
 
 .location-img {
@@ -40,12 +53,16 @@
 }
 
 .btn-add-coworking {
-  background: #EDEDED;
+  background: #E0E0D6;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
   border-radius: 10px;
   width: 211px;
   height: 54px;
   margin-right: 29px;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 28px;
+  color: rgba(27, 31, 59, 0.6);
 }
 
 .btn-notification {
@@ -56,6 +73,8 @@
 .profile-name {
   margin-left: 17px;
   font-size: 15px;
+  line-height: 28px;
+  color: rgba(27, 31, 59, 0.8);
 }
 
 .btn-settings {

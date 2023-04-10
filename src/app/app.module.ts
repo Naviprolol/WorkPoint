@@ -10,10 +10,13 @@ import { HeaderComponent } from './shared/header/header.component';
 import { BannerComponent } from './components/main-webpage/banner/banner.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { FilterComponent } from './components/main-webpage/filter/filter.component';
-
-const appRoutes: Routes = [   //Маршрутизация !
-  { path: '', component: MainPageComponent }
-]
+import { FindCoworkingPipe } from './pipes/find-coworking.pipe';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProfileSettingsComponent } from './components/profile-settings/profile-settings/profile-settings.component';
+import { LoginPageComponent } from './components/login-page/login-page.component';
+import { RegistrationPageComponent } from './components/registration-page/registration-page.component';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { TokenInterceptor } from './shared/classes/token.interceptor';
 
 @NgModule({
   declarations: [
@@ -23,14 +26,26 @@ const appRoutes: Routes = [   //Маршрутизация !
     HeaderComponent,
     BannerComponent,
     FooterComponent,
-    FilterComponent
+    FilterComponent,
+    FindCoworkingPipe,
+    ProfileSettingsComponent,
+    LoginPageComponent,
+    RegistrationPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes)
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      multi: true,
+      useClass: TokenInterceptor
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
