@@ -74,9 +74,7 @@ video {
   font-size: 100%;
   vertical-align: baseline;
   background: transparent;
-  font-family: 'Open Sans';
   font-style: normal;
-  font-weight: 400;
 }
 
 input {
@@ -84,6 +82,9 @@ input {
 }
 
 body {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  background: #FBFBF5;
   line-height: 1;
 }
 

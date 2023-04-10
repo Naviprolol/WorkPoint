@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
 
 @Component({
   selector: 'app-banner',
@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class BannerComponent {
 
+  term: string = '';
+
+  ngOnInit(): void {
+
+  }
 }
