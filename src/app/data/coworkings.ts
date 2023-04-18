@@ -18,7 +18,7 @@ export const coworkings: ICoworking[] = [
     title: 'NAMES',
     isGoodPlace: true,
     rating: 4.8,
-    image: 'https://image2.yell.ru/imager/MjI1MjY1YTEwODExMjlhNjhmY/565x000/responses/7/0/9/r_rddypyofer60ojj4_1572256661.jpg',
+    image: ['https://image2.yell.ru/imager/MjI1MjY1YTEwODExMjlhNjhmY/565x000/responses/7/0/9/r_rddypyofer60ojj4_1572256661.jpg', 'https://static.tildacdn.com/tild6238-3535-4064-b231-313039353663/c4d843292be8948d64ad.jpg'],
     description: 'NAMES — это место, где фрилансер, предприниматель и компания трудятся, живут, общаются и учатся вместе.',
     address: 'Добролюбова, 16/2',
     time: 'Ежедневно с 08:00 до 22:00',

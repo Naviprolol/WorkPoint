@@ -13,6 +13,9 @@ export class RegistrationPageComponent implements OnInit, OnDestroy {
 
   form: FormGroup
   aSub: Subscription
+  // a: AuthService
+
+  // *ngIf="!auth.isAuthenticated()"
 
   constructor(private auth: AuthService, private router: Router) {
 
@@ -20,10 +23,11 @@ export class RegistrationPageComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.form = new FormGroup({
-      name: new FormControl(null, []),
-      lastName: new FormControl(null, []),
+      name: new FormControl(null, [Validators.required]),
+      lastName: new FormControl(null, [Validators.required]),
       phone: new FormControl(null, [Validators.required, Validators.pattern("^[0-9]*$"), Validators.minLength(11), Validators.maxLength(11)]),
-      password: new FormControl(null, [Validators.required, Validators.minLength(6)])
+      password: new FormControl(null, [Validators.required, Validators.minLength(6)]),
+      type: new FormControl(null, [Validators.required])
     })
   }
 

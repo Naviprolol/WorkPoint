@@ -3,7 +3,7 @@ export interface ICoworking {
   title: string
   isGoodPlace: boolean
   rating: number
-  image: string
+  image: any
   description: string
   address: string
   time: string
@@ -15,4 +15,5 @@ export interface User {
   lastName: string
   phone: string
   password: string
+  type: number
 }
