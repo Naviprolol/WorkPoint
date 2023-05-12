@@ -10,7 +10,7 @@ export class FindCoworkingPipe implements PipeTransform {
     if (searh.length === 0)
       return coworkings
 
-    return coworkings.filter(p => p.title.toLowerCase().includes(searh.toLowerCase()));
+    return coworkings.filter(p => p.name.toLowerCase().includes(searh.toLowerCase()));
   }
 
 }

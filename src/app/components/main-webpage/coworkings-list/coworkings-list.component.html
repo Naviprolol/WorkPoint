@@ -2,7 +2,7 @@
 
   <div class="coworking-header-container">
     <div class="coworking-title-container">
-      <h1 class="coworking-title"> {{coworking.title}} </h1>
+      <a [routerLink]="['/main', coworking.id]" class="coworking-title"> {{coworking.name}} </a>
       <img src="assets/img/good-place.svg" width="22" height="22" alt="good-place" class="img-good-place"
         [ngStyle]="{ visibility: coworking.rating < 3.5 ? 'hidden' : '' }">
     </div>
@@ -15,7 +15,7 @@
   <div class="coworking-info-container">
 
     <div>
-      <img src="{{coworking.image[1]}}" alt="img" width="480" height="415" class="coworking-image">
+      <img src="{{coworking.photo[0]}}" alt="img" width="480" height="415" class="coworking-image">
     </div>
 
     <div class="coworking-content">
