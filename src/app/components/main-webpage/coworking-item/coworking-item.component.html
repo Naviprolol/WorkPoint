@@ -1,0 +1,103 @@
+<app-header></app-header>
+
+<div class="return">
+  <a routerLink='/main'>
+    <img src="assets/img/return-button.svg" alt="return-button">
+    Вернуться к списку
+  </a>
+</div>
+
+<div class="information">
+  <div class="main-information">
+    <div class="title-container">
+      <p class="title">{{coworking.name}}</p>
+      <img src="assets/img/good-place.svg" width="22" height="22" alt="good-place" class="img-good-place"
+        [ngStyle]="{ visibility: coworking.rating < 3.5 ? 'hidden' : '' }">
+      <p class="coworking-rating">{{coworking.rating}}</p>
+      <img src="assets/img/star.svg" width="22" height="21.02" alt="star" class="img-star">
+    </div>
+
+    <div class="photo-container">
+
+      <div>
+        <div class="photo">
+          <img src="{{coworking.photo[0]}}" class="first-photo" alt="img" width=950px height=522px>
+        </div>
+      </div>
+
+      <div>
+        <div class="photo">
+          <img src="{{coworking.photo[1]}}" class="second-photo" onerror="this.src='assets/img/logo.svg'" alt="img"
+            width=310px height=250px>
+        </div>
+
+        <div class="photo">
+          <img src="{{coworking.photo[2]}}" class="third-photo" onerror="this.src='assets/img/logo.svg'" alt="img"
+            width=310px height=250px>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="flex-description">
+      <div class="left-side">
+        <p class="coworking-description">{{coworking.description}}</p>
+
+        <div class="coworking-map">
+          <p>
+            Отображение на карте
+          </p>
+
+          <div class="map">
+            <img src="assets/img/map.png" alt="map">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="right-side">
+
+        <div class="coworking-adress-container">
+          <img src="assets/img/coworking-adress.svg" alt="coworking-adress">
+          <p> {{coworking.address}} </p>
+        </div>
+
+        <div class="coworking-time-container">
+          <img src="assets/img/coworking-time.svg" alt="coworking-time">
+          <p>{{coworking.time}}</p>
+        </div>
+
+        <div class="tags">
+          <p>Удобства</p>
+          <div class="coworking-tags">
+            <div class="coworking-tag" *ngFor="let tag of tags">{{tag}}</div>
+          </div>
+        </div>
+
+        <div class="contacts">
+          <p>Контакты</p>
+          <div class="phone-information">
+            <img src="assets/img/phone.svg" alt="phone" width="22.5" height="27">
+            <span>{{coworking.company_phone}}</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="reviews">
+      <p class="reviews-title">Отзывы</p>
+      <ngx-star-rating [id]="'rating'" class="rating"></ngx-star-rating>
+      <div class="review-input-field">
+        <input id="review" placeholder="Отзыв" type="text">
+        <label for="review"></label>
+      </div>
+      <button class="btn-review" type="button">Оставить отзыв</button>
+    </div>
+  </div>
+
+  <div class="line"></div>
+
+  <app-footer></app-footer>

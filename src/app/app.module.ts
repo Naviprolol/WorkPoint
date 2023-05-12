@@ -11,12 +11,16 @@ import { BannerComponent } from './components/main-webpage/banner/banner.compone
 import { FooterComponent } from './shared/footer/footer.component';
 import { FilterComponent } from './components/main-webpage/filter/filter.component';
 import { FindCoworkingPipe } from './pipes/find-coworking.pipe';
+import { FilterCoworkingPipe } from './pipes/filter-coworking.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProfileSettingsComponent } from './components/profile-settings/profile-settings/profile-settings.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { RegistrationPageComponent } from './components/registration-page/registration-page.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { TokenInterceptor } from './shared/classes/token.interceptor';
+import { AddCoworkingComponent } from './components/add-coworking/add-coworking.component';
+import { CoworkingItemComponent } from './components/main-webpage/coworking-item/coworking-item.component';
+import { NgxStarRatingModule } from 'ngx-star-rating';
 
 @NgModule({
   declarations: [
@@ -28,16 +32,20 @@ import { TokenInterceptor } from './shared/classes/token.interceptor';
     FooterComponent,
     FilterComponent,
     FindCoworkingPipe,
+    FilterCoworkingPipe,
     ProfileSettingsComponent,
     LoginPageComponent,
-    RegistrationPageComponent
+    RegistrationPageComponent,
+    AddCoworkingComponent,
+    CoworkingItemComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxStarRatingModule
   ],
   providers: [
     {
