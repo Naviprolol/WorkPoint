@@ -24,6 +24,7 @@ export interface ICoworking {
 }
 
 export interface User {
+  id: number,
   name: string
   lastName: string
   phone: string
@@ -34,4 +35,13 @@ export interface User {
 
 export interface Message {
   message: string
+}
+
+export interface Review {
+  id: string,
+  user_id: number,
+  place_id: string,
+  rating: number,
+  description: string,
+  created_at: string
 }

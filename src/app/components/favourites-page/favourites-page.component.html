@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<app-header></app-header>
+
+<div class="return-to-main">
+  <a routerLink="/">
+    <img src="assets/img/return-button.svg" alt="return-button" class="return-button" width="16" height="16">
+  </a>
+  <span>Вернуться к поиску</span>
+</div>
+
+<div class="main-top-content">
+
+  <div class="profile-navigation">
+    <ul>
+      <a routerLink="/favourites">
+        <li>Избранное</li>
+      </a>
+      <li>Настройки профиля</li>
+      <li>Настройки мест</li>
+    </ul>
+  </div>
+
+  <div class="top-information">
+    <p class="top-information__header">Избранное</p>
+
+    <app-coworkings-list *ngFor="let coworking of favourites_coworkings" [coworking]="coworking"></app-coworkings-list>
+
+  </div>
+</div>
+
+<app-footer></app-footer>
