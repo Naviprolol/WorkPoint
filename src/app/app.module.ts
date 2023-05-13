@@ -21,6 +21,7 @@ import { TokenInterceptor } from './shared/classes/token.interceptor';
 import { AddCoworkingComponent } from './components/add-coworking/add-coworking.component';
 import { CoworkingItemComponent } from './components/main-webpage/coworking-item/coworking-item.component';
 import { NgxStarRatingModule } from 'ngx-star-rating';
+import { FavouritesPageComponent } from './components/favourites-page/favourites-page.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { NgxStarRatingModule } from 'ngx-star-rating';
     LoginPageComponent,
     RegistrationPageComponent,
     AddCoworkingComponent,
-    CoworkingItemComponent
+    CoworkingItemComponent,
+    FavouritesPageComponent
   ],
   imports: [
     BrowserModule,

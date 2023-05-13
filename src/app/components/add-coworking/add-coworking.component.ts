@@ -146,6 +146,7 @@ export class AddCoworkingComponent implements OnInit {
       },
       error => {
         console.log('ERRRRROR!')
+        console.log(this.coworking)
         this.form.enable()
       }
     )

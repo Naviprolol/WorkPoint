@@ -87,16 +87,36 @@
 
     </div>
 
-    <div class="reviews">
+    <form class="add-review" [formGroup]="form" (ngSubmit)="onSubmit()">
       <p class="reviews-title">Отзывы</p>
-      <ngx-star-rating [id]="'rating'" class="rating"></ngx-star-rating>
+      <ngx-star-rating [id]="'rating'" class="add-rating" formControlName="rating"></ngx-star-rating>
       <div class="review-input-field">
-        <input id="review" placeholder="Отзыв" type="text">
+        <input id="review" placeholder="Отзыв" type="text" formControlName="description">
         <label for="review"></label>
       </div>
-      <button class="btn-review" type="button">Оставить отзыв</button>
+      <button class="btn-review" type="submit" [disabled]="form.invalid || form.disabled">Оставить отзыв</button>
+      <p>Form Value: {{form.value | json}}</p>
+    </form>
+
+    <div class="reviews">
+      <div *ngFor="let review of allReviews">
+        <div class="review" *ngIf="review.place_id === coworking.id">
+          <img src="assets/img/star.svg" alt="avatar" class="avatar" width="70" height="70">
+          <div class="review-title">
+            <div class="review-name-date">
+              <span class="review-name">Мария</span>
+              <time class="review-time"> {{review.created_at}} </time>
+            </div>
+            <div class="review-rating">
+              <ngx-star-rating [id]="'coworking'" [disabled]="true"></ngx-star-rating>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+
+
 
   <div class="line"></div>
 

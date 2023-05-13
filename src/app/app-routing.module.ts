@@ -7,6 +7,7 @@ import { RegistrationPageComponent } from './components/registration-page/regist
 import { AuthGuard } from './shared/classes/auth.guard';
 import { AddCoworkingComponent } from './components/add-coworking/add-coworking.component';
 import { CoworkingItemComponent } from './components/main-webpage/coworking-item/coworking-item.component';
+import { FavouritesPageComponent } from './components/favourites-page/favourites-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full' },
@@ -15,11 +16,12 @@ const routes: Routes = [
   { path: 'main/add', component: AddCoworkingComponent },
   { path: 'main/:id', component: CoworkingItemComponent }, // coworking item
   { path: 'login', component: LoginPageComponent },
-  { path: 'registration', component: RegistrationPageComponent }
+  { path: 'registration', component: RegistrationPageComponent },
+  { path: 'favourites', component: FavouritesPageComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
