@@ -68,27 +68,27 @@
 }
 
 .custom-radio_multiple:checked+label::before {
-  background-image: url("..//..//..//../assets/img/filter-multiple-checked.svg");
+  background-image: url("..//..//..//..//assets/img/filter-multiple-checked.svg");
 }
 
 .custom-radio_multiple:disabled+label::before {
-  background-image: url("..//..//..//../assets/img/filter-multiple-default.svg");
+  background-image: url("..//..//..//..//assets/img/filter-multiple-default.svg");
 }
 
 .custom-radio_multiple+label::before {
-  background-image: url("..//..//..//../assets/img/filter-multiple-default.svg");
+  background-image: url("..//..//..//..//assets/img/filter-multiple-default.svg");
 }
 
 .custom-radio_single:checked+label::before {
-  background-image: url("..//..//..//../assets/img/filter-single-checked.svg");
+  background-image: url("..//..//..//..//assets/img/filter-single-checked.svg");
 }
 
 .custom-radio_single:disabled+label::before {
-  background-image: url("..//..//..//../assets/img/filter-single-default.svg");
+  background-image: url("..//..//..//..//assets/img/filter-single-default.svg");
 }
 
 .custom-radio_single+label::before {
-  background-image: url("..//..//..//../assets/img/filter-single-default.svg");
+  background-image: url("..//..//..//..//assets/img/filter-single-default.svg");
 }
 
 .coworking-type {
