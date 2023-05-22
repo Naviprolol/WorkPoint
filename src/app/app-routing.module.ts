@@ -8,6 +8,8 @@ import { AuthGuard } from './shared/classes/auth.guard';
 import { AddCoworkingComponent } from './components/add-coworking/add-coworking.component';
 import { CoworkingItemComponent } from './components/main-webpage/coworking-item/coworking-item.component';
 import { FavouritesPageComponent } from './components/favourites-page/favourites-page.component';
+import { PlaceSettingsComponent } from './components/place-settings/place-settings.component';
+import { AdBusinessComponent } from './components/ad-business/ad-business.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full' },
@@ -17,7 +19,9 @@ const routes: Routes = [
   { path: 'main/:id', component: CoworkingItemComponent }, // coworking item
   { path: 'login', component: LoginPageComponent },
   { path: 'registration', component: RegistrationPageComponent },
-  { path: 'favourites', component: FavouritesPageComponent }
+  { path: 'favourites', component: FavouritesPageComponent },
+  { path: 'place-settings', component: PlaceSettingsComponent },
+  { path: 'ad-business', component:AdBusinessComponent }
 ];
 
 @NgModule({
