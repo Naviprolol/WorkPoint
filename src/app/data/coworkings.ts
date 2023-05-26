@@ -3,7 +3,7 @@ import { ICoworking } from "../interfaces/interfaces";
 
 export const coworkings: ICoworking[] = [
   {
-    id: '1',
+    id: 1,
     name: 'Simple coffee',
     isGoodPlace: true,
     rating: 4.6,
@@ -27,10 +27,11 @@ export const coworkings: ICoworking[] = [
     recreation_area: true,
     conference_hall: false,
 
-    tags: ['Кафе', 'Wi-Fi']
+    tags: ['Кафе', 'Wi-Fi'],
+    user_id: 1
   },
   {
-    id: '2',
+    id: 2,
     name: 'NAMES',
     isGoodPlace: true,
     rating: 4.8,
@@ -44,7 +45,7 @@ export const coworkings: ICoworking[] = [
     time: 'Ежедневно с 08:00 до 22:00',
     isFavorite: false,
 
-    type_cafe: 'Рабочий офис',
+    type_cafe: 'Рабочий зал',
     company_phone: '+7(999)999-99-00',
     email: '',
     site: '',
@@ -54,10 +55,11 @@ export const coworkings: ICoworking[] = [
     recreation_area: true,
     conference_hall: true,
 
-    tags: ['Wi-Fi', 'Зона отдыха', 'Розетки', 'klass']
+    tags: ['Wi-Fi', 'Зона отдыха', 'Розетки', 'klass'],
+    user_id: 2
   },
   {
-    id: '3',
+    id: 3,
     name: 'LIVE коворкинг',
     isGoodPlace: true,
     rating: 3.0,
@@ -71,7 +73,7 @@ export const coworkings: ICoworking[] = [
     time: 'Круглосуточно',
     isFavorite: false,
 
-    type_cafe: 'Рабочий офис',
+    type_cafe: 'Рабочий зал',
     company_phone: '+7(999)999-99-00',
     email: '',
     site: '',
@@ -82,6 +84,7 @@ export const coworkings: ICoworking[] = [
     recreation_area: false,
     conference_hall: true,
 
-    tags: ['Wi-Fi', 'Зона отдыха', 'Розетки']
+    tags: ['Wi-Fi', 'Зона отдыха', 'Розетки'],
+    user_id: 3
   }
 ]

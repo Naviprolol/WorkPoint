@@ -20,8 +20,8 @@ export class FilterCoworkingPipe implements PipeTransform {
       return coworkings.filter(p => p.type_cafe.includes(name));
     }
 
-    if (params === 'time') {
-      return coworkings.filter(p => p.time.includes(name));
+    if (params === 'opening_hours') {
+      return coworkings.filter(p => p.opening_hours.includes(name));
     }
 
     if (params === 'parking') {

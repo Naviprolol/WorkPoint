@@ -15,12 +15,18 @@ export class AuthService {
 
   }
 
-  login(user: User): Observable<{ token: string }> {
-    return this.http.post<{ token: string }>('/api/auth/login', user).pipe(
+  login(username: string, password: string): Observable<{ access_token: string }> {
+
+    const fd = new FormData()
+    fd.append('username', username)
+    fd.append('password', password)
+
+    return this.http.post<{ access_token: string }>('http://81.200.145.113:8001/user/login', fd).pipe(
       tap(
-        ({ token }) => {
-          localStorage.setItem('auth-token', token)
-          this.setToken(token)
+        (token) => {
+          localStorage.setItem('auth-token', token.access_token)
+          this.setToken(token.access_token)
+          // console.log(token.access_token)
         }
       )
     )
@@ -44,6 +50,6 @@ export class AuthService {
   }
 
   register(user: User): Observable<User> {
-    return this.http.post<User>('/api/auth/register', user)
+    return this.http.post<User>('http://81.200.145.113:8001/user/signup', user)
   }
 }

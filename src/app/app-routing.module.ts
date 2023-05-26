@@ -14,14 +14,15 @@ import { AdBusinessComponent } from './components/ad-business/ad-business.compon
 const routes: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full' },
   { path: 'main', component: MainPageComponent },
-  { path: 'profile', component: ProfileSettingsComponent }, // canActivate: [AuthGuard]
-  { path: 'main/add', component: AddCoworkingComponent },
-  { path: 'main/:id', component: CoworkingItemComponent }, // coworking item
+  { path: 'profile', canActivate: [AuthGuard], component: ProfileSettingsComponent }, // canActivate: [AuthGuard]
+  { path: 'main/add', canActivate: [AuthGuard], component: AddCoworkingComponent },
+  { path: 'main/:id', canActivate: [AuthGuard], component: CoworkingItemComponent }, // coworking item
+  { path: 'main/add/:id', canActivate: [AuthGuard], component: AddCoworkingComponent },
   { path: 'login', component: LoginPageComponent },
   { path: 'registration', component: RegistrationPageComponent },
-  { path: 'favourites', component: FavouritesPageComponent },
-  { path: 'place-settings', component: PlaceSettingsComponent },
-  { path: 'ad-business', component:AdBusinessComponent }
+  { path: 'favourites', canActivate: [AuthGuard], component: FavouritesPageComponent },
+  { path: 'place-settings', canActivate: [AuthGuard], component: PlaceSettingsComponent },
+  { path: 'ad-business', canActivate: [AuthGuard], component: AdBusinessComponent }
 ];
 
 @NgModule({

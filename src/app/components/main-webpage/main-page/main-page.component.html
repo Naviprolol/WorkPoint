@@ -84,7 +84,7 @@
         <div class="radio">
           <input type="checkbox" class="custom-radio custom-radio_multiple" id="office" name="type" value="office"
             [(ngModel)]="office">
-          <label for="office">Рабочий офис</label>
+          <label for="office">Рабочий зал</label>
         </div>
 
         <div class="radio">
@@ -167,12 +167,12 @@
       | filterCoworking: 'district':ORDJ:'Орджоникидзевский'
       | filterCoworking: 'district':Chkalovski:'Чкаловский'
 
-      | filterCoworking: 'type_cafe':office:'Рабочий офис'
+      | filterCoworking: 'type_cafe':office:'Рабочий зал'
       | filterCoworking: 'type_cafe':anticafe:'Антикафе'
       | filterCoworking: 'type_cafe':cafe:'Кафе'
 
-      | filterCoworking: 'time':kruglosutochno:'Круглосуточно'
-      | filterCoworking: 'time':budni:'Будни'
+      | filterCoworking: 'opening_hours':kruglosutochno:'Круглосуточно'
+      | filterCoworking: 'opening_hours':budni:'Будни'
 
       | filterCoworking: 'parking': parking
       | filterCoworking: 'recreation_area' : recreation_area

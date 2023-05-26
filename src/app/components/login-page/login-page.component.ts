@@ -20,7 +20,7 @@ export class LoginPageComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.form = new FormGroup({
-      phone: new FormControl(null, [Validators.required, Validators.pattern("^[0-9]*$"), Validators.minLength(11), Validators.maxLength(11)]),
+      username: new FormControl(null, [Validators.required, Validators.pattern("^[0-9]*$"), Validators.minLength(11), Validators.maxLength(11)]),
       password: new FormControl(null, [Validators.required, Validators.minLength(6)])
     })
 
@@ -42,12 +42,8 @@ export class LoginPageComponent implements OnInit, OnDestroy {
   onSubmit() {
     this.form.disable()
 
-    const user = {
-      phone: this.form.value.phone,
-      password: this.form.value.password
-    }
-    this.aSub = this.auth.login(this.form.value).subscribe(
-      () => this.router.navigate(['/overview']), // Навигация на нужную страницу, после успешного входа
+    this.aSub = this.auth.login(this.form.value.username, this.form.value.password).subscribe(
+      () => this.router.navigate(['/main']), // Навигация на нужную страницу, после успешного входа
       error => {
         console.warn(error)
         this.form.enable()

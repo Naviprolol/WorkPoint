@@ -20,7 +20,10 @@
     </a>
 
     <div class="dropdown">
-      <p class="profile-name">Мария Иванова</p>
+
+      <div *ngIf="user">
+        <p class="profile-name">{{user.name + ' ' + user.surname}}</p>
+      </div>
 
       <div class="dropdown-menu" [ngClass]="{
       'show': ifClicked
@@ -28,7 +31,9 @@
         <a routerLink="/favourites" class="dropdown-link">Избранное</a>
         <a routerLink="/profile" class="dropdown-link">Настройки профиля</a>
         <a routerLink="/place-settings" class="dropdown-link">Настройки мест</a>
-        <a routerLink="/ad-business" class="dropdown-link">Продвижение</a>
+        <div *ngIf="user">
+          <a routerLink="/ad-business" class="dropdown-link" *ngIf="user.role_id === 2">Продвижение</a>
+        </div>
         <a href="#" class="dropdown-link" (click)="logout($event)">Выход</a>
       </div>
     </div>

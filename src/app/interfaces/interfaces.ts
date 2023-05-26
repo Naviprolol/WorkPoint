@@ -1,5 +1,5 @@
 export interface ICoworking {
-  id: string
+  id: number
   name: string
   isGoodPlace: boolean
   rating: number
@@ -21,15 +21,18 @@ export interface ICoworking {
   recreation_area: boolean,
   conference_hall: boolean
   tags: string[]
+  user_id: number
 }
 
 export interface User {
-  id: number,
+  id: number
   name: string
-  lastName: string
+  surname: string
   phone: string
   password: string
-  type: number
+  role_id: number
+  photo_user: string
+  city: string
 }
 
 

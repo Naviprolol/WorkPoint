@@ -7,10 +7,10 @@
   </a>
 </div>
 
-<div class="information">
+<div class="information" *ngIf="coworking">
   <div class="main-information">
     <div class="title-container">
-      <p class="title">{{coworking.name}}</p>
+      <p class="title">{{ coworking.name }}</p>
       <img src="assets/img/good-place.svg" width="22" height="22" alt="good-place" class="img-good-place"
         [ngStyle]="{ visibility: coworking.rating < 3.5 ? 'hidden' : '' }">
       <p class="coworking-rating">{{coworking.rating}}</p>
@@ -21,7 +21,8 @@
 
       <div>
         <div class="photo">
-          <img src="{{coworking.photo[0]}}" class="first-photo" alt="img" width=950px height=522px>
+          <img src="{{coworking.photo[0]}}" class="first-photo" onerror="this.src='assets/img/logo.svg'" alt="img"
+            width=950px height=522px>
         </div>
       </div>
 
@@ -65,13 +66,13 @@
 
         <div class="coworking-time-container">
           <img src="assets/img/coworking-time.svg" alt="coworking-time">
-          <p>{{coworking.time}}</p>
+          <p>{{coworking.opening_hours}}</p>
         </div>
 
         <div class="tags">
           <p>Удобства</p>
           <div class="coworking-tags">
-            <div class="coworking-tag" *ngFor="let tag of tags">{{tag}}</div>
+            <div class="coworking-tag" *ngFor="let tag of tags">{{tag.name}}</div>
           </div>
         </div>
 
@@ -100,7 +101,7 @@
 
     <div class="reviews">
       <div *ngFor="let review of allReviews">
-        <div class="review" *ngIf="review.place_id === coworking.id">
+        <div class="review" *ngIf="coworking.id === review.place_id">
           <img src="assets/img/star.svg" alt="avatar" class="avatar" width="70" height="70">
           <div class="review-title">
             <div class="review-name-date">

@@ -2,10 +2,10 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { of } from 'rxjs';
-import { coworkings } from 'src/app/data/coworkings';
-import { switchMap } from 'rxjs/operators';
+import { mergeMap, switchMap } from 'rxjs/operators';
 import { CoworkingsService } from 'src/app/servises/coworkings.service';
 import { ICoworking } from 'src/app/interfaces/interfaces';
+import { ReviewService } from 'src/app/servises/review.service';
 
 @Component({
   selector: 'app-add-coworking',
@@ -21,10 +21,11 @@ export class AddCoworkingComponent implements OnInit {
   imagePreview: any = ''
   coworking: ICoworking
   selectedTags: string[] = [];
-  tags = ['Кафе', 'Wi-Fi', 'Зона отдыха', 'Розетки'];
+  tags = ['Розетки', 'Еда', 'Напитки', 'Wi-Fi'];
 
   constructor(private route: ActivatedRoute,
     private coworkingsService: CoworkingsService,
+    private reviewService: ReviewService,
     private router: Router) {
 
   }
@@ -36,7 +37,7 @@ export class AddCoworkingComponent implements OnInit {
       district: new FormControl(null, [Validators.required]),
       address: new FormControl(null, [Validators.required]),
       description: new FormControl(null, [Validators.required]),
-      workHours: new FormControl(''),
+      opening_hours: new FormControl(''),
       type: new FormControl(''),
       price: new FormControl(''),
       tags: new FormControl(''),
@@ -55,8 +56,7 @@ export class AddCoworkingComponent implements OnInit {
       switchMap((params: Params) => {
         if (params['id']) {
           this.isNew = false
-          // return this.coworkingsService.getById(params['id'])
-          return coworkings
+          return this.coworkingsService.getCoworkingById(params['id'])
         }
         return of(null)
       })
@@ -71,7 +71,7 @@ export class AddCoworkingComponent implements OnInit {
             address: coworking.address,
             description: coworking.description,
             photo: coworking.photo,
-            workHours: coworking.workHours,
+            opening_hours: coworking.opening_hours,
             type: coworking.type_cafe,
             price: coworking.cost,
             parking: coworking.parking,
@@ -124,18 +124,19 @@ export class AddCoworkingComponent implements OnInit {
     this.form.disable()
 
     if (this.isNew) {
+
       // create
-      obs$ = this.coworkingsService.create(this.form.value.name, this.form.value.city, this.form.value.district,
-        this.form.value.address, this.form.value.description, this.form.value.workHours,
-        this.form.value.type, this.form.value.price, this.form.value.tags, this.form.value.parking, this.form.value.restzone, this.form.value.conference, this.form.value.phone,
-        this.form.value.email, this.form.value.site, this.image) // разобраться как и дописать conference и тд
+      obs$ = this.coworkingsService.create(0, this.form.value.name, this.form.value.city, this.form.value.district,
+        this.form.value.address, this.form.value.description, this.form.value.opening_hours,
+        this.form.value.type, this.form.value.price, this.form.value.tags, this.form.value.parking, this.form.value.restzone, this.form.value.conference, this.image, this.form.value.phone,
+        this.form.value.email, this.form.value.site)
     }
     else {
       // update
-      obs$ = this.coworkingsService.update(this.coworking.id, this.form.value.name, this.form.value.city, this.form.value.district,
-        this.form.value.address, this.form.value.description, this.form.value.workHours,
-        this.form.value.type, this.form.value.price, this.form.value.tags, this.form.value.parking, this.form.value.restzone, this.form.value.conference, this.form.value.phone,
-        this.form.value.email, this.form.value.site, this.image) // дописать conference и тд
+      obs$ = this.coworkingsService.update(this.coworking.id, 0, this.form.value.name, this.form.value.city, this.form.value.district,
+        this.form.value.address, this.form.value.description, this.form.value.opening_hours,
+        this.form.value.type, this.form.value.price, this.form.value.parking, this.form.value.restzone, this.form.value.conference, this.image,
+        this.form.value.phone, this.form.value.email, this.form.value.site)
     }
 
     obs$.subscribe(
@@ -159,7 +160,7 @@ export class AddCoworkingComponent implements OnInit {
       this.coworkingsService.delete(this.coworking.id).subscribe(
         response => console.log('Успешно удалилось'),
         error => console.log('Ошибка удаления коворкинга'),
-        () => this.router.navigate(['/main'])
+        () => this.router.navigate(['/place-settings'])
       )
     }
   }
