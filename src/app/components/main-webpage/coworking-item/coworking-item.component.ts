@@ -9,6 +9,7 @@ import { v4 as uuidv4 } from 'uuid';
 import * as moment from 'moment';
 import { reviews as data } from 'src/app/data/reviews';
 import { mergeMap } from 'rxjs/operators';
+import { UserService } from 'src/app/servises/user.service';
 
 @Component({
   selector: 'app-coworking-item',
@@ -28,7 +29,8 @@ export class CoworkingItemComponent implements OnInit {
   constructor(private route: ActivatedRoute,
     private coworkingsService: CoworkingsService,
     private reviewService: ReviewService,
-    private authService: AuthService) {
+    private authService: AuthService,
+    private userService: UserService) {
 
   }
 
@@ -36,17 +38,15 @@ export class CoworkingItemComponent implements OnInit {
     const routeParams = this.route.snapshot.paramMap
     const coworkingIdFromRoute = String(routeParams.get('id'));
 
-    this.coworkingsService.getById(coworkingIdFromRoute).subscribe(coworking => {
+    this.coworkingsService.getCoworkingById(coworkingIdFromRoute).subscribe(coworking => {
       this.coworking = coworking
-      // console.log('Coworking', coworkings)
-      // this.coworking = this.coworkings.find(coworking => coworking.id == coworkingIdFromRoute)
       this.coworking.photo = this.coworking.photo.split('# ')
       this.coworking.photo.pop()
       this.tags = this.coworking.tags
     })
 
     //
-    this.reviewService.getPlacesByToken().subscribe(coworkings => {
+    this.coworkingsService.getCoworkingsByToken().subscribe(coworkings => {
       this.userPlaces = coworkings
       console.log('userPlaces', this.userPlaces)
     })
@@ -58,15 +58,10 @@ export class CoworkingItemComponent implements OnInit {
       description: new FormControl(null)
     })
 
-    this.reviewService.getUserByToken().subscribe(user => {
+    this.userService.getUserByToken().subscribe(user => {
       this.user = user
       console.log('user', this.user.name)
     });
-
-    // this.coworkingsService.getById(coworkingIdFromRoute).subscribe(coworking => {
-    //   this.coworking = coworking
-    //   console.log('Coworking', coworking)
-    // })
   }
 
   onSubmit() {
@@ -83,47 +78,6 @@ export class CoworkingItemComponent implements OnInit {
         this.form.enable()
       }
     );
-    // this.reviewService.getUserByToken()
-    //   .pipe(
-    //     mergeMap(user => {
-    //       console.log(user.id)
-    //       return this.reviewService.create(user.id, this.coworking.id, this.form.value.rating, this.form.value.description)
-    //     })
-    //   )
-    //   .subscribe(
-    //     review => {
-    //       this.review = review
-    //       console.log('Изменения сохранены')
-    //       this.form.enable()
-    //     },
-    //     error => {
-    //       console.log('ERRRRROR!') // Снизу второй параметр — UserId, проверить как работает с бекендом
-    //       console.log(localStorage.getItem('auth-token') ?? '', this.reviewService.getUserByToken().pipe(mergeMap(user => user.id.toString())), this.coworking.id, this.form.value.rating, this.form.value.description, moment().format('DD.MM.YYYY'))
-    //       this.form.enable()
-    //     }
-    //   )
-
-    // this.reviewService.getUserByToken().subscribe(
-    //   (user: User) => {
-    //     const user_id = user.id;
-    //     this.reviewService.create(user_id, this.coworking.id, this.form.value.rating, this.form.value.description, moment().format('DD.MM.YYYY')).subscribe(
-    //       (review) => {
-    //         this.review = review
-    //         console.log('Изменения сохранены')
-    //         this.form.enable()
-    //       },
-    //       (error) => {
-    //         // Обработка ошибки
-    //         console.error(error);
-    //       }
-    //     );
-    //   },
-    //   (error) => {
-    //     console.log('ERRRRROR!') // Снизу второй параметр — UserId, проверить как работает с бекендом
-    //     console.log(localStorage.getItem('auth-token') ?? '', this.reviewService.getUserByToken(), this.coworking.id, this.form.value.rating, this.form.value.description, moment().format('DD.MM.YYYY'))
-    //     this.form.enable()
-    //   }
-    // );
   }
 
 }

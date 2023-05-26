@@ -22,7 +22,9 @@ import { AddCoworkingComponent } from './components/add-coworking/add-coworking.
 import { CoworkingItemComponent } from './components/main-webpage/coworking-item/coworking-item.component';
 import { NgxStarRatingModule } from 'ngx-star-rating';
 import { FavouritesPageComponent } from './components/favourites-page/favourites-page.component';
-
+import {CommonModule} from '@angular/common'
+import { PlaceSettingsComponent } from './components/place-settings/place-settings.component';
+import { AdBusinessComponent } from './components/ad-business/ad-business.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +41,9 @@ import { FavouritesPageComponent } from './components/favourites-page/favourites
     RegistrationPageComponent,
     AddCoworkingComponent,
     CoworkingItemComponent,
-    FavouritesPageComponent
+    FavouritesPageComponent,
+    PlaceSettingsComponent,
+    AdBusinessComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +51,8 @@ import { FavouritesPageComponent } from './components/favourites-page/favourites
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgxStarRatingModule
+    NgxStarRatingModule,
+    CommonModule
   ],
   providers: [
     {

@@ -15,14 +15,14 @@ export class CoworkingsListComponent implements OnInit {
   ngOnInit(): void {
     this.coworking.photo = this.coworking.photo.split('# ')
     this.coworking.photo.pop()
-    console.log(this.coworking.photo);
+    // console.log(this.coworking.photo);
   }
 
   // constructor(private coworkingsService: CoworkingsService) {
 
   // }
   // ngOnInit(): void {
-  //   this.coworkingsService.fetch().subscribe(coworkings => {
+  //   this.coworkingsService.getAll().subscribe(coworkings => {
   //     this.coworkings = coworkings
   //     console.log('Coworking', coworkings)
   //   })

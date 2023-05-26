@@ -17,7 +17,8 @@ export class ProfileSettingsComponent implements OnInit {
   form: FormGroup
   user: User
 
-  constructor(private coworkingsService: CoworkingsService,
+  constructor(
+    private coworkingsService: CoworkingsService,
     private userService: UserService,
     private reviewService: ReviewService,
     private authService: AuthService) {
@@ -25,6 +26,11 @@ export class ProfileSettingsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    this.userService.getUserByToken().subscribe(user => {
+      this.user = user
+      console.log('user', this.user.role_id)
+    });
 
     this.form = new FormGroup({
       name: new FormControl(null, [Validators.required]),
@@ -38,7 +44,7 @@ export class ProfileSettingsComponent implements OnInit {
     let obs$
     this.form.disable()
 
-    obs$ = this.reviewService.getUserByToken()
+    obs$ = this.userService.getUserByToken()
       .pipe(
         mergeMap(user => {
           console.log(user.id)

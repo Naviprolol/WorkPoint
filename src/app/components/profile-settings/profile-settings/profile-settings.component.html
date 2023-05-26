@@ -20,7 +20,9 @@
   <div class="top-information">
     <img src="assets/img/profile.svg" alt="profile" width="150" height="150">
     <ul>
-      <h2>Мария Иванова</h2>
+      <div *ngIf="user">
+        <h2>{{user.name + ' ' + user.surname}}</h2>
+      </div>
       <span>+7 (999) 999-99-00</span>
     </ul>
   </div>

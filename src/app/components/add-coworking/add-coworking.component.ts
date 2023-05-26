@@ -2,7 +2,6 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { of } from 'rxjs';
-import { coworkings } from 'src/app/data/coworkings';
 import { mergeMap, switchMap } from 'rxjs/operators';
 import { CoworkingsService } from 'src/app/servises/coworkings.service';
 import { ICoworking } from 'src/app/interfaces/interfaces';
@@ -22,7 +21,7 @@ export class AddCoworkingComponent implements OnInit {
   imagePreview: any = ''
   coworking: ICoworking
   selectedTags: string[] = [];
-  tags = ['Розетки', 'Зона отдыха', 'Еда', 'Напитки'];
+  tags = ['Розетки', 'Еда', 'Напитки', 'Wi-Fi'];
 
   constructor(private route: ActivatedRoute,
     private coworkingsService: CoworkingsService,
@@ -57,8 +56,7 @@ export class AddCoworkingComponent implements OnInit {
       switchMap((params: Params) => {
         if (params['id']) {
           this.isNew = false
-          // return this.coworkingsService.getById(params['id'])
-          return coworkings
+          return this.coworkingsService.getCoworkingById(params['id'])
         }
         return of(null)
       })
@@ -135,10 +133,10 @@ export class AddCoworkingComponent implements OnInit {
     }
     else {
       // update
-      obs$ = this.coworkingsService.update(this.coworking.id, this.form.value.name, this.form.value.city, this.form.value.district,
+      obs$ = this.coworkingsService.update(this.coworking.id, 0, this.form.value.name, this.form.value.city, this.form.value.district,
         this.form.value.address, this.form.value.description, this.form.value.opening_hours,
-        this.form.value.type, this.form.value.price, this.form.value.tags, this.form.value.parking, this.form.value.restzone, this.form.value.conference, this.form.value.phone,
-        this.form.value.email, this.form.value.site, this.image)
+        this.form.value.type, this.form.value.price, this.form.value.parking, this.form.value.restzone, this.form.value.conference, this.image,
+        this.form.value.phone, this.form.value.email, this.form.value.site)
     }
 
     obs$.subscribe(
@@ -162,7 +160,7 @@ export class AddCoworkingComponent implements OnInit {
       this.coworkingsService.delete(this.coworking.id).subscribe(
         response => console.log('Успешно удалилось'),
         error => console.log('Ошибка удаления коворкинга'),
-        () => this.router.navigate(['/main'])
+        () => this.router.navigate(['/place-settings'])
       )
     }
   }

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<app-header></app-header>
+<div class="main-top-content">
+
+  <div class="profile-navigation">
+    <ul>
+      <li>Избранное</li>
+      <li>Настройки профиля</li>
+      <li>Настройки мест</li>
+    </ul>
+  </div>
+
+  <div class="place-information">
+    <h1 class="title">
+      Ваши места
+    </h1>
+
+    <p class="description">
+      В данном разделе вы также можете отследить статистику вашего заведения
+    </p>
+
+    <div class="explanations">
+      <li class="explanations-li">
+        Название
+      </li>
+
+      <li class="explanations-li">
+        Просмотры за предыдущий месяц
+      </li>
+
+      <li class="explanations-li">
+        Просмотры за текущий месяц
+      </li>
+    </div>
+
+    <ul class="cards">
+      <li class="card-li" *ngFor="let userCoworking of userCoworkings">
+        <div class="card">
+
+          <div class="first-block__card">
+            <p class="card-title">
+              <a [routerLink]="['/main/add', userCoworking.id]">{{userCoworking.name}}</a>
+            </p>
+            <p class="adress">
+              {{userCoworking.address}}
+            </p>
+          </div>
+
+          <div class="second-block__card">
+            <p class="number">
+              ?
+            </p>
+          </div>
+
+          <div class="third-block__card">
+            <p class="number">
+              ?
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M5.14496 0.625901C5.54214 0.235377 6.18609 0.235377 6.58326 0.625901L11.3298 5.2929C11.7269 5.68343 11.7269 6.31659 11.3298 6.70711C10.9326 7.09764 10.2886 7.09764 9.89146 6.70711L6.88115 3.74722V11C6.88115 11.5523 6.42581 12 5.86411 12C5.30242 12 4.84708 11.5523 4.84708 11V3.74722L1.83677 6.70711C1.43959 7.09764 0.795644 7.09764 0.398468 6.70711C0.00129186 6.31659 0.00129186 5.68343 0.398468 5.2929L5.14496 0.625901Z"
+                  fill="#4AC99B" />
+              </svg>
+            </p>
+          </div>
+
+        </div>
+      </li>
+      <!-- <li class="card-li">
+        <div class="card">
+          <div class="first-block__card">
+            <p class="card-title">
+              Simple coffee
+            </p>
+            <p class="adress">
+              Проспект Ленина, 46
+            </p>
+          </div>
+
+          <div class="second-block__card">
+            <p class="number">
+              50
+            </p>
+          </div>
+
+          <div class="third-block__card">
+            <p class="number">
+              50
+              <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M7.37945 11.3741C6.98228 11.7646 6.33833 11.7646 5.94115 11.3741L1.19466 6.7071C0.797478 6.31657 0.797478 5.68341 1.19466 5.29289C1.59183 4.90236 2.23578 4.90236 2.63296 5.29289L5.64327 8.25278L5.64327 0.999992C5.64327 0.447707 6.09861 -7.62939e-06 6.6603 -7.62939e-06C7.22199 -7.62939e-06 7.67733 0.447707 7.67733 0.999992L7.67733 8.25278L10.6876 5.29289C11.0848 4.90236 11.7288 4.90236 12.1259 5.29289C12.5231 5.68341 12.5231 6.31657 12.1259 6.7071L7.37945 11.3741Z" fill="#DD4C1E"/>
+              </svg>
+            </p>
+          </div>
+        </div>
+      </li> -->
+    </ul>
+
+  </div>
+</div>
+
+<app-footer></app-footer>

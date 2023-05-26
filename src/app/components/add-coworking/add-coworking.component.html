@@ -1,9 +1,13 @@
 <app-header></app-header>
 
 <div class="return">
-  <a routerLink='/main'>
+  <a *ngIf="isNew" routerLink='/main'>
     <img src="assets/img/return-button.svg" alt="return-button">
     Вернуться к списку
+  </a>
+  <a *ngIf="!isNew" routerLink='/place-settings'>
+    <img src="assets/img/return-button.svg" alt="return-button">
+    Вернуться к списку ваших коворкингов
   </a>
 </div>
 
@@ -183,7 +187,7 @@
 
     <div class="photo">
       <div class="first-photo">
-        <input id="photo" class="dn" type="file" (change)="onFileUpload($event)" #input>
+        <input id="photo" class="dn" type="file" name="photo" (change)="onFileUpload($event)" #input>
         <label for="photo"></label>
         <button class="btn-first-photo" type="button" (click)="triggerClick()" [disabled]="form.disabled">+</button>
         <img class="preview-img" [src]="imagePreview" *ngIf="imagePreview">

@@ -45,9 +45,9 @@ export class MainPageComponent {
   }
 
   ngOnInit(): void {
-    this.coworkingsService.fetch().subscribe(coworkings => {
+    this.coworkingsService.getAll().subscribe(coworkings => {
       this.coworkings = coworkings
-      console.log('Coworking', coworkings)
+      // console.log('Coworking', coworkings)
     })
   }
 
