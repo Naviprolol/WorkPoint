@@ -32,23 +32,23 @@ export class MainPageComponent {
   recreation_area: any = false
   conference_hall: any = false
 
-  coworkings: ICoworking[] = data
+  // coworkings: ICoworking[] = data
 
-  // coworkings: ICoworking[] = []
+  coworkings: ICoworking[] = []
   length = this.coworkings.filter(p => p.name.toLowerCase().includes(this.term.toLowerCase()));
 
   allRegions = ['Академический', 'Верх-Исетский', 'Железнодорожный', 'Кировский', 'Ленинский', 'Октябрьский', 'Орджоникидзевский', 'Чкаловский']
   activeRegions = []
 
-  // constructor(private coworkingsService: CoworkingsService) {
+  constructor(private coworkingsService: CoworkingsService) {
 
-  // }
+  }
 
-  // ngOnInit(): void {
-  //   this.coworkingsService.fetch().subscribe(coworkings => {
-  //     this.coworkings = coworkings
-  //     console.log('Coworking', coworkings)
-  //   })
-  // }
+  ngOnInit(): void {
+    this.coworkingsService.fetch().subscribe(coworkings => {
+      this.coworkings = coworkings
+      console.log('Coworking', coworkings)
+    })
+  }
 
 }

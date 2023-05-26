@@ -27,13 +27,13 @@
 
       <div class="coworking-time-container">
         <img src="assets/img/coworking-time.svg" alt="coworking-time">
-        <p> {{coworking.time}} </p>
+        <p> {{coworking.opening_hours}} </p>
       </div>
 
       <div class="coworking-map-and-favorite-container">
-        <div class="coworking-map">
+        <a class="coworking-map" [routerLink]="['/main', coworking.id]">
           <p>Посмотреть на карте</p>
-        </div>
+        </a>
         <button class="btn-like" (click)='like = !like'>
           <img src="assets/img/coworking-favorite.svg" width="22.85" height="20.23" alt="coworking-favorite"
             [ngStyle]="{'background-color': like ? 'red' : ''}">

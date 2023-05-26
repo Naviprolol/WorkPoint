@@ -54,37 +54,35 @@
   </button>
 </div>
 
-<div class="about-information">
-
+<form class="about-information" [formGroup]="form" (ngSubmit)="onSubmit()">
   <p class="title">О себе</p>
 
   <div class="about-information display-flex">
     <div class="input-field name">
-      <input id="name" placeholder="Имя" type="text">
+      <input id="name" placeholder="Имя" type="text" formControlName="name">
       <label for="name"></label>
     </div>
 
     <div class="input-field surname">
-      <input id="surname" placeholder="Фамилия" type="text">
+      <input id="surname" placeholder="Фамилия" type="text" formControlName="surname">
       <label for="surname"></label>
     </div>
   </div>
 
   <div class="input-field city">
-    <input id="city" placeholder="Город" type="text">
+    <input id="city" placeholder="Город" type="text" formControlName="city">
     <label for="city"></label>
   </div>
 
   <div class="input-field phone">
-    <input id="phone" placeholder="Номер телефона" type="phone">
+    <input id="phone" placeholder="Номер телефона" type="phone" formControlName="phone">
     <label for="phone"></label>
   </div>
 
-  <button class="progress-information-input__btn">
+  <button class="progress-information-input__btn" type="submit" [disabled]="form.invalid || form.disabled">
     Сохранить
   </button>
-
-</div>
+</form>
 
 <div class="business-information">
   <p class="title" style="margin-bottom: 22px;">

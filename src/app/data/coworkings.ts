@@ -44,7 +44,7 @@ export const coworkings: ICoworking[] = [
     time: 'Ежедневно с 08:00 до 22:00',
     isFavorite: false,
 
-    type_cafe: 'Рабочий офис',
+    type_cafe: 'Рабочий зал',
     company_phone: '+7(999)999-99-00',
     email: '',
     site: '',
@@ -71,7 +71,7 @@ export const coworkings: ICoworking[] = [
     time: 'Круглосуточно',
     isFavorite: false,
 
-    type_cafe: 'Рабочий офис',
+    type_cafe: 'Рабочий зал',
     company_phone: '+7(999)999-99-00',
     email: '',
     site: '',

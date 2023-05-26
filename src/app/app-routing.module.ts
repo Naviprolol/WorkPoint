@@ -12,12 +12,12 @@ import { FavouritesPageComponent } from './components/favourites-page/favourites
 const routes: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full' },
   { path: 'main', component: MainPageComponent },
-  { path: 'profile', component: ProfileSettingsComponent }, // canActivate: [AuthGuard]
-  { path: 'main/add', component: AddCoworkingComponent },
-  { path: 'main/:id', component: CoworkingItemComponent }, // coworking item
+  { path: 'profile', canActivate: [AuthGuard], component: ProfileSettingsComponent }, // canActivate: [AuthGuard]
+  { path: 'main/add', canActivate: [AuthGuard], component: AddCoworkingComponent },
+  { path: 'main/:id', canActivate: [AuthGuard], component: CoworkingItemComponent }, // coworking item
   { path: 'login', component: LoginPageComponent },
   { path: 'registration', component: RegistrationPageComponent },
-  { path: 'favourites', component: FavouritesPageComponent }
+  { path: 'favourites', canActivate: [AuthGuard], component: FavouritesPageComponent }
 ];
 
 @NgModule({

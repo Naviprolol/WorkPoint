@@ -13,16 +13,17 @@
 
   <div class="card-right-side">
 
-    <div class="input-field phone" [ngClass]="{'invalid': form.get('phone')?.invalid && form.get('phone')?.touched}">
-      <input id="phone" placeholder="Введите Ваш номер телефона" type="phone" formControlName="phone">
+    <div class="input-field phone"
+      [ngClass]="{'invalid': form.get('username')?.invalid && form.get('username')?.touched}">
+      <input id="phone" placeholder="Введите Ваш номер телефона" type="phone" formControlName="username">
       <label for="phone"></label>
-      <span class="helper-text red-text" *ngIf="form.get('phone')?.invalid && form.get('phone')?.touched">
-        <span *ngIf="form.get('phone')?.errors?.['required']">Телефон не должен быть пустым</span>
-        <span *ngIf="form.get('phone')?.errors?.['pattern']">Введите корректный телефон (через 8)</span>
-        <span *ngIf="form.get('phone')?.errors?.['minlength'] && !form.get('phone')?.errors?.['pattern']">
+      <span class="helper-text red-text" *ngIf="form.get('username')?.invalid && form.get('username')?.touched">
+        <span *ngIf="form.get('username')?.errors?.['required']">Телефон не должен быть пустым</span>
+        <span *ngIf="form.get('username')?.errors?.['pattern']">Введите корректный телефон (через 8)</span>
+        <span *ngIf="form.get('username')?.errors?.['minlength'] && !form.get('username')?.errors?.['pattern']">
           Телефон должен быть из 11 символов.
         </span>
-        <span *ngIf="form.get('phone')?.errors?.['maxlength'] && !form.get('phone')?.errors?.['pattern']">
+        <span *ngIf="form.get('username')?.errors?.['maxlength'] && !form.get('username')?.errors?.['pattern']">
           Телефон должен быть из 11 символов.
         </span>
       </span>
@@ -41,7 +42,7 @@
       </span>
     </div>
 
-    <div class="sign-in" [ngClass]="{'clear': form.get('phone')?.invalid || form.get('password')?.invalid}">
+    <div class="sign-in" [ngClass]="{'clear': form.get('username')?.invalid || form.get('password')?.invalid}">
       <button class="btn-sign-in" type="submit" [disabled]="form.invalid || form.disabled">Войти в аккаунт</button>
     </div>
 

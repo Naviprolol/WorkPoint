@@ -13,7 +13,9 @@ export class CoworkingsListComponent implements OnInit {
   like = false
 
   ngOnInit(): void {
-
+    this.coworking.photo = this.coworking.photo.split('# ')
+    this.coworking.photo.pop()
+    console.log(this.coworking.photo);
   }
 
   // constructor(private coworkingsService: CoworkingsService) {
