@@ -60,7 +60,7 @@ export class CoworkingItemComponent implements OnInit {
 
     this.userService.getUserByToken().subscribe(user => {
       this.user = user
-      console.log('user', this.user.name)
+      console.log('user', this.user.name);
     });
   }
 
