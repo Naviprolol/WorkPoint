@@ -21,7 +21,7 @@ export class AuthService {
     fd.append('username', username)
     fd.append('password', password)
 
-    return this.http.post<{ access_token: string }>('http://81.200.145.113:8001/user/login/', fd).pipe(
+    return this.http.post<{ access_token: string }>('http://81.200.145.113:8001/user/login', fd).pipe(
       tap(
         (token) => {
           localStorage.setItem('auth-token', token.access_token)
@@ -50,6 +50,6 @@ export class AuthService {
   }
 
   register(user: User): Observable<User> {
-    return this.http.post<User>('http://81.200.145.113:8001/user/signup/', user)
+    return this.http.post<User>('http://81.200.145.113:8001/user/signup', user)
   }
 }
