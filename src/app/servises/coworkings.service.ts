@@ -12,12 +12,12 @@ export class CoworkingsService {
   }
 
   getAll(): Observable<ICoworking[]> {
-    return this.http.get<ICoworking[]>('http://81.200.145.113:8001/places/all')
+    return this.http.get<ICoworking[]>('http://81.200.145.113:8001/places/all/')
   }
 
   getCoworkingById(id: string): Observable<ICoworking> {
     let params = new HttpParams().set('id_place', id)
-    return this.http.post<ICoworking>(`http://81.200.145.113:8001/places/get_place`, {}, { params })
+    return this.http.post<ICoworking>(`http://81.200.145.113:8001/places/get_place/`, {}, { params })
   }
 
   getCoworkingsByToken(): Observable<ICoworking[]> {
@@ -78,7 +78,7 @@ export class CoworkingsService {
     console.log(formData1.get('file'))
     console.log(formData1)
 
-    return this.http.post<ICoworking>('http://81.200.145.113:8001/places/upload_place', formData1, { headers })
+    return this.http.post<ICoworking>('http://81.200.145.113:8001/places/upload_place/', formData1, { headers })
   }
 
   update(id: number, user_id: number, name: string, city: string, district: string, address: string, description: string, workHours: string,
@@ -109,14 +109,14 @@ export class CoworkingsService {
       id: id
     };
 
-    return this.http.post<ICoworking>(`http://81.200.145.113:8001/places/update`, data, { headers: headers })
+    return this.http.post<ICoworking>(`http://81.200.145.113:8001/places/update/`, data, { headers: headers })
   }
 
   delete(id: number): Observable<any> {
     const token = localStorage.getItem('auth-token')
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`)
 
-    return this.http.delete<any>(`http://81.200.145.113:8001/places/delete?id_place=${id}`, { headers: headers })
+    return this.http.delete<any>(`http://81.200.145.113:8001/places/delete?id_place=${id}/`, { headers: headers })
   }
 
 }

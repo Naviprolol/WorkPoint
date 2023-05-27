@@ -18,12 +18,12 @@ export class UserService {
 
     // console.log(headers.get('Authorization'))
 
-    return this.http.get<any>('http://81.200.145.113:8001/user/current', { headers: headers }) // Путь бека
+    return this.http.get<any>('http://81.200.145.113:8001/user/current/', { headers: headers }) // Путь бека
   }
 
   updateUser(user_id: any, name: string, surname: string, city: string, phone: string,): Observable<User> {
 
     const fd = new FormData()
-    return this.http.post<User>('http://81.200.145.113:8001/user/settings', fd) // Путь бека
+    return this.http.post<User>('http://81.200.145.113:8001/user/settings/', fd) // Путь бека
   }
 }

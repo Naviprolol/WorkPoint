@@ -22,6 +22,6 @@ export class ReviewService {
       body: `${description}`
     };
 
-    return this.http.post<Review>('http://81.200.145.113:8001/review/add_review', data, { headers: headers }) // Путь бека
+    return this.http.post<Review>('http://81.200.145.113:8001/review/add_review/', data, { headers: headers }) // Путь бека
   }
 }
