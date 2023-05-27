@@ -12,9 +12,12 @@ export class CoworkingsListComponent implements OnInit {
   @Input() coworking: ICoworking
   like = false
 
+  constructor() { }
+
   ngOnInit(): void {
-    this.coworking.photo = this.coworking.photo.split('# ')
-    this.coworking.photo.pop()
+    let photo = this.coworking.photo + ''
+    this.coworking.photo = photo.split('# ')
+    // this.coworking.photo.pop()
     // console.log(this.coworking.photo);
   }
 

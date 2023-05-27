@@ -1,139 +1,5 @@
-.count-coworkings {
-  color: rgba(27, 31, 59, 0.8);
-  font-weight: 700;
-  font-size: 19px;
-  margin-left: 652px;
-  margin-top: 53px;
-  margin-bottom: 19px;
-}
-
 .filter-and-coworkings {
   display: flex;
-}
-
-.banner-container {
-  width: 1600px;
-  height: 413px;
-  margin-left: 160px;
-  margin-top: 70px;
-  background-color: #E0E0D6;
-  border-radius: 20px;
-  margin-bottom: 70px;
-}
-
-.banner-container p {
-  font-weight: 700;
-  font-size: 48px;
-  padding-top: 43px;
-  text-align: center;
-}
-
-.search {
-  display: flex;
-  width: 1175px;
-  margin-left: 412px;
-  justify-content: space-between;
-}
-
-.search-container {
-  display: flex;
-  gap: 17px;
-  width: 862px;
-  height: 54px;
-  background: #FBFBF5;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
-  border-radius: 10px;
-  vertical-align: middle;
-  align-items: center;
-}
-
-.search-container-input {
-  width: 277px;
-  font-size: 15px;
-  background: #FBFBF5;
-  font-weight: 300;
-}
-
-.search-container img {
-  margin-left: 28px;
-}
-
-.btn-find-coworking {
-  width: 275px;
-  background: #E0E0D6;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
-  border-radius: 10px;
-  font-weight: 600;
-  color: rgba(27, 31, 59, 0.6);
-}
-
-.filter-container {
-  background: rgba(190, 218, 195, 0.7);
-  border-radius: 20px;
-  width: 419px;
-  height: 1037px;
-  margin-left: 161px;
-}
-
-.filter-container h1 {
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 38px;
-  padding-top: 55px;
-  padding-left: 56px;
-  margin-bottom: 26px;
-}
-
-.filter {}
-
-.filter-labels {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.filter-labels h2 {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 33px;
-  padding-left: 56px;
-  padding-bottom: 6px;
-}
-
-.filter-labels h3 {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 33px;
-}
-
-.filter-parking {
-  margin-top: 16px;
-}
-
-.custom-radio {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
-}
-
-.custom-radio+label {
-  display: inline-flex;
-  align-items: center;
-  user-select: none;
-  font-size: 24px;
-  line-height: 177.69%;
-}
-
-.custom-radio+label::before {
-  content: '';
-  display: inline-block;
-  width: 22.6px;
-  height: 24px;
-  margin-right: 19px;
-  margin-left: 15px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 100% 100%;
 }
 
 .custom-radio_multiple:checked+label::before {
@@ -160,18 +26,306 @@
   background-image: url("..//..//..//../assets/img/filter-single-default.svg");
 }
 
-.coworking-type {
-  margin-top: 11px;
+
+
+@media screen and (max-width: 5000px) {
+  .count-coworkings {
+    color: rgba(27, 31, 59, 0.8);
+    font-weight: 700;
+    font-size: 19px;
+    margin-left: 652px;
+    margin-top: 53px;
+    margin-bottom: 19px;
+  }
+
+  .banner-container {
+    width: 1600px;
+    height: 413px;
+    margin-left: 160px;
+    margin-top: 70px;
+    background-color: #E0E0D6;
+    border-radius: 20px;
+    margin-bottom: 70px;
+  }
+
+  .banner-container p {
+    font-weight: 700;
+    font-size: 48px;
+    padding-top: 43px;
+    text-align: center;
+  }
+
+  .search {
+    display: flex;
+    width: 1175px;
+    margin-left: 412px;
+    justify-content: space-between;
+  }
+
+  .search-container {
+    display: flex;
+    gap: 17px;
+    width: 862px;
+    height: 54px;
+    background: #FBFBF5;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+    vertical-align: middle;
+    align-items: center;
+  }
+
+  .search-container-input {
+    width: 277px;
+    font-size: 15px;
+    background: #FBFBF5;
+    font-weight: 300;
+  }
+
+  .search-container img {
+    margin-left: 28px;
+  }
+
+  .btn-find-coworking {
+    width: 275px;
+    background: #E0E0D6;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+    font-weight: 600;
+    color: rgba(27, 31, 59, 0.6);
+    font-size: 15px;
+  }
+
+  .filter-container {
+    background: rgba(190, 218, 195, 0.7);
+    border-radius: 20px;
+    width: 419px;
+    height: 1037px;
+    margin-left: 161px;
+  }
+
+  .filter-container h1 {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+    padding-top: 55px;
+    padding-left: 56px;
+    margin-bottom: 26px;
+  }
+
+  .filter-labels {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .filter-labels h2 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    padding-left: 56px;
+    padding-bottom: 6px;
+  }
+
+  .filter-labels h3 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+  }
+
+  .filter-parking {
+    margin-top: 16px;
+  }
+
+  .custom-radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  .custom-radio+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    font-size: 24px;
+    line-height: 177.69%;
+  }
+
+  .custom-radio+label::before {
+    content: '';
+    display: inline-block;
+    width: 22.6px;
+    height: 24px;
+    margin-right: 19px;
+    margin-left: 15px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+  }
+
+  .coworking-type {
+    margin-top: 11px;
+  }
+
+  .coworking-time {
+    margin-top: 11px;
+  }
+
+  .filter-parking {
+    margin-bottom: 12px;
+  }
+
+  .filter-restzone {
+    margin-bottom: 12px;
+  }
 }
 
-.coworking-time {
-  margin-top: 11px;
-}
+@media screen and (max-width: 1550px) {
+  .count-coworkings {
+    color: rgba(27, 31, 59, 0.8);
+    font-weight: 700;
+    font-size: 13.5px;
+    margin-left: 463px;
+    margin-top: 37.6px;
+    margin-bottom: 13.5px;
+  }
 
-.filter-parking {
-  margin-bottom: 12px;
-}
+  .banner-container {
+    width: 1136px;
+    height: 293px;
+    margin-left: 113px;
+    margin-top: 49.7px;
+    background-color: #E0E0D6;
+    border-radius: 20px;
+    margin-bottom: 49.7px;
+  }
 
-.filter-restzone {
-  margin-bottom: 12px;
+  .banner-container p {
+    font-weight: 700;
+    font-size: 34px;
+    padding-top: 30.5px;
+    text-align: center;
+  }
+
+  .search {
+    display: flex;
+    width: 834px;
+    margin-left: 292px;
+    justify-content: space-between;
+  }
+
+  .search-container {
+    display: flex;
+    gap: 12px;
+    width: 612px;
+    height: 38.3px;
+    background: #FBFBF5;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+    vertical-align: middle;
+    align-items: center;
+  }
+
+  .search-container-input {
+    width: 196px;
+    font-size: 11px;
+    background: #FBFBF5;
+    font-weight: 300;
+  }
+
+  .search-container img {
+    margin-left: 20px;
+  }
+
+  .btn-find-coworking {
+    width: 195px;
+    background: #E0E0D6;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+    font-weight: 600;
+    color: rgba(27, 31, 59, 0.6);
+    font-size: 10.65px;
+  }
+
+  .filter-container {
+    background: rgba(190, 218, 195, 0.7);
+    border-radius: 20px;
+    width: 297px;
+    height: 736.27px;
+    margin-left: 114px;
+  }
+
+  .filter-container h1 {
+    font-weight: 700;
+    font-size: 19.9px;
+    line-height: 27px;
+    padding-top: 39px;
+    padding-left: 39px;
+    margin-bottom: 18.46px;
+  }
+
+  .filter-labels {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .filter-labels h2 {
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 23.4px;
+    padding-left: 40px;
+    padding-bottom: 4.26px;
+  }
+
+  .filter-labels h3 {
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 23.4px;
+  }
+
+  .filter-parking {
+    margin-top: 11.36px;
+  }
+
+  .custom-radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  .custom-radio+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    font-size: 17px;
+    line-height: 126.16%;
+  }
+
+  .custom-radio+label::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 17.04px;
+    margin-right: 13.5px;
+    margin-left: 10.65px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+  }
+
+  .coworking-type {
+    margin-top: 7.81px;
+  }
+
+  .coworking-time {
+    margin-top: 7.81px;
+  }
+
+  .filter-parking {
+    margin-bottom: 8.52px;
+  }
+
+  .filter-restzone {
+    margin-bottom: 8.52px;
+  }
 }

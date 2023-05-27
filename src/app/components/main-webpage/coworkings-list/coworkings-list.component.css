@@ -1,120 +1,249 @@
-.coworking {
-  margin-left: 60px;
-  width: 1120px;
-  height: 571px;
-  background: rgba(190, 218, 195, 0.7);
-  border-radius: 20px;
-  margin-bottom: 37px;
+@media screen and (max-width: 5000px) {
+  .coworking {
+    margin-left: 60px;
+    width: 1120px;
+    height: 571px;
+    background: rgba(190, 218, 195, 0.7);
+    border-radius: 20px;
+    margin-bottom: 37px;
+  }
+
+  .coworking-header-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+  }
+
+  .coworking-title {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    color: #000000;
+    margin-top: 26px;
+    margin-left: 54px;
+    margin-right: 16px;
+  }
+
+  .img-good-place {
+    margin-top: 34px;
+
+    width: 22px;
+    height: 22px;
+  }
+
+  .coworking-title-container {
+    display: flex;
+  }
+
+  .coworking-rating-container {
+    display: flex;
+    margin-right: 64px;
+  }
+
+  .coworking-rating {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    margin-top: 33px;
+    margin-right: 12px;
+  }
+
+  .img-star {
+    margin-top: 33px;
+  }
+
+  .coworking-info-container {
+    display: flex;
+  }
+
+  .coworking-image img {
+    margin-left: 54px;
+    border-radius: 20px;
+    margin-right: 51px;
+    width: 480px;
+    height: 415px;
+  }
+
+  .coworking-description {
+    width: 460px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 177.69%;
+    margin-bottom: 42px;
+  }
+
+  .coworking-adress-container {
+    display: flex;
+    gap: 29px;
+    font-size: 20px;
+    margin-bottom: 28px;
+  }
+
+  .coworking-time-container {
+    display: flex;
+    gap: 26px;
+    font-size: 20px;
+  }
+
+  .coworking-content {
+    position: relative;
+  }
+
+  .coworking-map-and-favorite-container {
+    display: flex;
+    gap: 54px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .coworking-map-and-favorite-container img:hover {
+    opacity: 50%;
+  }
+
+  .btn-like {
+    height: 21px;
+    margin-top: 20px;
+  }
+
+  .coworking-map {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+    width: 275px;
+    height: 54px;
+    background: #E0E0D6;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 54px;
+    color: rgba(27, 31, 59, 0.4);
+    text-align: center;
+  }
 }
 
-.coworking-header-container {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 35px;
-}
+@media screen and (max-width: 1550px) {
+  .coworking {
+    margin-left: 42.6px;
+    width: 795.2px;
+    height: 405.4px;
+    background: rgba(190, 218, 195, 0.7);
+    border-radius: 20px;
+    margin-bottom: 26.27px;
+  }
 
-.coworking-title {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 28px;
-  color: #000000;
-  margin-top: 26px;
-  margin-left: 54px;
-  margin-right: 16px;
-}
+  .coworking-header-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24.85px;
+  }
 
-.img-good-place {
-  margin-top: 34px;
+  .coworking-title {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19.9px;
+    color: #000000;
+    margin-top: 18.46px;
+    margin-left: 38.34px;
+    margin-right: 11.36px;
+  }
 
-  width: 22px;
-  height: 22px;
-}
+  .img-good-place {
+    margin-top: 24.1px;
 
-.coworking-title-container {
-  display: flex;
-}
+    width: 15.62px;
+    height: 15.62px;
+  }
 
-.coworking-rating-container {
-  display: flex;
-  margin-right: 64px;
-}
+  .coworking-title-container {
+    display: flex;
+  }
 
-.coworking-rating {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  margin-top: 33px;
-  margin-right: 12px;
-}
+  .coworking-rating-container {
+    display: flex;
+    margin-right: 45.44px;
+  }
 
-.img-star {
-  margin-top: 33px;
-}
+  .coworking-rating {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    margin-top: 23.43px;
+    margin-right: 8.52px;
+  }
 
-.coworking-info-container {
-  display: flex;
-}
+  .img-star {
+    margin-top: 23.43px;
+  }
 
-.coworking-image {
-  margin-left: 54px;
-  border-radius: 20px;
-  margin-right: 51px;
-}
+  .coworking-info-container {
+    display: flex;
+  }
 
-.coworking-description {
-  width: 460px;
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 300;
-  font-size: 24px;
-  line-height: 177.69%;
-  margin-bottom: 42px;
-}
+  .coworking-image img {
+    margin-left: 38.34px;
+    border-radius: 20px;
+    margin-right: 36.21px;
+    width: 340.8px;
+    height: 294.65px;
+  }
 
-.coworking-adress-container {
-  display: flex;
-  gap: 29px;
-  font-size: 20px;
-  margin-bottom: 28px;
-}
+  .coworking-description {
+    width: 326.6px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 126.16%;
+    margin-bottom: 29.8px;
+  }
 
-.coworking-time-container {
-  display: flex;
-  gap: 26px;
-  font-size: 20px;
-}
+  .coworking-adress-container {
+    display: flex;
+    gap: 20.6px;
+    font-size: 14px;
+    margin-bottom: 19.9px;
+  }
 
-.coworking-content {
-  position: relative;
-}
+  .coworking-time-container {
+    display: flex;
+    gap: 18.5px;
+    font-size: 14px;
+  }
 
-.coworking-map-and-favorite-container {
-  display: flex;
-  gap: 54px;
-  position: absolute;
-  bottom: 0;
-}
+  .coworking-content {
+    position: relative;
+  }
 
-.coworking-map-and-favorite-container img:hover {
-  opacity: 50%;
-}
+  .coworking-map-and-favorite-container {
+    display: flex;
+    gap: 38.34px;
+    position: absolute;
+    bottom: 0;
+  }
 
-.btn-like {
-  height: 21px;
-  margin-top: 20px;
-}
+  .coworking-map-and-favorite-container img:hover {
+    opacity: 50%;
+  }
 
-.coworking-map {
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
-  border-radius: 10px;
-  width: 275px;
-  height: 54px;
-  background: #E0E0D6;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 54px;
-  color: rgba(27, 31, 59, 0.4);
-  text-align: center;
+  .btn-like {
+    height: 14.9px;
+    margin-top: 14.2px;
+  }
+
+  .coworking-map {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+    width: 195.25px;
+    height: 38.34px;
+    background: #E0E0D6;
+    font-size: 10.65px;
+    font-weight: 600;
+    line-height: 38.34px;
+    color: rgba(27, 31, 59, 0.4);
+    text-align: center;
+  }
 }
