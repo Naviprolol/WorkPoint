@@ -179,45 +179,45 @@
   }
 }
 
-@media screen and (max-width: 1550px) {
+@media screen and (max-width: 1450px) {
   .count-coworkings {
     color: rgba(27, 31, 59, 0.8);
     font-weight: 700;
-    font-size: 13.5px;
-    margin-left: 463px;
-    margin-top: 37.6px;
-    margin-bottom: 13.5px;
+    font-size: calc(0.75*19px);
+    margin-left: calc(0.75*652px);
+    margin-top: calc(0.83*53px);
+    margin-bottom: calc(0.83*19px);
   }
 
   .banner-container {
-    width: 1136px;
-    height: 293px;
-    margin-left: 113px;
-    margin-top: 49.7px;
+    width: calc(0.75*1600px);
+    height: calc(0.83*413px);
+    margin-left: calc(0.75*160px);
+    margin-top: calc(0.83*70px);
     background-color: #E0E0D6;
     border-radius: 20px;
-    margin-bottom: 49.7px;
+    margin-bottom: calc(0.83*70px);
   }
 
   .banner-container p {
     font-weight: 700;
-    font-size: 34px;
-    padding-top: 30.5px;
+    font-size: calc(0.75*48px);
+    padding-top: calc(0.83*43px);
     text-align: center;
   }
 
   .search {
     display: flex;
-    width: 834px;
-    margin-left: 292px;
+    width: calc(0.75*1175px);
+    margin-left: calc(0.75*412px);
     justify-content: space-between;
   }
 
   .search-container {
     display: flex;
-    gap: 12px;
-    width: 612px;
-    height: 38.3px;
+    gap: calc(0.75*17px);
+    width: calc(0.75*862px);
+    height: calc(0.83*54px);
     background: #FBFBF5;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
@@ -226,65 +226,65 @@
   }
 
   .search-container-input {
-    width: 196px;
-    font-size: 11px;
+    width: calc(0.75*277px);
+    font-size: calc(0.75*15px);
     background: #FBFBF5;
     font-weight: 300;
   }
 
   .search-container img {
-    margin-left: 20px;
+    margin-left: calc(0.75*28px);
   }
 
   .btn-find-coworking {
-    width: 195px;
+    width: calc(0.75*275px);
     background: #E0E0D6;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
     font-weight: 600;
     color: rgba(27, 31, 59, 0.6);
-    font-size: 10.65px;
+    font-size: calc(0.75*15px);
   }
 
   .filter-container {
     background: rgba(190, 218, 195, 0.7);
     border-radius: 20px;
-    width: 297px;
-    height: 736.27px;
-    margin-left: 114px;
+    width: calc(0.75*419px);
+    height: calc(0.83*1037px);
+    margin-left: calc(0.75*161px);
   }
 
   .filter-container h1 {
     font-weight: 700;
-    font-size: 19.9px;
-    line-height: 27px;
-    padding-top: 39px;
-    padding-left: 39px;
-    margin-bottom: 18.46px;
+    font-size: calc(0.75*28px);
+    line-height: calc(0.83*38px);
+    padding-top: calc(0.83*55px);
+    padding-left: calc(0.75*56px);
+    margin-bottom: calc(0.83*26px);
   }
 
   .filter-labels {
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    gap: calc(0.75*4px);
   }
 
   .filter-labels h2 {
     font-weight: 600;
-    font-size: 17px;
-    line-height: 23.4px;
-    padding-left: 40px;
-    padding-bottom: 4.26px;
+    font-size: calc(0.75*24px);
+    line-height: calc(0.83*33px);
+    padding-left: calc(0.75*56px);
+    padding-bottom: calc(0.83*6px);
   }
 
   .filter-labels h3 {
     font-weight: 600;
-    font-size: 17px;
-    line-height: 23.4px;
+    font-size: calc(0.75*24px);
+    line-height: calc(0.83*33px);
   }
 
   .filter-parking {
-    margin-top: 11.36px;
+    margin-top: calc(0.83*16px);
   }
 
   .custom-radio {
@@ -297,35 +297,186 @@
     display: inline-flex;
     align-items: center;
     user-select: none;
-    font-size: 17px;
-    line-height: 126.16%;
+    font-size: calc(0.75*24px);
+    line-height: 177.69%;
   }
 
   .custom-radio+label::before {
     content: '';
     display: inline-block;
-    width: 16px;
-    height: 17.04px;
-    margin-right: 13.5px;
-    margin-left: 10.65px;
+    width: calc(0.75*22.6px);
+    height: calc(0.83*24px);
+    margin-right: calc(0.75*19px);
+    margin-left: calc(0.75*15px);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 100% 100%;
   }
 
   .coworking-type {
-    margin-top: 7.81px;
+    margin-top: calc(0.83*11px);
   }
 
   .coworking-time {
-    margin-top: 7.81px;
+    margin-top: calc(0.83*11px);
   }
 
   .filter-parking {
-    margin-bottom: 8.52px;
+    margin-bottom: calc(0.83*12px);
   }
 
   .filter-restzone {
-    margin-bottom: 8.52px;
+    margin-bottom: calc(0.83*12px);
+  }
+}
+
+@media screen and (max-width: 1370px) {
+  .count-coworkings {
+    color: rgba(27, 31, 59, 0.8);
+    font-weight: 700;
+    font-size: calc(0.71*19px);
+    margin-left: calc(0.71*652px);
+    margin-top: calc(0.71*53px);
+    margin-bottom: calc(0.71*19px);
+  }
+
+  .banner-container {
+    width: calc(0.71*1600px);
+    height: calc(0.71*413px);
+    margin-left: calc(0.71*160px);
+    margin-top: calc(0.71*70px);
+    background-color: #E0E0D6;
+    border-radius: 20px;
+    margin-bottom: calc(0.71*70px);
+  }
+
+  .banner-container p {
+    font-weight: 700;
+    font-size: calc(0.71*48px);
+    padding-top: calc(0.71*43px);
+    text-align: center;
+  }
+
+  .search {
+    display: flex;
+    width: calc(0.71*1175px);
+    margin-left: calc(0.71*412px);
+    justify-content: space-between;
+  }
+
+  .search-container {
+    display: flex;
+    gap: calc(0.71*17px);
+    width: calc(0.71*862px);
+    height: calc(0.71*54px);
+    background: #FBFBF5;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+    vertical-align: middle;
+    align-items: center;
+  }
+
+  .search-container-input {
+    width: calc(0.71*277px);
+    font-size: calc(0.71*15px);
+    background: #FBFBF5;
+    font-weight: 300;
+  }
+
+  .search-container img {
+    margin-left: calc(0.71*28px);
+  }
+
+  .btn-find-coworking {
+    width: calc(0.71*275px);
+    background: #E0E0D6;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+    font-weight: 600;
+    color: rgba(27, 31, 59, 0.6);
+    font-size: calc(0.71*15px);
+  }
+
+  .filter-container {
+    background: rgba(190, 218, 195, 0.7);
+    border-radius: 20px;
+    width: calc(0.71*419px);
+    height: calc(0.71*1037px);
+    margin-left: calc(0.71*161px);
+  }
+
+  .filter-container h1 {
+    font-weight: 700;
+    font-size: calc(0.71*28px);
+    line-height: calc(0.71*38px);
+    padding-top: calc(0.71*55px);
+    padding-left: calc(0.71*56px);
+    margin-bottom: calc(0.71*26px);
+  }
+
+  .filter-labels {
+    display: flex;
+    flex-direction: column;
+    gap: calc(0.71*4px);
+  }
+
+  .filter-labels h2 {
+    font-weight: 600;
+    font-size: calc(0.71*24px);
+    line-height: calc(0.71*33px);
+    padding-left: calc(0.71*56px);
+    padding-bottom: calc(0.71*6px);
+  }
+
+  .filter-labels h3 {
+    font-weight: 600;
+    font-size: calc(0.71*24px);
+    line-height: calc(0.71*33px);
+  }
+
+  .filter-parking {
+    margin-top: calc(0.71*16px);
+  }
+
+  .custom-radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  .custom-radio+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    font-size: calc(0.71*24px);
+    line-height: 177.69%;
+  }
+
+  .custom-radio+label::before {
+    content: '';
+    display: inline-block;
+    width: calc(0.71*22.6px);
+    height: calc(0.71*24px);
+    margin-right: calc(0.71*19px);
+    margin-left: calc(0.71*15px);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+  }
+
+  .coworking-type {
+    margin-top: calc(0.71*11px);
+  }
+
+  .coworking-time {
+    margin-top: calc(0.71*11px);
+  }
+
+  .filter-parking {
+    margin-bottom: calc(0.71*12px);
+  }
+
+  .filter-restzone {
+    margin-bottom: calc(0.71*12px);
   }
 }

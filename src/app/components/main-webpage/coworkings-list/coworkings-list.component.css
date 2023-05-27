@@ -123,38 +123,38 @@
   }
 }
 
-@media screen and (max-width: 1550px) {
+@media screen and (max-width: 1450px) {
   .coworking {
-    margin-left: 42.6px;
-    width: 795.2px;
-    height: 405.4px;
+    margin-left: calc(0.75*60px);
+    width: calc(0.75*1120px);
+    height: calc(0.83*571px);
     background: rgba(190, 218, 195, 0.7);
     border-radius: 20px;
-    margin-bottom: 26.27px;
+    margin-bottom: calc(0.83*37px);
   }
 
   .coworking-header-container {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 24.85px;
+    margin-bottom: calc(0.83*35px);
   }
 
   .coworking-title {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 19.9px;
+    font-size: calc(0.75*28px);
     color: #000000;
-    margin-top: 18.46px;
-    margin-left: 38.34px;
-    margin-right: 11.36px;
+    margin-top: calc(0.83*26px);
+    margin-left: calc(0.75*54px);
+    margin-right: calc(0.75*16px);
   }
 
   .img-good-place {
-    margin-top: 24.1px;
+    margin-top: calc(0.83*34px);
 
-    width: 15.62px;
-    height: 15.62px;
+    width: calc(0.75*22px);
+    height: calc(0.83*22px);
   }
 
   .coworking-title-container {
@@ -163,20 +163,20 @@
 
   .coworking-rating-container {
     display: flex;
-    margin-right: 45.44px;
+    margin-right: calc(0.75*64px);
   }
 
   .coworking-rating {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 17px;
-    margin-top: 23.43px;
-    margin-right: 8.52px;
+    font-size: calc(0.75*24px);
+    margin-top: calc(0.83*33px);
+    margin-right: calc(0.75*12px);
   }
 
   .img-star {
-    margin-top: 23.43px;
+    margin-top: calc(0.83*33px);
   }
 
   .coworking-info-container {
@@ -184,34 +184,34 @@
   }
 
   .coworking-image img {
-    margin-left: 38.34px;
+    margin-left: calc(0.75*54px);
     border-radius: 20px;
-    margin-right: 36.21px;
-    width: 340.8px;
-    height: 294.65px;
+    margin-right: calc(0.75*51px);
+    width: calc(0.75*480px);
+    height: calc(0.83*415px);
   }
 
   .coworking-description {
-    width: 326.6px;
+    width: calc(0.75*460px);
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 300;
-    font-size: 17px;
-    line-height: 126.16%;
-    margin-bottom: 29.8px;
+    font-size: calc(0.75*24px);
+    line-height: calc(0.83*177.69%);
+    margin-bottom: calc(0.83*42px);
   }
 
   .coworking-adress-container {
     display: flex;
-    gap: 20.6px;
-    font-size: 14px;
-    margin-bottom: 19.9px;
+    gap: calc(0.75*29px);
+    font-size: calc(0.75*20px);
+    margin-bottom: calc(0.83*28px);
   }
 
   .coworking-time-container {
     display: flex;
-    gap: 18.5px;
-    font-size: 14px;
+    gap: calc(0.75*26px);
+    font-size: calc(0.75*20px);
   }
 
   .coworking-content {
@@ -220,7 +220,7 @@
 
   .coworking-map-and-favorite-container {
     display: flex;
-    gap: 38.34px;
+    gap: calc(0.75*54px);
     position: absolute;
     bottom: 0;
   }
@@ -230,19 +230,144 @@
   }
 
   .btn-like {
-    height: 14.9px;
-    margin-top: 14.2px;
+    height: calc(0.83*21px);
+    margin-top: calc(0.83*20px);
   }
 
   .coworking-map {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
-    width: 195.25px;
-    height: 38.34px;
+    width: calc(0.75*275px);
+    height: calc(0.83*54px);
     background: #E0E0D6;
-    font-size: 10.65px;
+    font-size: calc(0.75*15px);
     font-weight: 600;
-    line-height: 38.34px;
+    line-height: calc(0.83*54px);
+    color: rgba(27, 31, 59, 0.4);
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1370px) {
+  .coworking {
+    margin-left: calc(0.71*60px);
+    width: calc(0.71*1120px);
+    height: calc(0.71*571px);
+    background: rgba(190, 218, 195, 0.7);
+    border-radius: 20px;
+    margin-bottom: calc(0.71*37px);
+  }
+
+  .coworking-header-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: calc(0.71*35px);
+  }
+
+  .coworking-title {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc(0.71*28px);
+    color: #000000;
+    margin-top: calc(0.71*26px);
+    margin-left: calc(0.71*54px);
+    margin-right: calc(0.71*16px);
+  }
+
+  .img-good-place {
+    margin-top: calc(0.71*34px);
+
+    width: calc(0.71*22px);
+    height: calc(0.71*22px);
+  }
+
+  .coworking-title-container {
+    display: flex;
+  }
+
+  .coworking-rating-container {
+    display: flex;
+    margin-right: calc(0.71*64px);
+  }
+
+  .coworking-rating {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc(0.71*24px);
+    margin-top: calc(0.71*33px);
+    margin-right: calc(0.71*12px);
+  }
+
+  .img-star {
+    margin-top: calc(0.71*33px);
+  }
+
+  .coworking-info-container {
+    display: flex;
+  }
+
+  .coworking-image img {
+    margin-left: calc(0.71*54px);
+    border-radius: 20px;
+    margin-right: calc(0.71*51px);
+    width: calc(0.71*480px);
+    height: calc(0.71*415px);
+  }
+
+  .coworking-description {
+    width: calc(0.71*460px);
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: calc(0.71*24px);
+    line-height: calc(0.71*177.69%);
+    margin-bottom: calc(0.71*42px);
+  }
+
+  .coworking-adress-container {
+    display: flex;
+    gap: calc(0.71*29px);
+    font-size: calc(0.71*20px);
+    margin-bottom: calc(0.71*28px);
+  }
+
+  .coworking-time-container {
+    display: flex;
+    gap: calc(0.71*26px);
+    font-size: calc(0.71*20px);
+  }
+
+  .coworking-content {
+    position: relative;
+  }
+
+  .coworking-map-and-favorite-container {
+    display: flex;
+    gap: calc(0.71*54px);
+    position: absolute;
+    bottom: 0;
+  }
+
+  .coworking-map-and-favorite-container img:hover {
+    opacity: 50%;
+  }
+
+  .btn-like {
+    height: calc(0.71*21px);
+    margin-top: calc(0.71*20px);
+  }
+
+  .coworking-map {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+    width: calc(0.71*275px);
+    height: calc(0.71*54px);
+    background: #E0E0D6;
+    font-size: calc(0.71*15px);
+    font-weight: 600;
+    line-height: calc(0.71*54px);
     color: rgba(27, 31, 59, 0.4);
     text-align: center;
   }

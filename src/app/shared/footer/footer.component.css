@@ -87,39 +87,39 @@
   }
 }
 
-@media screen and (max-width: 1550px) {
+@media screen and (max-width: 1450px) {
   .footer-container {
     display: flex;
     width: 100%;
-    height: 213px;
+    height: calc(0.83*300px);
     background: #E0E0D6;
   }
 
   .footer-logo-container {
-    padding-top: 56.09px;
-    padding-left: 113.6px;
-    margin-right: 168.27px;
+    padding-top: calc(0.83*79px);
+    padding-left: calc(0.75*160px);
+    margin-right: calc(0.75*237px);
   }
 
   .politics {
-    margin-top: 16.33px;
-    margin-bottom: 7.1px;
+    margin-top: calc(0.83*23px);
+    margin-bottom: calc(0.83*10px);
   }
 
   .footer-logo-container p {
-    font-size: 7.1px;
+    font-size: calc(0.75*10px);
     color: #FFFFFF;
   }
 
   .footer-part-one {
-    padding-top: 54.67px;
-    margin-right: 45.44px;
+    padding-top: calc(0.83*77px);
+    margin-right: calc(0.75*64px);
   }
 
   .footer-part-one li {
     font-weight: 300;
-    font-size: 10.65px;
-    margin-bottom: 9.23px;
+    font-size: calc(0.75*15px);
+    margin-bottom: calc(0.83*13px);
   }
 
   .footer-part-one li:last-child {
@@ -128,20 +128,20 @@
 
   .footer-part-one .main-page {
     font-weight: 400;
-    line-height: 21.3px;
-    font-size: 15.62px;
+    line-height: calc(0.83*30px);
+    font-size: calc(0.75*22px);
   }
 
   .footer-part-two {
-    padding-top: 54.67px;
-    font-size: 10.65px;
-    margin-right: 350px;
+    padding-top: calc(0.83*77px);
+    font-size: calc(0.75*15px);
+    margin-right: calc(0.75*493px);
   }
 
   .footer-part-two li {
     font-weight: 300;
-    font-size: 10.65px;
-    margin-bottom: 9.23px;
+    font-size: calc(0.75*15px);
+    margin-bottom: calc(0.83*13px);
   }
 
   .footer-part-two li:last-child {
@@ -150,19 +150,19 @@
 
   .footer-part-two .profile {
     font-weight: 400;
-    font-size: 15.65px;
-    line-height: 21.3px;
+    font-size: calc(0.75*22px);
+    line-height: calc(0.83*30px);
   }
 
   .footer-part-three {
-    padding-top: 54.67px;
-    font-size: 10.65px;
+    padding-top: calc(0.83*77px);
+    font-size: calc(0.75*15px);
   }
 
   .footer-part-three li {
     font-weight: 300;
-    font-size: 10.65px;
-    margin-bottom: 9.23px;
+    font-size: calc(0.75*15px);
+    margin-bottom: calc(0.83*13px);
   }
 
   .footer-part-three li:last-child {
@@ -171,7 +171,96 @@
 
   .footer-part-three .contacts {
     font-weight: 400;
-    font-size: 15.62px;
-    line-height: 21.3px;
+    font-size: calc(0.75*22px);
+    line-height: calc(0.83*30px);
+  }
+}
+
+@media screen and (max-width: 1370px) {
+  .footer-container {
+    display: flex;
+    width: 100%;
+    height: calc(0.71*300px);
+    background: #E0E0D6;
+  }
+
+  .footer-logo-container {
+    padding-top: calc(0.71*79px);
+    padding-left: calc(0.71*160px);
+    margin-right: calc(0.71*237px);
+  }
+
+  .politics {
+    margin-top: calc(0.71*23px);
+    margin-bottom: calc(0.71*10px);
+  }
+
+  .footer-logo-container p {
+    font-size: calc(0.71*10px);
+    color: #FFFFFF;
+  }
+
+  .footer-part-one {
+    padding-top: calc(0.71*77px);
+    margin-right: calc(0.71*64px);
+  }
+
+  .footer-part-one li {
+    font-weight: 300;
+    font-size: calc(0.71*15px);
+    margin-bottom: calc(0.71*13px);
+  }
+
+  .footer-part-one li:last-child {
+    margin-bottom: 0;
+  }
+
+  .footer-part-one .main-page {
+    font-weight: 400;
+    line-height: calc(0.71*30px);
+    font-size: calc(0.71*22px);
+  }
+
+  .footer-part-two {
+    padding-top: calc(0.71*77px);
+    font-size: calc(0.71*15px);
+    margin-right: calc(0.71*493px);
+  }
+
+  .footer-part-two li {
+    font-weight: 300;
+    font-size: calc(0.71*15px);
+    margin-bottom: calc(0.71*13px);
+  }
+
+  .footer-part-two li:last-child {
+    margin-bottom: 0;
+  }
+
+  .footer-part-two .profile {
+    font-weight: 400;
+    font-size: calc(0.71*22px);
+    line-height: calc(0.71*30px);
+  }
+
+  .footer-part-three {
+    padding-top: calc(0.71*77px);
+    font-size: calc(0.71*15px);
+  }
+
+  .footer-part-three li {
+    font-weight: 300;
+    font-size: calc(0.71*15px);
+    margin-bottom: calc(0.71*13px);
+  }
+
+  .footer-part-three li:last-child {
+    margin-bottom: 0;
+  }
+
+  .footer-part-three .contacts {
+    font-weight: 400;
+    font-size: calc(0.71*22px);
+    line-height: calc(0.71*30px);
   }
 }
