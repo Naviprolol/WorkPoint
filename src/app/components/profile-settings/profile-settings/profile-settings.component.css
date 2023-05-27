@@ -1,3 +1,11 @@
+/* @media screen and (max-width: 5000px) {
+
+}
+
+@media screen and (max-width: 1550px) {
+
+} */
+
 .return-to-main {
   display: flex;
   width: 180px;
@@ -183,11 +191,6 @@ input {
   font-weight: 600;
   color: rgba(27, 31, 59, 0.6);
 }
-
-
-
-
-
 
 .block {
   float: left;
