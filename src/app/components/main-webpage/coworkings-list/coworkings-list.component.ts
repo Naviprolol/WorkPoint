@@ -20,7 +20,7 @@ export class CoworkingsListComponent implements OnInit {
     let photo = this.coworking.photo + ''
     // this.coworking.photo = photo.split('#')
     // this.coworking.photo.pop()
-    // console.log(this.coworking.photo);
+    // console.log(this.coworking.photo)
     this.photos = this.coworking.photo.split('#');
 
     if (this.coworking.description.length > 164) {
