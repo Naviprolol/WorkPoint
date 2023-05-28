@@ -31,6 +31,4 @@ export class CoworkingsListComponent implements OnInit {
     }
   }
 
-  // constructor(private coworkingsService: CoworkingsService) {
-
 }
