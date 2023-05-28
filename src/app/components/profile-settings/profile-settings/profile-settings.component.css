@@ -199,6 +199,7 @@
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
     font-weight: 600;
+    font-size: 15px;
     color: rgba(27, 31, 59, 0.6);
   }
 
@@ -525,6 +526,7 @@
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
     font-weight: 600;
+    font-size: calc(0.75*15px);
     color: rgba(27, 31, 59, 0.6);
   }
 
@@ -638,7 +640,7 @@
 
   .goodSuccessText {
     color: green;
-    margin-left: 950px;
+    margin-left: calc(0.75*950px);
   }
 
   .button-flex {
@@ -846,6 +848,7 @@
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
     font-weight: 600;
+    font-size: calc(0.71*15px);
     color: rgba(27, 31, 59, 0.6);
   }
 
@@ -959,7 +962,7 @@
 
   .goodSuccessText {
     color: green;
-    margin-left: 950px;
+    margin-left: calc(0.71*950px);
   }
 
   .button-flex {
