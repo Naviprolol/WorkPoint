@@ -38,10 +38,11 @@ export class CoworkingItemComponent implements OnInit {
     const routeParams = this.route.snapshot.paramMap
     const coworkingIdFromRoute = String(routeParams.get('id'));
 
+
     this.coworkingsService.getCoworkingById(coworkingIdFromRoute).subscribe(coworking => {
       this.coworking = coworking
-      this.coworking.photo = this.coworking.photo.split('# ')
-      this.coworking.photo.pop()
+      this.coworking.photo = this.coworking.photo.split('#')
+      console.log(this.coworking.photo)
       this.tags = this.coworking.tags
     })
 

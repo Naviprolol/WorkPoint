@@ -15,11 +15,11 @@
   <div class="coworking-info-container">
 
     <div class="coworking-image">
-      <img src="{{coworking.photo[0]}}" alt="img">
+      <img src="{{photos[0]}}" alt="img">
     </div>
 
     <div class="coworking-content">
-      <p class="coworking-description"> {{coworking.description}} </p>
+      <p class="coworking-description"> {{newDescription}} </p>
       <div class="coworking-adress-container">
         <img src="assets/img/coworking-adress.svg" alt="coworking-adress">
         <p> {{coworking.address}} </p>
@@ -34,10 +34,10 @@
         <a class="coworking-map" [routerLink]="['/main', coworking.id]">
           <p>Посмотреть на карте</p>
         </a>
-        <button class="btn-like" (click)='like = !like'>
+        <!-- <button class="btn-like" (click)='like = !like'>
           <img src="assets/img/coworking-favorite.svg" width="22.85" height="20.23" alt="coworking-favorite"
             [ngStyle]="{'background-color': like ? 'red' : ''}">
-        </button>
+        </button> -->
       </div>
 
     </div>

@@ -1,123 +1,120 @@
 <div class="wrapper">
-  <div class="content">
-    <app-header></app-header>
-    <div class="return-to-main">
-      <a routerLink="/">
-        <img src="assets/img/return-button.svg" alt="return-button" class="return-button" width="16" height="16">
-      </a>
-      <span>Вернуться к поиску</span>
+  <app-header></app-header>
+  <div class="return-to-main">
+    <a routerLink="/">
+      <img src="assets/img/return-button.svg" alt="return-button" class="return-button" width="16" height="16">
+    </a>
+    <span>Вернуться к поиску</span>
+  </div>
+
+  <div class="main-top-content" *ngIf="user">
+
+    <div class="profile-navigation">
+      <ul>
+        <li><a routerLink="/favourites">Избранное</a></li>
+        <li><a routerLink="/profile">Настройки профиля</a></li>
+        <li><a routerLink="/place-settings">Настройки мест</a></li>
+        <li *ngIf="user.role_id == 2"><a routerLink="/ad-business">Продвижение</a></li>
+      </ul>
     </div>
 
-    <div class="main-top-content" *ngIf="user">
+    <form class="place-information" [formGroup]="form" (ngSubmit)="onSubmit()">
 
-      <div class="profile-navigation">
-        <ul>
-          <li><a routerLink="/favourites">Избранное</a></li>
-          <li><a routerLink="/profile">Настройки профиля</a></li>
-          <li><a routerLink="/place-settings">Настройки мест</a></li>
-          <li *ngIf="user.role_id == 2"><a routerLink="/ad-business">Продвижение</a></li>
-        </ul>
-      </div>
+      <h1 class="title">
+        Продвижение
+      </h1>
 
-      <form class="place-information" [formGroup]="form" (ngSubmit)="onSubmit()">
+      <p class="description">
+        В данном разделе вы можете приобрести рекламу, которая повысит посещаемость и увеличит просмотры вашего
+        заведения
+      </p>
 
-        <h1 class="title">
-          Продвижение
-        </h1>
+      <h2 class="subtitle">
+        Оставьте заявку
+      </h2>
 
-        <p class="description">
-          В данном разделе вы можете приобрести рекламу, которая повысит посещаемость и увеличит просмотры вашего
-          заведения
-        </p>
+      <div>
+        <div class="input-field name" [ngClass]="{'invalid': form.get('name')?.invalid && form.get('name')?.touched}">
+          <input id="name" placeholder="Название заведения" type="text" formControlName="name">
+          <label for="name"></label>
+          <span class="helper-text red-text" *ngIf="form.get('name')?.invalid && form.get('name')?.touched">
+            <span *ngIf="form.get('name')?.errors?.['required']">Обязательное поле</span>
+          </span>
 
-        <h2 class="subtitle">
-          Оставьте заявку
-        </h2>
-
-        <div>
-          <div class="input-field name" [ngClass]="{'invalid': form.get('name')?.invalid && form.get('name')?.touched}">
-            <input id="name" placeholder="Название заведения" type="text" formControlName="name">
-            <label for="name"></label>
-            <span class="helper-text red-text" *ngIf="form.get('name')?.invalid && form.get('name')?.touched">
-              <span *ngIf="form.get('name')?.errors?.['required']">Обязательное поле</span>
-            </span>
-
-          </div>
-
-          <div class="input-field city" [ngClass]="{'invalid': form.get('city')?.invalid && form.get('city')?.touched}">
-            <input id="city" placeholder="Город" type="text" formControlName="city">
-            <label for="city"></label>
-            <span class="helper-text red-text" *ngIf="form.get('city')?.invalid && form.get('city')?.touched">
-              <span *ngIf="form.get('city')?.errors?.['required']">Обязательное поле</span>
-            </span>
-          </div>
-
-          <div class="flex">
-            <div class="input-field address"
-              [ngClass]="{'invalid': form.get('address')?.invalid && form.get('address')?.touched}">
-              <input id="address" placeholder="Адрес" type="text" formControlName="address">
-              <label for="address"></label>
-              <span class="helper-text red-text" *ngIf="form.get('address')?.invalid && form.get('address')?.touched">
-                <span *ngIf="form.get('address')?.errors?.['required']">Обязательное поле</span>
-              </span>
-            </div>
-          </div>
         </div>
 
-        <h3 class="subtitle2">
-          Количество дней
-        </h3>
-
-        <div style="display: flex; margin-bottom: 38px;">
-          <div class="card" style="margin-right: 50px;">
-            <div class="radio">
-              <input type="radio" class="custom-radio custom-radio_single" id="1day" name="price" value="На 1 день"
-                formControlName="price">
-              <label for="1day">На 1 день</label>
-            </div>
-            <p class="card__description">
-              Позволит увеличить просмотры вашего заведения и повысит посещаемость
-            </p>
-            <p class="price">
-              199р
-            </p>
-          </div>
-
-          <div class="card">
-            <div class="radio">
-              <input type="radio" class="custom-radio custom-radio_single" id="7days" name="price" value="На 7 дней"
-                formControlName="price">
-              <label for="7days">На 7 дней</label>
-            </div>
-            <p class="card__description">
-              Позволит увеличить просмотры вашего заведения и повысит посещаемость
-            </p>
-            <p class="price">
-              199р
-            </p>
-          </div>
-        </div>
-
-        <div class="input-field email"
-          [ngClass]="{'invalid': form.get('email')?.invalid && form.get('email')?.touched}">
-          <input id="email" placeholder="Электронная почта" type="text" formControlName="email">
-          <label for="email"></label>
-          <span class="helper-text red-text" *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+        <div class="input-field city" [ngClass]="{'invalid': form.get('city')?.invalid && form.get('city')?.touched}">
+          <input id="city" placeholder="Город" type="text" formControlName="city">
+          <label for="city"></label>
+          <span class="helper-text red-text" *ngIf="form.get('city')?.invalid && form.get('city')?.touched">
             <span *ngIf="form.get('city')?.errors?.['required']">Обязательное поле</span>
           </span>
         </div>
 
-        <button class="button-send" type="submit" [disabled]="form.invalid || form.disabled" onclick="onClick()">
-          <!-- Доделать вывод плохого сообщения -->
-          Отправить заявку
-        </button>
+        <div class="flex">
+          <div class="input-field address"
+            [ngClass]="{'invalid': form.get('address')?.invalid && form.get('address')?.touched}">
+            <input id="address" placeholder="Адрес" type="text" formControlName="address">
+            <label for="address"></label>
+            <span class="helper-text red-text" *ngIf="form.get('address')?.invalid && form.get('address')?.touched">
+              <span *ngIf="form.get('address')?.errors?.['required']">Обязательное поле</span>
+            </span>
+          </div>
+        </div>
+      </div>
 
-        <p *ngIf="accessText === 'Письмо успешно отправлено!'" class="goodAccessText">{{accessText}}</p>
+      <h3 class="subtitle2">
+        Количество дней
+      </h3>
 
-      </form>
+      <div style="display: flex; margin-bottom: 38px;">
+        <div class="card" style="margin-right: 50px;">
+          <div class="radio">
+            <input type="radio" class="custom-radio custom-radio_single" id="1day" name="price" value="На 1 день"
+              formControlName="price">
+            <label for="1day">На 1 день</label>
+          </div>
+          <p class="card__description">
+            Позволит увеличить просмотры вашего заведения и повысит посещаемость
+          </p>
+          <p class="price">
+            199р
+          </p>
+        </div>
 
-    </div>
+        <div class="card">
+          <div class="radio">
+            <input type="radio" class="custom-radio custom-radio_single" id="7days" name="price" value="На 7 дней"
+              formControlName="price">
+            <label for="7days">На 7 дней</label>
+          </div>
+          <p class="card__description">
+            Позволит увеличить просмотры вашего заведения и повысит посещаемость
+          </p>
+          <p class="price">
+            199р
+          </p>
+        </div>
+      </div>
+
+      <div class="input-field email" [ngClass]="{'invalid': form.get('email')?.invalid && form.get('email')?.touched}">
+        <input id="email" placeholder="Электронная почта" type="text" formControlName="email">
+        <label for="email"></label>
+        <span class="helper-text red-text" *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+          <span *ngIf="form.get('city')?.errors?.['required']">Обязательное поле</span>
+        </span>
+      </div>
+
+      <button class="button-send" type="submit" [disabled]="form.invalid || form.disabled" onclick="onClick()">
+        <!-- Доделать вывод плохого сообщения -->
+        Отправить заявку
+      </button>
+
+      <p *ngIf="accessText === 'Письмо успешно отправлено!'" class="goodAccessText">{{accessText}}</p>
+
+    </form>
 
   </div>
-  <app-footer></app-footer>
+
 </div>
+<app-footer></app-footer>
