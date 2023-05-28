@@ -30,7 +30,7 @@ export class ProfileSettingsComponent implements OnInit {
 
     this.userService.getUserByToken().subscribe(user => {
       this.user = user
-      console.log('user', this.user.role_id)
+      console.log('user', this.user.role_id);
     });
 
     this.form = new FormGroup({
