@@ -20,7 +20,9 @@
     </div>
 
     <div class="top-information">
-      <img src="{{user.photo_user}}" alt="profile" width="150" height="150" onerror="this.src='assets/img/logo.svg'">
+      <div class="photo-container">
+        <img src="{{user.photo_user}}" alt="profile" onerror="this.src='assets/img/logo.svg'">
+      </div>
       <ul>
 
         <h2>{{user.name + ' ' + user.surname}}</h2>
@@ -31,7 +33,7 @@
   </div>
 
   <div class="progress-information">
-    <div class="donut-chart-block block">
+    <!-- <div class="donut-chart-block block">
       <div class="donut-chart">
         <div id="section1" class="clip">
           <div class="item"></div>
@@ -46,7 +48,7 @@
           <span></span>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <span class="progress-information__span">
       Добавь ещё одно место и получи подарок
