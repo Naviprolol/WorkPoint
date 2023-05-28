@@ -11,24 +11,26 @@ export class CoworkingsListComponent implements OnInit {
 
   @Input() coworking: ICoworking
   like = false
+  newDescription: string
+  photos: any
 
   constructor() { }
 
   ngOnInit(): void {
     let photo = this.coworking.photo + ''
-    this.coworking.photo = photo.split('# ')
+    // this.coworking.photo = photo.split('#')
     // this.coworking.photo.pop()
     // console.log(this.coworking.photo);
+    this.photos = this.coworking.photo.split('#')
+
+    if (this.coworking.description.length > 164) {
+      this.newDescription = this.coworking.description.substring(0, 164) + '...'
+    }
+    else {
+      this.newDescription = this.coworking.description
+    }
   }
 
   // constructor(private coworkingsService: CoworkingsService) {
-
-  // }
-  // ngOnInit(): void {
-  //   this.coworkingsService.getAll().subscribe(coworkings => {
-  //     this.coworkings = coworkings
-  //     console.log('Coworking', coworkings)
-  //   })
-  // }
 
 }

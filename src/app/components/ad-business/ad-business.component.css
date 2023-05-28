@@ -19,13 +19,10 @@
 }
 
 .wrapper {
-  min-height: 100%;
+  min-height: calc(100vh - 150px);
+  /* 150px - отступ сверху футера */
   display: flex;
   flex-direction: column;
-}
-
-.content {
-  flex: 1;
 }
 
 .main-top-content {

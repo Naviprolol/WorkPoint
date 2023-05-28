@@ -199,3 +199,8 @@ input,
 select {
   vertical-align: middle;
 }
+
+html,
+body {
+  height: 100%;
+}

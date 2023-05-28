@@ -53,6 +53,14 @@
     color: #000000;
   }
 
+  .wait-information {
+    width: 1300px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 38px;
+    color: red;
+  }
+
   .top-information__card {
     width: 1070px;
     height: 571px;
@@ -117,6 +125,14 @@
     color: #000000;
   }
 
+  .wait-information {
+    width: calc(0.75*1300px);
+    font-weight: 700;
+    font-size: calc(0.75*24px);
+    line-height: calc(0.83*38px);
+    color: red;
+  }
+
   .top-information__card {
     width: calc(0.75*1070px);
     height: calc(0.83*571px);
@@ -179,6 +195,14 @@
     font-size: calc(0.71*28px);
     line-height: calc(0.71*38px);
     color: #000000;
+  }
+
+  .wait-information {
+    width: calc(0.71*1300px);
+    font-weight: 700;
+    font-size: calc(0.71*24px);
+    line-height: calc(0.71*38px);
+    color: red;
   }
 
   .top-information__card {
