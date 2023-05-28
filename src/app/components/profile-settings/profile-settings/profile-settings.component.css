@@ -374,8 +374,8 @@
 
   .photo-container {
     position: relative;
-    width: calc(0.75*150px);
-    height: 150px;
+    width: calc(0.83*150px);
+    height: calc(0.83*150px);
     margin-right: calc(0.75*42px);
     border-radius: 50%;
     overflow: hidden;
@@ -697,7 +697,7 @@
   .photo-container {
     position: relative;
     width: calc(0.71*150px);
-    height: 150px;
+    height: calc(0.71*150px);
     margin-right: calc(0.71*42px);
     border-radius: 50%;
     overflow: hidden;
