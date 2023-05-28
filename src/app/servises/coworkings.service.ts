@@ -74,7 +74,7 @@ export class CoworkingsService {
     let formData1 = new FormData();
     formData1.append('payload', JSON.stringify(data))
     formData1.append('files', photo)
-    console.log(formData1.get('file'))
+    console.log(formData1.get('files'))
 
     return this.http.post<ICoworking>('https://1506815-cq40245.tw1.ru/places/upload_place', formData1, { headers })
   }

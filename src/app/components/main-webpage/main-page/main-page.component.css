@@ -43,9 +43,13 @@
     height: 413px;
     margin-left: 160px;
     margin-top: 70px;
-    background-color: #E0E0D6;
     border-radius: 20px;
-    margin-bottom: 70px;
+    margin-bottom: 140px;
+  }
+
+  .banner {
+    width: 1600px;
+    height: 413px;
   }
 
   .banner-container p {
@@ -194,9 +198,8 @@
     height: calc(0.83*413px);
     margin-left: calc(0.75*160px);
     margin-top: calc(0.83*70px);
-    background-color: #E0E0D6;
     border-radius: 20px;
-    margin-bottom: calc(0.83*70px);
+    margin-bottom: calc(0.83*140px);
   }
 
   .banner-container p {
@@ -204,6 +207,11 @@
     font-size: calc(0.75*48px);
     padding-top: calc(0.83*43px);
     text-align: center;
+  }
+
+  .banner {
+    width: calc(0.75*1600px);
+    height: calc(0.83*413px);
   }
 
   .search {
@@ -345,9 +353,8 @@
     height: calc(0.71*413px);
     margin-left: calc(0.71*160px);
     margin-top: calc(0.71*70px);
-    background-color: #E0E0D6;
     border-radius: 20px;
-    margin-bottom: calc(0.71*70px);
+    margin-bottom: calc(0.71*140px);
   }
 
   .banner-container p {
@@ -355,6 +362,11 @@
     font-size: calc(0.71*48px);
     padding-top: calc(0.71*43px);
     text-align: center;
+  }
+
+  .banner {
+    width: calc(0.71*1600px);
+    height: calc(0.71*413px);
   }
 
   .search {

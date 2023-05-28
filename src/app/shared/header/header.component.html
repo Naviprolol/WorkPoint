@@ -11,19 +11,19 @@
   <div class="header-right-side">
     <button type="button" class="btn-add-coworking" routerLink="/main/add">Добавить место</button>
 
-    <button type="button" class="btn-notification">
+    <!-- <button type="button" class="btn-notification">
       <img src="assets/img/notification.svg" alt="notification" class="btn-notification-img">
-    </button>
+    </button> -->
 
     <a routerLink="/profile" class="profile-img">
-      <img src="assets/img/profile.png" alt="profile" class="profile-img-img">
+      <img src="{{user.photo_user}}" alt="profile" class="profile-img-img" *ngIf="user"
+        onerror="this.src='assets/img/logo.svg'">
     </a>
 
     <div class="dropdown">
 
-      <div *ngIf="user">
-        <p class="profile-name">{{user.name + ' ' + user.surname}}</p>
-      </div>
+      <p class="profile-name" *ngIf="user">{{user.name + ' ' + user.surname}}</p>
+      <button class="profile-name" *ngIf="!user" routerLink="/registration">Зарегистрироваться</button>
 
       <div class="dropdown-menu" [ngClass]="{
       'show': ifClicked
@@ -42,7 +42,6 @@
       <button class="btn-settings" (click)="ifClicked = !ifClicked">
         <img src="assets/img/settings.svg" alt="settings" class="btn-settings-img">
       </button>
-
     </div>
 
   </div>

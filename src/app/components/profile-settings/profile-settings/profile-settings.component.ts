@@ -16,6 +16,7 @@ export class ProfileSettingsComponent implements OnInit {
 
   form: FormGroup
   user: User
+  successText: string
 
   constructor(
     private coworkingsService: CoworkingsService,
@@ -57,6 +58,21 @@ export class ProfileSettingsComponent implements OnInit {
         this.user = user
         console.log('Изменения сохранены')
         this.form.enable()
+      },
+      error => {
+        console.log('ERRRRROR!')
+        console.log(this.user)
+        this.form.enable()
+      }
+    )
+  }
+
+  onSubmitBusiness() {
+    this.userService.editRole(2).subscribe(
+      user => {
+        this.user.role_id = user.role_id
+        this.successText = 'Вы успешно перешли на бизнес-аккаунт!'
+        console.log('Изменения сохранены')
       },
       error => {
         console.log('ERRRRROR!')

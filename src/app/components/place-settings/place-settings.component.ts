@@ -10,7 +10,7 @@ import { UserService } from 'src/app/servises/user.service';
   styleUrls: ['./place-settings.component.css']
 })
 export class PlaceSettingsComponent implements OnInit {
-
+  user: User
   userCoworkings: ICoworking[] = []
 
   constructor(
@@ -19,6 +19,10 @@ export class PlaceSettingsComponent implements OnInit {
     private userService: UserService) { }
 
   ngOnInit() {
+
+    this.userService.getUserByToken().subscribe(user => {
+      this.user = user
+    });
 
     this.coworkingsService.getCoworkingsByToken().subscribe(coworkings => {
       this.userCoworkings = coworkings

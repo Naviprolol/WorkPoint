@@ -1,6 +1,6 @@
 <div class="header-container">
   <div class="logo-img1"></div>
-  <span>WorkPoint</span>
+  <a routerLink='/main'>WorkPoint</a>
 </div>
 
 <div class="container-registration">
@@ -63,13 +63,13 @@
         <div class="choose-account">Выбери тип аккаунта</div>
 
         <div class="radio">
-          <input type="radio" class="custom-radio custom-radio_single first" id="basic" name="account" value=1
+          <input type="radio" class="custom-radio custom-radio_single first" id="basic" name="role_id" value=1
             formControlName="role_id">
           <label for="basic">Обычный пользователь</label>
         </div>
 
         <div class="radio">
-          <input type="radio" class="custom-radio custom-radio_single second" id="bussiness" name="account" value=2
+          <input type="radio" class="custom-radio custom-radio_single second" id="bussiness" name="role_id" value=2
             formControlName="role_id">
           <label for="bussiness">Бизнес-аккаунт</label>
           <br>

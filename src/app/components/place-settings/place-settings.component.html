@@ -1,12 +1,20 @@
-<!DOCTYPE html>
 <app-header></app-header>
-<div class="main-top-content">
+
+<div class="return-to-main">
+  <a routerLink="/">
+    <img src="assets/img/return-button.svg" alt="return-button" class="return-button" width="16" height="16">
+  </a>
+  <span>Вернуться к поиску</span>
+</div>
+
+<div class="main-top-content" *ngIf="user">
 
   <div class="profile-navigation">
     <ul>
-      <li>Избранное</li>
-      <li>Настройки профиля</li>
-      <li>Настройки мест</li>
+      <li><a routerLink="/favourites">Избранное</a></li>
+      <li><a routerLink="/profile">Настройки профиля</a></li>
+      <li><a routerLink="/place-settings">Настройки мест</a></li>
+      <li *ngIf="user.role_id == 2"><a routerLink="/ad-business">Продвижение</a></li>
     </ul>
   </div>
 
@@ -19,7 +27,7 @@
       В данном разделе вы также можете отследить статистику вашего заведения
     </p>
 
-    <div class="explanations">
+    <div class="explanations" *ngIf="userCoworkings.length > 0">
       <li class="explanations-li">
         Название
       </li>
@@ -65,33 +73,6 @@
 
         </div>
       </li>
-      <!-- <li class="card-li">
-        <div class="card">
-          <div class="first-block__card">
-            <p class="card-title">
-              Simple coffee
-            </p>
-            <p class="adress">
-              Проспект Ленина, 46
-            </p>
-          </div>
-
-          <div class="second-block__card">
-            <p class="number">
-              50
-            </p>
-          </div>
-
-          <div class="third-block__card">
-            <p class="number">
-              50
-              <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M7.37945 11.3741C6.98228 11.7646 6.33833 11.7646 5.94115 11.3741L1.19466 6.7071C0.797478 6.31657 0.797478 5.68341 1.19466 5.29289C1.59183 4.90236 2.23578 4.90236 2.63296 5.29289L5.64327 8.25278L5.64327 0.999992C5.64327 0.447707 6.09861 -7.62939e-06 6.6603 -7.62939e-06C7.22199 -7.62939e-06 7.67733 0.447707 7.67733 0.999992L7.67733 8.25278L10.6876 5.29289C11.0848 4.90236 11.7288 4.90236 12.1259 5.29289C12.5231 5.68341 12.5231 6.31657 12.1259 6.7071L7.37945 11.3741Z" fill="#DD4C1E"/>
-              </svg>
-            </p>
-          </div>
-        </div>
-      </li> -->
     </ul>
 
   </div>

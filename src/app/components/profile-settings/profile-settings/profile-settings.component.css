@@ -299,3 +299,12 @@ input {
   width: 8px;
   border-radius: 10px;
 }
+
+.goodSuccessText {
+  color: green;
+  margin-left: 950px;
+}
+
+.button-flex {
+  display: flex;
+}

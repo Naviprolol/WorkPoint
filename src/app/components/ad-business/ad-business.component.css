@@ -18,6 +18,16 @@
   color: rgba(27, 31, 59, 0.65);
 }
 
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+}
+
 .main-top-content {
   display: flex;
   margin-left: 202px;
@@ -40,14 +50,14 @@
   margin-bottom: 0;
 }
 
-.title{
+.title {
   font-weight: 700;
   font-size: 28px;
   line-height: 38px;
   margin-bottom: 32px;
 }
 
-.description{
+.description {
   display: inline-block;
   font-weight: 400;
   font-size: 24px;
@@ -56,7 +66,7 @@
   margin-bottom: 30px;
 }
 
-.subtitle{
+.subtitle {
   font-weight: 600;
   font-size: 26px;
   line-height: 35px;
@@ -64,7 +74,7 @@
   margin-bottom: 39px;
 }
 
-.subtitle2{
+.subtitle2 {
   margin-top: 30px;
   margin-bottom: 24px;
   font-weight: 600;
@@ -155,7 +165,7 @@ input {
   background-image: url("..//..//..//assets/img/filter-single-default.svg");
 }
 
-.card{
+.card {
   padding-top: 19px;
   padding-left: 29px;
   width: 309.51px;
@@ -164,27 +174,27 @@ input {
   border-radius: 20px;
 }
 
-label{
+label {
   font-weight: 600;
   font-size: 20px;
   line-height: 36px;
   color: #000000;
 }
 
-.card__description{
+.card__description {
   font-weight: 300;
   font-size: 15px;
-  line-height:27px;
+  line-height: 27px;
   color: #000000;
   max-width: 276px;
   margin-top: 21px;
 
 }
 
-.price{
+.price {
   font-weight: 600;
   font-size: 20px;
-  line-height:36px;
+  line-height: 36px;
   color: #000000;
   margin-left: 30%;
 }
@@ -199,4 +209,7 @@ label{
   color: rgba(27, 31, 59, 0.4);
 }
 
-
+.goodAccessText {
+  color: green;
+  margin-top: 30px;
+}

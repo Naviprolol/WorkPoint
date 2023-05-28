@@ -13,7 +13,7 @@ import { UserService } from 'src/app/servises/user.service';
 export class HeaderComponent implements OnInit {
 
   ifClicked = false;
-  user: any;
+  user: User;
 
   constructor(
     private auth: AuthService,
@@ -26,7 +26,6 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.userService.getUserByToken().subscribe(user => {
       this.user = user
-      console.log('user', this.user.role_id)
     });
   }
 

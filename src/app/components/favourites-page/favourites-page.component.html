@@ -8,15 +8,14 @@
   <span>Вернуться к поиску</span>
 </div>
 
-<div class="main-top-content">
+<div class="main-top-content" *ngIf="user">
 
   <div class="profile-navigation">
     <ul>
-      <a routerLink="/favourites">
-        <li>Избранное</li>
-      </a>
-      <li>Настройки профиля</li>
-      <li>Настройки мест</li>
+      <li><a routerLink="/favourites">Избранное</a></li>
+      <li><a routerLink="/profile">Настройки профиля</a></li>
+      <li><a routerLink="/place-settings">Настройки мест</a></li>
+      <li *ngIf="user.role_id == 2"><a routerLink="/ad-business">Продвижение</a></li>
     </ul>
   </div>
 
