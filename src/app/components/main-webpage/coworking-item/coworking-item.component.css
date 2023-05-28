@@ -1,271 +1,276 @@
-@media screen and (max-width: 5000px){
-.line {
-  position: absolute;
-  height: 791px;
-  left: 1266.71px;
-  top: 950px;
-  border: 1px solid #DDDFE0;
-  box-shadow: inset 0px -1px 0px rgba(221, 223, 224, 0.7);
+@media screen and (max-width: 5000px) {
+  .line {
+    position: absolute;
+    height: 791px;
+    left: 1266.71px;
+    top: 950px;
+    border: 1px solid #DDDFE0;
+    box-shadow: inset 0px -1px 0px rgba(221, 223, 224, 0.7);
+  }
+
+  .return {
+    margin-left: 164px;
+    margin-top: 18px;
+    margin-bottom: 68px;
+    font-size: 15px;
+    line-height: 20px;
+    color: rgba(27, 31, 59, 0.65);
+  }
+
+  .return img {
+    padding-right: 14px;
+  }
+
+  .information {
+    margin-left: 280px;
+  }
+
+  .main-information {
+    width: 1360px;
+    margin-bottom: 43px;
+  }
+
+  .title-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 44px;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+    color: #000000;
+    margin-right: 5px;
+  }
+
+  .img-good-place {
+    margin-right: 27px;
+  }
+
+  .coworking-rating {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 177.69%;
+    margin-right: 11px;
+  }
+
+  .photo-container {
+    display: flex;
+    width: 1320px;
+    height: 522px;
+    margin-bottom: 55px;
+  }
+
+  .first-photo {
+    width: 950px;
+    height: 522px;
+    border-radius: 20px;
+  }
+
+  .second-photo {
+    margin-left: 52px;
+    width: 310px;
+    height: 250px;
+    border-radius: 20px;
+    margin-bottom: 21px;
+  }
+
+  .third-photo {
+    margin-left: 52px;
+    width: 310px;
+    height: 250px;
+    border-radius: 20px;
+  }
+
+  .first-photo img {
+    border-radius: 20px;
+  }
+
+  .flex-description {
+    display: flex;
+    gap: 54px;
+  }
+
+  .left-side {
+    width: 962px;
+  }
+
+  .coworking-description {
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 177.69%;
+    margin-bottom: 5px;
+  }
+
+  .coworking-map p {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    margin-bottom: 38px;
+  }
+
+  .coworking-map .map {
+    margin-bottom: 63px;
+  }
+
+  .map-img {
+    width: 838px;
+    height: 571px;
+  }
+
+  .right-side {
+    width: 345px;
+    margin-top: 43px;
+  }
+
+  .coworking-adress-container {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 177.69%;
+    margin-bottom: 15px;
+  }
+
+  .coworking-time-container {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 177.69%;
+    margin-bottom: 70px;
+  }
+
+  .tags {
+    margin-bottom: 70px;
+  }
+
+  .tags p {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    margin-bottom: 27px;
+  }
+
+  .coworking-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .coworking-tag {
+    text-align: center;
+    min-width: 80px;
+    max-width: 300px;
+    font-size: 20px;
+    line-height: 177.69%;
+    background: #E0E0D6;
+    border-radius: 20px;
+  }
+
+  .contacts p {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    margin-bottom: 37px;
+  }
+
+  .phone-information {
+    display: flex;
+    gap: 22.5px;
+    align-items: center;
+  }
+
+  .phone-information span {
+    font-size: 20px;
+    line-height: 177.69%;
+  }
+
+  .add-review {
+    width: 1147px;
+    margin-bottom: 100px;
+  }
+
+  .reviews-title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    margin-bottom: 26px;
+  }
+
+  .add-rating {
+    display: flex;
+  }
+
+  .review-input-field {
+    width: 1150px;
+    background: rgba(190, 218, 195, 0.7);
+    border-radius: 10px;
+    height: 62px;
+    margin-bottom: 35px;
+  }
+
+  .review-input-field input {
+    width: 100%;
+    height: 100%;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 177.69%;
+    background: inherit;
+    border-radius: 10px;
+  }
+
+  .btn-review {
+    width: 250px;
+    height: 54px;
+    background: #E0E0D6;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+    margin-left: 900px;
+  }
+
+  .review {
+    display: flex;
+  }
+
+  .review .avatar {
+    margin-right: 27px;
+  }
+
+  .review-title {
+    position: relative;
+  }
+
+  .review-name-date {
+    display: flex;
+    align-items: center;
+  }
+
+  .review-name {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+    margin-right: 8px;
+  }
+
+  .review-time {
+    padding-top: 5px;
+    font-size: 15px;
+    line-height: 177.69%;
+    color: #535353;
+  }
+
+  .review-rating {
+    position: absolute;
+    width: 268px;
+    left: -10px;
+  }
 }
 
-.return {
-  margin-left: 164px;
-  margin-top: 18px;
-  margin-bottom: 68px;
-  font-size: 15px;
-  line-height: 20px;
-  color: rgba(27, 31, 59, 0.65);
-}
-
-.return img {
-  padding-right: 14px;
-}
-
-.information {
-  margin-left: 280px;
-}
-
-.main-information {
-  width: 1360px;
-  margin-bottom: 43px;
-}
-
-.title-container {
-  display: flex;
-  align-items: center;
-  margin-bottom: 44px;
-}
-
-.title {
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 38px;
-  color: #000000;
-  margin-right: 5px;
-}
-
-.img-good-place {
-  margin-right: 27px;
-}
-
-.coworking-rating {
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 177.69%;
-  margin-right: 11px;
-}
-
-.photo-container {
-  display: flex;
-  width: 1320px;
-  height: 522px;
-  margin-bottom: 55px;
-}
-
-.first-photo {
-  width: 950px;
-  height: 522px;
-  border-radius: 20px;
-}
-
-.second-photo {
-  margin-left: 52px;
-  width: 310px;
-  height: 250px;
-  border-radius: 20px;
-  margin-bottom: 21px;
-}
-
-.third-photo {
-  margin-left: 52px;
-  width: 310px;
-  height: 250px;
-  border-radius: 20px;
-}
-
-.first-photo img {
-  border-radius: 20px;
-}
-
-.flex-description {
-  display: flex;
-  gap: 54px;
-}
-
-.left-side {
-  width: 962px;
-}
-
-.coworking-description {
-  font-weight: 300;
-  font-size: 22px;
-  line-height: 177.69%;
-  margin-bottom: 5px;
-}
-
-.coworking-map p {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 33px;
-  margin-bottom: 38px;
-}
-
-.coworking-map .map {
-  margin-bottom: 63px;
-}
-
-.right-side {
-  width: 345px;
-  margin-top: 43px;
-}
-
-.coworking-adress-container {
-  display: flex;
-  gap: 25px;
-  align-items: center;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 177.69%;
-  margin-bottom: 15px;
-}
-
-.coworking-time-container {
-  display: flex;
-  gap: 24px;
-  align-items: center;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 177.69%;
-  margin-bottom: 70px;
-}
-
-.tags {
-  margin-bottom: 70px;
-}
-
-.tags p {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 33px;
-  margin-bottom: 27px;
-}
-
-.coworking-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-.coworking-tag {
-  text-align: center;
-  min-width: 80px;
-  max-width: 300px;
-  font-size: 20px;
-  line-height: 177.69%;
-  background: #E0E0D6;
-  border-radius: 20px;
-}
-
-.contacts p {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 33px;
-  margin-bottom: 37px;
-}
-
-.phone-information {
-  display: flex;
-  gap: 22.5px;
-  align-items: center;
-}
-
-.phone-information span {
-  font-size: 20px;
-  line-height: 177.69%;
-}
-
-.add-review {
-  width: 1147px;
-  margin-bottom: 100px;
-}
-
-.reviews-title {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 33px;
-  margin-bottom: 26px;
-}
-
-.add-rating {
-  display: flex;
-}
-
-.review-input-field {
-  width: 1150px;
-  background: rgba(190, 218, 195, 0.7);
-  border-radius: 10px;
-  height: 62px;
-  margin-bottom: 35px;
-}
-
-.review-input-field input {
-  width: 100%;
-  height: 100%;
-  font-weight: 300;
-  font-size: 22px;
-  line-height: 177.69%;
-  background: inherit;
-  border-radius: 10px;
-}
-
-.btn-review {
-  width: 250px;
-  height: 54px;
-  background: #E0E0D6;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
-  border-radius: 10px;
-  margin-left: 900px;
-}
-
-.review {
-  display: flex;
-}
-
-.review .avatar {
-  margin-right: 27px;
-}
-
-.review-title {
-  position: relative;
-}
-
-.review-name-date {
-  display: flex;
-  align-items: center;
-}
-
-.review-name {
-  font-weight: 600;
-  font-size: 22px;
-  line-height: 30px;
-  margin-right: 8px;
-}
-
-.review-time {
-  padding-top: 5px;
-  font-size: 15px;
-  line-height: 177.69%;
-  color: #535353;
-}
-
-.review-rating {
-  position: absolute;
-  width: 268px;
-  left: -10px;
-}
-}
-
-@media screen and (max-width: 1450px){
+@media screen and (max-width: 1450px) {
   .line {
     position: absolute;
     height: calc(0.83*791px);
@@ -379,6 +384,11 @@
 
   .coworking-map .map {
     margin-bottom: calc(0.83*63px);
+  }
+
+  .map-img {
+    width: calc(0.75*838px);
+    height: calc(0.83*571px);
   }
 
   .right-side {
@@ -532,7 +542,7 @@
   }
 }
 
-@media screen and (max-width: 1370px){
+@media screen and (max-width: 1370px) {
   .line {
     position: absolute;
     height: calc(0.71*791px);
@@ -646,6 +656,11 @@
 
   .coworking-map .map {
     margin-bottom: calc(0.71*63px);
+  }
+
+  .map-img {
+    width: calc(0.71*838px);
+    height: calc(0.71*571px);
   }
 
   .right-side {

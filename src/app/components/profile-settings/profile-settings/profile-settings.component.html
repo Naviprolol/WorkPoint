@@ -1,105 +1,109 @@
 <app-header></app-header>
 
-<div class="return-to-main">
-  <a routerLink="/">
-    <img src="assets/img/return-button.svg" alt="return-button" class="return-button" width="16" height="16">
-  </a>
-  <span>Вернуться к поиску</span>
-</div>
-
-<div class="main-top-content">
-
-  <div class="profile-navigation">
-    <ul>
-      <li>Избранное</li>
-      <li>Настройки профиля</li>
-      <li>Настройки мест</li>
-    </ul>
+<div *ngIf="user">
+  <div class="return-to-main">
+    <a routerLink="/">
+      <img src="assets/img/return-button.svg" alt="return-button" class="return-button" width="16" height="16">
+    </a>
+    <span>Вернуться к поиску</span>
   </div>
 
-  <div class="top-information">
-    <img src="assets/img/profile.svg" alt="profile" width="150" height="150">
-    <ul>
-      <div *ngIf="user">
+  <div class="main-top-content">
+
+    <div class="profile-navigation">
+      <ul>
+        <li><a routerLink="/favourites">Избранное</a></li>
+        <li><a routerLink="/profile">Настройки профиля</a></li>
+        <li><a routerLink="/place-settings">Настройки мест</a></li>
+        <li *ngIf="user.role_id == 2"><a routerLink="/ad-business">Продвижение</a></li>
+      </ul>
+    </div>
+
+    <div class="top-information">
+      <img src="{{user.photo_user}}" alt="profile" width="150" height="150" onerror="this.src='assets/img/logo.svg'">
+      <ul>
+
         <h2>{{user.name + ' ' + user.surname}}</h2>
-      </div>
-      <span>+7 (999) 999-99-00</span>
-    </ul>
-  </div>
-
-</div>
-
-<div class="progress-information">
-  <div class="donut-chart-block block">
-    <div class="donut-chart">
-      <div id="section1" class="clip">
-        <div class="item"></div>
-      </div>
-      <div id="section2" class="clip">
-        <div class="item"></div>
-      </div>
-      <div id="section3" class="clip">
-        <div class="item"></div>
-      </div>
-      <div class="center">
-        <span></span>
-      </div>
-    </div>
-  </div>
-
-  <span class="progress-information__span">
-    Добавь ещё одно место и получи подарок
-  </span>
-
-  <button class="progress-information__btn" routerLink="/main/add">
-    Добавить место
-  </button>
-</div>
-
-<form class="about-information" [formGroup]="form" (ngSubmit)="onSubmit()">
-  <p class="title">О себе</p>
-
-  <div class="about-information display-flex">
-    <div class="input-field name">
-      <input id="name" placeholder="Имя" type="text" formControlName="name">
-      <label for="name"></label>
+        <span>{{user.phone}}</span>
+      </ul>
     </div>
 
-    <div class="input-field surname">
-      <input id="surname" placeholder="Фамилия" type="text" formControlName="surname">
-      <label for="surname"></label>
+  </div>
+
+  <div class="progress-information">
+    <div class="donut-chart-block block">
+      <div class="donut-chart">
+        <div id="section1" class="clip">
+          <div class="item"></div>
+        </div>
+        <div id="section2" class="clip">
+          <div class="item"></div>
+        </div>
+        <div id="section3" class="clip">
+          <div class="item"></div>
+        </div>
+        <div class="center">
+          <span></span>
+        </div>
+      </div>
     </div>
+
+    <span class="progress-information__span">
+      Добавь ещё одно место и получи подарок
+    </span>
+
+    <button class="progress-information__btn" routerLink="/main/add">
+      Добавить место
+    </button>
   </div>
 
-  <div class="input-field city">
-    <input id="city" placeholder="Город" type="text" formControlName="city">
-    <label for="city"></label>
+  <form class="about-information" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <p class="title">О себе</p>
+
+    <div class="about-information display-flex">
+      <div class="input-field name">
+        <input id="name" placeholder="Имя" type="text" formControlName="name">
+        <label for="name"></label>
+      </div>
+
+      <div class="input-field surname">
+        <input id="surname" placeholder="Фамилия" type="text" formControlName="surname">
+        <label for="surname"></label>
+      </div>
+    </div>
+
+    <div class="input-field city">
+      <input id="city" placeholder="Город" type="text" formControlName="city">
+      <label for="city"></label>
+    </div>
+
+    <div class="input-field phone">
+      <input id="phone" placeholder="Номер телефона" type="phone" formControlName="phone">
+      <label for="phone"></label>
+    </div>
+
+    <button class="progress-information-input__btn" type="submit" [disabled]="form.invalid || form.disabled">
+      Сохранить
+    </button>
+  </form>
+
+  <div class="business-information" *ngIf="user.role_id == 1">
+    <p class="title" style="margin-bottom: 22px;">
+      Бизнес-аккаунт
+    </p>
+    <p class="business-information__text">
+      Если ты являешься владельцем заведения и хочешь продвигать его, то переходи на бизнес-аккаунт.
+    </p>
+
+    <div class="button-flex">
+      <button (click)="onSubmitBusiness()" class="business-information__btn">
+        Перейти на бизнес-аккаунт
+      </button>
+    </div>
+
   </div>
-
-  <div class="input-field phone">
-    <input id="phone" placeholder="Номер телефона" type="phone" formControlName="phone">
-    <label for="phone"></label>
-  </div>
-
-  <button class="progress-information-input__btn" type="submit" [disabled]="form.invalid || form.disabled">
-    Сохранить
-  </button>
-</form>
-
-<div class="business-information">
-  <p class="title" style="margin-bottom: 22px;">
-    Бизнес-аккаунт
-  </p>
-  <p class="business-information__text">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus lorem, condimentum eget arcu nec, tempor
-    dignissim quam. Quisque fringilla accumsan nisl vitae facilisis. Suspendisse lacus libero, pulvinar at nunc a,
-    luctus dictum libero. Etiam aliquet orci quis diam pellentesque lacinia. Donec laoreet, lectus sit amet dignissim
-    sagittis, nibh velit volutpat purus, ac scelerisque dui tortor vitae diam.
-  </p>
-  <button class="business-information__btn">
-    Перейти на бизнес-аккаунт
-  </button>
-
+  <p *ngIf="successText === 'Вы успешно перешли на бизнес-аккаунт!'" class="goodSuccessText">{{successText}}</p>
+  <!-- сделать появление надписи на несколько секунд -->
 </div>
 
 <app-footer></app-footer>

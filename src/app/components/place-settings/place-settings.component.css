@@ -1,13 +1,45 @@
+.return-to-main {
+  display: flex;
+  width: 180px;
+  margin-left: 168px;
+  margin-bottom: 65px;
+  align-items: center;
+}
+
+.return-button {
+  margin-right: 18px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.return-to-main span {
+  font-size: 15px;
+  line-height: 20px;
+  color: rgba(27, 31, 59, 0.65);
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+}
+
 .main-top-content {
   display: flex;
   margin-left: 202px;
   margin-top: 65px;
 }
+
 .profile-navigation {
   width: 238px;
   margin-right: 60px;
   margin-top: 31px;
 }
+
 .profile-navigation li {
   font-size: 20px;
   line-height: 177.69%;
@@ -18,40 +50,40 @@
   margin-bottom: 0;
 }
 
-.title{
+.title {
   font-weight: 700;
   font-size: 28px;
   line-height: 38px;
   margin-bottom: 11px;
 }
 
-.description{
+.description {
   display: inline-block;
   font-weight: 400;
   font-size: 24px;
   line-height: 43px;
 }
 
-.explanations{
+.explanations {
   display: flex;
   list-style: none;
   margin-top: 45px;
   padding-left: 27px;
 }
 
-.explanations-li{
+.explanations-li {
   max-width: 158px;
   font-weight: 400;
   font-size: 15px;
-  line-height:27px;
+  line-height: 27px;
   color: #535353;
 }
 
-.explanations-li{
+.explanations-li {
   margin-right: 118px;
 }
 
-.card{
+.card {
   display: flex;
   width: 1070px;
   height: 99px;
@@ -59,11 +91,11 @@
   border-radius: 20px;
 }
 
-.card-li{
+.card-li {
   margin-bottom: 30px;
 }
 
-.card-title{
+.card-title {
   padding-top: 16px;
   padding-left: 27px;
   font-weight: 700;
@@ -71,28 +103,28 @@
   line-height: 33px;
 }
 
-.adress{
+.adress {
   font-weight: 400;
   font-size: 15px;
-  line-height:27px;
+  line-height: 27px;
   padding-left: 27px;
 }
 
-.second-block__card{
+.second-block__card {
   margin-left: 98px;
 }
 
-.number{
+.number {
   font-weight: 400;
   font-size: 24px;
-  line-height:43px;
+  line-height: 43px;
   padding-top: 28px;
 }
 
-.third-block__card{
+.third-block__card {
   margin-left: 235px;
 }
 
-.card-li:last-child{
+.card-li:last-child {
   margin-bottom: 100px;
 }
