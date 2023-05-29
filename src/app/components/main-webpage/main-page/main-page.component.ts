@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { coworkings as data } from 'src/app/data/coworkings';
 import { ICoworking } from 'src/app/interfaces/interfaces';
 import { CoworkingsService } from 'src/app/servises/coworkings.service';
@@ -12,43 +13,116 @@ import { CoworkingsService } from 'src/app/servises/coworkings.service';
 
 export class MainPageComponent {
   term = ''
-  Octyabrski: any = false
-  Leninski: any = false
-  Chkalovski: any = false
-  ORDJ: any = false
-  Kirovski: any = false
-  JD: any = false
-  VIZ: any = false
-  Akadem: any = false
 
-  office: any = false
-  anticafe: any = false
-  cafe: any = false
-
-  kruglosutochno: any = false
-  budni: any = false
-
-  parking: any = false
-  recreation_area: any = false
-  conference_hall: any = false
-
-  // coworkings: ICoworking[] = data
+  parking: boolean = false
+  recreation_area: boolean = false
+  conference_hall: boolean = false
 
   coworkings: ICoworking[] = []
-  length = this.coworkings.filter(p => p.name.toLowerCase().includes(this.term.toLowerCase()));
+  filteredCoworkings: ICoworking[] = []
 
-  allRegions = ['Академический', 'Верх-Исетский', 'Железнодорожный', 'Кировский', 'Ленинский', 'Октябрьский', 'Орджоникидзевский', 'Чкаловский']
-  activeRegions = []
+  activeDistricts: string[] = []
+  activeTypes: string[] = []
+  activeOpeningHours: string[] = []
 
-  constructor(private coworkingsService: CoworkingsService) {
+  constructor(
+    private coworkingsService: CoworkingsService,
+    private elementRef: ElementRef,
+    private router: Router) {
 
   }
 
   ngOnInit(): void {
     this.coworkingsService.getAll().subscribe(coworkings => {
-      this.coworkings = coworkings
-      // console.log('Coworking', coworkings)
-    })
+      this.coworkings = coworkings;
+      this.updateFilteredCoworkings();
+    });
   }
 
+  scrollToElement(element: string): void {
+    const searchElement = this.elementRef.nativeElement.querySelector(element);
+    if (searchElement) {
+      searchElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  onClickDistrictFilter(district: string): void {
+    if (this.activeDistricts.includes(district)) {
+      this.activeDistricts = this.activeDistricts.filter(d => d !== district);
+    } else {
+      this.activeDistricts.push(district);
+    }
+    this.updateFilteredCoworkings();
+  }
+
+  onClickTypeFilter(type: string): void {
+    if (this.activeTypes.includes(type)) {
+      this.activeTypes = this.activeTypes.filter(t => t !== type);
+    } else {
+      this.activeTypes.push(type);
+    }
+    this.updateFilteredCoworkings();
+  }
+
+  onClickOpeningHoursFilter(opening_hours: string): void {
+    if (this.activeOpeningHours.includes(opening_hours)) {
+      this.activeOpeningHours = this.activeOpeningHours.filter(h => h !== opening_hours);
+    } else {
+      this.activeOpeningHours.push(opening_hours);
+    }
+    this.updateFilteredCoworkings();
+  }
+
+  onClickParkingFilter(): void {
+    this.parking = !this.parking;
+    this.updateFilteredCoworkings();
+  }
+
+  onClickConferenceHallFilter(): void {
+    this.conference_hall = !this.conference_hall;
+    this.updateFilteredCoworkings();
+  }
+
+  onClickRecreationAreaFilter(): void {
+    this.recreation_area = !this.recreation_area;
+    this.updateFilteredCoworkings();
+  }
+
+  private updateFilteredCoworkings(): void {
+    if (this.activeDistricts.length === 0 && this.activeTypes.length === 0 && this.activeOpeningHours.length === 0 &&
+      !this.parking && !this.conference_hall && !this.recreation_area) {
+      this.filteredCoworkings = [...this.coworkings];
+    } else {
+      this.filteredCoworkings = this.coworkings.filter(coworking =>
+        this.isActiveDistrict(coworking.district) && this.isActiveType(coworking.type_cafe) && this.isActiveOpeningHours(coworking.opening_hours) &&
+        this.isActiveParking(coworking.parking) &&
+        this.isActiveConferenceHall(coworking.conference_hall) &&
+        this.isActiveRecreationArea(coworking.recreation_area)
+      );
+    }
+  }
+
+  private isActiveDistrict(district: string): boolean {
+    return this.activeDistricts.length === 0 || this.activeDistricts.includes(district);
+  }
+
+  private isActiveType(type: string): boolean {
+    return this.activeTypes.length === 0 || this.activeTypes.includes(type);
+  }
+
+  private isActiveOpeningHours(opening_hours: string): boolean {
+    return this.activeOpeningHours.length === 0 || this.activeOpeningHours.includes(opening_hours)
+  }
+
+  private isActiveParking(parking: boolean): boolean {
+    return !this.parking || parking;
+  }
+
+  private isActiveConferenceHall(conferenceHall: boolean): boolean {
+    return !this.conference_hall || conferenceHall;
+  }
+
+  private isActiveRecreationArea(recreationArea: boolean): boolean {
+    return !this.recreation_area || recreationArea;
+  }
 }

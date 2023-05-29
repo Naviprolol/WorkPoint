@@ -30,7 +30,7 @@ export class ProfileSettingsComponent implements OnInit {
 
     this.userService.getUserByToken().subscribe(user => {
       this.user = user
-      console.log('user', this.user.role_id);
+      // console.log('user', this.user.role_id);
     });
 
     this.form = new FormGroup({
@@ -48,7 +48,7 @@ export class ProfileSettingsComponent implements OnInit {
     obs$ = this.userService.getUserByToken()
       .pipe(
         mergeMap(user => {
-          console.log(user.id)
+          // console.log(user.id)
           return this.userService.updateUser(user.id, this.form.value.name, this.form.value.surname, this.form.value.city, this.form.value.phone)
         })
       )
@@ -56,7 +56,7 @@ export class ProfileSettingsComponent implements OnInit {
     obs$.subscribe(
       user => {
         this.user = user
-        console.log('Изменения сохранены')
+        // console.log('Изменения сохранены')
         this.form.enable()
       },
       error => {
@@ -72,7 +72,7 @@ export class ProfileSettingsComponent implements OnInit {
       user => {
         this.user.role_id = user.role_id
         this.successText = 'Вы успешно перешли на бизнес-аккаунт!'
-        console.log('Изменения сохранены')
+        // console.log('Изменения сохранены')
       },
       error => {
         console.log('ERRRRROR!')

@@ -5,16 +5,16 @@
   <p>Все коворкинги вашего города</p>
 </div>
 <div class="search">
-  <div class="search-container">
+  <div class="search-container" id="searchInput">
     <img src="assets/img/search.svg" alt="search">
     <input type="text" placeholder="Введите название или тип заведения" class="search-container-input"
       [(ngModel)]="term">
   </div>
-  <button class="btn-find-coworking" id="find-coworking">Найти коворкинг</button>
+  <button class="btn-find-coworking">Найти коворкинг</button>
 </div>
 
 
-<p class="count-coworkings" id="coworkings-list"> Найдено: {{coworkings.length}} </p>
+<p class="count-coworkings" id="coworkings-list"> Найдено: {{filteredCoworkings.length}} </p>
 <span *ngIf="">
 
 </span>
@@ -31,49 +31,49 @@
 
         <div class="radio">
           <input type="checkbox" class="custom-radio custom-radio_multiple" id="akadem" name="district" value="akadem"
-            [(ngModel)]="Akadem">
+            (change)="onClickDistrictFilter('Академический')">
           <label for="akadem">Академический</label>
         </div>
 
         <div class="radio">
           <input type="checkbox" class="custom-radio custom-radio_multiple" id="VIZ" name="district" value="VIZ"
-            [(ngModel)]="VIZ">
+            (change)="onClickDistrictFilter('Верх-Исетский')">
           <label for="VIZ">Верх-Исетский</label>
         </div>
 
         <div class="radio">
           <input type="checkbox" class="custom-radio custom-radio_multiple" id="JD" name="district" value="JD"
-            [(ngModel)]="JD">
+            (change)="onClickDistrictFilter('Железнодорожный')">
           <label for="JD">Железнодорожный</label>
         </div>
 
         <div class="radio">
           <input type="checkbox" class="custom-radio custom-radio_multiple" id="Kirovski" name="district"
-            value="Kirovski" [(ngModel)]="Kirovski">
+            value="Kirovski" (change)="onClickDistrictFilter('Кировский')">
           <label for="Kirovski">Кировский</label>
         </div>
 
         <div class="radio">
           <input type="checkbox" class="custom-radio custom-radio_multiple" id="Leninski" name="district"
-            value="Leninski" [(ngModel)]="Leninski">
+            value="Leninski" (change)="onClickDistrictFilter('Ленинский')">
           <label for="Leninski">Ленинский</label>
         </div>
 
         <div class="radio">
           <input type="checkbox" class="custom-radio custom-radio_multiple" id="Octyabrski" name="district"
-            value="Octyabrski" [(ngModel)]="Octyabrski">
+            value="Octyabrski" (change)="onClickDistrictFilter('Октябрьский')">
           <label for="Octyabrski">Октябрьский</label>
         </div>
 
         <div class="radio">
           <input type="checkbox" class="custom-radio custom-radio_multiple" id="ORDJ" name="district" value="ORDJ"
-            [(ngModel)]="ORDJ">
+            (change)="onClickDistrictFilter('Орджоникидзевский')">
           <label for="ORDJ">Орджоникидзевский</label>
         </div>
 
         <div class="radio">
           <input type="checkbox" class="custom-radio custom-radio_multiple" id="Chkalovski" name="district"
-            value="Chkalovski" [(ngModel)]="Chkalovski">
+            value="Chkalovski" (change)="onClickDistrictFilter('Чкаловский')">
           <label for="Chkalovski">Чкаловский</label>
         </div>
 
@@ -84,19 +84,19 @@
 
         <div class="radio">
           <input type="checkbox" class="custom-radio custom-radio_multiple" id="office" name="type" value="office"
-            [(ngModel)]="office">
+            (change)="onClickTypeFilter('Рабочий зал')">
           <label for="office">Рабочий зал</label>
         </div>
 
         <div class="radio">
           <input type="checkbox" class="custom-radio custom-radio_multiple" id="anticafe" name="type" value="anticafe"
-            [(ngModel)]="anticafe">
+            (change)="onClickTypeFilter('Антикафе')">
           <label for="anticafe">Антикафе</label>
         </div>
 
         <div class="radio">
           <input type="checkbox" class="custom-radio custom-radio_multiple" id="cafe" name="type" value="cafe"
-            [(ngModel)]="cafe">
+            (change)="onClickTypeFilter('Кафе')">
           <label for="cafe">Кафе</label>
         </div>
 
@@ -108,13 +108,13 @@
 
         <div class="radio">
           <input type="checkbox" class="custom-radio custom-radio_single" id="everytime" name="time" value="everytime"
-            [(ngModel)]="kruglosutochno">
+            (change)="onClickOpeningHoursFilter('Круглосуточно')">
           <label for="everytime">Круглосуточно</label>
         </div>
 
         <div class="radio">
           <input type="checkbox" class="custom-radio custom-radio_single" id="weekdays" name="time" value="weekdays"
-            [(ngModel)]="budni">
+            (change)="onClickOpeningHoursFilter('По будням')">
           <label for="weekdays">По будням</label>
         </div>
 
@@ -123,7 +123,7 @@
       <div class="filter-labels filter-parking">
         <div class="radio">
           <input type="checkbox" class="custom-radio custom-radio_single" id="parking" name="parking" value="parking"
-            [(ngModel)]="parking">
+            (change)="onClickParkingFilter()">
           <label for="parking">
             <h3>Парковка</h3>
           </label>
@@ -133,7 +133,7 @@
       <div class="filter-labels filter-restzone">
         <div class="radio">
           <input type="checkbox" class="custom-radio custom-radio_single" id="restzone" name="restzone" value="restzone"
-            [(ngModel)]="recreation_area">
+            (change)="onClickRecreationAreaFilter()">
           <label for="restzone">
             <h3>Зона отдыха</h3>
           </label>
@@ -143,7 +143,7 @@
       <div class="filter-labels filter-conference">
         <div class="radio">
           <input type="checkbox" class="custom-radio custom-radio_single" id="conference" name="conference"
-            value="conference" [(ngModel)]="conference_hall">
+            value="conference" (change)="onClickConferenceHallFilter()">
           <label for="conference">
             <h3>Наличие конференц-зала</h3>
           </label>
@@ -153,35 +153,14 @@
     </div>
   </div>
 
-
-  <!-- <app-filter></app-filter> -->
   <div>
 
-    <app-coworkings-list *ngFor="let coworking of coworkings
-      | findCoworking: term
-      | filterCoworking: 'district':Akadem:'Академический'
-      | filterCoworking: 'district':VIZ:'Верх-Исетский'
-      | filterCoworking: 'district':JD:'Железнодорожный'
-      | filterCoworking: 'district':Kirovski:'Кировский'
-      | filterCoworking: 'district':Leninski:'Ленинский'
-      | filterCoworking: 'district':Octyabrski:'Октябрьский'
-      | filterCoworking: 'district':ORDJ:'Орджоникидзевский'
-      | filterCoworking: 'district':Chkalovski:'Чкаловский'
-
-      | filterCoworking: 'type_cafe':office:'Рабочий зал'
-      | filterCoworking: 'type_cafe':anticafe:'Антикафе'
-      | filterCoworking: 'type_cafe':cafe:'Кафе'
-
-      | filterCoworking: 'opening_hours':kruglosutochno:'Круглосуточно'
-      | filterCoworking: 'opening_hours':budni:'Будни'
-
-      | filterCoworking: 'parking': parking
-      | filterCoworking: 'recreation_area' : recreation_area
-      | filterCoworking: 'conference_hall' : conference_hall; let i = index"
+    <app-coworkings-list *ngFor="let coworking of filteredCoworkings | findCoworking: term let i = index"
       [coworking]="coworking"></app-coworkings-list>
 
   </div>
 
 </div>
 
-<app-footer></app-footer>
+<app-footer (searchClicked)="scrollToElement('#searchInput')" (coworkingsClicked)="scrollToElement('#coworkings-list')"
+  (topClicked)="scrollToElement('.header-container')"></app-footer>
