@@ -1,4 +1,14 @@
 @media screen and (max-width: 5000px) {
+
+  .wrapper{
+    min-height: 100%;
+  }
+
+  .footer {
+    margin-top: -300px;
+    height: 300px;
+  }
+
   .return-to-main {
     display: flex;
     width: 180px;
@@ -22,6 +32,7 @@
   .main-top-content {
     display: flex;
     margin-left: 202px;
+    padding-bottom: 300px;
   }
 
   .profile-navigation {
@@ -71,6 +82,16 @@
 }
 
 @media screen and (max-width: 1450px) {
+
+  .wrapper{
+    min-height: 100%;
+  }
+
+  .footer {
+    margin-top: calc(0.83*-300px);
+    height: calc(0.83*300px);
+  }
+  
   .return-to-main {
     display: flex;
     width: calc(0.75*180px);
@@ -94,6 +115,7 @@
   .main-top-content {
     display: flex;
     margin-left: calc(0.75*202px);
+    padding-bottom: calc(0.83*300px);
   }
 
   .profile-navigation {
@@ -143,6 +165,16 @@
 }
 
 @media screen and (max-width: 1370px) {
+
+  .wrapper{
+    min-height: 100%;
+  }
+
+  .footer {
+    margin-top: calc(0.71*-300px);
+    height: calc(0.71*300px);
+  }
+  
   .return-to-main {
     display: flex;
     width: calc(0.71*180px);
@@ -166,6 +198,7 @@
   .main-top-content {
     display: flex;
     margin-left: calc(0.71*202px);
+    padding-bottom: calc(0.71*300px);
   }
 
   .profile-navigation {
