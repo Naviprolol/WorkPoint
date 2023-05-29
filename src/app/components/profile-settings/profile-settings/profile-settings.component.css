@@ -302,8 +302,8 @@
 @media screen and (max-width: 1450px) {
   .return-to-main {
     display: flex;
-    width: calc(0.75*180px);
-    margin-left: calc(0.75*68px);
+    width: calc(0.75*250px);
+    margin-left: calc(0.75*180px);
     margin-bottom: calc(0.83*65px);
     align-items: center;
   }
@@ -598,8 +598,8 @@
 @media screen and (max-width: 1370px) {
   .return-to-main {
     display: flex;
-    width: calc(0.71*180px);
-    margin-left: calc(0.71*68px);
+    width: calc(0.71*250px);
+    margin-left: calc(0.71*180px);
     margin-bottom: calc(0.71*65px);
     align-items: center;
   }
