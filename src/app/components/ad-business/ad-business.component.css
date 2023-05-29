@@ -3,6 +3,7 @@
   width: 180px;
   margin-left: 168px;
   margin-bottom: 65px;
+  margin-top: 18px;
   align-items: center;
 }
 
@@ -10,6 +11,8 @@
   margin-right: 18px;
   margin-top: auto;
   margin-bottom: auto;
+  width: 16px;
+  height: 16px;
 }
 
 .return-to-main span {

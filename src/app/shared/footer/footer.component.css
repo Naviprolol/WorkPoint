@@ -13,6 +13,11 @@
     margin-right: 237px;
   }
 
+  .footer-logo-container .logo {
+    width: 116px;
+    height: 87.72px;
+  }
+
   .politics {
     margin-top: 23px;
     margin-bottom: 10px;
@@ -102,6 +107,11 @@
     margin-right: calc(0.75*237px);
   }
 
+  .footer-logo-container .logo {
+    width: calc(0.83*116px);
+    height: calc(0.83*87.72px);
+  }
+
   .politics {
     margin-top: calc(0.83*23px);
     margin-bottom: calc(0.83*10px);
@@ -189,6 +199,11 @@
     padding-top: calc(0.71*79px);
     padding-left: calc(0.71*160px);
     margin-right: calc(0.71*237px);
+  }
+
+  .footer-logo-container .logo {
+    width: calc(0.71*116px);
+    height: calc(0.71*87.72px);
   }
 
   .politics {

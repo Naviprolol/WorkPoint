@@ -52,6 +52,8 @@
 
   .location-name {
     margin-top: 10px;
+    font-size: 15px;
+    line-height: 28px;
   }
 
   .btn-add-coworking {
@@ -202,6 +204,8 @@
 
   .location-name {
     margin-top: calc(0.83*10px);
+    font-size: calc(0.75*15px);
+    line-height: calc(0.83*28px);
   }
 
   .btn-add-coworking {
@@ -352,6 +356,8 @@
 
   .location-name {
     margin-top: calc(0.71*10px);
+    font-size: calc(0.71*15px);
+    line-height: calc(0.71*28px);
   }
 
   .btn-add-coworking {
