@@ -7,17 +7,17 @@
   </div>
 
   <ul class="footer-part-one">
-    <li class="main-page"><a routerLink="/">Главная</a></li>
-    <li class="search"><a href="#find-coworking">Поиск</a></li>
-    <li><a href="#coworkings-list">Список заведений</a></li>
+    <li class="main-page"><button (click)="onTopClick()">Главная</button></li>
+    <li class="search"><button (click)="onSearchClick()">Поиск</button></li>
+    <li><button (click)="onCoworkingsClick()">Список заведений</button></li>
   </ul>
 
   <ul class="footer-part-two">
     <li class="profile"><a routerLink="/profile">Профиль</a></li>
-    <li><a href="#">Избранное</a></li>
-    <li><a href="#">Ваши места</a></li>
-    <li><a href="#">Настройки профиля</a></li>
-    <li><a href="#">Добавить место</a></li>
+    <li><a routerLink="/favourites">Избранное</a></li>
+    <li><a routerLink="/place-settings">Ваши места</a></li>
+    <li><a routerLink="/profile">Настройки профиля</a></li>
+    <li><a routerLink="/main/add">Добавить место</a></li>
   </ul>
 
   <ul class="footer-part-three">
