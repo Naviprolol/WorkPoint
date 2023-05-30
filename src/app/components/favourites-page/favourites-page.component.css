@@ -1,6 +1,6 @@
 @media screen and (max-width: 5000px) {
 
-  .wrapper{
+  .wrapper {
     min-height: 100%;
   }
 
@@ -14,6 +14,7 @@
     width: 180px;
     margin-left: 168px;
     margin-bottom: 65px;
+    margin-top: 18px;
     align-items: center;
   }
 
@@ -21,6 +22,8 @@
     margin-right: 18px;
     margin-top: auto;
     margin-bottom: auto;
+    width: 16px;
+    height: 16px;
   }
 
   .return-to-main span {
@@ -83,7 +86,7 @@
 
 @media screen and (max-width: 1450px) {
 
-  .wrapper{
+  .wrapper {
     min-height: 100%;
   }
 
@@ -91,12 +94,13 @@
     margin-top: calc(0.83*-300px);
     height: calc(0.83*300px);
   }
-  
+
   .return-to-main {
     display: flex;
-    width: calc(0.75*180px);
-    margin-left: calc(0.75*168px);
+    width: calc(0.75*250px);
+    margin-left: calc(0.75*180px);
     margin-bottom: calc(0.83*65px);
+    margin-top: calc(0.83*18px);
     align-items: center;
   }
 
@@ -104,11 +108,13 @@
     margin-right: calc(0.75*18px);
     margin-top: auto;
     margin-bottom: auto;
+    width: calc(0.75*16px);
+    height: calc(0.75*16px);
   }
 
   .return-to-main span {
     font-size: calc(0.75*15px);
-    line-height: calc(0.83*20px);
+    line-height: 20px;
     color: rgba(27, 31, 59, 0.65);
   }
 
@@ -166,7 +172,7 @@
 
 @media screen and (max-width: 1370px) {
 
-  .wrapper{
+  .wrapper {
     min-height: 100%;
   }
 
@@ -174,12 +180,13 @@
     margin-top: calc(0.71*-300px);
     height: calc(0.71*300px);
   }
-  
+
   .return-to-main {
     display: flex;
-    width: calc(0.71*180px);
-    margin-left: calc(0.71*168px);
+    width: calc(0.71*250px);
+    margin-left: calc(0.71*180px);
     margin-bottom: calc(0.71*65px);
+    margin-top: calc(0.71*18px);
     align-items: center;
   }
 
@@ -187,11 +194,13 @@
     margin-right: calc(0.71*18px);
     margin-top: auto;
     margin-bottom: auto;
+    width: calc(0.71*16px);
+    height: calc(0.71*16px);
   }
 
   .return-to-main span {
     font-size: calc(0.71*15px);
-    line-height: calc(0.71*20px);
+    line-height: 20px;
     color: rgba(27, 31, 59, 0.65);
   }
 

@@ -27,7 +27,7 @@ export class AdBusinessComponent implements OnInit {
 
     this.userService.getUserByToken().subscribe(user => {
       this.user = user
-      console.log('user', this.user.role_id)
+      // console.log('user', this.user.role_id)
     });
   }
 
@@ -47,7 +47,7 @@ export class AdBusinessComponent implements OnInit {
       report => {
         this.report = report
         this.accessText = 'Письмо успешно отправлено!'
-        console.log('Письмо успешно отправлено!')
+        // console.log('Письмо успешно отправлено!')
         this.form.enable()
       },
       error => {

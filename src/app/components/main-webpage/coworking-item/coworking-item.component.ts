@@ -42,14 +42,14 @@ export class CoworkingItemComponent implements OnInit {
     this.coworkingsService.getCoworkingById(coworkingIdFromRoute).subscribe(coworking => {
       this.coworking = coworking
       this.coworking.photo = this.coworking.photo.split('#')
-      console.log(this.coworking.photo)
+      // console.log(this.coworking.photo)
       this.tags = this.coworking.tags
     })
 
     //
     this.coworkingsService.getCoworkingsByToken().subscribe(coworkings => {
       this.userPlaces = coworkings
-      console.log('userPlaces', this.userPlaces)
+      // console.log('userPlaces', this.userPlaces)
     })
     //
 
@@ -61,7 +61,7 @@ export class CoworkingItemComponent implements OnInit {
 
     this.userService.getUserByToken().subscribe(user => {
       this.user = user
-      console.log('user', this.user.name)
+      // console.log('user', this.user.name)
     });
   }
 
@@ -70,7 +70,7 @@ export class CoworkingItemComponent implements OnInit {
     this.reviewService.create(0, this.coworking.id, this.form.value.rating, this.form.value.description).subscribe(
       (review) => {
         this.review = review
-        console.log('Изменения сохранены')
+        // console.log('Изменения сохранены')
         this.form.enable()
       },
       (error) => {

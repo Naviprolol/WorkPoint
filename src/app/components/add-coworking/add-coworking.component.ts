@@ -142,7 +142,7 @@ export class AddCoworkingComponent implements OnInit {
     obs$.subscribe(
       coworking => {
         this.coworking = coworking
-        console.log('Изменения сохранены')
+        // console.log('Изменения сохранены')
         this.form.enable()
       },
       error => {
@@ -158,7 +158,7 @@ export class AddCoworkingComponent implements OnInit {
 
     if (decision) {
       this.coworkingsService.delete(this.coworking.id).subscribe(
-        response => console.log('Успешно удалилось'),
+        response => { }, // console.log('Успешно удалилось')
         error => console.log('Ошибка удаления коворкинга'),
         () => this.router.navigate(['/place-settings'])
       )

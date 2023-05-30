@@ -52,6 +52,8 @@
 
   .location-name {
     margin-top: 10px;
+    font-size: 15px;
+    line-height: 28px;
   }
 
   .btn-add-coworking {
@@ -79,14 +81,17 @@
   }
 
   .profile-img {
+    position: relative;
     margin-right: 17px;
     width: 80px;
     height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
   }
 
   .profile-img-img {
-    width: 80px;
-    height: 80px;
+    width: 100%;
+    height: 100%;
   }
 
   .profile-name {
@@ -202,6 +207,8 @@
 
   .location-name {
     margin-top: calc(0.83*10px);
+    font-size: calc(0.75*15px);
+    line-height: calc(0.83*28px);
   }
 
   .btn-add-coworking {
@@ -352,6 +359,8 @@
 
   .location-name {
     margin-top: calc(0.71*10px);
+    font-size: calc(0.71*15px);
+    line-height: calc(0.71*28px);
   }
 
   .btn-add-coworking {
