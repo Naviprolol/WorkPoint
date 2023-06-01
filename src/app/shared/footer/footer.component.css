@@ -1,7 +1,7 @@
 @media screen and (max-width: 5000px) {
   .footer-container {
     display: flex;
-    width: 100%;
+    width: 2000px;
     height: 300px;
     background: #E0E0D6;
     margin-top: auto;
@@ -96,7 +96,7 @@
 @media screen and (max-width: 1450px) {
   .footer-container {
     display: flex;
-    width: 100%;
+    width: calc(0.75*2000px);
     height: calc(0.83*300px);
     background: #E0E0D6;
   }
@@ -190,7 +190,7 @@
 @media screen and (max-width: 1370px) {
   .footer-container {
     display: flex;
-    width: 100%;
+    width: calc(0.71*2000px);
     height: calc(0.71*300px);
     background: #E0E0D6;
   }

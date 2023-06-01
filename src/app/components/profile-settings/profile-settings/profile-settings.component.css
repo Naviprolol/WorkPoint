@@ -78,7 +78,7 @@
   }
 
   .progress-information {
-    margin-left: 560px;
+    margin-left: 520px;
     margin-bottom: 40px;
     padding: 50px 85px 80px 102px;
     width: 1075.53px;
@@ -117,7 +117,7 @@
   }
 
   .about-information {
-    margin-left: 560px;
+    margin-left: 520px;
   }
 
   .display-flex {
@@ -168,7 +168,7 @@
     cursor: pointer;
     display: flex;
     width: 188.49px;
-    padding: 13px 43px;
+    padding: 13px 52px;
     background: #E0E0D6;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
@@ -179,7 +179,7 @@
   }
 
   .business-information {
-    margin-left: 560px;
+    margin-left: 520px;
   }
 
   .business-information__text {
@@ -197,7 +197,7 @@
     cursor: pointer;
     display: flex;
     width: 251px;
-    padding: 13px 9px;
+    padding: 13px 18px;
     background: #E0E0D6;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
@@ -409,7 +409,7 @@
   }
 
   .progress-information {
-    margin-left: calc(0.75*560px);
+    margin-left: calc(0.75*520px);
     margin-bottom: calc(0.83*40px);
     padding: calc(0.83*50px) calc(0.75*85px) calc(0.83*80px) calc(0.75*102px);
     width: calc(0.75*1075.53px);
@@ -447,7 +447,7 @@
   }
 
   .about-information {
-    margin-left: calc(0.75*560px);
+    margin-left: calc(0.75*520px);
   }
 
   .display-flex {
@@ -498,7 +498,7 @@
     cursor: pointer;
     display: flex;
     width: calc(0.75*188.49px);
-    padding: calc(0.83*13px) calc(0.75*43px);
+    padding: calc(0.83*13px) calc(0.75*52px);
     background: #E0E0D6;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
@@ -509,7 +509,7 @@
   }
 
   .business-information {
-    margin-left: calc(0.75*560px);
+    margin-left: calc(0.75*520px);
   }
 
   .business-information__text {
@@ -527,7 +527,7 @@
     cursor: pointer;
     display: flex;
     width: calc(0.75*251px);
-    padding: calc(0.83*13px) calc(0.75*9px);
+    padding: calc(0.83*13px) calc(0.75*18px);
     background: #E0E0D6;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
@@ -734,7 +734,7 @@
   }
 
   .progress-information {
-    margin-left: calc(0.71*560px);
+    margin-left: calc(0.71*520px);
     margin-bottom: calc(0.71*40px);
     padding: calc(0.71*50px) calc(0.71*85px) calc(0.71*80px) calc(0.71*102px);
     width: calc(0.71*1075.53px);
@@ -772,7 +772,7 @@
   }
 
   .about-information {
-    margin-left: calc(0.71*560px);
+    margin-left: calc(0.71*520px);
   }
 
   .display-flex {
@@ -823,7 +823,7 @@
     cursor: pointer;
     display: flex;
     width: calc(0.71*188.49px);
-    padding: calc(0.71*13px) calc(0.71*43px);
+    padding: calc(0.71*13px) calc(0.71*52px);
     background: #E0E0D6;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
@@ -834,7 +834,7 @@
   }
 
   .business-information {
-    margin-left: calc(0.71*560px);
+    margin-left: calc(0.71*520px);
   }
 
   .business-information__text {
@@ -852,7 +852,7 @@
     cursor: pointer;
     display: flex;
     width: calc(0.71*251px);
-    padding: calc(0.71*13px) calc(0.71*9px);
+    padding: calc(0.71*13px) calc(0.71*18px);
     background: #E0E0D6;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
