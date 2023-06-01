@@ -34,4 +34,10 @@ export class HeaderComponent implements OnInit {
     this.auth.logout()
     this.router.navigate(['/login'])
   }
+
+  navigateWithDelay(route: string) {
+    setTimeout(() => {
+      this.router.navigate([route]);
+    }, 100);
+  }
 }

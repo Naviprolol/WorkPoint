@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <app-header></app-header>
-
+<div class="wrapper">
 <div class="return-to-main">
   <a routerLink="/">
     <img src="assets/img/return-button.svg" alt="return-button" class="return-button" width="16" height="16">
@@ -8,27 +8,28 @@
   <span>Вернуться к поиску</span>
 </div>
 
-<div class="main-top-content" *ngIf="user">
+  <div class="main-top-content" *ngIf="user">
 
-  <div class="profile-navigation">
-    <ul>
-      <li><a routerLink="/favourites">Избранное</a></li>
-      <li><a routerLink="/profile">Настройки профиля</a></li>
-      <li><a routerLink="/place-settings">Настройки мест</a></li>
-      <li *ngIf="user.role_id == 2"><a routerLink="/ad-business">Продвижение</a></li>
-    </ul>
-  </div>
+    <div class="profile-navigation">
+      <ul>
+        <li><a routerLink="/favourites">Избранное</a></li>
+        <li><a routerLink="/profile">Настройки профиля</a></li>
+        <li><a routerLink="/place-settings">Настройки мест</a></li>
+        <li *ngIf="user.role_id == 2"><a routerLink="/ad-business">Продвижение</a></li>
+      </ul>
+    </div>
 
-  <div class="top-information">
-    <p class="top-information__header">Избранное</p>
+    <div class="top-information">
+      <p class="top-information__header">Избранное</p>
 
-    <!-- <app-coworkings-list *ngFor="let coworking of favourites_coworkings" [coworking]="coworking"></app-coworkings-list> -->
+      <!-- <app-coworkings-list *ngFor="let coworking of favourites_coworkings" [coworking]="coworking"></app-coworkings-list> -->
 
-    <p class="wait-information">Здесь ведется работа над новым и захватывающим контентом. Мы с нетерпением ждем, чтобы
-      поделиться им с вами!
-      Оставайтесь на связи и скоро вы увидите нашу новую, впечатляющую страницу.</p>
+      <p class="wait-information">Здесь ведется работа над новым и захватывающим контентом. Мы с нетерпением ждем, чтобы
+        поделиться им с вами!
+        Оставайтесь на связи и скоро вы увидите нашу новую, впечатляющую страницу.</p>
 
+    </div>
   </div>
 </div>
-
-<app-footer></app-footer>
+<app-footer class="footer"></app-footer>
+</div>

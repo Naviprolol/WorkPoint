@@ -16,7 +16,7 @@ export class UserService {
     const token = localStorage.getItem('auth-token')
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Accept', 'application/json')
 
-    console.log(headers.get('Authorization'))
+    // console.log(headers.get('Authorization'))
 
     return this.http.get<any>('https://1506815-cq40245.tw1.ru/user/current', { headers: headers }) // Путь бека
   }

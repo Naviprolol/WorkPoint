@@ -1,29 +1,29 @@
 <div class="footer-container">
 
   <div class="footer-logo-container">
-    <img src="assets/img/logo.png" alt="logo">
+    <img src="assets/img/logo.png" alt="logo" class="logo">
     <p class="politics">Политика конфиденциальности</p>
     <p>WorkPoint ©2023 Все права защищены</p>
   </div>
 
   <ul class="footer-part-one">
-    <li class="main-page"><a routerLink="/">Главная</a></li>
-    <li class="search"><a href="#find-coworking">Поиск</a></li>
-    <li><a href="#coworkings-list">Список заведений</a></li>
+    <li class="main-page"><button (click)="onTopClick()">Главная</button></li>
+    <li class="search"><button (click)="onSearchClick()">Поиск</button></li>
+    <li><button (click)="onCoworkingsClick()">Список заведений</button></li>
   </ul>
 
   <ul class="footer-part-two">
     <li class="profile"><a routerLink="/profile">Профиль</a></li>
-    <li><a href="#">Избранное</a></li>
-    <li><a href="#">Ваши места</a></li>
-    <li><a href="#">Настройки профиля</a></li>
-    <li><a href="#">Добавить место</a></li>
+    <li><a routerLink="/favourites">Избранное</a></li>
+    <li><a routerLink="/place-settings">Ваши места</a></li>
+    <li><a routerLink="/profile">Настройки профиля</a></li>
+    <li><a routerLink="/main/add">Добавить место</a></li>
   </ul>
 
   <ul class="footer-part-three">
     <li class="contacts">Контакты</li>
     <li>Свяжитесь с нами, если у вас есть вопросы</li>
-    <li>Email: example@gmail.com</li>
+    <li>Email: proektwork241@gmail.com</li>
   </ul>
 
 </div>
