@@ -39,16 +39,16 @@
   }
 
   .banner-container {
-    width: 1600px;
+    width: 1400px;
     height: 413px;
-    margin-left: 160px;
+    margin-left: 200px;
     margin-top: 70px;
     border-radius: 20px;
     margin-bottom: 140px;
   }
 
   .banner {
-    width: 1600px;
+    width: 1400px;
     height: 413px;
   }
 
@@ -194,9 +194,9 @@
   }
 
   .banner-container {
-    width: calc(0.75*1600px);
+    width: calc(0.75*1400px);
     height: calc(0.83*413px);
-    margin-left: calc(0.75*160px);
+    margin-left: calc(0.75*200px);
     margin-top: calc(0.83*70px);
     border-radius: 20px;
     margin-bottom: calc(0.83*140px);
@@ -210,7 +210,7 @@
   }
 
   .banner {
-    width: calc(0.75*1600px);
+    width: calc(0.75*1400px);
     height: calc(0.83*413px);
   }
 
@@ -349,9 +349,9 @@
   }
 
   .banner-container {
-    width: calc(0.71*1600px);
+    width: calc(0.71*1400px);
     height: calc(0.71*413px);
-    margin-left: calc(0.71*160px);
+    margin-left: calc(0.71*200px);
     margin-top: calc(0.71*70px);
     border-radius: 20px;
     margin-bottom: calc(0.71*140px);
@@ -365,7 +365,7 @@
   }
 
   .banner {
-    width: calc(0.71*1600px);
+    width: calc(0.71*1400px);
     height: calc(0.71*413px);
   }
 
