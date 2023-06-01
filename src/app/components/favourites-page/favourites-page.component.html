@@ -12,7 +12,7 @@
 
     <div class="profile-navigation">
       <ul>
-        <li><a routerLink="/favourites">Избранное</a></li>
+        <li style="border-right: solid 2px black ;"><a routerLink="/favourites">Избранное</a></li>
         <li><a routerLink="/profile">Настройки профиля</a></li>
         <li><a routerLink="/place-settings">Настройки мест</a></li>
         <li *ngIf="user.role_id == 2"><a routerLink="/ad-business">Продвижение</a></li>
@@ -32,4 +32,3 @@
   </div>
 </div>
 <app-footer class="footer"></app-footer>
-</div>
