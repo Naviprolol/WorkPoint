@@ -41,10 +41,14 @@ export interface Message {
 }
 
 export interface Review {
-  id: string,
-  user_id: number,
-  place_id: string,
-  rating: number,
-  description: string,
+  id: string
+  user_id: number
+  place_id: string
+  rank: number
+  body: string
   created_at: string
+  user_name: string
+  user_surname: string
+  user_photo: string
+  formattedDate: string
 }

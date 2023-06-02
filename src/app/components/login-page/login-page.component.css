@@ -25,7 +25,7 @@
     filter: drop-shadow(0px 7.935px 19.8375px rgba(250, 196, 201, 0.2));
     transform: rotate(117.88deg);
     border-radius: 50%;
-    opacity: 50%;
+    z-index: -1;
   }
 
   .card {
@@ -48,9 +48,16 @@
 
   .logo-img2 {
     position: absolute;
-    left: 175px;
-    top: 325px;
-    opacity: 50%;
+    width: 50px;
+    height: 49.74px;
+    left: 197px;
+    top: 335px;
+
+    background: linear-gradient(341.04deg, #BEDAC3 10.49%, rgba(255, 255, 255, 0) 100.29%);
+    filter: drop-shadow(0px 7.935px 19.8375px rgba(250, 196, 201, 0.2));
+    transform: rotate(117.88deg);
+    border-radius: 50%;
+    z-index: -1;
   }
 
   .card-right-side {
@@ -93,19 +100,15 @@
     margin-top: 40px;
   }
 
-  .sign-in:hover {
-    background: #EDFAED;
-    border: 1px solid #6A6D79;
-  }
-
+  .sign-in:hover,
   .sign-in:focus {
     background: #EDFAED;
-    border: 1px solid #6A6D79;
+    outline: 1px solid #6A6D79;
   }
 
   .sign-in:active {
     background: #8EBD9D;
-    border: 0px;
+    outline: 0px;
   }
 
   .btn-sign-in {
@@ -173,17 +176,10 @@
   }
 
   .logo-img1 {
-    position: absolute;
     width: calc(0.75*50px);
-    height: calc(0.83*49.74px);
+    height: calc(0.75*49.74px);
     left: calc(0.75*165px);
-    top: calc(0.83*30px);
-
-    background: linear-gradient(341.04deg, #BEDAC3 10.49%, rgba(255, 255, 255, 0) 100.29%);
-    filter: drop-shadow(0px 7.935px 19.8375px rgba(250, 196, 201, 0.2));
-    transform: rotate(117.88deg);
-    border-radius: 50%;
-    opacity: 50%;
+    top: calc(0.9*30px);
   }
 
   .card {
@@ -205,10 +201,10 @@
   }
 
   .logo-img2 {
-    position: absolute;
-    left: calc(0.75*175px);
-    top: calc(0.83*325px);
-    opacity: 50%;
+    width: calc(0.75*50px);
+    height: calc(0.75*49.74px);
+    left: calc(0.75*197px);
+    top: calc(0.83*335px);
   }
 
   .card-right-side {
@@ -249,21 +245,6 @@
     border-radius: 10px;
     margin-left: calc(0.75*249px);
     margin-top: calc(0.83*40px);
-  }
-
-  .sign-in:hover {
-    background: #EDFAED;
-    border: 1px solid #6A6D79;
-  }
-
-  .sign-in:focus {
-    background: #EDFAED;
-    border: 1px solid #6A6D79;
-  }
-
-  .sign-in:active {
-    background: #8EBD9D;
-    border: 0px;
   }
 
   .btn-sign-in {
@@ -331,17 +312,10 @@
   }
 
   .logo-img1 {
-    position: absolute;
     width: calc(0.71*50px);
     height: calc(0.71*49.74px);
     left: calc(0.71*165px);
-    top: calc(0.71*30px);
-
-    background: linear-gradient(341.04deg, #BEDAC3 10.49%, rgba(255, 255, 255, 0) 100.29%);
-    filter: drop-shadow(0px 7.935px 19.8375px rgba(250, 196, 201, 0.2));
-    transform: rotate(117.88deg);
-    border-radius: 50%;
-    opacity: 50%;
+    top: calc(0.90*30px);
   }
 
   .card {
@@ -363,10 +337,10 @@
   }
 
   .logo-img2 {
-    position: absolute;
-    left: calc(0.71*175px);
-    top: calc(0.71*325px);
-    opacity: 50%;
+    width: calc(0.71*50px);
+    height: calc(0.71*49.74px);
+    left: calc(0.71*197px);
+    top: calc(0.71*335px);
   }
 
   .card-right-side {
@@ -407,21 +381,6 @@
     border-radius: 10px;
     margin-left: calc(0.71*249px);
     margin-top: calc(0.71*40px);
-  }
-
-  .sign-in:hover {
-    background: #EDFAED;
-    border: 1px solid #6A6D79;
-  }
-
-  .sign-in:focus {
-    background: #EDFAED;
-    border: 1px solid #6A6D79;
-  }
-
-  .sign-in:active {
-    background: #8EBD9D;
-    border: 0px;
   }
 
   .btn-sign-in {

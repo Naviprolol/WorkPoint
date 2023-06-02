@@ -1,14 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ICoworking, Review, User } from 'src/app/interfaces/interfaces';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CoworkingsService } from 'src/app/servises/coworkings.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ReviewService } from 'src/app/servises/review.service';
 import { AuthService } from 'src/app/servises/auth.service';
-import { v4 as uuidv4 } from 'uuid';
 import * as moment from 'moment';
-import { reviews as data } from 'src/app/data/reviews';
-import { mergeMap } from 'rxjs/operators';
 import { UserService } from 'src/app/servises/user.service';
 
 @Component({
@@ -21,25 +18,34 @@ export class CoworkingItemComponent implements OnInit {
   tags: any
   form: FormGroup
   review: Review
-  allReviews: Review[] = data
+  allReviews: Review[] = []
   coworkings: ICoworking[] = []
   userPlaces: ICoworking[] = []
   user: User
+  sortedItems: Review[] = []
+
+  isReviewSend: boolean = false
+  showFullDescription: boolean = false
+  UPDay: boolean = true
+  UPRating: boolean = false
+  isButtonDayActive: boolean = true
+  isButtonRatingActive: boolean = false
 
   constructor(private route: ActivatedRoute,
     private coworkingsService: CoworkingsService,
     private reviewService: ReviewService,
-    private authService: AuthService,
-    private userService: UserService) {
+    private userService: UserService,
+    private router: Router) {
 
   }
 
   ngOnInit() {
     const routeParams = this.route.snapshot.paramMap
-    const coworkingIdFromRoute = String(routeParams.get('id'));
+    const coworkingIdFromRouteSTR = String(routeParams.get('id'));
+    const coworkingIdFromRouteINT = Number(routeParams.get('id'));
 
 
-    this.coworkingsService.getCoworkingById(coworkingIdFromRoute).subscribe(coworking => {
+    this.coworkingsService.getCoworkingById(coworkingIdFromRouteSTR).subscribe(coworking => {
       this.coworking = coworking
       this.coworking.photo = this.coworking.photo.split('#')
       // console.log(this.coworking.photo)
@@ -56,21 +62,68 @@ export class CoworkingItemComponent implements OnInit {
 
     this.form = new FormGroup({
       rating: new FormControl(null, [Validators.required]),
-      description: new FormControl(null)
+      description: new FormControl('')
     })
 
     this.userService.getUserByToken().subscribe(user => {
       this.user = user
       // console.log('user', this.user.name)
     });
+
+    this.reviewService.getReviewsByIdPlace(coworkingIdFromRouteINT).subscribe(reviews => {
+      this.allReviews = reviews;
+      this.allReviews.sort((reviewFirst: Review, reviewSecond: Review) => moment(reviewSecond.created_at).diff(moment(reviewFirst.created_at)))
+
+      this.allReviews.forEach(review => {
+        review.formattedDate = moment(review.created_at).format('DD.MM.YYYY HH:mm');
+      });
+    })
+  }
+
+  sortByDay() {
+    if (this.UPDay) {
+      this.sortedItems = this.allReviews.sort((reviewFirst: Review, reviewSecond: Review) => moment(reviewSecond.created_at).diff(moment(reviewFirst.created_at)))
+    }
+    else {
+      this.sortedItems = this.allReviews.sort((reviewFirst: Review, reviewSecond: Review) => moment(reviewFirst.created_at).diff(moment(reviewSecond.created_at)))
+    }
+  }
+
+  sortByRating() {
+    if (this.UPRating) {
+      this.sortedItems = this.allReviews.sort((reviewFirst: Review, reviewSecond: Review) => reviewSecond.rank - reviewFirst.rank)
+    }
+    else {
+      this.sortedItems = this.allReviews.sort((reviewFirst: Review, reviewSecond: Review) => reviewFirst.rank - reviewSecond.rank)
+    }
+  }
+
+  toggleButtonDay() {
+    if (this.isButtonDayActive) {
+      return
+    }
+    this.isButtonDayActive = !this.isButtonDayActive;
+    this.isButtonRatingActive = false;
+  }
+
+  toggleButtonRating() {
+    if (this.isButtonRatingActive) {
+      return
+    }
+    this.isButtonRatingActive = !this.isButtonRatingActive;
+    this.isButtonDayActive = false;
   }
 
   onSubmit() {
+    const routeParams = this.route.snapshot.paramMap
+
     this.form.disable()
     this.reviewService.create(0, this.coworking.id, this.form.value.rating, this.form.value.description).subscribe(
       (review) => {
         this.review = review
         // console.log('Изменения сохранены')
+        this.isReviewSend = true
+        location.reload()
         this.form.enable()
       },
       (error) => {
@@ -79,6 +132,14 @@ export class CoworkingItemComponent implements OnInit {
         this.form.enable()
       }
     );
+  }
+
+  toggleUPDay() {
+    this.UPDay = !this.UPDay
+  }
+
+  toggleUPRating() {
+    this.UPRating = !this.UPRating
   }
 
 }
