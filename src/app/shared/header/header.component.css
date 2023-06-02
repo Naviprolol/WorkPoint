@@ -100,13 +100,26 @@
     color: rgba(27, 31, 59, 0.8);
   }
 
+  .sign-in {
+    margin-right: 30px;
+    font-size: 20px;
+  }
+
+  .sign-in:hover {
+    color: black;
+  }
+
+  .name {
+    margin-right: 7px;
+  }
+
   .dropdown {
-    position: relative;
-    margin-top: 160px;
+    display: flex;
   }
 
   .dropdown-menu {
-    padding-top: 13px;
+    position: absolute;
+    margin-top: 30px;
     background: #FBFBF5;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 7px;
@@ -127,6 +140,7 @@
     color: #494C62;
     padding: 11px 11px;
     opacity: 0.7;
+    font-size: 16px;
   }
 
   .dropdown-menu a:hover {
@@ -252,13 +266,22 @@
     color: rgba(27, 31, 59, 0.8);
   }
 
+  .sign-in {
+    margin-right: calc(0.75*30px);
+    font-size: calc(0.75*20px);
+  }
+
+  .name {
+    margin-right: calc(0.75*7px);
+  }
+
   .dropdown {
-    position: relative;
-    margin-top: calc(0.83*160px);
+    display: flex;
   }
 
   .dropdown-menu {
-    padding-top: calc(0.83*13px);
+    position: absolute;
+    margin-top: calc(0.83*30px);
     background: #FBFBF5;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 7px;
@@ -279,6 +302,7 @@
     color: #494C62;
     padding: calc(0.83*11px) calc(0.75*11px);
     opacity: 0.7;
+    font-size: calc(0.75*16px);
   }
 
   .dropdown-menu a:hover {
@@ -287,13 +311,13 @@
 
   .btn-settings {
     height: calc(0.83*10px);
-    width: calc(0.75*10px);
+    width: calc(0.83*10px);
     position: relative;
   }
 
   .btn-settings-img {
     height: calc(0.83*10px);
-    width: calc(0.75*10px);
+    width: calc(0.83*10px);
   }
 
   .settings li {
@@ -402,15 +426,25 @@
     font-size: calc(0.71*15px);
     line-height: calc(0.71*28px);
     color: rgba(27, 31, 59, 0.8);
+    margin-top: 3px;
+  }
+
+  .sign-in {
+    margin-right: calc(0.71*30px);
+    font-size: calc(0.71*20px);
+  }
+
+  .name {
+    margin-right: calc(0.71*7px);
   }
 
   .dropdown {
-    position: relative;
-    margin-top: calc(0.71*160px);
+    display: flex;
   }
 
   .dropdown-menu {
-    padding-top: calc(0.71*13px);
+    position: absolute;
+    margin-top: calc(0.71*30px);
     background: #FBFBF5;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 7px;
@@ -431,6 +465,7 @@
     color: #494C62;
     padding: calc(0.71*11px) calc(0.71*11px);
     opacity: 0.7;
+    font-size: calc(0.71*16px);
   }
 
   .dropdown-menu a:hover {
@@ -451,8 +486,4 @@
   .settings li {
     position: relative;
   }
-
-  /* .settings li a {
-    display: block;
-  } */
 }

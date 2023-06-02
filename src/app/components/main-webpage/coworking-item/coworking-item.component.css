@@ -1,9 +1,32 @@
 @media screen and (max-width: 5000px) {
+  .return-to-main {
+    display: flex;
+    width: 180px;
+    margin-left: 168px;
+    margin-bottom: 65px;
+    margin-top: 18px;
+    align-items: center;
+  }
+
+  .return-button {
+    margin-right: 18px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 16px;
+    height: 16px;
+  }
+
+  .return-to-main span {
+    font-size: 15px;
+    line-height: 20px;
+    color: rgba(27, 31, 59, 0.65);
+  }
+
   .line {
     position: absolute;
-    height: 791px;
+    height: 700px;
     left: 1266.71px;
-    top: 950px;
+    top: 900px;
     border: 1px solid #DDDFE0;
     box-shadow: inset 0px -1px 0px rgba(221, 223, 224, 0.7);
   }
@@ -46,6 +69,28 @@
 
   .img-good-place {
     margin-right: 27px;
+    width: 22px;
+    height: 22px;
+  }
+
+  .img-star {
+    width: 22px;
+    height: 21.02px;
+  }
+
+  .img-coworking-address {
+    width: 20px;
+    height: 24px;
+  }
+
+  .img-coworking-time {
+    width: 22px;
+    height: 22px;
+  }
+
+  .img-coworking-phone {
+    width: 22.5px;
+    height: 27px;
   }
 
   .coworking-rating {
@@ -163,8 +208,8 @@
 
   .coworking-tag {
     text-align: center;
-    min-width: 80px;
-    max-width: 300px;
+    width: fit-content;
+    padding: 1px 20px;
     font-size: 20px;
     line-height: 177.69%;
     background: #E0E0D6;
@@ -191,7 +236,7 @@
 
   .add-review {
     width: 1147px;
-    margin-bottom: 100px;
+    margin-bottom: 26px;
   }
 
   .reviews-title {
@@ -211,16 +256,18 @@
     border-radius: 10px;
     height: 62px;
     margin-bottom: 35px;
+    margin-top: 27px;
   }
 
   .review-input-field input {
-    width: 100%;
+    width: calc(100% - 20px);
     height: 100%;
     font-weight: 300;
     font-size: 22px;
     line-height: 177.69%;
     background: inherit;
     border-radius: 10px;
+    padding-left: 20px;
   }
 
   .btn-review {
@@ -230,14 +277,86 @@
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
     margin-left: 900px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 28px;
+    color: rgba(27, 31, 59, 0.6);
+  }
+
+  .btn-review:hover,
+  .btn-review:focus {
+    background-color: #EDFAED;
+    outline: 1px solid #6A6D79;
+  }
+
+  .btn-review:active {
+    background: #8EBD9D;
+  }
+
+  .sorting-reviews {
+    display: flex;
+    margin-bottom: 37px;
+    font-size: 20px;
+    line-height: 177.69%;
+    align-items: center;
+  }
+
+  .sorting-reviews b {
+    margin-right: 23px;
+    color: #000000;
+  }
+
+  .sorting-reviews .sort-by-date {
+    position: relative;
+    width: 100px;
+    margin-right: 29px;
+  }
+
+  .sorting-reviews .sort-by-date span:hover {
+    opacity: 50%;
+  }
+
+  .sorting-reviews .sort-by-rating span:hover {
+    opacity: 50%;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 11px;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+  }
+
+  .sorting-reviews .sort-by-date span {
+    margin-right: 5px;
+  }
+
+  .sorting-reviews .sort-by-rating {
+    position: relative;
+  }
+
+  .sorting-reviews .sort-by-rating span {
+    margin-right: 5px;
+  }
+
+  .blue-button {
+    color: #4DA8F7;
   }
 
   .review {
+    margin-bottom: 51px;
+  }
+
+  .review-title-container {
     display: flex;
+    margin-bottom: 10px;
   }
 
   .review .avatar {
     margin-right: 27px;
+    width: 70px;
+    height: 70px;
   }
 
   .review-title {
@@ -247,6 +366,7 @@
   .review-name-date {
     display: flex;
     align-items: center;
+    margin-bottom: 5px;
   }
 
   .review-name {
@@ -263,34 +383,52 @@
     color: #535353;
   }
 
-  .review-rating {
-    position: absolute;
-    width: 268px;
-    left: -10px;
+  .review-rating {}
+
+  .rating {
+    width: 161px;
+    height: 24px;
+  }
+
+  .review-description {
+    width: 1120px;
+    font-size: 22px;
+    line-height: 177.69%;
+  }
+
+  .review-description p {
+    font-weight: 300;
+  }
+
+  .review-description button {
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    color: #4DA8F7;
   }
 }
 
 @media screen and (max-width: 1450px) {
-  .line {
-    position: absolute;
-    height: calc(0.83*791px);
-    left: calc(0.75*1266.71px);
-    top: calc(0.83*950px);
-    border: 1px solid #DDDFE0;
-    box-shadow: inset 0px -1px 0px rgba(221, 223, 224, 0.7);
-  }
-
-  .return {
-    margin-left: calc(0.75*164px);
+  .return-to-main {
+    width: calc(0.75*250px);
+    margin-left: calc(0.75*180px);
+    margin-bottom: calc(0.83*65px);
     margin-top: calc(0.83*18px);
-    margin-bottom: calc(0.83*68px);
-    font-size: 15px;
-    line-height: 20px;
-    color: rgba(27, 31, 59, 0.65);
   }
 
-  .return img {
-    padding-right: calc(0.75*14px);
+  .return-button {
+    margin-right: calc(0.75*18px);
+    width: calc(0.75*16px);
+    height: calc(0.75*16px);
+  }
+
+  .return-to-main span {
+    font-size: calc(0.75*15px);
+  }
+
+  .line {
+    height: calc(0.83*700px);
+    left: calc(0.75*1266.71px);
+    top: calc(0.83*900px);
   }
 
   .information {
@@ -303,27 +441,44 @@
   }
 
   .title-container {
-    display: flex;
-    align-items: center;
     margin-bottom: calc(0.83*44px);
   }
 
   .title {
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 38px;
-    color: #000000;
+    font-size: calc(0.75*28px);
+    line-height: calc(0.83*38px);
     margin-right: calc(0.75*5px);
   }
 
   .img-good-place {
     margin-right: calc(0.75*27px);
+    width: calc(0.75*22px);
+    height: calc(0.75*22px);
+  }
+
+  .img-star {
+    width: calc(0.75*22px);
+    height: calc(0.75*21.02px);
+  }
+
+  .img-coworking-address {
+    width: calc(0.75*20px);
+    height: calc(0.75*24px);
+  }
+
+  .img-coworking-time {
+    width: calc(0.75*22px);
+    height: calc(0.75*22px);
+  }
+
+  .img-coworking-phone {
+    width: calc(0.75*22.5px);
+    height: calc(0.75*27px);
   }
 
   .coworking-rating {
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 177.69%;
+    font-size: calc(0.75*24px);
+    line-height: calc(0.83*177.69%);
     margin-right: calc(0.75*11px);
   }
 
@@ -337,14 +492,12 @@
   .first-photo {
     width: calc(0.75*950px);
     height: calc(0.83*522px);
-    border-radius: 20px;
   }
 
   .second-photo {
     margin-left: calc(0.75*52px);
     width: calc(0.75*310px);
     height: calc(0.83*250px);
-    border-radius: 20px;
     margin-bottom: calc(0.83*21px);
   }
 
@@ -352,16 +505,10 @@
     margin-left: calc(0.75*52px);
     width: calc(0.75*310px);
     height: calc(0.83*250px);
-    border-radius: 20px;
-  }
-
-  .first-photo img {
-    border-radius: 20px;
   }
 
   .flex-description {
-    display: flex;
-    gap: 54px;
+    gap: calc(0.75*54px);
   }
 
   .left-side {
@@ -369,16 +516,14 @@
   }
 
   .coworking-description {
-    font-weight: 300;
-    font-size: 22px;
-    line-height: 177.69%;
+    font-size: calc(0.75*22px);
+    line-height: calc(0.83*177.69%);
     margin-bottom: calc(0.83*5px);
   }
 
   .coworking-map p {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 33px;
+    font-size: calc(0.75*24px);
+    line-height: calc(0.83*33px);
     margin-bottom: calc(0.83*38px);
   }
 
@@ -397,22 +542,16 @@
   }
 
   .coworking-adress-container {
-    display: flex;
-    gap: 25px;
-    align-items: center;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 177.69%;
+    gap: calc(0.75*25px);
+    font-size: calc(0.75*20px);
+    line-height: calc(0.83*177.69%);
     margin-bottom: calc(0.83*15px);
   }
 
   .coworking-time-container {
-    display: flex;
-    gap: 24px;
-    align-items: center;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 177.69%;
+    gap: calc(0.75*24px);
+    font-size: calc(0.75*20px);
+    line-height: calc(0.83*177.69%);
     margin-bottom: calc(0.83*70px);
   }
 
@@ -421,148 +560,159 @@
   }
 
   .tags p {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 33px;
+    font-size: calc(0.75*24px);
+    line-height: calc(0.83*33px);
     margin-bottom: calc(0.83*27px);
   }
 
   .coworking-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+    gap: calc(0.75*15px);
   }
 
   .coworking-tag {
-    text-align: center;
-    min-width: calc(0.75*80px);
-    max-width: calc(0.75*300px);
-    font-size: 20px;
-    line-height: 177.69%;
-    background: #E0E0D6;
-    border-radius: 20px;
+    padding: calc(0.83*1px) calc(0.75*20px);
+    font-size: calc(0.75*20px);
+    line-height: calc(0.83*177.69%);
   }
 
   .contacts p {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 33px;
+    font-size: calc(0.75*24px);
+    line-height: calc(0.83*33px);
     margin-bottom: calc(0.83*37px);
   }
 
   .phone-information {
-    display: flex;
-    gap: 22.5px;
-    align-items: center;
+    gap: calc(0.75*22.5px);
   }
 
   .phone-information span {
-    font-size: 20px;
-    line-height: 177.69%;
+    font-size: calc(0.75*20px);
+    line-height: calc(0.83*177.69%);
   }
 
   .add-review {
     width: calc(0.75*1147px);
-    margin-bottom: calc(0.83*100px);
-  }
-
-  .reviews-title {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 33px;
     margin-bottom: calc(0.83*26px);
   }
 
-  .add-rating {
-    display: flex;
+  .reviews-title {
+    font-size: calc(0.75*24px);
+    line-height: calc(0.83*33px);
+    margin-bottom: calc(0.83*26px);
   }
 
   .review-input-field {
     width: calc(0.75*1150px);
-    background: rgba(190, 218, 195, 0.7);
-    border-radius: 10px;
     height: calc(0.83*62px);
     margin-bottom: calc(0.83*35px);
   }
 
   .review-input-field input {
-    width: 100%;
-    height: 100%;
-    font-weight: 300;
-    font-size: 22px;
-    line-height: 177.69%;
-    background: inherit;
-    border-radius: 10px;
+    width: calc(100% - calc(0.75*20px));
+    font-size: calc(0.75*22px);
+    line-height: calc(0.83*177.69%);
+    padding-left: calc(0.75*20px);
   }
 
   .btn-review {
     width: calc(0.75*250px);
     height: calc(0.83*54px);
-    background: #E0E0D6;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
-    border-radius: 10px;
     margin-left: calc(0.75*900px);
+    font-size: calc(0.75*15px);
+    line-height: calc(0.83*28px);
+  }
+
+  .sorting-reviews {
+    margin-bottom: calc(0.75*37px);
+    font-size: calc(0.75*20px);
+    line-height: calc(0.83*177.69%);
+  }
+
+  .sorting-reviews span {
+    margin-right: calc(0.75*23px);
+  }
+
+  .sorting-reviews .sort-by-date {
+    width: calc(0.75*100px);
+    margin-right: calc(0.75*29px);
+  }
+
+  .arrow {
+    top: calc(0.6*11px);
+    width: calc(0.75*16px);
+    height: calc(0.75*16px);
+  }
+
+  .sorting-reviews .sort-by-date span {
+    margin-right: calc(0.75*5px);
   }
 
   .review {
-    display: flex;
+    margin-bottom: calc(0.83*51px);
+  }
+
+  .review-title-container {
+    margin-bottom: calc(0.83*10px);
   }
 
   .review .avatar {
     margin-right: calc(0.75*27px);
-  }
-
-  .review-title {
-    position: relative;
+    width: calc(0.75*70px);
+    height: calc(0.75*70px);
   }
 
   .review-name-date {
-    display: flex;
-    align-items: center;
+    margin-bottom: calc(0.75*5px);
   }
 
   .review-name {
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 30px;
+    font-size: calc(0.75*22px);
+    line-height: calc(0.83*30px);
     margin-right: calc(0.75*8px);
   }
 
   .review-time {
     padding-top: calc(0.83*5px);
-    font-size: 15px;
-    line-height: 177.69%;
-    color: #535353;
+    font-size: calc(0.75*15px);
+    line-height: calc(0.83*177.69%);
   }
 
-  .review-rating {
-    position: absolute;
-    width: calc(0.75*268px);
-    left: calc(0.75*-10px);
+  .review-rating {}
+
+  .rating {
+    width: calc(0.75*161px);
+    height: calc(0.83*24px);
+  }
+
+  .review-description {
+    width: calc(0.75*1120px);
+    font-size: calc(0.75*22px);
+    line-height: calc(0.83*177.69%);
   }
 }
 
 @media screen and (max-width: 1370px) {
-  .line {
-    position: absolute;
-    height: calc(0.71*791px);
-    left: calc(0.71*1266.71px);
-    top: calc(0.71*950px);
-    border: 1px solid #DDDFE0;
-    box-shadow: inset 0px -1px 0px rgba(221, 223, 224, 0.7);
-  }
-
-  .return {
-    margin-left: calc(0.71*164px);
+  .return-to-main {
+    width: calc(0.71*250px);
+    margin-left: calc(0.71*180px);
+    margin-bottom: calc(0.71*65px);
     margin-top: calc(0.71*18px);
-    margin-bottom: calc(0.71*68px);
-    font-size: 15px;
-    line-height: 20px;
-    color: rgba(27, 31, 59, 0.65);
   }
 
-  .return img {
-    padding-right: calc(0.71*14px);
+  .return-button {
+    margin-right: calc(0.71*18px);
+    width: calc(0.71*16px);
+    height: calc(0.71*16px);
+  }
+
+  .return-to-main span {
+    font-size: calc(0.71*15px);
+  }
+
+  .line {
+    height: calc(0.71*700px);
+    left: calc(0.71*1266.71px);
+    top: calc(0.71*900px);
   }
 
   .information {
@@ -575,32 +725,48 @@
   }
 
   .title-container {
-    display: flex;
-    align-items: center;
     margin-bottom: calc(0.71*44px);
   }
 
   .title {
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 38px;
-    color: #000000;
+    font-size: calc(0.71*28px);
+    line-height: calc(0.71*38px);
     margin-right: calc(0.71*5px);
   }
 
   .img-good-place {
     margin-right: calc(0.71*27px);
+    width: calc(0.71*22px);
+    height: calc(0.71*22px);
+  }
+
+  .img-star {
+    width: calc(0.71*22px);
+    height: calc(0.71*21.02px);
+  }
+
+  .img-coworking-address {
+    width: calc(0.71*20px);
+    height: calc(0.71*24px);
+  }
+
+  .img-coworking-time {
+    width: calc(0.71*22px);
+    height: calc(0.71*22px);
+  }
+
+  .img-coworking-phone {
+    width: calc(0.71*22.5px);
+    height: calc(0.71*27px);
   }
 
   .coworking-rating {
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 177.69%;
+    font-size: calc(0.71*24px);
+    line-height: calc(0.71*177.69%);
     margin-right: calc(0.71*11px);
   }
 
   .photo-container {
-    display: flex;
     width: calc(0.71*1320px);
     height: calc(0.71*522px);
     margin-bottom: calc(0.71*55px);
@@ -609,14 +775,12 @@
   .first-photo {
     width: calc(0.71*950px);
     height: calc(0.71*522px);
-    border-radius: 20px;
   }
 
   .second-photo {
     margin-left: calc(0.71*52px);
     width: calc(0.71*310px);
     height: calc(0.71*250px);
-    border-radius: 20px;
     margin-bottom: calc(0.71*21px);
   }
 
@@ -624,16 +788,10 @@
     margin-left: calc(0.71*52px);
     width: calc(0.71*310px);
     height: calc(0.71*250px);
-    border-radius: 20px;
-  }
-
-  .first-photo img {
-    border-radius: 20px;
   }
 
   .flex-description {
-    display: flex;
-    gap: 54px;
+    gap: calc(0.71*54px);
   }
 
   .left-side {
@@ -641,16 +799,14 @@
   }
 
   .coworking-description {
-    font-weight: 300;
-    font-size: 22px;
-    line-height: 177.69%;
+    font-size: calc(0.71*22px);
+    line-height: calc(0.71*177.69%);
     margin-bottom: calc(0.71*5px);
   }
 
   .coworking-map p {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 33px;
+    font-size: calc(0.71*24px);
+    line-height: calc(0.71*33px);
     margin-bottom: calc(0.71*38px);
   }
 
@@ -669,22 +825,16 @@
   }
 
   .coworking-adress-container {
-    display: flex;
-    gap: 25px;
-    align-items: center;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 177.69%;
+    gap: calc(0.71*25px);
+    font-size: calc(0.71*20px);
+    line-height: calc(0.71*177.69%);
     margin-bottom: calc(0.71*15px);
   }
 
   .coworking-time-container {
-    display: flex;
-    gap: 24px;
-    align-items: center;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 177.69%;
+    gap: calc(0.71*24px);
+    font-size: calc(0.71*20px);
+    line-height: calc(0.71*177.69%);
     margin-bottom: calc(0.71*70px);
   }
 
@@ -693,123 +843,133 @@
   }
 
   .tags p {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 33px;
+    font-size: calc(0.71*24px);
+    line-height: calc(0.71*33px);
     margin-bottom: calc(0.71*27px);
   }
 
   .coworking-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+    gap: calc(0.71*15px);
   }
 
   .coworking-tag {
-    text-align: center;
-    min-width: calc(0.71*80px);
-    max-width: calc(0.71*300px);
-    font-size: 20px;
-    line-height: 177.69%;
-    background: #E0E0D6;
-    border-radius: 20px;
+    padding: calc(0.71*1px) calc(0.71*20px);
+    font-size: calc(0.71*20px);
+    line-height: calc(0.71*177.69%);
   }
 
   .contacts p {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 33px;
+    font-size: calc(0.71*24px);
+    line-height: calc(0.71*33px);
     margin-bottom: calc(0.71*37px);
   }
 
   .phone-information {
-    display: flex;
-    gap: 22.5px;
-    align-items: center;
+    gap: calc(0.71*22.5px);
   }
 
   .phone-information span {
-    font-size: 20px;
-    line-height: 177.69%;
+    font-size: calc(0.71*20px);
+    line-height: calc(0.71*177.69%);
   }
 
   .add-review {
     width: calc(0.71*1147px);
-    margin-bottom: calc(0.71*100px);
-  }
-
-  .reviews-title {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 33px;
     margin-bottom: calc(0.71*26px);
   }
 
-  .add-rating {
-    display: flex;
+  .reviews-title {
+    font-size: calc(0.71*24px);
+    line-height: calc(0.71*33px);
+    margin-bottom: calc(0.71*26px);
   }
 
   .review-input-field {
     width: calc(0.71*1150px);
-    background: rgba(190, 218, 195, 0.7);
-    border-radius: 10px;
     height: calc(0.71*62px);
     margin-bottom: calc(0.71*35px);
   }
 
   .review-input-field input {
-    width: 100%;
-    height: 100%;
-    font-weight: 300;
-    font-size: 22px;
-    line-height: 177.69%;
-    background: inherit;
-    border-radius: 10px;
+    width: calc(100% - calc(0.71*20px));
+    font-size: calc(0.71*22px);
+    line-height: calc(0.71*177.69%);
+    padding-left: calc(0.71*20px);
   }
 
   .btn-review {
     width: calc(0.71*250px);
     height: calc(0.71*54px);
-    background: #E0E0D6;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
-    border-radius: 10px;
     margin-left: calc(0.71*900px);
+    font-size: calc(0.71*15px);
+    line-height: calc(0.71*28px);
+  }
+
+  .sorting-reviews {
+    margin-bottom: calc(0.71*37px);
+    font-size: calc(0.71*20px);
+    line-height: calc(0.71*177.69%);
+  }
+
+  .sorting-reviews span {
+    margin-right: calc(0.71*23px);
+  }
+
+  .sorting-reviews .sort-by-date {
+    width: calc(0.71*100px);
+    margin-right: calc(0.71*29px);
+  }
+
+  .arrow {
+    top: calc(0.4*11px);
+    width: calc(0.71*16px);
+    height: calc(0.71*16px);
+  }
+
+  .sorting-reviews .sort-by-date span {
+    margin-right: calc(0.71*5px);
   }
 
   .review {
-    display: flex;
+    margin-bottom: calc(0.71*51px);
+  }
+
+  .review-title-container {
+    margin-bottom: calc(0.71*10px);
   }
 
   .review .avatar {
     margin-right: calc(0.71*27px);
-  }
-
-  .review-title {
-    position: relative;
+    width: calc(0.71*70px);
+    height: calc(0.71*70px);
   }
 
   .review-name-date {
-    display: flex;
-    align-items: center;
+    margin-bottom: calc(0.71*5px);
   }
 
   .review-name {
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 30px;
+    font-size: calc(0.71*22px);
+    line-height: calc(0.71*30px);
     margin-right: calc(0.71*8px);
   }
 
   .review-time {
     padding-top: calc(0.71*5px);
-    font-size: 15px;
-    line-height: 177.69%;
-    color: #535353;
+    font-size: calc(0.71*15px);
+    line-height: calc(0.71*177.69%);
   }
 
-  .review-rating {
-    position: absolute;
-    width: calc(0.71*268px);
-    left: calc(0.71*-10px);
+  .review-rating {}
+
+  .rating {
+    width: calc(0.71*161px);
+    height: calc(0.71*24px);
+  }
+
+  .review-description {
+    width: calc(0.71*1120px);
+    font-size: calc(0.71*22px);
+    line-height: calc(0.71*177.69%);
   }
 }

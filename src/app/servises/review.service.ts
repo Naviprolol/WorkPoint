@@ -16,12 +16,17 @@ export class ReviewService {
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json');
 
     const data = {
-      user_id: `${user_id}`,
-      place_id: `${place_id}`,
-      rank: `${rating}`,
-      body: `${description}`
+      user_id,
+      place_id,
+      rank: rating,
+      body: description
     };
 
     return this.http.post<Review>('https://1506815-cq40245.tw1.ru/review/add_review', data, { headers: headers }) // Путь бека
+  }
+
+  getReviewsByIdPlace(place_id: number): Observable<Review[]> {
+
+    return this.http.post<Review[]>(`https://1506815-cq40245.tw1.ru/places/get_reviews?id_place=${place_id}`, {})
   }
 }

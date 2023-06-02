@@ -1,20 +1,20 @@
 <app-header></app-header>
 
-<div class="return">
-  <a routerLink='/main'>
-    <img src="assets/img/return-button.svg" alt="return-button">
-    Вернуться к списку
+<div class="return-to-main">
+  <a routerLink="/">
+    <img src="assets/img/return-button.svg" alt="return-button" class="return-button">
   </a>
+  <span>Вернуться к поиску</span>
 </div>
 
 <div class="information" *ngIf="coworking">
   <div class="main-information">
     <div class="title-container">
       <p class="title">{{ coworking.name }}</p>
-      <img src="assets/img/good-place.svg" width="22" height="22" alt="good-place" class="img-good-place"
+      <img src="assets/img/good-place.svg" alt="good-place" class="img-good-place"
         [ngStyle]="{ visibility: coworking.rating < 3.5 ? 'hidden' : '' }">
       <p class="coworking-rating">{{coworking.rating}}</p>
-      <img src="assets/img/star.svg" width="22" height="21.02" alt="star" class="img-star">
+      <img src="assets/img/star.svg" alt="star" class="img-star">
     </div>
 
     <div class="photo-container">
@@ -60,12 +60,12 @@
       <div class="right-side">
 
         <div class="coworking-adress-container">
-          <img src="assets/img/coworking-adress.svg" alt="coworking-adress">
+          <img src="assets/img/coworking-adress.svg" alt="coworking-adress" class="img-coworking-address">
           <p> {{coworking.address}} </p>
         </div>
 
         <div class="coworking-time-container">
-          <img src="assets/img/coworking-time.svg" alt="coworking-time">
+          <img src="assets/img/coworking-time.svg" alt="coworking-time" class="img-coworking-time">
           <p>{{coworking.opening_hours}}</p>
         </div>
 
@@ -79,7 +79,7 @@
         <div class="contacts">
           <p>Контакты</p>
           <div class="phone-information">
-            <img src="assets/img/phone.svg" alt="phone" width="22.5" height="27">
+            <img src="assets/img/phone.svg" alt="phone" width="22.5" height="27" class="img-coworking-phone">
             <span>{{coworking.company_phone}}</span>
           </div>
         </div>
@@ -98,21 +98,54 @@
       <button class="btn-review" type="submit" [disabled]="form.invalid || form.disabled">Оставить отзыв</button>
     </form>
 
+    <div class="sorting-reviews">
+      <b>Сортировать:</b>
+      <button class="sort-by-date" (click)="toggleUPDay()" (click)="sortByDay()"
+        [ngClass]="{ 'blue-button': isButtonDayActive }" (click)="toggleButtonDay()">
+        <span>по дате</span>
+        <img src="assets/img/arrowUP.svg" alt="arrowUP" class="arrow" *ngIf="UPDay && isButtonDayActive">
+        <img src="assets/img/arrowDOWN.svg" alt="arrowDOWN" class="arrow" *ngIf="!UPDay && isButtonDayActive">
+      </button>
+      <button class="sort-by-rating" (click)="toggleUPRating()" (click)="sortByRating()"
+        [ngClass]="{ 'blue-button': isButtonRatingActive }" (click)="toggleButtonRating()">
+        <span>по оценке</span>
+        <img src="assets/img/arrowUP.svg" alt="arrowUP" class="arrow" *ngIf="UPRating && isButtonRatingActive">
+        <img src="assets/img/arrowDOWN.svg" alt="arrowDOWN" class="arrow" *ngIf="!UPRating && isButtonRatingActive">
+      </button>
+    </div>
+
     <div class="reviews">
-      <div *ngFor="let review of allReviews">
-        <div class="review" *ngIf="coworking.id === review.place_id">
-          <img src="assets/img/star.svg" alt="avatar" class="avatar" width="70" height="70">
+      <div class="review" *ngFor="let review of allReviews">
+        <div class="review-title-container">
+          <img src="assets/img/star.svg" alt="avatar" class="avatar">
           <div class="review-title">
+
             <div class="review-name-date">
-              <span class="review-name">Мария</span>
-              <time class="review-time"> {{review.created_at}} </time>
+              <span class="review-name">{{review.user_name + ' ' + review.user_surname}}</span>
+              <time class="review-time">{{review.formattedDate}}</time> <!-- {{review.created_at}} -->
             </div>
             <div class="review-rating">
-              <ngx-star-rating [id]="'coworking'" [disabled]="true"></ngx-star-rating>
+              <img src="assets/img/rating1.svg" alt="rating" class="rating" *ngIf="review.rank === 1">
+              <img src="assets/img/rating2.svg" alt="rating" class="rating" *ngIf="review.rank === 2">
+              <img src="assets/img/rating3.svg" alt="rating" class="rating" *ngIf="review.rank === 3">
+              <img src="assets/img/rating4.svg" alt="rating" class="rating" *ngIf="review.rank === 4">
+              <img src="assets/img/rating5.svg" alt="rating" class="rating" *ngIf="review.rank === 5">
             </div>
           </div>
         </div>
+
+        <div class="review-description" *ngIf="review.body">
+
+          <p *ngIf="review.body.length > 244  && !showFullDescription">
+            {{ review.body.substring(0, 244) + '...' }}
+            <button (click)="showFullDescription = true">Читать полностью</button>
+          </p>
+
+          <p *ngIf="(review.body.length < 244 || showFullDescription) && review.body.length > 0">{{ review.body }}</p>
+        </div>
+
       </div>
+
     </div>
   </div>
 
