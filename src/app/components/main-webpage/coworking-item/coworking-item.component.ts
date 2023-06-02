@@ -75,7 +75,7 @@ export class CoworkingItemComponent implements OnInit {
       this.allReviews.sort((reviewFirst: Review, reviewSecond: Review) => moment(reviewSecond.created_at).diff(moment(reviewFirst.created_at)))
 
       this.allReviews.forEach(review => {
-        review.formattedDate = moment(review.created_at).format('DD.MM.YYYY');
+        review.formattedDate = moment(review.created_at).format('DD.MM.YYYY HH:mm');
       });
     })
   }

@@ -78,7 +78,7 @@
   }
 
   .progress-information {
-    margin-left: 560px;
+    margin-left: 520px;
     margin-bottom: 40px;
     padding: 50px 85px 80px 102px;
     width: 1075.53px;
@@ -117,7 +117,7 @@
   }
 
   .about-information {
-    margin-left: 560px;
+    margin-left: 520px;
   }
 
   .display-flex {
@@ -168,7 +168,7 @@
     cursor: pointer;
     display: flex;
     width: 188.49px;
-    padding: 13px 43px;
+    padding: 13px 52px;
     background: #E0E0D6;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
@@ -179,7 +179,7 @@
   }
 
   .business-information {
-    margin-left: 560px;
+    margin-left: 520px;
   }
 
   .business-information__text {
@@ -197,7 +197,7 @@
     cursor: pointer;
     display: flex;
     width: 251px;
-    padding: 13px 9px;
+    padding: 13px 18px;
     background: #E0E0D6;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
@@ -332,7 +332,7 @@
 @media screen and (max-width: 1450px) {
   .return-to-main {
     display: flex;
-    width: calc(0.75*250px);
+    width: calc(0.75*220px);
     margin-left: calc(0.75*180px);
     margin-bottom: calc(0.83*65px);
     margin-top: calc(0.83*18px);
@@ -349,7 +349,7 @@
 
   .return-to-main span {
     font-size: calc(0.75*15px);
-    line-height: 20px;
+    line-height: calc(0.83*20px);
     color: rgba(27, 31, 59, 0.65);
   }
 
@@ -409,9 +409,9 @@
   }
 
   .progress-information {
-    margin-left: calc(0.75*560px);
+    margin-left: calc(0.75*520px);
     margin-bottom: calc(0.83*40px);
-    padding: 50px 85px 80px 102px;
+    padding: calc(0.83*50px) calc(0.75*85px) calc(0.83*80px) calc(0.75*102px);
     width: calc(0.75*1075.53px);
     left: calc(0.75*568.47px);
     top: calc(0.83*824px);
@@ -423,7 +423,7 @@
     display: flex;
     font-size: calc(0.75*40px);
     font-weight: 700;
-    line-height: 54px;
+    line-height: calc(0.83*54px);
     letter-spacing: 0em;
     text-align: center;
     margin-left: calc(0.75*230px);
@@ -447,7 +447,7 @@
   }
 
   .about-information {
-    margin-left: calc(0.75*560px);
+    margin-left: calc(0.75*520px);
   }
 
   .display-flex {
@@ -459,7 +459,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: calc(0.75*28px);
-    line-height: 38px;
+    line-height: calc(0.83*38px);
     color: #000000;
     margin-bottom: calc(0.83*54px);
   }
@@ -473,7 +473,7 @@
     height: calc(0.83*57px);
     font-weight: 300;
     font-size: calc(0.75*15px);
-    line-height: 28px;
+    line-height: calc(0.83*28px);
     padding-left: calc(0.75*28px);
     background: #E0E0D6;
     border-radius: 10px;
@@ -498,7 +498,7 @@
     cursor: pointer;
     display: flex;
     width: calc(0.75*188.49px);
-    padding: calc(0.83*13px) calc(0.75*43px);
+    padding: calc(0.83*13px) calc(0.75*52px);
     background: #E0E0D6;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
@@ -509,7 +509,7 @@
   }
 
   .business-information {
-    margin-left: calc(0.75*560px);
+    margin-left: calc(0.75*520px);
   }
 
   .business-information__text {
@@ -527,7 +527,7 @@
     cursor: pointer;
     display: flex;
     width: calc(0.75*251px);
-    padding: 13px 9px;
+    padding: calc(0.83*13px) calc(0.75*18px);
     background: #E0E0D6;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
@@ -627,7 +627,7 @@
     left: calc(0.75*5px);
     width: calc(0.75*30px);
     height: calc(0.83*30px);
-    line-height: 30px;
+    line-height: calc(0.83*30px);
     background: #9C5D56;
     color: #fff;
     font-size: calc(0.75*60%);
@@ -657,7 +657,7 @@
 @media screen and (max-width: 1370px) {
   .return-to-main {
     display: flex;
-    width: calc(0.71*250px);
+    width: calc(0.71*220px);
     margin-left: calc(0.71*180px);
     margin-bottom: calc(0.71*65px);
     margin-top: calc(0.71*18px);
@@ -674,7 +674,7 @@
 
   .return-to-main span {
     font-size: calc(0.71*15px);
-    line-height: 20px;
+    line-height: calc(0.71*20px);
     color: rgba(27, 31, 59, 0.65);
   }
 
@@ -734,9 +734,9 @@
   }
 
   .progress-information {
-    margin-left: calc(0.71*560px);
+    margin-left: calc(0.71*520px);
     margin-bottom: calc(0.71*40px);
-    padding: 50px 85px 80px 102px;
+    padding: calc(0.71*50px) calc(0.71*85px) calc(0.71*80px) calc(0.71*102px);
     width: calc(0.71*1075.53px);
     left: calc(0.71*568.47px);
     top: calc(0.71*824px);
@@ -748,7 +748,7 @@
     display: flex;
     font-size: calc(0.71*40px);
     font-weight: 700;
-    line-height: 54px;
+    line-height: calc(0.71*54px);
     letter-spacing: 0em;
     text-align: center;
     margin-left: calc(0.71*230px);
@@ -772,7 +772,7 @@
   }
 
   .about-information {
-    margin-left: calc(0.71*560px);
+    margin-left: calc(0.71*520px);
   }
 
   .display-flex {
@@ -784,7 +784,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: calc(0.71*28px);
-    line-height: 38px;
+    line-height: calc(0.71*38px);
     color: #000000;
     margin-bottom: calc(0.71*54px);
   }
@@ -798,7 +798,7 @@
     height: calc(0.71*57px);
     font-weight: 300;
     font-size: calc(0.71*15px);
-    line-height: 28px;
+    line-height: calc(0.71*28px);
     padding-left: calc(0.71*28px);
     background: #E0E0D6;
     border-radius: 10px;
@@ -823,7 +823,7 @@
     cursor: pointer;
     display: flex;
     width: calc(0.71*188.49px);
-    padding: calc(0.71*13px) calc(0.71*43px);
+    padding: calc(0.71*13px) calc(0.71*52px);
     background: #E0E0D6;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
@@ -834,7 +834,7 @@
   }
 
   .business-information {
-    margin-left: calc(0.71*560px);
+    margin-left: calc(0.71*520px);
   }
 
   .business-information__text {
@@ -852,7 +852,7 @@
     cursor: pointer;
     display: flex;
     width: calc(0.71*251px);
-    padding: 13px 9px;
+    padding: calc(0.71*13px) calc(0.71*18px);
     background: #E0E0D6;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
@@ -952,7 +952,7 @@
     left: calc(0.71*5px);
     width: calc(0.71*30px);
     height: calc(0.71*30px);
-    line-height: 30px;
+    line-height: calc(0.71*30px);
     background: #9C5D56;
     color: #fff;
     font-size: calc(0.71*60%);

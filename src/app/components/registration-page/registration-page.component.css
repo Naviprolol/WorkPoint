@@ -216,9 +216,9 @@
   .header-container {
     width: calc(0.75*1578.49px);
     height: calc(0.83*94.5px);
-    margin-top: 27px;
-    margin-left: 172px;
-    margin-bottom: 34px;
+    margin-top: calc(0.83*27px);
+    margin-left: calc(0.75*172px);
+    margin-bottom: calc(0.83*34px);
     border-bottom: 2px solid #e9e9e9;
   }
 
@@ -233,7 +233,7 @@
     width: calc(0.75*50px);
     height: calc(0.83*49.74px);
     left: calc(0.75*165px);
-    top: 30px;
+    top: calc(0.83*30px);
 
     /* background: linear-gradient(341.04deg, #BEDAC3 10.49%, rgba(255, 255, 255, 0) 100.29%);
     filter: drop-shadow(0px 7.935px 19.8375px rgba(250, 196, 201, 0.2));
@@ -247,7 +247,7 @@
     width: calc(0.75*50px);
     height: calc(0.83*49.74px);
     left: calc(0.75*1032px);
-    top: 162px;
+    top: calc(0.83*162px);
 
     /* background: linear-gradient(341.04deg, #BEDAC3 10.49%, rgba(255, 255, 255, 0) 100.29%);
     filter: drop-shadow(0px 7.935px 19.8375px rgba(250, 196, 201, 0.2));
@@ -267,10 +267,10 @@
 
   .welcome {
     width: calc(0.75*871px);
-    font-size: 48px;
+    font-size: calc(0.75*48px);
     line-height: 120%;
     padding-left: calc(0.75*177px);
-    margin-bottom: 37px;
+    margin-bottom: calc(0.83*37px);
   }
 
   .registration {
@@ -281,10 +281,10 @@
 
   .info {
     font-size: 28px;
-    line-height: 38px;
-    padding-top: 26px;
+    line-height: calc(0.83*38px);
+    padding-top: calc(0.83*26px);
     padding-left: calc(0.75*59px);
-    margin-bottom: 21px;
+    margin-bottom: calc(0.83*21px);
   }
 
   .input-field {
@@ -293,17 +293,17 @@
     border-radius: 20px;
     margin-left: calc(0.75*61px);
     background: #FBFBF5;
-    margin-bottom: 20px;
+    margin-bottom: calc(0.83*20px);
   }
 
   .input-field input {
     width: calc(0.75*528px);
     height: calc(0.83*67px);
     font-weight: 300;
-    font-size: 15px;
-    line-height: 28px;
+    font-size: calc(0.75*15px);
+    line-height: calc(0.83*28px);
     padding-left: calc(0.75*28px);
-    margin-top: 2px;
+    margin-top: calc(0.83*2px);
     margin-left: calc(0.75*2px);
     background: #FBFBF5;
     border-radius: 20px;
@@ -316,7 +316,7 @@
   .sign-up {
     width: calc(0.75*275px);
     height: calc(0.83*54px);
-    margin-top: 40px;
+    margin-top: calc(0.83*40px);
     background: #E0E0D6;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
@@ -343,18 +343,18 @@
     height: 100%;
     color: rgba(27, 31, 59, 0.6);
     font-weight: 600;
-    font-size: 15px;
-    line-height: 28px;
+    font-size: calc(0.75*15px);
+    line-height: calc(0.83*28px);
   }
 
   .helper-text {
-    font-size: 15px;
+    font-size: calc(0.75*15px);
   }
 
   .red-text {
     display: inline-block;
     color: red;
-    padding-top: 7px;
+    padding-top: calc(0.83*7px);
   }
 
   .invalid {}
@@ -370,14 +370,14 @@
   }
 
   .flex-registration .choose-account {
-    font-size: 28px;
-    line-height: 38px;
-    margin-top: 53px;
-    margin-bottom: 22px;
+    font-size: calc(0.75*28px);
+    line-height: calc(0.83*38px);
+    margin-top: calc(0.83*53px);
+    margin-bottom: calc(0.83*22px);
   }
 
   .first+label {
-    margin-bottom: 26px;
+    margin-bottom: calc(0.83*26px);
   }
 
   .custom-radio {
@@ -391,7 +391,7 @@
     align-items: center;
     user-select: none;
     font-weight: 300;
-    font-size: 24px;
+    font-size: calc(0.75*24px);
     line-height: 177.69%;
   }
 
@@ -420,7 +420,7 @@
 
   .radio .help {
     font-weight: 300;
-    font-size: 20px;
+    font-size: calc(0.75*20px);
     color: rgba(0, 0, 0, 0.6);
     padding-left: calc(0.75*50px);
   }
@@ -430,9 +430,9 @@
   .header-container {
     width: calc(0.71*1578.49px);
     height: calc(0.71*94.5px);
-    margin-top: 27px;
-    margin-left: 172px;
-    margin-bottom: 34px;
+    margin-top: calc(0.71*27px);
+    margin-left: calc(0.71*172px);
+    margin-bottom: calc(0.71*34px);
     border-bottom: 2px solid #e9e9e9;
   }
 
@@ -447,7 +447,7 @@
     width: calc(0.71*50px);
     height: calc(0.71*49.74px);
     left: calc(0.71*165px);
-    top: 30px;
+    top: calc(0.71*30px);
 
     /* background: linear-gradient(341.04deg, #BEDAC3 10.49%, rgba(255, 255, 255, 0) 100.29%);
       filter: drop-shadow(0px 7.935px 19.8375px rgba(250, 196, 201, 0.2));
@@ -461,7 +461,7 @@
     width: calc(0.71*50px);
     height: calc(0.71*49.74px);
     left: calc(0.71*1032px);
-    top: 162px;
+    top: calc(0.71*162px);
 
     background: linear-gradient(341.04deg, #BEDAC3 10.49%, rgba(255, 255, 255, 0) 100.29%);
     filter: drop-shadow(0px 7.935px 19.8375px rgba(250, 196, 201, 0.2));
@@ -481,10 +481,10 @@
 
   .welcome {
     width: calc(0.71*871px);
-    font-size: 48px;
+    font-size: calc(0.71*48px);
     line-height: 120%;
     padding-left: calc(0.71*177px);
-    margin-bottom: 37px;
+    margin-bottom: calc(0.71*37px);
   }
 
   .registration {
@@ -494,11 +494,11 @@
   }
 
   .info {
-    font-size: 28px;
-    line-height: 38px;
-    padding-top: 26px;
+    font-size: calc(0.71*28px);
+    line-height: calc(0.71*38px);
+    padding-top: calc(0.71*26px);
     padding-left: calc(0.71*59px);
-    margin-bottom: 21px;
+    margin-bottom: calc(0.71*21px);
   }
 
   .input-field {
@@ -507,17 +507,17 @@
     border-radius: 20px;
     margin-left: calc(0.71*61px);
     background: #FBFBF5;
-    margin-bottom: 20px;
+    margin-bottom: calc(0.71*20px);
   }
 
   .input-field input {
     width: calc(0.71*528px);
     height: calc(0.71*67px);
     font-weight: 300;
-    font-size: 15px;
-    line-height: 28px;
+    font-size: calc(0.71*15px);
+    line-height: calc(0.71*28px);
     padding-left: calc(0.71*28px);
-    margin-top: 2px;
+    margin-top: calc(0.71*2px);
     margin-left: calc(0.71*2px);
     background: #FBFBF5;
     border-radius: 20px;
@@ -530,7 +530,7 @@
   .sign-up {
     width: calc(0.71*275px);
     height: calc(0.71*54px);
-    margin-top: 40px;
+    margin-top: calc(0.71*40px);
     background: #E0E0D6;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
@@ -557,18 +557,18 @@
     height: 100%;
     color: rgba(27, 31, 59, 0.6);
     font-weight: 600;
-    font-size: 15px;
-    line-height: 28px;
+    font-size: calc(0.71*15px);
+    line-height: calc(0.71*28px);
   }
 
   .helper-text {
-    font-size: 15px;
+    font-size: calc(0.71*15px);
   }
 
   .red-text {
     display: inline-block;
     color: red;
-    padding-top: 7px;
+    padding-top: calc(0.71*7px);
   }
 
   .invalid {}
@@ -585,13 +585,13 @@
 
   .flex-registration .choose-account {
     font-size: 28px;
-    line-height: 38px;
-    margin-top: 53px;
-    margin-bottom: 22px;
+    line-height: calc(0.71*38px);
+    margin-top: calc(0.71*53px);
+    margin-bottom: calc(0.71*22px);
   }
 
   .first+label {
-    margin-bottom: 26px;
+    margin-bottom: calc(0.71*26px);
   }
 
   .custom-radio {

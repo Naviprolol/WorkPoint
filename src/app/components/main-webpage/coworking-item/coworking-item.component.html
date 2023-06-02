@@ -98,7 +98,7 @@
       <button class="btn-review" type="submit" [disabled]="form.invalid || form.disabled">Оставить отзыв</button>
     </form>
 
-    <div class="sorting-reviews">
+    <div class="sorting-reviews" *ngIf="allReviews.length > 0">
       <b>Сортировать:</b>
       <button class="sort-by-date" (click)="toggleUPDay()" (click)="sortByDay()"
         [ngClass]="{ 'blue-button': isButtonDayActive }" (click)="toggleButtonDay()">
