@@ -105,8 +105,12 @@
     </div>
 
   </div>
-  <p *ngIf="successText === 'Вы успешно перешли на бизнес-аккаунт!'" class="goodSuccessText">{{successText}}</p>
-  <!-- сделать появление надписи на несколько секунд -->
+  <p id="popup" *ngIf="successText === 'Вы успешно перешли на бизнес-аккаунт!'">
+    <img class="goodSuccessText" alt="Вы успешно перешли на бизнес-аккаунт!" src="../../../../assets/img/check-busines.svg">
+  </p>
+  <script type="text/javascript" charset="utf-8">
+    setTimeout(() => popup.hidden = true, 2000)
+  </script>
 </div>
 
 <app-footer></app-footer>

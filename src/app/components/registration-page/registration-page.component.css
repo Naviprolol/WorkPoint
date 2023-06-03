@@ -605,7 +605,7 @@
     align-items: center;
     user-select: none;
     font-weight: 300;
-    font-size: 24px;
+    font-size: calc(0.71*24px);
     line-height: 177.69%;
   }
 
@@ -634,7 +634,7 @@
 
   .radio .help {
     font-weight: 300;
-    font-size: 20px;
+    font-size: calc(0.71*20px);
     color: rgba(0, 0, 0, 0.6);
     padding-left: calc(0.71*50px);
   }
