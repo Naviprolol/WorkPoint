@@ -79,7 +79,7 @@
   }
 
   .search-container-input {
-    width: 277px;
+    width: 862px;
     font-size: 15px;
     background: #FBFBF5;
     font-weight: 300;
@@ -89,9 +89,18 @@
     margin-left: 28px;
   }
 
+  .btn-find-coworking:hover {
+    background-color: #EDFAED;
+    outline: 1px solid #6A6D79;
+  }
+
+  .btn-find-coworking:active {
+    background: #8EBD9D !important;
+  }
+
   .btn-find-coworking {
     width: 275px;
-    background: #E0E0D6;
+    background-color: #E0E0D6 !important;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
     font-weight: 600;
@@ -181,6 +190,23 @@
   .filter-restzone {
     margin-bottom: 12px;
   }
+
+  .loader-icon {
+    position: absolute;
+    top: calc(1650px/2);
+    left: calc(1920px/2);
+    font-size: 50px;
+    animation: fa-spin 0.7s infinite linear;
+  }
+
+  .pagination {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    margin-left: 100px;
+  }
+
+
 }
 
 @media screen and (max-width: 1450px) {
@@ -234,7 +260,7 @@
   }
 
   .search-container-input {
-    width: calc(0.75*277px);
+    width: calc(0.75*862px);
     font-size: calc(0.75*15px);
     background: #FBFBF5;
     font-weight: 300;
@@ -336,6 +362,12 @@
   .filter-restzone {
     margin-bottom: calc(0.83*12px);
   }
+
+  .loader-icon {
+    top: calc(0.83*calc(1650px/2));
+    left: calc(0.75*calc(1920px/2));
+    font-size: calc(0.75*50px);
+  }
 }
 
 @media screen and (max-width: 1370px) {
@@ -389,7 +421,7 @@
   }
 
   .search-container-input {
-    width: calc(0.71*277px);
+    width: calc(0.71*862px);
     font-size: calc(0.71*15px);
     background: #FBFBF5;
     font-weight: 300;
@@ -490,5 +522,11 @@
 
   .filter-restzone {
     margin-bottom: calc(0.71*12px);
+  }
+
+  .loader-icon {
+    top: calc(0.71*calc(1650px/2));
+    left: calc(0.71*calc(1920px/2));
+    font-size: calc(0.71*50px);
   }
 }
