@@ -1,45 +1,47 @@
 <div class="coworking">
+  <a [routerLink]="['/main', coworking.id]">
 
-  <div class="coworking-header-container">
-    <div class="coworking-title-container">
-      <a [routerLink]="['/main', coworking.id]" class="coworking-title"> {{coworking.name}} </a>
-      <img src="assets/img/good-place.svg" width="22" height="22" alt="good-place" class="img-good-place"
-        [ngStyle]="{ visibility: coworking.rating < 3.5 ? 'hidden' : '' }">
-    </div>
-    <div class="coworking-rating-container">
-      <p class="coworking-rating"> {{coworking.rating}} </p>
-      <img src="assets/img/star.svg" width="22" height="21.02" alt="star" class="img-star">
-    </div>
-  </div>
-
-  <div class="coworking-info-container">
-
-    <div class="coworking-image">
-      <img src="{{photos[0]}}" alt="img">
+    <div class="coworking-header-container">
+      <div class="coworking-title-container">
+        <a class="coworking-title"> {{coworking.name}} </a>
+        <img src="assets/img/good-place.svg" width="22" height="22" alt="good-place" class="img-good-place"
+          [ngStyle]="{ visibility: coworking.rating < 3.5 ? 'hidden' : '' }">
+      </div>
+      <div class="coworking-rating-container">
+        <p class="coworking-rating"> {{coworking.rating}} </p>
+        <img src="assets/img/star.svg" width="22" height="21.02" alt="star" class="img-star">
+      </div>
     </div>
 
-    <div class="coworking-content">
-      <p class="coworking-description"> {{newDescription}} </p>
-      <div class="coworking-adress-container">
-        <img src="assets/img/coworking-adress.svg" alt="coworking-adress">
-        <p> {{coworking.address}} </p>
+    <div class="coworking-info-container">
+
+      <div class="coworking-image">
+        <img src="{{photos[0]}}" alt="img">
       </div>
 
-      <div class="coworking-time-container">
-        <img src="assets/img/coworking-time.svg" alt="coworking-time">
-        <p> {{coworking.opening_hours}} </p>
-      </div>
+      <div class="coworking-content">
+        <p class="coworking-description"> {{newDescription}} </p>
+        <div class="coworking-adress-container">
+          <img src="assets/img/coworking-adress.svg" alt="coworking-adress">
+          <p> {{coworking.address}} </p>
+        </div>
 
-      <div class="coworking-map-and-favorite-container">
-        <a class="coworking-map" [routerLink]="['/main', coworking.id]">
-          <p>Посмотреть на карте</p>
-        </a>
-        <!-- <button class="btn-like" (click)='like = !like'>
+        <div class="coworking-time-container">
+          <img src="assets/img/coworking-time.svg" alt="coworking-time">
+          <p> {{coworking.opening_hours}} </p>
+        </div>
+
+        <div class="coworking-map-and-favorite-container">
+          <button class="coworking-map" [routerLink]="['/main', coworking.id]">
+            <p>Посмотреть на карте</p>
+          </button>
+          <!-- <button class="btn-like" (click)='like = !like'>
           <img src="assets/img/coworking-favorite.svg" width="22.85" height="20.23" alt="coworking-favorite"
             [ngStyle]="{'background-color': like ? 'red' : ''}">
         </button> -->
-      </div>
+        </div>
 
+      </div>
     </div>
-  </div>
+  </a>
 </div>

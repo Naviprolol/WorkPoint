@@ -22,9 +22,12 @@ import { AddCoworkingComponent } from './components/add-coworking/add-coworking.
 import { CoworkingItemComponent } from './components/main-webpage/coworking-item/coworking-item.component';
 import { NgxStarRatingModule } from 'ngx-star-rating';
 import { FavouritesPageComponent } from './components/favourites-page/favourites-page.component';
-import {CommonModule} from '@angular/common'
+import { CommonModule } from '@angular/common'
 import { PlaceSettingsComponent } from './components/place-settings/place-settings.component';
 import { AdBusinessComponent } from './components/ad-business/ad-business.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +55,8 @@ import { AdBusinessComponent } from './components/ad-business/ad-business.compon
     ReactiveFormsModule,
     HttpClientModule,
     NgxStarRatingModule,
-    CommonModule
+    CommonModule,
+    NgxPaginationModule
   ],
   providers: [
     {

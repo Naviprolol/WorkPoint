@@ -1,5 +1,6 @@
 import { Component, ElementRef, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { coworkings as data } from 'src/app/data/coworkings';
 import { ICoworking } from 'src/app/interfaces/interfaces';
 import { CoworkingsService } from 'src/app/servises/coworkings.service';
@@ -12,11 +13,15 @@ import { CoworkingsService } from 'src/app/servises/coworkings.service';
 })
 
 export class MainPageComponent {
-  term = ''
+  searchText: string = ''
+  currentPage: number = 1;
+  itemsPerPage: number = 4;
+  totelCoworkings: number;
 
   parking: boolean = false
   recreation_area: boolean = false
   conference_hall: boolean = false
+  isLoading: boolean = false;
 
   coworkings: ICoworking[] = []
   filteredCoworkings: ICoworking[] = []
@@ -35,6 +40,7 @@ export class MainPageComponent {
   ngOnInit(): void {
     this.coworkingsService.getAll().subscribe(coworkings => {
       this.coworkings = coworkings;
+      this.totelCoworkings = coworkings.length
       this.updateFilteredCoworkings();
     });
   }
@@ -44,6 +50,23 @@ export class MainPageComponent {
     if (searchElement) {
       searchElement.scrollIntoView({ behavior: 'smooth' });
     }
+  }
+
+  filterByText() {
+    this.isLoading = true;
+
+    this.updateFilteredCoworkings();
+
+    const loadingData = new Observable<void>(observer => {
+      setTimeout(() => {
+        observer.next();
+        observer.complete();
+      }, 200);
+    });
+
+    loadingData.subscribe(() => {
+      this.isLoading = false; // Загрузка данных завершена, установка isLoading в false
+    });
   }
 
   onClickDistrictFilter(district: string): void {
@@ -90,14 +113,15 @@ export class MainPageComponent {
 
   private updateFilteredCoworkings(): void {
     if (this.activeDistricts.length === 0 && this.activeTypes.length === 0 && this.activeOpeningHours.length === 0 &&
-      !this.parking && !this.conference_hall && !this.recreation_area) {
+      !this.parking && !this.conference_hall && !this.recreation_area && this.searchText.length === 0) {
       this.filteredCoworkings = [...this.coworkings];
     } else {
       this.filteredCoworkings = this.coworkings.filter(coworking =>
         this.isActiveDistrict(coworking.district) && this.isActiveType(coworking.type_cafe) && this.isActiveOpeningHours(coworking.opening_hours) &&
         this.isActiveParking(coworking.parking) &&
         this.isActiveConferenceHall(coworking.conference_hall) &&
-        this.isActiveRecreationArea(coworking.recreation_area)
+        this.isActiveRecreationArea(coworking.recreation_area) &&
+        coworking.name.toLowerCase().includes(this.searchText.toLowerCase())
       );
     }
   }

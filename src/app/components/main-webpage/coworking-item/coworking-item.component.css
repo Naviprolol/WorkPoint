@@ -283,14 +283,13 @@
     color: rgba(27, 31, 59, 0.6);
   }
 
-  .btn-review:hover,
-  .btn-review:focus {
+  .btn-review:hover {
     background-color: #EDFAED;
     outline: 1px solid #6A6D79;
   }
 
   .btn-review:active {
-    background: #8EBD9D;
+    background: #8EBD9D !important;
   }
 
   .sorting-reviews {

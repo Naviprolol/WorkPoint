@@ -100,8 +100,13 @@
     bottom: 0;
   }
 
-  .coworking-map-and-favorite-container img:hover {
-    opacity: 50%;
+  .coworking-map:hover {
+    background-color: #EDFAED;
+    outline: 1px solid #6A6D79;
+  }
+
+  .coworking-map:active {
+    background: #8EBD9D !important;
   }
 
   .btn-like {
@@ -122,6 +127,8 @@
     color: rgba(27, 31, 59);
     text-align: center;
   }
+
+  .coworking-map {}
 }
 
 @media screen and (max-width: 1450px) {
