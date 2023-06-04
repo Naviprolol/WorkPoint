@@ -116,19 +116,19 @@
 
   .coworking-map {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
-    border: 0.5px solid rgba(0, 0, 0, 0.4);
     border-radius: 10px;
     width: 275px;
     height: 54px;
     background: #E0E0D6;
-    font-size: 15px;
-    font-weight: 600;
-    line-height: 54px;
-    color: rgba(27, 31, 59);
     text-align: center;
   }
 
-  .coworking-map {}
+  .coworking-map p {
+    font-size: 15px;
+    line-height: 28px;
+    color: rgba(27, 31, 59, 0.4);
+    font-weight: 600;
+  }
 }
 
 @media screen and (max-width: 1450px) {
@@ -243,16 +243,13 @@
   }
 
   .coworking-map {
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
-    border-radius: 10px;
-    width: calc(0.75*275px);
+    width: calc(0.71*275px);
     height: calc(0.83*54px);
-    background: #E0E0D6;
-    font-size: calc(0.75*15px);
-    font-weight: 600;
-    line-height: calc(0.83*54px);
-    color: rgba(27, 31, 59, 0.4);
-    text-align: center;
+  }
+
+  .coworking-map p {
+    font-size: calc(0.71*15px);
+    line-height: calc(0.83*28px);
   }
 }
 
@@ -368,15 +365,12 @@
   }
 
   .coworking-map {
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
-    border-radius: 10px;
     width: calc(0.71*275px);
     height: calc(0.71*54px);
-    background: #E0E0D6;
+  }
+
+  .coworking-map p {
     font-size: calc(0.71*15px);
-    font-weight: 600;
-    line-height: calc(0.71*54px);
-    color: rgba(27, 31, 59, 0.4);
-    text-align: center;
+    line-height: calc(0.71*28px);
   }
 }

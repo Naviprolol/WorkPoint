@@ -69,6 +69,15 @@
     color: rgba(27, 31, 59, 0.6);
   }
 
+  .btn-add-coworking:hover {
+    background-color: #EDFAED;
+    outline: 1px solid #6A6D79;
+  }
+
+  .btn-add-coworking:active {
+    background: #8EBD9D !important;
+  }
+
   .btn-notification {
     width: 20px;
     height: 22px;

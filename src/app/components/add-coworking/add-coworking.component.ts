@@ -5,7 +5,6 @@ import { of } from 'rxjs';
 import { mergeMap, switchMap } from 'rxjs/operators';
 import { CoworkingsService } from 'src/app/servises/coworkings.service';
 import { ICoworking } from 'src/app/interfaces/interfaces';
-import { ReviewService } from 'src/app/servises/review.service';
 
 @Component({
   selector: 'app-add-coworking',
@@ -13,19 +12,27 @@ import { ReviewService } from 'src/app/servises/review.service';
   styleUrls: ['./add-coworking.component.css']
 })
 export class AddCoworkingComponent implements OnInit {
-  @ViewChild('input') inputRef: ElementRef
-  isNew = true
-  ifClicked = false
+  @ViewChild('input1') inputRef1: ElementRef
+  @ViewChild('input2') inputRef2: ElementRef
+  @ViewChild('input3') inputRef3: ElementRef
+
+  isNew: boolean = true
+  ifClicked: boolean = false
+  showPopup: boolean = false
   form: FormGroup
-  image: File
-  imagePreview: any = ''
   coworking: ICoworking
   selectedTags: string[] = [];
-  tags = ['Розетки', 'Еда', 'Напитки', 'Wi-Fi'];
+  tags = ['Розетки', 'Еда', 'Напитки', 'Wi-Fi', 'Канцелярия'];
+
+  image1: File;
+  image2: File;
+  image3: File;
+  imagePreview1: any = '';
+  imagePreview2: any = '';
+  imagePreview3: any = '';
 
   constructor(private route: ActivatedRoute,
     private coworkingsService: CoworkingsService,
-    private reviewService: ReviewService,
     private router: Router) {
 
   }
@@ -80,14 +87,13 @@ export class AddCoworkingComponent implements OnInit {
             phone: coworking.company_phone,
             email: coworking.email,
             site: coworking.site,
-            tags: coworking.tags
+            tags: coworking.tags,
           })
-          // for (let index = 0; index < coworking.photo.length; index++) {
-          //   console.log(coworking.photo.length)
-          //   this.imagePreview.append(coworking.photo[index])
-          //   console.log(this.imagePreview)
-          // }
-          this.imagePreview = coworking.photo[0]
+          // this.coworking.photo = this.coworking.photo.split('#')
+          // this.imagePreview1 = coworking.photo[0]
+          // this.imagePreview2 = coworking.photo[1]
+          // this.imagePreview3 = coworking.photo[2]
+          // console.log(coworking)
         }
       },
       error => { console.log('Ошибка') }
@@ -104,17 +110,43 @@ export class AddCoworkingComponent implements OnInit {
     this.form.get('tags')?.setValue(this.selectedTags);
   }
 
-  triggerClick() {
-    this.inputRef.nativeElement.click()
+  triggerClick(index: number) {
+    switch (index) {
+      case 1:
+        this.inputRef1.nativeElement.click()
+        break;
+      case 2:
+        this.inputRef2.nativeElement.click()
+        break;
+      case 3:
+        this.inputRef3.nativeElement.click()
+        break;
+      default:
+        break;
+    }
   }
 
-  onFileUpload(event: any) {
+  onFileUpload(event: any, index: number) {
     const file = event.target.files[0] // 0 — если передаем один елемент
-    this.image = file
 
     const reader = new FileReader()
     reader.onload = () => {
-      this.imagePreview = reader.result
+      switch (index) {
+        case 1:
+          this.image1 = file;
+          this.imagePreview1 = reader.result;
+          break;
+        case 2:
+          this.image2 = file;
+          this.imagePreview2 = reader.result;
+          break;
+        case 3:
+          this.image3 = file;
+          this.imagePreview3 = reader.result;
+          break;
+        default:
+          break;
+      }
     }
     reader.readAsDataURL(file)
   }
@@ -125,18 +157,30 @@ export class AddCoworkingComponent implements OnInit {
 
     if (this.isNew) {
 
+
+
+      console.log(this.coworking)
+
       // create
       obs$ = this.coworkingsService.create(0, this.form.value.name, this.form.value.city, this.form.value.district,
         this.form.value.address, this.form.value.description, this.form.value.opening_hours,
-        this.form.value.type, this.form.value.price, this.form.value.tags, this.form.value.parking, this.form.value.restzone, this.form.value.conference, this.image, this.form.value.phone,
+        this.form.value.type, this.form.value.price, this.form.value.tags, this.form.value.parking, this.form.value.restzone, this.form.value.conference,
+        this.image1, this.image2, this.image3, this.form.value.phone,
         this.form.value.email, this.form.value.site)
     }
     else {
       // update
       obs$ = this.coworkingsService.update(this.coworking.id, 0, this.form.value.name, this.form.value.city, this.form.value.district,
         this.form.value.address, this.form.value.description, this.form.value.opening_hours,
-        this.form.value.type, this.form.value.price, this.form.value.parking, this.form.value.restzone, this.form.value.conference, this.image,
-        this.form.value.phone, this.form.value.email, this.form.value.site)
+        this.form.value.type, this.form.value.price, this.form.value.parking, this.form.value.restzone, this.form.value.conference, this.form.value.phone,
+        this.form.value.email, this.form.value.site)
+
+      this.coworkingsService.updatePhoto(this.coworking.id, this.image1, this.image2, this.image3).subscribe(
+        coworking => {
+          this.coworking = coworking
+          console.log('Фото обновлено')
+        }
+      )
     }
 
     obs$.subscribe(
@@ -167,6 +211,18 @@ export class AddCoworkingComponent implements OnInit {
 
   returnToMain() {
     this.router.navigate(['/main'])
+  }
+
+  showPopupAndRedirect() {
+    this.showPopup = true;
+    setTimeout(() => {
+      this.closePopup();
+      this.router.navigate(['/place-settings'])
+    }, 2000);
+  }
+
+  closePopup() {
+    this.showPopup = false;
   }
 
 }

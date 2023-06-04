@@ -26,6 +26,9 @@
   background-image: url("..//..//..//../assets/img/filter-single-default.svg");
 }
 
+.radio:hover {
+  opacity: 70%;
+}
 
 
 @media screen and (max-width: 5000px) {
@@ -112,7 +115,7 @@
     background: rgba(190, 218, 195, 0.7);
     border-radius: 20px;
     width: 419px;
-    height: 1037px;
+    height: 1100px;
     margin-left: 161px;
   }
 
@@ -284,7 +287,7 @@
     background: rgba(190, 218, 195, 0.7);
     border-radius: 20px;
     width: calc(0.75*419px);
-    height: calc(0.83*1037px);
+    height: calc(0.83*1100px);
     margin-left: calc(0.75*161px);
   }
 
@@ -445,7 +448,7 @@
     background: rgba(190, 218, 195, 0.7);
     border-radius: 20px;
     width: calc(0.71*419px);
-    height: calc(0.71*1037px);
+    height: calc(0.71*1100px);
     margin-left: calc(0.71*161px);
   }
 

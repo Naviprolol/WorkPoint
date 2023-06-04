@@ -69,6 +69,7 @@
         <option value="" disabled selected hidden>Часы работы</option>
         <option value="Круглосуточно">Круглосуточно</option>
         <option value="По будням">По будням</option>
+        <option value="Каждый день">Каждый день</option>
       </select>
     </div>
 
@@ -187,29 +188,46 @@
 
     <div class="photo">
       <div class="first-photo">
-        <input id="photo" class="dn" type="file" name="photo" (change)="onFileUpload($event)" #input>
-        <label for="photo"></label>
-        <button class="btn-first-photo" type="button" (click)="triggerClick()" [disabled]="form.disabled">+</button>
-        <img class="preview-img" [src]="imagePreview" *ngIf="imagePreview">
+        <input id="photo1" class="dn" type="file" name="photo1" (change)="onFileUpload($event, 1)" #input1>
+        <label for="photo1"></label>
+        <button class="btn-first-photo" type="button" (click)="triggerClick(1)" [disabled]="form.disabled">+</button>
+        <img class="preview-img1" [src]="imagePreview1" *ngIf="imagePreview1">
       </div>
 
-      <!-- <div class="second-photo">
-        <input id="photo" class="dn" placeholder="Фото" type="file" formControlName="photo"
-          (change)="onFileUpload($event)" #input>
-        <label for="photo"></label>
-        <button class="btn-second-photo" type="button" (click)="triggerClick()" [disabled]="form.disabled">+</button>
-        <img class="preview-img" [src]="imagePreview" *ngIf="imagePreview">
-      </div> -->
+      <div>
+        <div class="second-photo">
+          <input id="photo2" class="dn" type="file" name="photo2" (change)="onFileUpload($event, 2)" #input2>
+          <label for="photo2"></label>
+          <button class="btn-second-photo" type="button" (click)="triggerClick(2)" [disabled]="form.disabled">+</button>
+          <img class="preview-img2" [src]="imagePreview2" *ngIf="imagePreview2">
+        </div>
+
+        <div class="third-photo">
+          <input id="photo3" class="dn" type="file" name="photo3" (change)="onFileUpload($event, 3)" #input3>
+          <label for="photo3"></label>
+          <button class="btn-third-photo" type="button" (click)="triggerClick(3)" [disabled]="form.disabled">+</button>
+          <img class="preview-img3" [src]="imagePreview3" *ngIf="imagePreview3">
+        </div>
+      </div>
 
     </div>
   </div>
 
   <div class="buttons-submit">
 
-    <button class="button-add" type="submit" [disabled]="form.invalid || form.disabled">{{isNew ? 'Добавить':
+    <button class="button-add" type="submit" (click)="showPopupAndRedirect()"
+      [disabled]="form.invalid || form.disabled">{{isNew ?
+      'Добавить':
       'Сохранить'}}</button>
     <button (click)="isNew ? returnToMain() : deleteCategory()" class="button-return" type="button">{{isNew ? 'Отмена' :
-      'Удалить'}}</button>
+      'Удалить'}}
+    </button>
+
+    <div class="popup" *ngIf="showPopup">
+      <img src="assets/img/add-coworking.svg" alt="add-coworking" *ngIf="isNew">
+      <img src="assets/img/update-coworking.svg" alt="update-coworking" *ngIf="!isNew">
+    </div>
+
 
   </div>
 

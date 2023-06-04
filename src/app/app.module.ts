@@ -27,7 +27,6 @@ import { PlaceSettingsComponent } from './components/place-settings/place-settin
 import { AdBusinessComponent } from './components/ad-business/ad-business.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +45,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     CoworkingItemComponent,
     FavouritesPageComponent,
     PlaceSettingsComponent,
-    AdBusinessComponent
+    AdBusinessComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,7 +55,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     HttpClientModule,
     NgxStarRatingModule,
     CommonModule,
-    NgxPaginationModule
+    NgxPaginationModule,
   ],
   providers: [
     {
