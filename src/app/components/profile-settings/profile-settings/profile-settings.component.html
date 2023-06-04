@@ -21,7 +21,12 @@
 
     <div class="top-information">
       <div class="photo-container">
-        <img src="{{user.photo_user}}" alt="profile" onerror="this.src='assets/img/logo.svg'">
+        <input id="avatar" class="dn" type="file" name="avatar" (change)="onFileUpload($event)" #avatar>
+        <label for="avatar"></label>
+        <button type="button" (click)="triggerClick()">
+          <img [src]="imagePreview || user.photo_user" alt="profile" onerror="this.src='assets/img/logo.svg'"
+            *ngIf="imagePreview || user.photo_user">
+        </button>
       </div>
       <ul>
 
@@ -32,32 +37,35 @@
 
   </div>
 
-  <div class="progress-information">
-    <!-- <div class="donut-chart-block block">
-      <div class="donut-chart">
-        <div id="section1" class="clip">
-          <div class="item"></div>
-        </div>
-        <div id="section2" class="clip">
-          <div class="item"></div>
-        </div>
-        <div id="section3" class="clip">
-          <div class="item"></div>
-        </div>
-        <div class="center">
-          <span></span>
-        </div>
+  <div class=" progress-information" *ngIf="user.role_id === 1">
+    <div class="progress-donuts">
+      <div *ngIf="userCoworkingsCount === 0">
+        <img src="assets/img/0of5.png" alt="0of5" class="donut">
       </div>
-    </div> -->
+      <div *ngIf="userCoworkingsCount === 1">
+        <img src="assets/img/1of5.png" alt="1of5" class="donut">
+      </div>
+      <div *ngIf="userCoworkingsCount === 2">
+        <img src="assets/img/2of5.png" alt="2of5" class="donut">
+      </div>
+      <div *ngIf="userCoworkingsCount === 3">
+        <img src="assets/img/3of5.png" alt="3of5" class="donut">
+      </div>
+      <div *ngIf="userCoworkingsCount === 4">
+        <img src="assets/img/4of5.png" alt="4of5" class="donut">
+      </div>
+      <div *ngIf="userCoworkingsCount === 5">
+        <img src="assets/img/5of5.png" alt="5of5" class="donut">
+      </div>
+    </div>
 
-    <span class="progress-information__span">
-      <!-- Добавь ещё одно место и получи подарок -->
-      Добавь пять мест и получи подарок
-    </span>
-
-    <button class="progress-information__btn" routerLink="/main/add">
-      Добавить место
-    </button>
+    <div class="progress-information__span">
+      <p *ngIf="userCoworkingsCount !== 5">Добавь пять мест и получи подарок</p>
+      <p *ngIf="userCoworkingsCount === 5">Добавь ещё одно место и получи подарок</p>
+      <button class="progress-information__btn" routerLink="/main/add">
+        Добавить место
+      </button>
+    </div>
   </div>
 
   <form class="about-information" [formGroup]="form" (ngSubmit)="onSubmit()">
@@ -106,7 +114,8 @@
 
   </div>
   <p id="popup" *ngIf="successText === 'Вы успешно перешли на бизнес-аккаунт!'">
-    <img class="goodSuccessText" alt="Вы успешно перешли на бизнес-аккаунт!" src="../../../../assets/img/check-busines.svg">
+    <img class="goodSuccessText" alt="Вы успешно перешли на бизнес-аккаунт!"
+      src="../../../../assets/img/check-busines.svg">
   </p>
   <script type="text/javascript" charset="utf-8">
     setTimeout(() => popup.hidden = true, 2000)

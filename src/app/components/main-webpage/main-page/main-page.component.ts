@@ -1,7 +1,6 @@
 import { Component, ElementRef, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { coworkings as data } from 'src/app/data/coworkings';
 import { ICoworking } from 'src/app/interfaces/interfaces';
 import { CoworkingsService } from 'src/app/servises/coworkings.service';
 

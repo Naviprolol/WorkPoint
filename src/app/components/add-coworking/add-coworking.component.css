@@ -217,7 +217,10 @@
     margin-bottom: 70px;
   }
 
-  .photo {}
+  .photo {
+    display: flex;
+    gap: 70px;
+  }
 
   .photo .first-photo {
     width: 620.55px;
@@ -226,16 +229,38 @@
     border-radius: 20px;
   }
 
+  .photo .second-photo,
+  .photo .third-photo {
+    width: 304px;
+    height: 165px;
+    background: rgba(190, 218, 195, 0.7);
+    border-radius: 20px;
+    margin-bottom: 34px;
+  }
+
   .btn-first-photo {
     position: absolute;
-
     width: 620.55px;
     height: 364px;
   }
 
-  .preview-img {
+  .btn-second-photo,
+  .btn-third-photo {
+    position: absolute;
+    width: 304px;
+    height: 165px;
+  }
+
+  .preview-img1 {
     width: 620.55px;
     height: 364px;
+    border-radius: 20px;
+  }
+
+  .preview-img2,
+  .preview-img3 {
+    width: 304px;
+    height: 165px;
     border-radius: 20px;
   }
 
@@ -260,9 +285,16 @@
   .btn-photo {}
 
   .buttons-submit {
+    position: relative;
     display: flex;
     gap: 37px;
     margin-bottom: 150px;
+  }
+
+  .popup {
+    position: absolute;
+    bottom: 200px;
+    left: 320px;
   }
 
   .button-add {
@@ -281,7 +313,16 @@
     border-radius: 10px;
   }
 
+  .button-add:hover,
+  .button-return:hover {
+    background-color: #EDFAED;
+    outline: 1px solid #6A6D79;
+  }
 
+  .button-add:active,
+  .button-return:active {
+    background: #8EBD9D !important;
+  }
 
   .filter-labels {
     display: flex;
@@ -552,7 +593,9 @@
     margin-bottom: calc(0.83*70px);
   }
 
-  .photo {}
+  .photo {
+    gap: calc(0.75*70px);
+  }
 
   .photo .first-photo {
     width: calc(0.75*620.55px);
@@ -561,17 +604,35 @@
     border-radius: 20px;
   }
 
-  .btn-first-photo {
-    position: absolute;
+  .photo .second-photo,
+  .photo .third-photo {
+    width: calc(0.75*304px);
+    height: calc(0.83*165px);
+    margin-bottom: calc(0.83*34px);
+  }
 
+  .btn-first-photo {
     width: calc(0.75*620.55px);
     height: calc(0.83*364px);
   }
 
-  .preview-img {
+  .btn-second-photo,
+  .btn-third-photo {
+    position: absolute;
+    width: calc(0.75*304px);
+    height: calc(0.83*165px);
+  }
+
+  .preview-img1 {
     width: calc(0.75*620.55px);
     height: calc(0.83*364px);
     border-radius: 20px;
+  }
+
+  .preview-img2,
+  .preview-img3 {
+    width: calc(0.75*304px);
+    height: calc(0.83*165px);
   }
 
   .photo-container h1 {
@@ -598,6 +659,11 @@
     display: flex;
     gap: calc(0.75*37px);
     margin-bottom: calc(0.83*150px);
+  }
+
+  .popup {
+    bottom: calc(0.83*200px);
+    left: calc(0.75*320px);
   }
 
   .button-add {
@@ -887,7 +953,9 @@
     margin-bottom: calc(0.71*70px);
   }
 
-  .photo {}
+  .photo {
+    gap: calc(0.71*70px);
+  }
 
   .photo .first-photo {
     width: calc(0.71*620.55px);
@@ -896,17 +964,35 @@
     border-radius: 20px;
   }
 
-  .btn-first-photo {
-    position: absolute;
+  .photo .second-photo,
+  .photo .third-photo {
+    width: calc(0.71*304px);
+    height: calc(0.71*165px);
+    margin-bottom: calc(0.71*34px);
+  }
 
+  .btn-first-photo {
     width: calc(0.71*620.55px);
     height: calc(0.71*364px);
   }
 
-  .preview-img {
+  .btn-second-photo,
+  .btn-third-photo {
+    position: absolute;
+    width: calc(0.71*304px);
+    height: calc(0.71*165px);
+  }
+
+  .preview-img1 {
     width: calc(0.71*620.55px);
     height: calc(0.71*364px);
     border-radius: 20px;
+  }
+
+  .preview-img2,
+  .preview-img3 {
+    width: calc(0.71*304px);
+    height: calc(0.71*165px);
   }
 
   .photo-container h1 {
@@ -933,6 +1019,11 @@
     display: flex;
     gap: calc(0.71*37px);
     margin-bottom: calc(0.71*150px);
+  }
+
+  .popup {
+    bottom: calc(0.71*200px);
+    left: calc(0.71*320px);
   }
 
   .button-add {

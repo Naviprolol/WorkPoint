@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { mergeMap } from 'rxjs/operators';
 import { User } from 'src/app/interfaces/interfaces';
@@ -17,46 +17,60 @@ export class ProfileSettingsComponent implements OnInit {
   form: FormGroup
   user: User
   successText: string
+  userCoworkingsCount: number = 0
+  avatar: File
+  imagePreview: any = ''
+  @ViewChild('avatar') inputRef: ElementRef
+
 
   constructor(
     private coworkingsService: CoworkingsService,
-    private userService: UserService,
-    private reviewService: ReviewService,
-    private authService: AuthService) {
+    private userService: UserService,) {
 
   }
 
   ngOnInit(): void {
 
-    this.userService.getUserByToken().subscribe(user => {
-      this.user = user
-      // console.log('user', this.user.role_id);
-    });
-
     this.form = new FormGroup({
       name: new FormControl(null, [Validators.required]),
-      surname: new FormControl(null, [Validators.required]),
+      surname: new FormControl(null),
       city: new FormControl(null),
       phone: new FormControl(null),
     })
+
+    this.coworkingsService.getCoworkingsByToken().subscribe((coworkings) => {
+      this.userCoworkingsCount = coworkings.length
+      console.log(this.userCoworkingsCount)
+    })
+
+    this.userService.getUserByToken().subscribe(user => {
+      this.user = user
+      this.form.patchValue({
+        name: user.name,
+        surname: user.surname,
+        city: user.city,
+        phone: user.phone,
+      })
+    });
   }
 
   onSubmit() {
-    let obs$
     this.form.disable()
+    let obs$ = this.userService.updateUser(0, this.form.value.name, this.form.value.surname, this.form.value.city, this.form.value.phone)
 
-    obs$ = this.userService.getUserByToken()
-      .pipe(
-        mergeMap(user => {
-          // console.log(user.id)
-          return this.userService.updateUser(user.id, this.form.value.name, this.form.value.surname, this.form.value.city, this.form.value.phone)
-        })
+    if (this.avatar !== null && this.avatar !== undefined) {
+      this.userService.uploadAvatar(this.avatar).subscribe(
+        user => {
+          this.user = user
+          console.log('Аватар обновлен')
+        }
       )
+    }
 
     obs$.subscribe(
-      user => {
-        this.user = user
-        // console.log('Изменения сохранены')
+      () => {
+        console.log('Изменения сохранены')
+        location.reload()
         this.form.enable()
       },
       error => {
@@ -82,4 +96,18 @@ export class ProfileSettingsComponent implements OnInit {
     )
   }
 
+  triggerClick() {
+    this.inputRef.nativeElement.click()
+  }
+
+  onFileUpload(event: any) {
+    const file = event.target.files[0] // 0 — если передаем один елемент
+    this.avatar = file
+
+    const reader = new FileReader()
+    reader.onload = () => {
+      this.imagePreview = reader.result
+    }
+    reader.readAsDataURL(file)
+  }
 }

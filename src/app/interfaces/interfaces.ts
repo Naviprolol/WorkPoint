@@ -22,6 +22,7 @@ export interface ICoworking {
   conference_hall: boolean
   tags: string[]
   user_id: number
+  photos: File[]
 }
 
 export interface User {

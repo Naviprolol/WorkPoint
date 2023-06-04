@@ -122,6 +122,12 @@
           <label for="weekdays">По будням</label>
         </div>
 
+        <div class="radio">
+          <input type="checkbox" class="custom-radio custom-radio_single" id="everyday" name="time" value="everyday"
+            (change)="onClickOpeningHoursFilter('Каждый день')">
+          <label for="everyday">Каждый день</label>
+        </div>
+
       </div>
 
       <div class="filter-labels filter-parking">

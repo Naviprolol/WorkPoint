@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { coworkings as data } from 'src/app/data/coworkings';
 import { ICoworking, User } from 'src/app/interfaces/interfaces';
 import { UserService } from 'src/app/servises/user.service';
 @Component({
@@ -19,6 +18,6 @@ export class FavouritesPageComponent implements OnInit {
     });
   }
 
-  favourites_coworkings: ICoworking[] = data;
+  // favourites_coworkings: ICoworking[] = data;
 
 }
