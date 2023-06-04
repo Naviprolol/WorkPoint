@@ -14,7 +14,7 @@
         <li><a routerLink="/favourites">Избранное</a></li>
         <li><a routerLink="/profile">Настройки профиля</a></li>
         <li><a routerLink="/place-settings">Настройки мест</a></li>
-        <li *ngIf="user.role_id == 2"><a routerLink="/ad-business">Продвижение</a></li>
+        <li style="border-right: solid 2px black ;" *ngIf="user.role_id == 2"><a routerLink="/ad-business">Продвижение</a></li>
       </ul>
     </div>
 
@@ -110,7 +110,12 @@
         Отправить заявку
       </button>
 
-      <p *ngIf="accessText === 'Письмо успешно отправлено!'" class="goodAccessText">{{accessText}}</p>
+      <p id="popup" *ngIf="accessText === 'Письмо успешно отправлено!'">
+        <img class="goodAccessText" alt="Письмо успешно отправлено!" src="../../../assets/img/check-letter.svg">
+      </p>
+      <script type="text/javascript" charset="utf-8">
+        setTimeout(() => popup.hidden = true, 2000)
+      </script>
 
     </form>
 

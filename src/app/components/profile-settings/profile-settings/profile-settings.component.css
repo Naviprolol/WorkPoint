@@ -320,8 +320,8 @@
   }
 
   .goodSuccessText {
-    color: green;
-    margin-left: 950px;
+
+    margin-left: 700px;
   }
 
   .button-flex {
@@ -645,8 +645,9 @@
   }
 
   .goodSuccessText {
-    color: green;
-    margin-left: calc(0.75*950px);
+    width: 460.47px;
+    height: 287px;
+    margin-left: calc(0.75*700px);
   }
 
   .button-flex {
@@ -970,8 +971,9 @@
   }
 
   .goodSuccessText {
-    color: green;
-    margin-left: calc(0.71*950px);
+    width: 360.47px;
+    height: 187px;
+    margin-left: calc(0.71*700px);
   }
 
   .button-flex {

@@ -225,55 +225,55 @@ label {
     margin-bottom: calc(0.83*65px);
     align-items: center;
   }
-  
+
   .return-button {
     margin-right: calc(0.75*18px);
     margin-top: auto;
     margin-bottom: auto;
   }
-  
+
   .return-to-main span {
     font-size: calc(0.75*15px);
     line-height: calc(0.83*20px);
     color: rgba(27, 31, 59, 0.65);
   }
-  
+
   .wrapper {
     min-height: calc(100vh - 150px);
     /* 150px - отступ сверху футера */
     display: flex;
     flex-direction: column;
   }
-  
+
   .main-top-content {
     display: flex;
     margin-left: calc(0.75*202px);
     margin-bottom: calc(0.83*100px);
   }
-  
+
   .profile-navigation {
     width: calc(0.75*238px);
     margin-right: calc(0.75*60px);
     margin-top: calc(0.83*31px);
   }
-  
+
   .profile-navigation li {
     font-size: calc(0.75*20px);
     line-height: 177.69%;
     margin-bottom: calc(0.83*16px);
   }
-  
+
   .profile-navigation li:last-child {
     margin-bottom: 0;
   }
-  
+
   .title {
     font-weight: 700;
     font-size: calc(0.75*28px);
     line-height: calc(0.83*38px);
     margin-bottom: calc(0.83*32px);
   }
-  
+
   .description {
     display: inline-block;
     font-weight: 400;
@@ -282,7 +282,7 @@ label {
     max-width: calc(0.75*1070px);
     margin-bottom: calc(0.83*30px);
   }
-  
+
   .subtitle {
     font-weight: 600;
     font-size: calc(0.75*26px);
@@ -290,7 +290,7 @@ label {
     color: #000000;
     margin-bottom: calc(0.83*39px);
   }
-  
+
   .subtitle2 {
     margin-top: calc(0.83*30px);
     margin-bottom: calc(0.83*24px);
@@ -299,11 +299,11 @@ label {
     line-height: calc(0.83*36px);
     color: #000000;
   }
-  
+
   input {
     cursor: pointer;
   }
-  
+
   .input-field {
     width: calc(0.75*560px);
     height: calc(0.83*62px);
@@ -311,7 +311,7 @@ label {
     background: #E0E0D6;
     margin-bottom: calc(0.83*20px);
   }
-  
+
   .input-field input {
     width: calc(0.75*520px);
     height: calc(0.83*52px);
@@ -324,20 +324,20 @@ label {
     background: inherit;
     border-radius: 10px;
   }
-  
+
   .red-text {
     font-size: calc(0.75*12px);
     display: inline-block;
     color: red;
     padding-top: calc(0.83*10px);
   }
-  
+
   .custom-radio {
     position: absolute;
     z-index: -1;
     opacity: 0;
   }
-  
+
   .custom-radio+label {
     display: inline-flex;
     align-items: center;
@@ -345,7 +345,7 @@ label {
     font-size: calc(0.75*24px);
     line-height: 177.69%;
   }
-  
+
   .custom-radio+label::before {
     content: '';
     display: inline-block;
@@ -357,31 +357,31 @@ label {
     background-position: center center;
     background-size: 100% 100%;
   }
-  
+
   .custom-radio_multiple:checked+label::before {
     background-image: url("..//..//..//assets/img/filter-multiple-checked.svg");
   }
-  
+
   .custom-radio_multiple:disabled+label::before {
     background-image: url("..//..//..//assets/img/filter-multiple-default.svg");
   }
-  
+
   .custom-radio_multiple+label::before {
     background-image: url("..//..//..//assets/img/filter-multiple-default.svg");
   }
-  
+
   .custom-radio_single:checked+label::before {
     background-image: url("..//..//..//assets/img/filter-single-checked.svg");
   }
-  
+
   .custom-radio_single:disabled+label::before {
     background-image: url("..//..//..//assets/img/filter-single-default.svg");
   }
-  
+
   .custom-radio_single+label::before {
     background-image: url("..//..//..//assets/img/filter-single-default.svg");
   }
-  
+
   .card {
     padding-top: calc(0.83*19px);
     padding-left: calc(0.75*29px);
@@ -390,14 +390,14 @@ label {
     background: #D1E5D2;
     border-radius: 20px;
   }
-  
+
   label {
     font-weight: 600;
     font-size: calc(0.75*20px);
     line-height: calc(0.83*36px);
     color: #000000;
   }
-  
+
   .card__description {
     font-weight: 300;
     font-size: calc(0.75*15px);
@@ -405,9 +405,9 @@ label {
     color: #000000;
     max-width: calc(0.75*276px);
     margin-top: calc(0.83*21px);
-  
+
   }
-  
+
   .price {
     font-weight: 600;
     font-size: calc(0.75*20px);
@@ -415,7 +415,7 @@ label {
     color: #000000;
     margin-left: 30%;
   }
-  
+
   .button-send {
     width: calc(0.75*220px);
     height: calc(0.83*54px);
@@ -425,9 +425,10 @@ label {
     border-radius: 10px;
     color: rgba(27, 31, 59, 0.4);
   }
-  
+
   .goodAccessText {
-    color: green;
+    width: 460.47px;
+    height: 287px;
     margin-top: calc(0.83*30px);
   }
 }
@@ -441,55 +442,55 @@ label {
     margin-bottom: calc(0.71*65px);
     align-items: center;
   }
-  
+
   .return-button {
     margin-right: calc(0.71*18px);
     margin-top: auto;
     margin-bottom: auto;
   }
-  
+
   .return-to-main span {
     font-size: calc(0.71*15px);
     line-height: calc(0.71*20px);
     color: rgba(27, 31, 59, 0.65);
   }
-  
+
   .wrapper {
     min-height: calc(100vh - 150px);
     /* 150px - отступ сверху футера */
     display: flex;
     flex-direction: column;
   }
-  
+
   .main-top-content {
     display: flex;
     margin-left: calc(0.71*202px);
     margin-bottom: calc(0.71*100px);
   }
-  
+
   .profile-navigation {
     width: calc(0.71*238px);
     margin-right: calc(0.71*60px);
     margin-top: calc(0.71*31px);
   }
-  
+
   .profile-navigation li {
     font-size: calc(0.71*20px);
     line-height: 177.69%;
     margin-bottom: calc(0.71*16px);
   }
-  
+
   .profile-navigation li:last-child {
     margin-bottom: 0;
   }
-  
+
   .title {
     font-weight: 700;
     font-size: calc(0.71*28px);
     line-height: calc(0.71*38px);
     margin-bottom: calc(0.71*32px);
   }
-  
+
   .description {
     display: inline-block;
     font-weight: 400;
@@ -498,7 +499,7 @@ label {
     max-width: calc(0.71*1070px);
     margin-bottom: calc(0.71*30px);
   }
-  
+
   .subtitle {
     font-weight: 600;
     font-size: calc(0.71*26px);
@@ -506,7 +507,7 @@ label {
     color: #000000;
     margin-bottom: calc(0.71*39px);
   }
-  
+
   .subtitle2 {
     margin-top: calc(0.71*30px);
     margin-bottom: calc(0.71*24px);
@@ -515,11 +516,11 @@ label {
     line-height: calc(0.71*36px);
     color: #000000;
   }
-  
+
   input {
     cursor: pointer;
   }
-  
+
   .input-field {
     width: calc(0.71*560px);
     height: calc(0.71*62px);
@@ -527,7 +528,7 @@ label {
     background: #E0E0D6;
     margin-bottom: calc(0.71*20px);
   }
-  
+
   .input-field input {
     width: calc(0.71*520px);
     height: calc(0.71*52px);
@@ -540,20 +541,20 @@ label {
     background: inherit;
     border-radius: 10px;
   }
-  
+
   .red-text {
     font-size: calc(0.71*12px);
     display: inline-block;
     color: red;
     padding-top: calc(0.71*10px);
   }
-  
+
   .custom-radio {
     position: absolute;
     z-index: -1;
     opacity: 0;
   }
-  
+
   .custom-radio+label {
     display: inline-flex;
     align-items: center;
@@ -561,7 +562,7 @@ label {
     font-size: calc(0.71*24px);
     line-height: 177.69%;
   }
-  
+
   .custom-radio+label::before {
     content: '';
     display: inline-block;
@@ -573,31 +574,31 @@ label {
     background-position: center center;
     background-size: 100% 100%;
   }
-  
+
   .custom-radio_multiple:checked+label::before {
     background-image: url("..//..//..//assets/img/filter-multiple-checked.svg");
   }
-  
+
   .custom-radio_multiple:disabled+label::before {
     background-image: url("..//..//..//assets/img/filter-multiple-default.svg");
   }
-  
+
   .custom-radio_multiple+label::before {
     background-image: url("..//..//..//assets/img/filter-multiple-default.svg");
   }
-  
+
   .custom-radio_single:checked+label::before {
     background-image: url("..//..//..//assets/img/filter-single-checked.svg");
   }
-  
+
   .custom-radio_single:disabled+label::before {
     background-image: url("..//..//..//assets/img/filter-single-default.svg");
   }
-  
+
   .custom-radio_single+label::before {
     background-image: url("..//..//..//assets/img/filter-single-default.svg");
   }
-  
+
   .card {
     padding-top: calc(0.71*19px);
     padding-left: calc(0.71*29px);
@@ -606,14 +607,14 @@ label {
     background: #D1E5D2;
     border-radius: 20px;
   }
-  
+
   label {
     font-weight: 600;
     font-size: calc(0.71*20px);
     line-height: calc(0.71*36px);
     color: #000000;
   }
-  
+
   .card__description {
     font-weight: 300;
     font-size: calc(0.71*15px);
@@ -621,9 +622,9 @@ label {
     color: #000000;
     max-width: calc(0.71*276px);
     margin-top: calc(0.71*21px);
-  
+
   }
-  
+
   .price {
     font-weight: 600;
     font-size: calc(0.71*20px);
@@ -631,7 +632,7 @@ label {
     color: #000000;
     margin-left: 30%;
   }
-  
+
   .button-send {
     width: calc(0.71*220px);
     height: calc(0.71*54px);
@@ -641,9 +642,10 @@ label {
     border-radius: 10px;
     color: rgba(27, 31, 59, 0.4);
   }
-  
+
   .goodAccessText {
-    color: green;
+    width: 360.47px;
+    height: 187px;
     margin-top: calc(0.71*30px);
   }
 }
