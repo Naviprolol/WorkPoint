@@ -15,7 +15,6 @@ export class PlaceSettingsComponent implements OnInit {
 
   constructor(
     private coworkingsService: CoworkingsService,
-    private reviewService: ReviewService,
     private userService: UserService) { }
 
   ngOnInit() {
