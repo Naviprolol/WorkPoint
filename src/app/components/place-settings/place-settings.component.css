@@ -88,9 +88,10 @@
 }
 
 .card {
+  position: relative;
   display: flex;
-  width: 1070px;
-  height: 99px;
+  max-width: 1070px;
+  min-height: 99px;
   background: rgba(190, 218, 195, 0.7);
   border-radius: 20px;
 }
@@ -100,11 +101,13 @@
 }
 
 .card-title {
+  width: 165px;
   padding-top: 16px;
   padding-left: 27px;
   font-weight: 700;
   font-size: 24px;
   line-height: 33px;
+  word-wrap: break-word;
 }
 
 .adress {
@@ -115,8 +118,10 @@
 }
 
 .second-block__card {
-  margin-top: 21px;
-  margin-left: 730px;
+  position: absolute;
+  margin-top: -1.9em;
+  top: 50%;
+  right: 25px;
 }
 
 .number {
@@ -237,9 +242,10 @@
   }
 
   .card {
+    position: relative;
     display: flex;
-    width: calc(0.75*1070px);
-    height: calc(0.83*99px);
+    max-width: calc(0.75*1070px);
+    min-height: calc(0.83*99px);
     background: rgba(190, 218, 195, 0.7);
     border-radius: 20px;
   }
@@ -254,6 +260,7 @@
     font-weight: 700;
     font-size: calc(0.75*24px);
     line-height: calc(0.83*33px);
+    word-wrap: break-word;
   }
 
   .adress {
@@ -264,8 +271,10 @@
   }
 
   .second-block__card {
-    margin-top: calc(0.83*21px);
-    margin-left: calc(0.75*730px);
+    position: absolute;
+    margin-top: calc(0.83*-1.9em);
+    top: 50%;
+    right: calc(0.75*25px);
   }
 
   .number {
@@ -302,7 +311,7 @@
 @media screen and (max-width: 1370px){
   .return-to-main {
     display: flex;
-    width: calc(0.71*180px);
+    width: calc(0.71*300px);
     margin-left: calc(0.71*168px);
     margin-bottom: calc(0.71*65px);
     align-items: center;
@@ -386,9 +395,10 @@
   }
 
   .card {
+    position: relative;
     display: flex;
-    width: calc(0.71*1070px);
-    height: calc(0.71*99px);
+    max-width: calc(0.71*1070px);
+    min-height: calc(0.71*99px);
     background: rgba(190, 218, 195, 0.7);
     border-radius: 20px;
   }
@@ -403,6 +413,7 @@
     font-weight: 700;
     font-size: calc(0.71*24px);
     line-height: calc(0.71*33px);
+    word-wrap: break-word;
   }
 
   .adress {
@@ -413,8 +424,10 @@
   }
 
   .second-block__card {
-    margin-top: calc(0.71*21px);
-    margin-left: calc(0.71*730px);
+    position: absolute;
+    margin-top: calc(0.71*-1.9em);
+    top: 50%;
+    right: calc(0.71*25px);
   }
 
   .number {
