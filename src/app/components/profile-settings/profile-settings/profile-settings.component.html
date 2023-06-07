@@ -107,19 +107,17 @@
     </p>
 
     <div class="button-flex">
-      <button (click)="onSubmitBusiness()" class="business-information__btn">
+      <button (click)="[onSubmitBusiness(), showPopupAndRedirect()]" class="business-information__btn">
         Перейти на бизнес-аккаунт
       </button>
     </div>
 
   </div>
-  <p id="popup" *ngIf="successText === 'Вы успешно перешли на бизнес-аккаунт!'">
-    <img class="goodSuccessText" alt="Вы успешно перешли на бизнес-аккаунт!"
-      src="../../../../assets/img/check-busines.svg">
-  </p>
-  <script type="text/javascript" charset="utf-8">
-    setTimeout(() => popup.hidden = true, 2000)
-  </script>
+  <div class="overlay" *ngIf="showPopup"></div>
+
+      <div class="popup" *ngIf="showPopup">
+        <img src="../../../../assets/img/check-busines.svg" alt="Вы успешно перешли на бизнес-аккаунт!">
+      </div>
 </div>
 
 <app-footer></app-footer>

@@ -211,9 +211,27 @@
     color: rgba(27, 31, 59, 0.4);
   }
 
-  .goodAccessText {
-    color: green;
-    margin-top: 30px;
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+  }
+
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+  }
+
+  .popup img {
+    width: 555px;
+    height: 292px;
   }
 }
 
@@ -426,11 +444,17 @@
     color: rgba(27, 31, 59, 0.4);
   }
 
-  .goodAccessText {
-    width: 460.47px;
-    height: 287px;
-    margin-top: calc(0.83*30px);
+  .popup {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
+
+  .popup img {
+    width: calc(0.75*555px);
+    height: calc(0.83*292px);
+  }
+
 }
 
 @media screen and (max-width: 1370px) {
@@ -642,9 +666,15 @@
     color: rgba(27, 31, 59, 0.4);
   }
 
-  .goodAccessText {
-    width: 360.47px;
-    height: 187px;
-    margin-top: calc(0.71*30px);
+  .popup {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
+
+  .popup img {
+    width: calc(0.71*555px);
+    height: calc(0.71*292px);
+  }
+
 }
