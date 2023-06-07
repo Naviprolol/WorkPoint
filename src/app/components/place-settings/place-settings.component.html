@@ -40,14 +40,14 @@
 
           <div class="first-block__card">
             <p class="card-title">
-              <a [routerLink]="['/main/add', userCoworking.id]">{{userCoworking.name}}</a>
+              <a class="card-title" [routerLink]="['/main', userCoworking.id]">{{userCoworking.name}}</a>
             </p>
             <p class="adress">
               {{userCoworking.address}}
             </p>
           </div>
           <div class="second-block__card">
-            <button class="progress-information__btn" routerLink="/main/add">
+            <button class="progress-information__btn" [routerLink]="['/main/add', userCoworking.id]">
               Редактировать
             </button>
           </div>

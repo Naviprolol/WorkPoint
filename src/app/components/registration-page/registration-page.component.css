@@ -21,6 +21,12 @@
     left: 165px;
     top: 30px;
 
+    background: linear-gradient(341.04deg, #BEDAC3 10.49%, rgba(255, 255, 255, 0) 100.29%);
+    filter: drop-shadow(0px 7.935px 19.8375px rgba(250, 196, 201, 0.2));
+    transform: rotate(117.88deg);
+    border-radius: 50%;
+    z-index: -1;
+
     /* background: linear-gradient(341.04deg, #BEDAC3 10.49%, rgba(255, 255, 255, 0) 100.29%);
   filter: drop-shadow(0px 7.935px 19.8375px rgba(250, 196, 201, 0.2));
   transform: rotate(117.88deg);
@@ -235,6 +241,12 @@
     left: calc(0.75*165px);
     top: calc(0.83*30px);
 
+    background: linear-gradient(341.04deg, #BEDAC3 10.49%, rgba(255, 255, 255, 0) 100.29%);
+    filter: drop-shadow(0px 7.935px 19.8375px rgba(250, 196, 201, 0.2));
+    transform: rotate(117.88deg);
+    border-radius: 50%;
+    z-index: -1;
+
     /* background: linear-gradient(341.04deg, #BEDAC3 10.49%, rgba(255, 255, 255, 0) 100.29%);
     filter: drop-shadow(0px 7.935px 19.8375px rgba(250, 196, 201, 0.2));
     transform: rotate(117.88deg);
@@ -448,6 +460,12 @@
     height: calc(0.71*49.74px);
     left: calc(0.71*165px);
     top: calc(0.71*30px);
+
+    background: linear-gradient(341.04deg, #BEDAC3 10.49%, rgba(255, 255, 255, 0) 100.29%);
+    filter: drop-shadow(0px 7.935px 19.8375px rgba(250, 196, 201, 0.2));
+    transform: rotate(117.88deg);
+    border-radius: 50%;
+    z-index: -1;
 
     /* background: linear-gradient(341.04deg, #BEDAC3 10.49%, rgba(255, 255, 255, 0) 100.29%);
       filter: drop-shadow(0px 7.935px 19.8375px rgba(250, 196, 201, 0.2));
