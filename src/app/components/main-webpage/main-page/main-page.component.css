@@ -37,7 +37,8 @@
     border-radius: 10px;
   }
 
-  .pagination /deep/ .ngx-pagination a:hover, .ngx-pagination button:hover {
+  .pagination /deep/ .ngx-pagination a:hover,
+  .ngx-pagination button:hover {
     background: rgba(190, 218, 195, 0.7);
     border-radius: 10px;
   }
@@ -127,6 +128,7 @@
     width: 419px;
     height: 1100px;
     margin-left: 161px;
+    margin-bottom: 271px;
   }
 
   .filter-container h1 {
@@ -228,7 +230,8 @@
     border-radius: 10px;
   }
 
-  .pagination /deep/ .ngx-pagination a:hover, .ngx-pagination button:hover {
+  .pagination /deep/ .ngx-pagination a:hover,
+  .ngx-pagination button:hover {
     background: rgba(190, 218, 195, 0.7);
     border-radius: 10px;
   }
@@ -309,6 +312,7 @@
     width: calc(0.75*419px);
     height: calc(0.83*1100px);
     margin-left: calc(0.75*161px);
+    margin-bottom: calc(0.83*271px);
   }
 
   .filter-container h1 {
@@ -399,7 +403,8 @@
     border-radius: 10px;
   }
 
-  .pagination /deep/ .ngx-pagination a:hover, .ngx-pagination button:hover {
+  .pagination /deep/ .ngx-pagination a:hover,
+  .ngx-pagination button:hover {
     background: rgba(190, 218, 195, 0.7);
     border-radius: 10px;
   }
@@ -480,6 +485,7 @@
     width: calc(0.71*419px);
     height: calc(0.71*1100px);
     margin-left: calc(0.71*161px);
+    margin-bottom: calc(0.71*271px);
   }
 
   .filter-container h1 {

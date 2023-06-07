@@ -11,17 +11,28 @@
 }
 
 @media screen and (max-width: 5000px) {
-  .return {
-    margin-left: 164px;
+
+  .return-to-main {
+    display: flex;
+    width: 400px;
+    margin-left: 168px;
+    margin-bottom: 65px;
     margin-top: 18px;
-    margin-bottom: 59px;
+    align-items: center;
+  }
+
+  .return-button {
+    margin-right: 18px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 16px;
+    height: 16px;
+  }
+
+  .return-to-main span {
     font-size: 15px;
     line-height: 20px;
     color: rgba(27, 31, 59, 0.65);
-  }
-
-  .return img {
-    padding-right: 14px;
   }
 
   .card-container {
@@ -291,10 +302,27 @@
     margin-bottom: 150px;
   }
 
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+  }
+
   .popup {
-    position: absolute;
-    bottom: 200px;
-    left: 320px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+  }
+
+  .popup img {
+    width: 555px;
+    height: 292px;
   }
 
   .button-add {
@@ -387,17 +415,23 @@
 }
 
 @media screen and (max-width: 1450px) {
-  .return {
-    margin-left: calc(0.75*164px);
+
+  .return-to-main {
+    width: calc(0.75*400px);
+    margin-left: calc(0.75*168px);
+    margin-bottom: calc(0.83*65px);
     margin-top: calc(0.83*18px);
-    margin-bottom: calc(0.83*59px);
-    font-size: calc(0.75*15px);
-    line-height: calc(0.83*20px);
-    color: rgba(27, 31, 59, 0.65);
   }
 
-  .return img {
-    padding-right: calc(0.75*14px);
+  .return-button {
+    margin-right: calc(0.75*18px);
+    width: calc(0.75*16px);
+    height: calc(0.83*16px);
+  }
+
+  .return-to-main span {
+    font-size: calc(0.75*15px);
+    line-height: calc(0.83*20px);
   }
 
   .card-container {
@@ -662,8 +696,14 @@
   }
 
   .popup {
-    bottom: calc(0.83*200px);
-    left: calc(0.75*320px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .popup img {
+    width: calc(0.75*555px);
+    height: calc(0.83*292px);
   }
 
   .button-add {
@@ -747,17 +787,23 @@
 }
 
 @media screen and (max-width: 1370px) {
-  .return {
-    margin-left: calc(0.71*164px);
+
+  .return-to-main {
+    width: calc(0.71*400px);
+    margin-left: calc(0.71*168px);
+    margin-bottom: calc(0.71*65px);
     margin-top: calc(0.71*18px);
-    margin-bottom: calc(0.71*59px);
-    font-size: calc(0.71*15px);
-    line-height: calc(0.71*20px);
-    color: rgba(27, 31, 59, 0.65);
   }
 
-  .return img {
-    padding-right: calc(0.71*14px);
+  .return-button {
+    margin-right: calc(0.71*18px);
+    width: calc(0.71*16px);
+    height: calc(0.71*16px);
+  }
+
+  .return-to-main span {
+    font-size: calc(0.71*15px);
+    line-height: calc(0.71*20px);
   }
 
   .card-container {
@@ -1022,8 +1068,14 @@
   }
 
   .popup {
-    bottom: calc(0.71*200px);
-    left: calc(0.71*320px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .popup img {
+    width: calc(0.71*555px);
+    height: calc(0.71*292px);
   }
 
   .button-add {

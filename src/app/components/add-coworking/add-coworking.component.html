@@ -1,14 +1,18 @@
 <app-header></app-header>
 
-<div class="return">
-  <a *ngIf="isNew" routerLink='/main'>
-    <img src="assets/img/return-button.svg" alt="return-button">
-    Вернуться к списку
-  </a>
-  <a *ngIf="!isNew" routerLink='/place-settings'>
-    <img src="assets/img/return-button.svg" alt="return-button">
-    Вернуться к списку ваших коворкингов
-  </a>
+<div class="return-to-main">
+  <div *ngIf="isNew">
+    <a routerLink='/main'>
+      <img src="assets/img/return-button.svg" alt="return-button" class="return-button">
+    </a>
+    <span>Вернуться к списку</span>
+  </div>
+  <div *ngIf="!isNew">
+    <a routerLink='/place-settings'>
+      <img src="assets/img/return-button.svg" alt="return-button" class="return-button">
+    </a>
+    <span>Вернуться к списку ваших коворкингов</span>
+  </div>
 </div>
 
 <form class="card-container" [formGroup]="form" (ngSubmit)="onSubmit()">
@@ -222,6 +226,8 @@
     <button (click)="isNew ? returnToMain() : deleteCategory()" class="button-return" type="button">{{isNew ? 'Отмена' :
       'Удалить'}}
     </button>
+
+    <div class="overlay" *ngIf="showPopup"></div>
 
     <div class="popup" *ngIf="showPopup">
       <img src="assets/img/add-coworking.svg" alt="add-coworking" *ngIf="isNew">
