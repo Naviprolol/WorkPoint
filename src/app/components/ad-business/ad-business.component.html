@@ -2,7 +2,7 @@
   <app-header></app-header>
   <div class="return-to-main">
     <a routerLink="/">
-      <img src="assets/img/return-button.svg" alt="return-button" class="return-button" width="16" height="16">
+      <img src="assets/img/return-button.svg" alt="return-button" class="return-button">
     </a>
     <span>Вернуться к поиску</span>
   </div>
@@ -14,7 +14,8 @@
         <li><a routerLink="/favourites">Избранное</a></li>
         <li><a routerLink="/profile">Настройки профиля</a></li>
         <li><a routerLink="/place-settings">Настройки мест</a></li>
-        <li style="border-right: solid 2px black ;" *ngIf="user.role_id == 2"><a routerLink="/ad-business">Продвижение</a></li>
+        <li style="border-right: solid 2px black ;" *ngIf="user.role_id == 2"><a
+            routerLink="/ad-business">Продвижение</a></li>
       </ul>
     </div>
 
@@ -105,7 +106,7 @@
         </span>
       </div>
 
-      <button class="button-send" type="submit" [disabled]="form.invalid || form.disabled" onclick="onClick()">
+      <button class="button-send" type="submit" [disabled]="form.invalid || form.disabled" (click)="onClick()">
         <!-- Доделать вывод плохого сообщения -->
         Отправить заявку
       </button>

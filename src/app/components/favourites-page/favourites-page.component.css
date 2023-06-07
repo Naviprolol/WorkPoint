@@ -50,10 +50,6 @@
     margin-bottom: 16px;
   }
 
-  .profile-navigation a li {
-    margin-bottom: 16px;
-  }
-
   .profile-navigation li:last-child {
     margin-bottom: 0;
   }
@@ -72,7 +68,7 @@
     font-weight: 700;
     font-size: 24px;
     line-height: 38px;
-    color: red;
+    color: black;
   }
 
   .top-information__card {
@@ -96,26 +92,21 @@
   }
 
   .return-to-main {
-    display: flex;
-    width: calc(0.75*250px);
-    margin-left: calc(0.75*180px);
+    width: calc(0.75*180px);
+    margin-left: calc(0.75*168px);
     margin-bottom: calc(0.83*65px);
     margin-top: calc(0.83*18px);
-    align-items: center;
   }
 
   .return-button {
     margin-right: calc(0.75*18px);
-    margin-top: auto;
-    margin-bottom: auto;
     width: calc(0.75*16px);
-    height: calc(0.75*16px);
+    height: calc(0.83*16px);
   }
 
   .return-to-main span {
     font-size: calc(0.75*15px);
-    line-height: 20px;
-    color: rgba(27, 31, 59, 0.65);
+    line-height: calc(0.83*20px);
   }
 
   .main-top-content {
@@ -132,11 +123,7 @@
 
   .profile-navigation li {
     font-size: calc(0.75*20px);
-    line-height: calc(0.83*177.69%);
-    margin-bottom: calc(0.83*16px);
-  }
-
-  .profile-navigation a li {
+    line-height: 177.69%;
     margin-bottom: calc(0.83*16px);
   }
 
@@ -155,10 +142,8 @@
 
   .wait-information {
     width: calc(0.75*1300px);
-    font-weight: 700;
     font-size: calc(0.75*24px);
     line-height: calc(0.83*38px);
-    color: red;
   }
 
   .top-information__card {
@@ -182,26 +167,21 @@
   }
 
   .return-to-main {
-    display: flex;
-    width: calc(0.71*250px);
-    margin-left: calc(0.71*180px);
+    width: calc(0.71*180px);
+    margin-left: calc(0.71*168px);
     margin-bottom: calc(0.71*65px);
     margin-top: calc(0.71*18px);
-    align-items: center;
   }
 
   .return-button {
     margin-right: calc(0.71*18px);
-    margin-top: auto;
-    margin-bottom: auto;
     width: calc(0.71*16px);
     height: calc(0.71*16px);
   }
 
   .return-to-main span {
     font-size: calc(0.71*15px);
-    line-height: 20px;
-    color: rgba(27, 31, 59, 0.65);
+    line-height: calc(0.71*20px);
   }
 
   .main-top-content {
@@ -218,17 +198,14 @@
 
   .profile-navigation li {
     font-size: calc(0.71*20px);
-    line-height: calc(0.71*177.69%);
-    margin-bottom: calc(0.71*16px);
-  }
-
-  .profile-navigation a li {
+    line-height: 177.69%;
     margin-bottom: calc(0.71*16px);
   }
 
   .profile-navigation li:last-child {
     margin-bottom: 0;
   }
+
 
   .top-information__header {
     margin-bottom: calc(0.71*43px);
@@ -241,10 +218,8 @@
 
   .wait-information {
     width: calc(0.71*1300px);
-    font-weight: 700;
     font-size: calc(0.71*24px);
     line-height: calc(0.71*38px);
-    color: red;
   }
 
   .top-information__card {

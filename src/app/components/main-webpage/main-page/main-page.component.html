@@ -10,7 +10,7 @@
   <div class="search-container" id="searchInput">
     <img src="assets/img/search.svg" alt="search">
     <input type="text" placeholder="Введите название или тип заведения" class="search-container-input"
-      [(ngModel)]="searchText">
+      [(ngModel)]="searchText" (keyup.enter)="filterByText()">
   </div>
   <button class="btn-find-coworking" type="button" (click)="filterByText()">
     Найти коворкинг
