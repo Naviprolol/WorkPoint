@@ -26,6 +26,10 @@
     color: rgba(27, 31, 59, 0.65);
   }
 
+  .profile-settings {
+    margin-bottom: 160px;
+  }
+
   .main-top-content {
     display: flex;
     margin-left: 202px;
@@ -35,6 +39,7 @@
     width: 238px;
     margin-right: 60px;
     margin-top: 31px;
+
   }
 
   .profile-navigation li {
@@ -360,6 +365,10 @@
     line-height: calc(0.83*20px);
   }
 
+  .profile-settings {
+    margin-bottom: calc(0.83*160px);
+  }
+
   .main-top-content {
     display: flex;
     margin-left: calc(0.75*202px);
@@ -676,6 +685,10 @@
   .return-to-main span {
     font-size: calc(0.71*15px);
     line-height: calc(0.71*20px);
+  }
+
+  .profile-settings {
+    margin-bottom: calc(0.71*160px);
   }
 
   .main-top-content {

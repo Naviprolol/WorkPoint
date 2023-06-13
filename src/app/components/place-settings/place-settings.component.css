@@ -42,6 +42,7 @@
     width: 238px;
     margin-right: 60px;
     margin-top: 31px;
+    margin-bottom: 600px;
   }
 
   .profile-navigation li {
@@ -194,6 +195,7 @@
     width: calc(0.75*238px);
     margin-right: calc(0.75*60px);
     margin-top: calc(0.83*31px);
+    margin-bottom: calc(0.83*600px);
   }
 
   .profile-navigation li {
@@ -345,6 +347,7 @@
     width: calc(0.71*238px);
     margin-right: calc(0.71*60px);
     margin-top: calc(0.71*31px);
+    margin-bottom: calc(0.71*600px);
   }
 
   .profile-navigation li {
