@@ -23,8 +23,8 @@ export class CoworkingsListComponent implements OnInit {
     // console.log(this.coworking.photo)
     this.photos = this.coworking.photo.split('#');
 
-    if (this.coworking.description.length > 164) {
-      this.newDescription = this.coworking.description.substring(0, 164) + '...'
+    if (this.coworking.description.length > 151) {
+      this.newDescription = this.coworking.description.substring(0, 151) + '...'
     }
     else {
       this.newDescription = this.coworking.description
