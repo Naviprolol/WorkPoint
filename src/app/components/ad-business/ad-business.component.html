@@ -106,17 +106,16 @@
         </span>
       </div>
 
-      <button class="button-send" type="submit" [disabled]="form.invalid || form.disabled" (click)="onClick()">
+      <button class="button-send" type="submit" [disabled]="form.invalid || form.disabled" (click)="[onClick(), showPopupAndRedirect()]">
         <!-- Доделать вывод плохого сообщения -->
         Отправить заявку
       </button>
 
-      <p id="popup" *ngIf="accessText === 'Письмо успешно отправлено!'">
-        <img class="goodAccessText" alt="Письмо успешно отправлено!" src="../../../assets/img/check-letter.svg">
-      </p>
-      <script type="text/javascript" charset="utf-8">
-        setTimeout(() => popup.hidden = true, 2000)
-      </script>
+      <div class="overlay" *ngIf="showPopup"></div>
+
+      <div class="popup" *ngIf="showPopup">
+        <img src="../../../assets/img/check-letter.svg" alt="Письмо успшно отправлено">
+      </div>
 
     </form>
 
