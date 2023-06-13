@@ -6,6 +6,7 @@ import { AuthService } from 'src/app/servises/auth.service';
 import { CoworkingsService } from 'src/app/servises/coworkings.service';
 import { ReviewService } from 'src/app/servises/review.service';
 import { UserService } from 'src/app/servises/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile-settings',
@@ -13,7 +14,7 @@ import { UserService } from 'src/app/servises/user.service';
   styleUrls: ['./profile-settings.component.css']
 })
 export class ProfileSettingsComponent implements OnInit {
-
+  showPopup: boolean = false
   form: FormGroup
   user: User
   successText: string
@@ -25,7 +26,8 @@ export class ProfileSettingsComponent implements OnInit {
 
   constructor(
     private coworkingsService: CoworkingsService,
-    private userService: UserService,) {
+    private userService: UserService,
+    private router: Router,) {
 
   }
 
@@ -109,5 +111,17 @@ export class ProfileSettingsComponent implements OnInit {
       this.imagePreview = reader.result
     }
     reader.readAsDataURL(file)
+  }
+
+  showPopupAndRedirect() {
+    this.showPopup = true;
+    setTimeout(() => {
+      this.closePopup();
+      this.router.navigate(['/place-settings'])
+    }, 2000);
+  }
+
+  closePopup() {
+    this.showPopup = false;
   }
 }
