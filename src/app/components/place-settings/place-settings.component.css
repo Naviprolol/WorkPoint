@@ -33,9 +33,14 @@
   }
 
   .main-top-content {
+    flex: 1 0 auto;
     display: flex;
     margin-left: 202px;
     margin-top: 65px;
+  }
+
+  .footer{
+    flex: 0 0 auto;
   }
 
   .profile-navigation {
@@ -88,6 +93,8 @@
   }
 
   .card {
+    padding-left: 27px;
+    padding-bottom: 15px;
     position: relative;
     display: flex;
     max-width: 1070px;
@@ -103,7 +110,6 @@
   .card-title {
     width: 165px;
     padding-top: 16px;
-    padding-left: 27px;
     font-weight: 700;
     font-size: 24px;
     line-height: 33px;
@@ -114,7 +120,6 @@
     font-weight: 400;
     font-size: 15px;
     line-height: 27px;
-    padding-left: 27px;
   }
 
   .second-block__card {
@@ -185,9 +190,14 @@
   }
 
   .main-top-content {
+    flex: 1 0 auto;
     display: flex;
     margin-left: calc(0.75*202px);
     margin-top: calc(0.83*65px);
+  }
+
+  .footer{
+    flex: 0 0 auto;
   }
 
   .profile-navigation {
@@ -242,6 +252,8 @@
   .card {
     position: relative;
     display: flex;
+    padding-left: calc(0.75*27px);
+    padding-bottom: calc(0.83*15px);
     max-width: calc(0.75*1070px);
     min-height: calc(0.83*99px);
     background: rgba(190, 218, 195, 0.7);
@@ -254,7 +266,6 @@
 
   .card-title {
     padding-top: calc(0.83*16px);
-    padding-left: calc(0.75*27px);
     font-weight: 700;
     font-size: calc(0.75*24px);
     line-height: calc(0.83*33px);
@@ -265,7 +276,6 @@
     font-weight: 400;
     font-size: calc(0.75*15px);
     line-height: calc(0.83*27px);
-    padding-left: calc(0.75*27px);
   }
 
   .second-block__card {
@@ -336,9 +346,14 @@
   }
 
   .main-top-content {
+    flex: 1 0 auto;
     display: flex;
     margin-left: calc(0.71*202px);
     margin-top: calc(0.71*65px);
+  }
+
+  .footer{
+    flex: 0 0 auto;
   }
 
   .profile-navigation {
@@ -393,6 +408,8 @@
   .card {
     position: relative;
     display: flex;
+    padding-left: calc(0.71*27px);
+    padding-bottom: calc(0.71*15px);
     max-width: calc(0.71*1070px);
     min-height: calc(0.71*99px);
     background: rgba(190, 218, 195, 0.7);
@@ -405,7 +422,6 @@
 
   .card-title {
     padding-top: calc(0.71*16px);
-    padding-left: calc(0.71*27px);
     font-weight: 700;
     font-size: calc(0.71*24px);
     line-height: calc(0.71*33px);
@@ -416,7 +432,6 @@
     font-weight: 400;
     font-size: calc(0.71*15px);
     line-height: calc(0.71*27px);
-    padding-left: calc(0.71*27px);
   }
 
   .second-block__card {

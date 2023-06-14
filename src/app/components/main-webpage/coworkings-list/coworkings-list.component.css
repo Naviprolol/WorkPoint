@@ -105,6 +105,10 @@
     outline: 1px solid #6A6D79;
   }
 
+  .coworking-map:hover p{
+    color: #000000;
+  }
+
   .coworking-map:active {
     background: #8EBD9D !important;
   }
@@ -115,18 +119,19 @@
   }
 
   .coworking-map {
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
     width: 275px;
     height: 54px;
-    background: #E0E0D6;
     text-align: center;
+    background: #5E9C76;
+    border: 0.5px solid #FFFFFF;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
   }
 
   .coworking-map p {
     font-size: 15px;
     line-height: 28px;
-    color: rgba(27, 31, 59, 0.4);
+    color: #FFFFFF;
     font-weight: 600;
   }
 }
