@@ -31,6 +31,8 @@ export class AddCoworkingComponent implements OnInit {
   imagePreview2: any = '';
   imagePreview3: any = '';
 
+  flag: boolean = false;
+
   constructor(private route: ActivatedRoute,
     private coworkingsService: CoworkingsService,
     private router: Router) {
@@ -44,16 +46,16 @@ export class AddCoworkingComponent implements OnInit {
       district: new FormControl(null, [Validators.required]),
       address: new FormControl(null, [Validators.required]),
       description: new FormControl(null, [Validators.required]),
-      opening_hours: new FormControl(''),
-      type: new FormControl(''),
-      price: new FormControl(''),
+      opening_hours: new FormControl('', [Validators.required]),
+      type: new FormControl('', [Validators.required]),
+      price: new FormControl('', [Validators.required]),
       tags: new FormControl(''),
       parking: new FormControl(false),
       restzone: new FormControl(false),
       conference: new FormControl(false),
-      phone: new FormControl(null),
-      email: new FormControl(null),
-      site: new FormControl(null),
+      phone: new FormControl(null, [Validators.required]),
+      email: new FormControl(null, [Validators.required]),
+      site: new FormControl(null, [Validators.required]),
       photo: new FormControl(null)
     })
 
@@ -89,11 +91,17 @@ export class AddCoworkingComponent implements OnInit {
             site: coworking.site,
             tags: coworking.tags,
           })
-          // this.coworking.photo = this.coworking.photo.split('#')
+
+          // coworking.photo = this.coworking.photo.split('#')
           // this.imagePreview1 = coworking.photo[0]
           // this.imagePreview2 = coworking.photo[1]
           // this.imagePreview3 = coworking.photo[2]
-          // console.log(coworking)
+          // console.log(coworking.photo)
+
+          coworking.tags.forEach(tag => {
+            this.selectedTags.push(tag.name);
+          });
+          this.form.get('tags')?.setValue(this.selectedTags);
         }
       },
       error => { console.log('Ошибка') }
@@ -134,6 +142,7 @@ export class AddCoworkingComponent implements OnInit {
       switch (index) {
         case 1:
           this.image1 = file;
+          console.log(this.image1)
           this.imagePreview1 = reader.result;
           break;
         case 2:
@@ -156,17 +165,13 @@ export class AddCoworkingComponent implements OnInit {
     this.form.disable()
 
     if (this.isNew) {
-
-
-
       console.log(this.coworking)
 
       // create
       obs$ = this.coworkingsService.create(0, this.form.value.name, this.form.value.city, this.form.value.district,
         this.form.value.address, this.form.value.description, this.form.value.opening_hours,
         this.form.value.type, this.form.value.price, this.form.value.tags, this.form.value.parking, this.form.value.restzone, this.form.value.conference,
-        this.image1, this.image2, this.image3, this.form.value.phone,
-        this.form.value.email, this.form.value.site)
+        this.image1, this.image2, this.image3, this.form.value.phone, this.form.value.email, this.form.value.site)
     }
     else {
       // update
@@ -179,6 +184,20 @@ export class AddCoworkingComponent implements OnInit {
         coworking => {
           this.coworking = coworking
           console.log('Фото обновлено')
+        },
+        error => {
+          console.log('Что то пошло не так с обновлением фото')
+          console.log(error)
+        }
+      )
+      this.coworkingsService.updateTags(this.coworking.id, this.form.value.tags).subscribe(
+        coworking => {
+          this.coworking = coworking
+          console.log('Теги обновлены')
+        },
+        error => {
+          console.log('Что то пошло не так с обновлением тегов')
+          console.log(error)
         }
       )
     }
@@ -191,13 +210,14 @@ export class AddCoworkingComponent implements OnInit {
       },
       error => {
         console.log('ERRRRROR!')
+        console.log(error)
         console.log(this.coworking)
         this.form.enable()
       }
     )
   }
 
-  deleteCategory() {
+  deleteCoworking() {
     const decision = window.confirm(`Вы уверены, что хотите удалить коворкинг ${this.coworking.name}?`)
 
     if (decision) {
@@ -211,6 +231,10 @@ export class AddCoworkingComponent implements OnInit {
 
   returnToMain() {
     this.router.navigate(['/main'])
+  }
+
+  changeFlag() {
+    this.flag = true;
   }
 
   showPopupAndRedirect() {

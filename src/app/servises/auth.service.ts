@@ -21,7 +21,7 @@ export class AuthService {
     fd.append('username', username)
     fd.append('password', password)
 
-    return this.http.post<{ access_token: string }>('https://1506815-cq40245.tw1.ru/user/login', fd).pipe(
+    return this.http.post<{ access_token: string }>('https://www.1506815-cq40245.tw1.ru/user/login', fd).pipe( // https://1506815-cq40245.tw1.ru/user/login
       tap(
         (token) => {
           localStorage.setItem('auth-token', token.access_token)
@@ -50,6 +50,6 @@ export class AuthService {
   }
 
   register(user: User): Observable<User> {
-    return this.http.post<User>('https://1506815-cq40245.tw1.ru/user/signup', user)
+    return this.http.post<User>('https://www.1506815-cq40245.tw1.ru/user/signup', user) // https://1506815-cq40245.tw1.ru/user/signup
   }
 }

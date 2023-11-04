@@ -46,12 +46,15 @@
         <p class="coworking-description">{{coworking.description}}</p>
 
         <div class="coworking-map">
-          <p>
-            Отображение на карте
-          </p>
+          <p>Отображение на карте</p>
 
           <div class="map">
-            <img src="assets/img/map.png" alt="map" class="map-img">
+            <div class="map-container">
+              <ya-map [center]="[55.74, 37.58]" [zoom]="14" [state]="{ controls: [] }">
+                <ya-control type="SearchControl" [parameters]="parameters"
+                  (ready)="onControlReady($event)"></ya-control>
+              </ya-map>
+            </div>
           </div>
         </div>
 
@@ -81,6 +84,14 @@
           <div class="phone-information">
             <img src="assets/img/phone.svg" alt="phone" width="22.5" height="27" class="img-coworking-phone">
             <span>{{coworking.company_phone}}</span>
+          </div>
+          <div class="phone-information">
+            <img src="assets/img/phone.svg" alt="phone" width="22.5" height="27" class="img-coworking-phone">
+            <span>{{coworking.email}}</span>
+          </div>
+          <div class="phone-information">
+            <img src="assets/img/phone.svg" alt="phone" width="22.5" height="27" class="img-coworking-phone">
+            <span>{{coworking.site}}</span>
           </div>
         </div>
 
@@ -117,7 +128,7 @@
     <div class="reviews">
       <div class="review" *ngFor="let review of allReviews">
         <div class="review-title-container">
-          <img src="{{review.user_photo}}" alt="avatar" class="avatar">
+          <img src="{{review.user_photo}}" alt="avatar" class="avatar" onerror="this.src='assets/img/logo.svg'">
           <div class="review-title">
 
             <div class="review-name-date">
@@ -135,21 +146,19 @@
         </div>
 
         <div class="review-description" *ngIf="review.body">
-
-          <p *ngIf="review.body.length > 244  && !showFullDescription">
+          <p *ngIf="review.body.length > 244  && !review.showFullDescription">
             {{ review.body.substring(0, 244) + '...' }}
-            <button (click)="showFullDescription = true">Читать полностью</button>
+            <button (click)="review.showFullDescription = true">Читать полностью</button>
           </p>
 
-          <p *ngIf="(review.body.length < 244 || showFullDescription) && review.body.length > 0">{{ review.body }}</p>
+          <p *ngIf="(review.body.length < 244 || review.showFullDescription) && review.body.length > 0">{{ review.body
+            }}</p>
         </div>
 
       </div>
 
     </div>
   </div>
-
-
 
   <div class="line"></div>
 

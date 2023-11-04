@@ -47,6 +47,7 @@ export class ProfileSettingsComponent implements OnInit {
 
     this.userService.getUserByToken().subscribe(user => {
       this.user = user
+      console.log(user)
       this.form.patchValue({
         name: user.name,
         surname: user.surname,
@@ -72,7 +73,7 @@ export class ProfileSettingsComponent implements OnInit {
     obs$.subscribe(
       () => {
         console.log('Изменения сохранены')
-        location.reload()
+        // location.reload()
         this.form.enable()
       },
       error => {
@@ -86,7 +87,9 @@ export class ProfileSettingsComponent implements OnInit {
   onSubmitBusiness() {
     this.userService.editRole(2).subscribe(
       user => {
-        this.user.role_id = user.role_id
+        setTimeout(() => {
+          this.user.role_id = user.role_id
+        }, 2000)
         this.successText = 'Вы успешно перешли на бизнес-аккаунт!'
         // console.log('Изменения сохранены')
       },
@@ -117,7 +120,7 @@ export class ProfileSettingsComponent implements OnInit {
     this.showPopup = true;
     setTimeout(() => {
       this.closePopup();
-      this.router.navigate(['/place-settings'])
+      this.router.navigate(['/profile'])
     }, 2000);
   }
 

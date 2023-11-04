@@ -159,8 +159,8 @@
     margin-bottom: 63px;
   }
 
-  .map-img {
-    width: 838px;
+  .map-container {
+    width: 950px;
     height: 571px;
   }
 
@@ -393,6 +393,7 @@
     width: 1120px;
     font-size: 22px;
     line-height: 177.69%;
+    word-wrap: break-word;
   }
 
   .review-description p {
@@ -530,8 +531,8 @@
     margin-bottom: calc(0.83*63px);
   }
 
-  .map-img {
-    width: calc(0.75*838px);
+  .map-container {
+    width: calc(0.75*950px);
     height: calc(0.83*571px);
   }
 
@@ -813,8 +814,8 @@
     margin-bottom: calc(0.71*63px);
   }
 
-  .map-img {
-    width: calc(0.71*838px);
+  .map-container {
+    width: calc(0.71*950px);
     height: calc(0.71*571px);
   }
 

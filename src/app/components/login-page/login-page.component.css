@@ -177,9 +177,9 @@
 
   .logo-img1 {
     width: calc(0.75*50px);
-    height: calc(0.75*49.74px);
+    height: calc(0.83*49.74px);
     left: calc(0.75*165px);
-    top: calc(0.9*30px);
+    top: calc(0.83*30px);
   }
 
   .card {
@@ -308,14 +308,14 @@
   .header-container a {
     font-weight: 300;
     font-size: calc(0.71*48px);
-    line-height: 56px;
+    line-height: calc(0.71*56px);
   }
 
   .logo-img1 {
     width: calc(0.71*50px);
     height: calc(0.71*49.74px);
     left: calc(0.71*165px);
-    top: calc(0.90*30px);
+    top: calc(0.71*30px);
   }
 
   .card {

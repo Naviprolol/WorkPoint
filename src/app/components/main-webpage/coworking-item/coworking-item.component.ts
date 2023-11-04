@@ -7,6 +7,8 @@ import { ReviewService } from 'src/app/servises/review.service';
 import { AuthService } from 'src/app/servises/auth.service';
 import * as moment from 'moment';
 import { UserService } from 'src/app/servises/user.service';
+import { YaReadyEvent } from 'angular8-yandex-maps';
+
 
 @Component({
   selector: 'app-coworking-item',
@@ -25,11 +27,20 @@ export class CoworkingItemComponent implements OnInit {
   sortedItems: Review[] = []
 
   isReviewSend: boolean = false
-  showFullDescription: boolean = false
   UPDay: boolean = true
   UPRating: boolean = false
   isButtonDayActive: boolean = true
   isButtonRatingActive: boolean = false
+
+  parameters: ymaps.control.ISearchControlParameters = {
+    options: {
+      provider: 'yandex#search'
+    }
+  };
+
+  onControlReady(event: YaReadyEvent<ymaps.control.SearchControl>): void {
+    event.target.search(`${this.coworking.city} ${this.coworking.address} ${this.coworking.name}`);
+  }
 
   constructor(private route: ActivatedRoute,
     private coworkingsService: CoworkingsService,
@@ -40,6 +51,7 @@ export class CoworkingItemComponent implements OnInit {
   }
 
   ngOnInit() {
+
     const routeParams = this.route.snapshot.paramMap
     const coworkingIdFromRouteSTR = String(routeParams.get('id'));
     const coworkingIdFromRouteINT = Number(routeParams.get('id'));
@@ -72,9 +84,11 @@ export class CoworkingItemComponent implements OnInit {
 
     this.reviewService.getReviewsByIdPlace(coworkingIdFromRouteINT).subscribe(reviews => {
       this.allReviews = reviews;
+      console.log(reviews)
       this.allReviews.sort((reviewFirst: Review, reviewSecond: Review) => moment(reviewSecond.created_at).diff(moment(reviewFirst.created_at)))
 
       this.allReviews.forEach(review => {
+        review.showFullDescription = false;
         review.formattedDate = moment(review.created_at).format('DD.MM.YYYY HH:mm');
       });
     })

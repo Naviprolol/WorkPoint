@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ICoworking } from 'src/app/interfaces/interfaces';
 import { CoworkingsService } from 'src/app/servises/coworkings.service';
 
@@ -14,7 +15,9 @@ export class CoworkingsListComponent implements OnInit {
   newDescription: string
   photos: any
 
-  constructor() { }
+  constructor(private router: Router) {
+
+  }
 
   ngOnInit(): void {
     let photo = this.coworking.photo + ''
@@ -23,12 +26,11 @@ export class CoworkingsListComponent implements OnInit {
     // console.log(this.coworking.photo)
     this.photos = this.coworking.photo.split('#');
 
-    if (this.coworking.description.length > 151) {
+    if (this.coworking.description.length > 151) { // 164
       this.newDescription = this.coworking.description.substring(0, 151) + '...'
     }
     else {
       this.newDescription = this.coworking.description
     }
   }
-
 }

@@ -455,7 +455,6 @@
   }
 
   .logo-img1 {
-    position: absolute;
     width: calc(0.71*50px);
     height: calc(0.71*49.74px);
     left: calc(0.71*165px);
