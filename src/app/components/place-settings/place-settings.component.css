@@ -154,6 +154,16 @@
     line-height: 28px;
     color: rgba(27, 31, 59, 0.4);
   }
+
+  .progress-information__btn:hover {
+    background-color: #EDFAED;
+    outline: 1px solid #6A6D79;
+  }
+
+  .progress-information__btn:active,
+  .progress-information__btn:active {
+    background: #8EBD9D !important;
+  }
 }
 
 @media screen and (max-width: 1450px) {

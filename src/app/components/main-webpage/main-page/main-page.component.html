@@ -2,10 +2,27 @@
 
 <i class="fa fa-spinner fa-spin loader-icon" *ngIf="isLoading"></i>
 
+
 <div class="banner-container">
-  <img src="assets/img/banner2.svg" class="banner" alt="banner">
+
+  <div class="carousel" *ngIf="items.length !== 0">
+    <tui-carousel [(index)]="index" [duration]="2000">
+      <ng-container *ngFor="let item of items; let i = index">
+        <img *tuiItem alt="" draggable="false" src="{{ item }}" class="item" [class.item_active]="i === index + 1" />
+      </ng-container>
+    </tui-carousel>
+    <tui-pagination size="s" class="carousel-pagination" [length]="items.length" [(index)]="index"></tui-pagination>
+  </div>
+
+  <div class="default-banner" *ngIf="items.length === 0">
+    <img src="assets/img/banner2.svg" alt="banner" class="banner">
+  </div>
+
   <p>Все коворкинги вашего города</p>
 </div>
+
+
+
 <div class="search">
   <div class="search-container" id="searchInput">
     <img src="assets/img/search.svg" alt="search">
@@ -17,11 +34,7 @@
   </button>
 </div>
 
-
 <p class="count-coworkings" id="coworkings-list"> Найдено: {{filteredCoworkings.length}} </p>
-<span *ngIf="">
-
-</span>
 
 <div class="filter-and-coworkings">
 

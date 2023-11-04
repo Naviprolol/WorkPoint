@@ -20,7 +20,7 @@ export interface ICoworking {
   parking: boolean,
   recreation_area: boolean,
   conference_hall: boolean
-  tags: string[]
+  tags: any[]
   user_id: number
   photos: File[]
 }
@@ -52,4 +52,5 @@ export interface Review {
   user_surname: string
   user_photo: string
   formattedDate: string
+  showFullDescription: boolean
 }

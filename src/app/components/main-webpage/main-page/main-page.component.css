@@ -61,9 +61,19 @@
     margin-bottom: 140px;
   }
 
-  .banner {
+  .banner-container .item {
+    width: 100%;
+    height: 413px;
+    border-radius: 20px;
+  }
+
+  .banner-container .banner {
     width: 1400px;
     height: 413px;
+  }
+
+  .carousel-pagination {
+    margin-top: 20px;
   }
 
   .banner-container p {
@@ -254,16 +264,26 @@
     margin-bottom: calc(0.83*140px);
   }
 
+  .banner-container .item {
+    width: 100%;
+    height: calc(0.83*413px);
+    border-radius: 20px;
+  }
+
+  .banner-container .banner {
+    width: calc(0.75*1400px);
+    height: calc(0.83*413px);
+  }
+
+  .carousel-pagination {
+    margin-top: calc(0.83*20px);
+  }
+
   .banner-container p {
     font-weight: 700;
     font-size: calc(0.75*48px);
     padding-top: calc(0.83*43px);
     text-align: center;
-  }
-
-  .banner {
-    width: calc(0.75*1400px);
-    height: calc(0.83*413px);
   }
 
   .search {
@@ -427,16 +447,26 @@
     margin-bottom: calc(0.71*140px);
   }
 
+  .banner-container .item {
+    width: 100%;
+    height: calc(0.71*413px);
+    border-radius: 20px;
+  }
+
+  .banner-container .banner {
+    width: calc(0.71*1400px);
+    height: calc(0.71*413px);
+  }
+
+  .carousel-pagination {
+    margin-top: calc(0.71*20px);
+  }
+
   .banner-container p {
     font-weight: 700;
     font-size: calc(0.71*48px);
     padding-top: calc(0.71*43px);
     text-align: center;
-  }
-
-  .banner {
-    width: calc(0.71*1400px);
-    height: calc(0.71*413px);
   }
 
   .search {

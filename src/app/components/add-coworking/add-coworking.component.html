@@ -21,16 +21,15 @@
   <div class="input-field name" [ngClass]="{'invalid': form.get('name')?.invalid && form.get('name')?.touched}">
     <input id="name" placeholder="Название заведения" type="text" formControlName="name">
     <label for="name"></label>
-    <span class="helper-text red-text" *ngIf="form.get('name')?.invalid && form.get('name')?.touched">
+    <span class="red-text" *ngIf="form.get('name')?.invalid && form.get('name')?.touched">
       <span *ngIf="form.get('name')?.errors?.['required']">Обязательное поле</span>
     </span>
-
   </div>
 
   <div class="input-field city" [ngClass]="{'invalid': form.get('city')?.invalid && form.get('city')?.touched}">
     <input id="city" placeholder="Город" type="text" formControlName="city">
     <label for="city"></label>
-    <span class="helper-text red-text" *ngIf="form.get('city')?.invalid && form.get('city')?.touched">
+    <span class="red-text" *ngIf="form.get('city')?.invalid && form.get('city')?.touched">
       <span *ngIf="form.get('city')?.errors?.['required']">Обязательное поле</span>
     </span>
   </div>
@@ -40,7 +39,7 @@
       [ngClass]="{'invalid': form.get('district')?.invalid && form.get('district')?.touched}">
       <input id="district" placeholder="Район" type="text" formControlName="district">
       <label for="district"></label>
-      <span class="helper-text red-text" *ngIf="form.get('district')?.invalid && form.get('district')?.touched">
+      <span class="red-text" *ngIf="form.get('district')?.invalid && form.get('district')?.touched">
         <span *ngIf="form.get('district')?.errors?.['required']">Обязательное поле</span>
       </span>
     </div>
@@ -49,7 +48,7 @@
       [ngClass]="{'invalid': form.get('address')?.invalid && form.get('address')?.touched}">
       <input id="address" placeholder="Адрес" type="text" formControlName="address">
       <label for="address"></label>
-      <span class="helper-text red-text" *ngIf="form.get('address')?.invalid && form.get('address')?.touched">
+      <span class="red-text" *ngIf="form.get('address')?.invalid && form.get('address')?.touched">
         <span *ngIf="form.get('address')?.errors?.['required']">Обязательное поле</span>
       </span>
     </div>
@@ -59,7 +58,7 @@
     [ngClass]="{'invalid': form.get('description')?.invalid && form.get('description')?.touched}">
     <input class="description-input" id="description" placeholder="Описание" formControlName="description">
     <label for="description"></label>
-    <span class="helper-text red-text description-warning"
+    <span class="red-text description-warning"
       *ngIf="form.get('description')?.invalid && form.get('description')?.touched">
       <span *ngIf="form.get('description')?.errors?.['required']">Обязательное поле</span>
     </span>
@@ -68,23 +67,30 @@
   <div class="filters">
     <h1>Фильтры</h1>
 
-    <div class="input-field workHours">
+    <div class="input-field workHours"
+      [ngClass]="{'invalid': form.get('opening_hours')?.invalid && form.get('opening_hours')?.touched}">
       <select id="opening_hours" placeholder="Часы работы" formControlName="opening_hours">
         <option value="" disabled selected hidden>Часы работы</option>
         <option value="Круглосуточно">Круглосуточно</option>
         <option value="По будням">По будням</option>
         <option value="Каждый день">Каждый день</option>
       </select>
+      <span class="red-text" *ngIf="form.get('opening_hours')?.invalid && form.get('opening_hours')?.touched">
+        <span *ngIf="form.get('opening_hours')?.errors?.['required']">Обязательное поле</span>
+      </span>
     </div>
 
     <div class="flex">
-      <div class="input-field type">
+      <div class="input-field type" [ngClass]="{'invalid': form.get('type')?.invalid && form.get('type')?.touched}">
         <select id="type" placeholder="Тип заведения" formControlName="type">
           <option value="" disabled selected hidden>Тип заведения</option>
           <option value="Рабочий зал">Рабочий зал</option>
           <option value="Антикафе">Антикафе</option>
           <option value="Кафе">Кафе</option>
         </select>
+        <span class="red-text" *ngIf="form.get('type')?.invalid && form.get('type')?.touched">
+          <span *ngIf="form.get('type')?.errors?.['required']">Обязательное поле</span>
+        </span>
       </div>
 
       <div class="input-field price" [ngClass]="{'invalid': form.get('price')?.invalid && form.get('price')?.touched}">
@@ -93,14 +99,14 @@
           <option value="Бесплатно">Бесплатно</option>
           <option value="Платно">Платно</option>
         </select>
-        <span class="helper-text red-text" *ngIf="form.get('price')?.invalid && form.get('price')?.touched">
+        <span class="red-text" *ngIf="form.get('price')?.invalid && form.get('price')?.touched">
           <span *ngIf="form.get('price')?.errors?.['required']">Обязательное поле</span>
         </span>
       </div>
     </div>
 
     <div class="filter-tags">
-      <span>Дополнительно</span>
+      <span class="extra-information">Дополнительно</span>
       <div class="tags-container">
         <div class="tags-input">
           <h5>Теги</h5>
@@ -109,7 +115,9 @@
             <div class="dropdown-menu" [ngClass]="{'show': ifClicked}">
               <button type="button" class="dropdown-link" *ngFor="let tag of tags"
                 [class.active]="selectedTags.includes(tag)" (click)="toggleTag(tag)">
-                {{ tag }}
+                <span class="tag-name">
+                  {{ tag }}
+                </span>
               </button>
             </div>
           </div>
@@ -125,7 +133,7 @@
 
           <div>
             <button type="button" class="btn-settings" (click)="ifClicked = !ifClicked">
-              <img src="assets/img/settings.svg" alt="settings" width="13" height="13">
+              <img src="assets/img/settings.svg" alt="settings">
             </button>
           </div>
 
@@ -169,26 +177,35 @@
 
     <h1>Контакты</h1>
 
-    <div class="input-field phone">
+    <div class="input-field phone" [ngClass]="{'invalid': form.get('phone')?.invalid && form.get('phone')?.touched}">
       <input id="phone" placeholder="Телефон заведения" type="text" formControlName="phone">
       <label for="phone"></label>
+      <span class="red-text" *ngIf="form.get('phone')?.invalid && form.get('phone')?.touched">
+        <span *ngIf="form.get('phone')?.errors?.['required']">Обязательное поле</span>
+      </span>
     </div>
 
-    <div class="input-field email">
+    <div class="input-field email" [ngClass]="{'invalid': form.get('email')?.invalid && form.get('email')?.touched}">
       <input id="email" placeholder="Электронная почта" type="email" formControlName="email">
       <label for="email"></label>
+      <span class="red-text" *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+        <span *ngIf="form.get('email')?.errors?.['required']">Обязательное поле</span>
+      </span>
     </div>
 
-    <div class="input-field site">
+    <div class="input-field site" [ngClass]="{'invalid': form.get('site')?.invalid && form.get('site')?.touched}">
       <input id="site" placeholder="Сайт" type="text" formControlName="site">
       <label for="site"></label>
+      <span class="red-text" *ngIf="form.get('site')?.invalid && form.get('site')?.touched">
+        <span *ngIf="form.get('site')?.errors?.['required']">Обязательное поле</span>
+      </span>
     </div>
 
   </div>
 
   <div class="photo-container">
     <h1>Фотографии</h1>
-    <h2>Добавьте минимум 3 фотографии</h2>
+    <h2>Добавьте минимум 1 фотографию</h2>
 
     <div class="photo">
       <div class="first-photo">
@@ -219,12 +236,20 @@
 
   <div class="buttons-submit">
 
-    <button class="button-add" type="submit" (click)="showPopupAndRedirect()"
-      [disabled]="form.invalid || form.disabled">{{isNew ?
-      'Добавить':
-      'Сохранить'}}</button>
-    <button (click)="isNew ? returnToMain() : deleteCategory()" class="button-return" type="button">{{isNew ? 'Отмена' :
-      'Удалить'}}
+    <div>
+      <button class="button-add" type="submit" (click)="showPopupAndRedirect()"
+        [disabled]="form.invalid || form.disabled || !image1">{{isNew ? 'Добавить': 'Сохранить'}}
+      </button>
+
+      <div>
+        <span class="red-text" *ngIf="form.invalid || !image1">
+          <span>Вы не заполнили обязательные поля</span>
+        </span>
+      </div>
+    </div>
+
+    <button (click)="isNew ? returnToMain() : deleteCoworking()" class="button-return" type="button">
+      {{isNew ? 'Отмена' : 'Удалить'}}
     </button>
 
     <div class="overlay" *ngIf="showPopup"></div>

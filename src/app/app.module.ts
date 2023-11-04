@@ -1,3 +1,4 @@
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -5,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainPageComponent } from './components/main-webpage/main-page/main-page.component';
 import { CoworkingsListComponent } from './components/main-webpage/coworkings-list/coworkings-list.component';
-import { Routes, RouterModule } from '@angular/router';
 import { HeaderComponent } from './shared/header/header.component';
 import { BannerComponent } from './components/main-webpage/banner/banner.component';
 import { FooterComponent } from './shared/footer/footer.component';
@@ -26,6 +26,16 @@ import { CommonModule } from '@angular/common'
 import { PlaceSettingsComponent } from './components/place-settings/place-settings.component';
 import { AdBusinessComponent } from './components/ad-business/ad-business.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+
+import { TuiRootModule, TuiButtonModule } from '@taiga-ui/core';
+import { TuiCarouselModule, TuiIslandModule, TuiPaginationModule } from '@taiga-ui/kit';
+
+import { AngularYandexMapsModule, YaConfig } from 'angular8-yandex-maps';
+
+const mapConfig: YaConfig = {
+  apikey: '4d882b8c-882e-4fd7-8097-d924a789563f',
+  lang: 'ru_RU',
+};
 
 @NgModule({
   declarations: [
@@ -56,13 +66,20 @@ import { NgxPaginationModule } from 'ngx-pagination';
     NgxStarRatingModule,
     CommonModule,
     NgxPaginationModule,
+    BrowserAnimationsModule,
+    TuiRootModule,
+    TuiCarouselModule,
+    TuiIslandModule,
+    TuiPaginationModule,
+    TuiButtonModule,
+    AngularYandexMapsModule.forRoot(mapConfig)
   ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
       multi: true,
       useClass: TokenInterceptor
-    }
+    },
   ],
   bootstrap: [AppComponent]
 })

@@ -22,11 +22,10 @@ export class ReviewService {
       body: description
     };
 
-    return this.http.post<Review>('https://1506815-cq40245.tw1.ru/review/add_review', data, { headers: headers }) // Путь бека
+    return this.http.post<Review>('https://www.1506815-cq40245.tw1.ru/review/add_review', data, { headers: headers }) // https://1506815-cq40245.tw1.ru/review/add_review
   }
 
   getReviewsByIdPlace(place_id: number): Observable<Review[]> {
-
-    return this.http.post<Review[]>(`https://1506815-cq40245.tw1.ru/places/get_reviews?id_place=${place_id}`, {})
+    return this.http.post<Review[]>(`https://www.1506815-cq40245.tw1.ru/places/get_reviews?id_place=${place_id}`, {}) // https://1506815-cq40245.tw1.ru/places/get_reviews?id_place=${place_id}
   }
 }

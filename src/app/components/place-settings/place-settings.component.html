@@ -28,19 +28,17 @@
     </p>
 
     <div class="explanations" *ngIf="userCoworkings.length > 0">
-      <li class="explanations-li">
+      <h5 class="explanations-li">
         Название
-      </li>
-
+      </h5>
     </div>
 
     <ul class="cards">
       <li class="card-li" *ngFor="let userCoworking of userCoworkings">
         <div class="card">
-
           <div class="first-block__card">
             <p class="card-title">
-              <a class="card-title" [routerLink]="['/main', userCoworking.id]">{{userCoworking.name}}</a>
+              <a [routerLink]="['/main', userCoworking.id]">{{userCoworking.name}}</a>
             </p>
             <p class="adress">
               {{userCoworking.address}}

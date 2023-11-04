@@ -18,7 +18,7 @@ export class UserService {
 
     // console.log(headers.get('Authorization'))
 
-    return this.http.get<User>('https://1506815-cq40245.tw1.ru/user/current', { headers: headers }) // Путь бека
+    return this.http.get<User>('https://www.1506815-cq40245.tw1.ru/user/current', { headers: headers }) // https://1506815-cq40245.tw1.ru/user/current
   }
 
   updateUser(user_id: number, name: string, surname: string, city: string, phone: string,): Observable<User> {
@@ -33,7 +33,7 @@ export class UserService {
       city: city
     }
 
-    return this.http.post<User>('https://1506815-cq40245.tw1.ru/user/settings', data, { headers: headers }) // Путь бека
+    return this.http.post<User>('https://www.1506815-cq40245.tw1.ru/user/settings', data, { headers: headers }) // https://1506815-cq40245.tw1.ru/user/settings
   }
 
   report(name: string, city: string, address: string, price: string, email: string, user_name: string): Observable<any> {
@@ -49,7 +49,7 @@ export class UserService {
       user_name: user_name
     }
 
-    return this.http.post<User>('https://1506815-cq40245.tw1.ru/report/dashboard', data, { headers: headers })
+    return this.http.post<User>('https://www.1506815-cq40245.tw1.ru/report/dashboard', data, { headers: headers }) // https://1506815-cq40245.tw1.ru/report/dashboard
   }
 
   editRole(role_id: number): Observable<User> {
@@ -61,7 +61,7 @@ export class UserService {
 
     const options = { params, headers };
 
-    return this.http.post<User>('https://1506815-cq40245.tw1.ru/user/role', null, options)
+    return this.http.post<User>('https://www.1506815-cq40245.tw1.ru/user/role', null, options) // https://1506815-cq40245.tw1.ru/user/role
   }
 
   uploadAvatar(photo: File): Observable<User> {
@@ -71,6 +71,6 @@ export class UserService {
     let formData = new FormData();
     formData.append('file', photo)
 
-    return this.http.post<User>('https://1506815-cq40245.tw1.ru/user/photo', formData, { headers: headers })
+    return this.http.post<User>('https://www.1506815-cq40245.tw1.ru/user/photo', formData, { headers: headers }) // https://1506815-cq40245.tw1.ru/user/photo
   }
 }
