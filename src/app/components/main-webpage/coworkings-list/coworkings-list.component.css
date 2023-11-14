@@ -27,7 +27,6 @@
 
   .img-good-place {
     margin-top: 34px;
-
     width: 22px;
     height: 22px;
   }
@@ -52,6 +51,8 @@
 
   .img-star {
     margin-top: 33px;
+    width: 22px;
+    height: 22px;
   }
 
   .coworking-info-container {
@@ -105,7 +106,7 @@
     outline: 1px solid #6A6D79;
   }
 
-  .coworking-map:hover p{
+  .coworking-map:hover p {
     color: #000000;
   }
 
@@ -133,6 +134,11 @@
     line-height: 28px;
     color: #FFFFFF;
     font-weight: 600;
+  }
+
+  .btn-like .heart {
+    width: 21.5px;
+    height: 24px;
   }
 }
 
@@ -165,9 +171,8 @@
 
   .img-good-place {
     margin-top: calc(0.83*34px);
-
     width: calc(0.75*22px);
-    height: calc(0.83*22px);
+    height: calc(0.75*22px);
   }
 
   .coworking-title-container {
@@ -190,6 +195,8 @@
 
   .img-star {
     margin-top: calc(0.83*33px);
+    width: calc(0.75*22px);
+    height: calc(0.75*22px);
   }
 
   .coworking-info-container {
@@ -248,13 +255,18 @@
   }
 
   .coworking-map {
-    width: calc(0.71*275px);
+    width: calc(0.75*275px);
     height: calc(0.83*54px);
   }
 
   .coworking-map p {
-    font-size: calc(0.71*15px);
+    font-size: calc(0.75*15px);
     line-height: calc(0.83*28px);
+  }
+
+  .btn-like .heart {
+    width: calc(0.71*21.5px);
+    height: calc(0.83*24px);
   }
 }
 
@@ -287,7 +299,6 @@
 
   .img-good-place {
     margin-top: calc(0.71*34px);
-
     width: calc(0.71*22px);
     height: calc(0.71*22px);
   }
@@ -312,6 +323,8 @@
 
   .img-star {
     margin-top: calc(0.71*33px);
+    width: calc(0.71*22px);
+    height: calc(0.71*22px);
   }
 
   .coworking-info-container {
@@ -377,5 +390,10 @@
   .coworking-map p {
     font-size: calc(0.71*15px);
     line-height: calc(0.71*28px);
+  }
+
+  .btn-like .heart {
+    width: calc(0.71*21.5px);
+    height: calc(0.71*24px);
   }
 }

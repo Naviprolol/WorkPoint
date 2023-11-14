@@ -54,3 +54,11 @@ export interface Review {
   formattedDate: string
   showFullDescription: boolean
 }
+
+export interface Ad {
+  name: string,
+  city: string,
+  address: string,
+  tariff: string,
+  email: string
+}

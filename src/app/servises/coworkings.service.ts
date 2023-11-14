@@ -90,6 +90,7 @@ export class CoworkingsService {
       formData.append('files', photo3)
     }
     console.log(formData.get('files'))
+    console.log(formData.get('payload'))
 
     return this.http.post<ICoworking>('https://www.1506815-cq40245.tw1.ru/places/upload_place', formData, { headers }) // https://1506815-cq40245.tw1.ru/places/upload_place
   }

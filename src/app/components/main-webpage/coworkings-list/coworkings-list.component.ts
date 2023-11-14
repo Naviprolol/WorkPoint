@@ -1,7 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ICoworking } from 'src/app/interfaces/interfaces';
+import { TuiHideSelectedPipe } from '@taiga-ui/kit';
+import { ICoworking, User } from 'src/app/interfaces/interfaces';
 import { CoworkingsService } from 'src/app/servises/coworkings.service';
+import { UserService } from 'src/app/servises/user.service';
 
 @Component({
   selector: 'app-coworkings-list',
@@ -11,13 +13,16 @@ import { CoworkingsService } from 'src/app/servises/coworkings.service';
 export class CoworkingsListComponent implements OnInit {
 
   @Input() coworking: ICoworking
-  like = false
   newDescription: string
   photos: any
+  user: User
+  favoritePlaces: any
+  favoriteIDs: number[] = []
 
-  constructor(private router: Router) {
-
-  }
+  constructor(
+    private router: Router,
+    private userService: UserService
+  ) { }
 
   ngOnInit(): void {
     let photo = this.coworking.photo + ''
@@ -32,5 +37,43 @@ export class CoworkingsListComponent implements OnInit {
     else {
       this.newDescription = this.coworking.description
     }
+
+    this.userService.getUserByToken().subscribe(user => {
+      this.user = user
+    })
+
+    this.userService.getFavoritePlaces().subscribe(favoritePlaces => {
+      this.favoritePlaces = favoritePlaces
+      this.favoritePlaces.forEach((favoritePlace: any) => {
+        if (!this.favoriteIDs.includes(favoritePlace.place_id)) {
+          this.favoriteIDs.push(favoritePlace.place_id)
+        }
+      });
+    })
+
+  }
+
+  OnLikeBtnClick() {
+    const favoritePlace = this.favoritePlaces.find((place: any) => place.place_id === this.coworking.id);
+
+    if (favoritePlace) {
+      this.userService.deleteFavoritePlace(favoritePlace.id).subscribe(() => {
+        this.favoriteIDs = this.favoriteIDs.filter(id => id !== this.coworking.id);
+        this.refreshFavoritePlaces()
+      })
+    }
+
+    else {
+      this.userService.addFavoritePlace(this.coworking.id, this.user.id).subscribe(() => {
+        this.favoriteIDs.push(this.coworking.id)
+        this.refreshFavoritePlaces()
+      })
+    }
+  }
+
+  refreshFavoritePlaces() {
+    this.userService.getFavoritePlaces().subscribe(favoritePlaces => {
+      this.favoritePlaces = favoritePlaces;
+    });
   }
 }

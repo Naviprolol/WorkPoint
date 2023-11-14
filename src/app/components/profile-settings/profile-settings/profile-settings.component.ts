@@ -73,7 +73,7 @@ export class ProfileSettingsComponent implements OnInit {
     obs$.subscribe(
       () => {
         console.log('Изменения сохранены')
-        // location.reload()
+        location.reload()
         this.form.enable()
       },
       error => {

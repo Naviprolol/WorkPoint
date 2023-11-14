@@ -30,6 +30,12 @@
         заведения
       </p>
 
+      <div class="all-requests-container">
+        <button type="button" class="all-requests" [routerLink]="[]">
+          <p>Посмотреть все заявки</p>
+        </button>
+      </div>
+
       <h2 class="subtitle">
         Оставьте заявку
       </h2>
@@ -38,7 +44,7 @@
         <div class="input-field name" [ngClass]="{'invalid': form.get('name')?.invalid && form.get('name')?.touched}">
           <input id="name" placeholder="Название заведения" type="text" formControlName="name">
           <label for="name"></label>
-          <span class="helper-text red-text" *ngIf="form.get('name')?.invalid && form.get('name')?.touched">
+          <span class="red-text" *ngIf="form.get('name')?.invalid && form.get('name')?.touched">
             <span *ngIf="form.get('name')?.errors?.['required']">Обязательное поле</span>
           </span>
 
@@ -47,7 +53,7 @@
         <div class="input-field city" [ngClass]="{'invalid': form.get('city')?.invalid && form.get('city')?.touched}">
           <input id="city" placeholder="Город" type="text" formControlName="city">
           <label for="city"></label>
-          <span class="helper-text red-text" *ngIf="form.get('city')?.invalid && form.get('city')?.touched">
+          <span class="red-text" *ngIf="form.get('city')?.invalid && form.get('city')?.touched">
             <span *ngIf="form.get('city')?.errors?.['required']">Обязательное поле</span>
           </span>
         </div>
@@ -57,7 +63,7 @@
             [ngClass]="{'invalid': form.get('address')?.invalid && form.get('address')?.touched}">
             <input id="address" placeholder="Адрес" type="text" formControlName="address">
             <label for="address"></label>
-            <span class="helper-text red-text" *ngIf="form.get('address')?.invalid && form.get('address')?.touched">
+            <span class="red-text" *ngIf="form.get('address')?.invalid && form.get('address')?.touched">
               <span *ngIf="form.get('address')?.errors?.['required']">Обязательное поле</span>
             </span>
           </div>
@@ -101,9 +107,19 @@
       <div class="input-field email" [ngClass]="{'invalid': form.get('email')?.invalid && form.get('email')?.touched}">
         <input id="email" placeholder="Электронная почта" type="text" formControlName="email">
         <label for="email"></label>
-        <span class="helper-text red-text" *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+        <span class="red-text" *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
           <span *ngIf="form.get('city')?.errors?.['required']">Обязательное поле</span>
         </span>
+      </div>
+
+      <div class="photo-baner-container">
+        <p>Прикрепите Ваш рекламный банер размера 970х300px в формате svg.</p>
+
+        <div class="photo-baner">
+          <input id="banner" class="dn" type="file" name="banner" (change)="onFileUpload($event)" #banner>
+          <label for="banner"></label>
+          <button class="btn-photo-baner" type="button" (click)="triggerClick()">Прикрепить файл</button>
+        </div>
       </div>
 
       <button class="button-send" type="submit" [disabled]="form.invalid || form.disabled"
