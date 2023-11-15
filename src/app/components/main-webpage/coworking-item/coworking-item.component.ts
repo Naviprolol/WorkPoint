@@ -53,11 +53,10 @@ export class CoworkingItemComponent implements OnInit {
   ngOnInit() {
 
     const routeParams = this.route.snapshot.paramMap
-    const coworkingIdFromRouteSTR = String(routeParams.get('id'));
     const coworkingIdFromRouteINT = Number(routeParams.get('id'));
 
 
-    this.coworkingsService.getCoworkingById(coworkingIdFromRouteSTR).subscribe(coworking => {
+    this.coworkingsService.getCoworkingById(coworkingIdFromRouteINT).subscribe(coworking => {
       this.coworking = coworking
       this.coworking.photo = this.coworking.photo.split('#')
       // console.log(this.coworking.photo)

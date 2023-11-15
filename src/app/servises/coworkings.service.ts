@@ -15,9 +15,8 @@ export class CoworkingsService {
     return this.http.get<ICoworking[]>('https://www.1506815-cq40245.tw1.ru/places/all') // https://1506815-cq40245.tw1.ru/places/all
   }
 
-  getCoworkingById(id: string): Observable<ICoworking> {
-    let params = new HttpParams().set('id_place', id)
-    return this.http.post<ICoworking>(`https://www.1506815-cq40245.tw1.ru/places/get_place`, {}, { params }) // https://1506815-cq40245.tw1.ru/places/get_place
+  getCoworkingById(id: number): Observable<ICoworking> {
+    return this.http.post<ICoworking>(`https://www.1506815-cq40245.tw1.ru/places/get_place?id_place=${id}`, {}) // https://1506815-cq40245.tw1.ru/places/get_place
   }
 
   getCoworkingsByToken(): Observable<ICoworking[]> {

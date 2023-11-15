@@ -182,7 +182,7 @@
       *ngFor="let coworking of filteredCoworkings | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage } let i = index"
       [coworking]="coworking"></app-coworkings-list>
 
-    <div class="pagination">
+    <div class="pagination" *ngIf="filteredCoworkings.length > 4">
       <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
     </div>
   </div>
