@@ -62,18 +62,15 @@ export class ProfileSettingsComponent implements OnInit {
     let obs$ = this.userService.updateUser(0, this.form.value.name, this.form.value.surname, this.form.value.city, this.form.value.phone)
 
     if (this.avatar !== null && this.avatar !== undefined) {
-      this.userService.uploadAvatar(this.avatar).subscribe(
-        user => {
-          this.user = user
-          console.log('Аватар обновлен')
-        }
-      )
+      this.userService.uploadAvatar(this.avatar).subscribe(() => {
+        console.log('Аватар обновлен')
+      })
     }
 
     obs$.subscribe(
       () => {
         console.log('Изменения сохранены')
-        // location.reload()
+        location.reload()
         this.form.enable()
       },
       error => {

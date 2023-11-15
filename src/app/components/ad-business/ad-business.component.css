@@ -67,6 +67,26 @@
     margin-bottom: 30px;
   }
 
+  .all-requests-container {
+    margin-bottom: 35px;
+  }
+
+  .all-requests {
+    border-radius: 10px;
+    width: 234px;
+    height: 54px;
+    text-align: center;
+    background: #E0E0D6;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.16);
+  }
+
+  .all-requests p {
+    color: var(--text-03, rgba(27, 31, 59, 0.40));
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 28px;
+  }
+
   .subtitle {
     font-weight: 600;
     font-size: 26px;
@@ -96,6 +116,10 @@
     margin-bottom: 20px;
   }
 
+  .email {
+    margin-bottom: 39px;
+  }
+
   .input-field input {
     width: 520px;
     height: 52px;
@@ -114,6 +138,10 @@
     display: inline-block;
     color: red;
     padding-top: 10px;
+  }
+
+  .invalid {
+    border: 1px #CC0000 solid;
   }
 
   .custom-radio {
@@ -200,11 +228,44 @@
     margin-left: 30%;
   }
 
+  .dn {
+    display: none;
+  }
+
+  .photo-baner-container {
+    margin-bottom: 45px;
+  }
+
+  .photo-baner-container p {
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 177.688%;
+    margin-bottom: 22px;
+  }
+
+  .photo-baner {
+    width: 249px;
+    height: 56px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #D1E5D2;
+  }
+
+  .photo-baner .btn-photo-baner {
+    width: 249px;
+    height: 56px;
+
+    color: #000;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 177.688%;
+  }
+
   .button-send {
     width: 220px;
     height: 54px;
     font-size: 15px;
-    margin-top: 48px;
     background-color: #E0E0D6;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
@@ -292,12 +353,25 @@
   }
 
   .description {
-    display: inline-block;
     font-weight: 400;
     font-size: calc(0.75*24px);
     line-height: calc(0.83*43px);
     max-width: calc(0.75*1070px);
     margin-bottom: calc(0.83*30px);
+  }
+
+  .all-requests-container {
+    margin-bottom: calc(0.83*35px);
+  }
+
+  .all-requests {
+    width: calc(0.75*234px);
+    height: calc(0.83*54px);
+  }
+
+  .all-requests p {
+    font-size: calc(0.75*15px);
+    line-height: calc(0.83*28px);
   }
 
   .subtitle {
@@ -327,6 +401,10 @@
     border-radius: 20px;
     background: #E0E0D6;
     margin-bottom: calc(0.83*20px);
+  }
+
+  .email {
+    margin-bottom: calc(0.83*39px);
   }
 
   .input-field input {
@@ -433,11 +511,32 @@
     margin-left: 30%;
   }
 
+  .photo-baner-container {
+    margin-bottom: calc(0.83*45px);
+  }
+
+  .photo-baner-container p {
+    font-size: calc(0.75*20px);
+    line-height: calc(0.83*177.688%);
+    margin-bottom: calc(0.83*22px);
+  }
+
+  .photo-baner {
+    width: calc(0.75*249px);
+    height: calc(0.83*56px);
+  }
+
+  .photo-baner .btn-photo-baner {
+    width: calc(0.75*249px);
+    height: calc(0.83*56px);
+    font-size: calc(0.75*15px);
+    line-height: calc(0.83*177.688%);
+  }
+
   .button-send {
     width: calc(0.75*220px);
     height: calc(0.83*54px);
     font-size: calc(0.75*15px);
-    margin-top: calc(0.83*48px);
     background-color: #E0E0D6;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
@@ -514,12 +613,25 @@
   }
 
   .description {
-    display: inline-block;
     font-weight: 400;
     font-size: calc(0.71*24px);
     line-height: calc(0.71*43px);
     max-width: calc(0.71*1070px);
     margin-bottom: calc(0.71*30px);
+  }
+
+  .all-requests-container {
+    margin-bottom: calc(0.71*35px);
+  }
+
+  .all-requests {
+    width: calc(0.71*234px);
+    height: calc(0.71*54px);
+  }
+
+  .all-requests p {
+    font-size: calc(0.71*15px);
+    line-height: calc(0.71*28px);
   }
 
   .subtitle {
@@ -549,6 +661,10 @@
     border-radius: 20px;
     background: #E0E0D6;
     margin-bottom: calc(0.71*20px);
+  }
+
+  .email {
+    margin-bottom: calc(0.71*39px);
   }
 
   .input-field input {
@@ -655,11 +771,32 @@
     margin-left: 30%;
   }
 
+  .photo-baner-container {
+    margin-bottom: calc(0.71*45px);
+  }
+
+  .photo-baner-container p {
+    font-size: calc(0.71*20px);
+    line-height: calc(0.71*177.688%);
+    margin-bottom: calc(0.71*22px);
+  }
+
+  .photo-baner {
+    width: calc(0.71*249px);
+    height: calc(0.71*56px);
+  }
+
+  .photo-baner .btn-photo-baner {
+    width: calc(0.71*249px);
+    height: calc(0.71*56px);
+    font-size: calc(0.71*15px);
+    line-height: calc(0.71*177.688%);
+  }
+
   .button-send {
     width: calc(0.71*220px);
     height: calc(0.71*54px);
     font-size: calc(0.71*15px);
-    margin-top: calc(0.71*48px);
     background-color: #E0E0D6;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
     border-radius: 10px;

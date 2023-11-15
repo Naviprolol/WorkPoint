@@ -139,6 +139,7 @@
     height: 1100px;
     margin-left: 161px;
     margin-bottom: 271px;
+    margin-right: 60px;
   }
 
   .filter-container h1 {
@@ -224,12 +225,12 @@
     animation: fa-spin 0.7s infinite linear;
   }
 
-  .pagination {
+  /* .pagination {
     display: flex;
     justify-self: center;
     align-items: center;
     margin-left: 100px;
-  }
+  } */
 
 
 }
@@ -333,6 +334,7 @@
     height: calc(0.83*1100px);
     margin-left: calc(0.75*161px);
     margin-bottom: calc(0.83*271px);
+    margin-right: calc(0.75*60px);
   }
 
   .filter-container h1 {
@@ -516,6 +518,7 @@
     height: calc(0.71*1100px);
     margin-left: calc(0.71*161px);
     margin-bottom: calc(0.71*271px);
+    margin-right: calc(0.71*60px);
   }
 
   .filter-container h1 {

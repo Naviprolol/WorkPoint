@@ -1,5 +1,23 @@
 @media screen and (max-width: 5000px) {
 
+  .pagination /deep/ .ngx-pagination .current {
+    background: rgba(190, 218, 195, 0.7);
+    border-radius: 10px;
+  }
+
+  .pagination /deep/ .ngx-pagination a:hover,
+  .ngx-pagination button:hover {
+    background: rgba(190, 218, 195, 0.7);
+    border-radius: 10px;
+  }
+
+  /* .pagination {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    margin-left: 100px;
+  } */
+
   .wrapper {
     min-height: 100%;
   }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { User } from 'src/app/interfaces/interfaces';
 import { UserService } from 'src/app/servises/user.service';
@@ -15,7 +15,10 @@ export class AdBusinessComponent implements OnInit {
   user: User
   showPopup: boolean = false
   isNew: boolean = true
-  constructor(private userService: UserService, private router: Router) {}
+  banner: File
+  @ViewChild('banner') inputRef: ElementRef
+
+  constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit(): void {
 
@@ -40,11 +43,23 @@ export class AdBusinessComponent implements OnInit {
     }
   }
 
+  triggerClick() {
+    this.inputRef.nativeElement.click()
+  }
+
+  onFileUpload(event: any) {
+    const file = event.target.files[0] // 0 — если передаем один елемент
+    this.banner = file
+
+    const reader = new FileReader()
+    reader.readAsDataURL(file)
+  }
+
   onSubmit() {
     let obs$
     this.form.disable()
 
-    obs$ = this.userService.report(this.form.value.name, this.form.value.city, this.form.value.address, this.form.value.price, this.form.value.email, 'string')
+    obs$ = this.userService.uploadAd(this.form.value.name, this.form.value.city, this.form.value.address, this.form.value.price, this.form.value.email, this.banner)
 
     obs$.subscribe(
       report => {
