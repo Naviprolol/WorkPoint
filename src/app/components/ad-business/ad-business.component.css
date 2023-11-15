@@ -49,8 +49,6 @@
   .wrapper {
     min-height: calc(100vh - 150px);
     /* 150px - отступ сверху футера */
-    display: flex;
-    flex-direction: column;
   }
 
   .main-top-content {
@@ -316,11 +314,6 @@
     line-height: calc(0.83*20px);
   }
 
-  .wrapper {
-    min-height: calc(100vh - 150px);
-    /* 150px - отступ сверху футера */
-  }
-
   .main-top-content {
     margin-left: calc(0.75*202px);
     margin-bottom: calc(0.83*100px);
@@ -495,10 +488,6 @@
   .return-to-main span {
     font-size: calc(0.71*15px);
     line-height: calc(0.71*20px);
-  }
-
-  .wrapper {
-    min-height: calc(100vh - 150px);
   }
 
   .main-top-content {

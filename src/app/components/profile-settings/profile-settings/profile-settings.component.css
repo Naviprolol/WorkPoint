@@ -3,6 +3,10 @@
 }
 
 @media screen and (max-width: 5000px) {
+  .wrapper {
+    min-height: calc(100% - 150px);
+  }
+
   .return-to-main {
     display: flex;
     width: 180px;
