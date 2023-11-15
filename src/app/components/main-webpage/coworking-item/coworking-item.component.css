@@ -483,7 +483,6 @@
   }
 
   .photo-container {
-    display: flex;
     width: calc(0.75*1320px);
     height: calc(0.83*522px);
     margin-bottom: calc(0.83*55px);
@@ -676,8 +675,6 @@
     font-size: calc(0.75*15px);
     line-height: calc(0.83*177.69%);
   }
-
-  .review-rating {}
 
   .rating {
     width: calc(0.75*161px);
@@ -959,8 +956,6 @@
     font-size: calc(0.71*15px);
     line-height: calc(0.71*177.69%);
   }
-
-  .review-rating {}
 
   .rating {
     width: calc(0.71*161px);

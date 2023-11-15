@@ -95,10 +95,8 @@
 
 @media screen and (max-width: 1450px) {
   .footer-container {
-    display: flex;
     width: calc(0.75*2000px);
     height: calc(0.83*300px);
-    background: #E0E0D6;
   }
 
   .footer-logo-container {
@@ -119,7 +117,6 @@
 
   .footer-logo-container p {
     font-size: calc(0.75*10px);
-    color: #FFFFFF;
   }
 
   .footer-part-one {
@@ -128,7 +125,6 @@
   }
 
   .footer-part-one li {
-    font-weight: 300;
     font-size: calc(0.75*15px);
     margin-bottom: calc(0.83*13px);
   }
@@ -138,7 +134,6 @@
   }
 
   .footer-part-one .main-page {
-    font-weight: 400;
     line-height: calc(0.83*30px);
     font-size: calc(0.75*22px);
   }
@@ -150,7 +145,6 @@
   }
 
   .footer-part-two li {
-    font-weight: 300;
     font-size: calc(0.75*15px);
     margin-bottom: calc(0.83*13px);
   }
@@ -160,7 +154,6 @@
   }
 
   .footer-part-two .profile {
-    font-weight: 400;
     font-size: calc(0.75*22px);
     line-height: calc(0.83*30px);
   }
@@ -171,7 +164,6 @@
   }
 
   .footer-part-three li {
-    font-weight: 300;
     font-size: calc(0.75*15px);
     margin-bottom: calc(0.83*13px);
   }
@@ -181,7 +173,6 @@
   }
 
   .footer-part-three .contacts {
-    font-weight: 400;
     font-size: calc(0.75*22px);
     line-height: calc(0.83*30px);
   }
@@ -189,10 +180,8 @@
 
 @media screen and (max-width: 1370px) {
   .footer-container {
-    display: flex;
     width: calc(0.71*2000px);
     height: calc(0.71*300px);
-    background: #E0E0D6;
   }
 
   .footer-logo-container {
@@ -213,7 +202,6 @@
 
   .footer-logo-container p {
     font-size: calc(0.71*10px);
-    color: #FFFFFF;
   }
 
   .footer-part-one {
@@ -222,7 +210,6 @@
   }
 
   .footer-part-one li {
-    font-weight: 300;
     font-size: calc(0.71*15px);
     margin-bottom: calc(0.71*13px);
   }
@@ -232,7 +219,6 @@
   }
 
   .footer-part-one .main-page {
-    font-weight: 400;
     line-height: calc(0.71*30px);
     font-size: calc(0.71*22px);
   }
@@ -244,7 +230,6 @@
   }
 
   .footer-part-two li {
-    font-weight: 300;
     font-size: calc(0.71*15px);
     margin-bottom: calc(0.71*13px);
   }
@@ -254,7 +239,6 @@
   }
 
   .footer-part-two .profile {
-    font-weight: 400;
     font-size: calc(0.71*22px);
     line-height: calc(0.71*30px);
   }
@@ -265,7 +249,6 @@
   }
 
   .footer-part-three li {
-    font-weight: 300;
     font-size: calc(0.71*15px);
     margin-bottom: calc(0.71*13px);
   }
@@ -275,7 +258,6 @@
   }
 
   .footer-part-three .contacts {
-    font-weight: 400;
     font-size: calc(0.71*22px);
     line-height: calc(0.71*30px);
   }

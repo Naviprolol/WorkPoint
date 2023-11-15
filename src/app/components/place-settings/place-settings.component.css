@@ -39,7 +39,7 @@
     margin-top: 65px;
   }
 
-  .footer{
+  .footer {
     flex: 0 0 auto;
   }
 
@@ -190,25 +190,9 @@
     line-height: calc(0.83*20px);
   }
 
-  .wrapper {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .content {
-    flex: 1;
-  }
-
   .main-top-content {
-    flex: 1 0 auto;
-    display: flex;
     margin-left: calc(0.75*202px);
     margin-top: calc(0.83*65px);
-  }
-
-  .footer{
-    flex: 0 0 auto;
   }
 
   .profile-navigation {
@@ -220,41 +204,30 @@
 
   .profile-navigation li {
     font-size: calc(0.75*20px);
-    line-height: 177.69%;
+    line-height: calc(0.83*177.69%);
     margin-bottom: calc(0.83*16px);
   }
 
-  .profile-navigation li:last-child {
-    margin-bottom: 0;
-  }
-
   .title {
-    font-weight: 700;
     font-size: calc(0.75*28px);
     line-height: calc(0.83*38px);
     margin-bottom: calc(0.83*11px);
   }
 
   .description {
-    display: inline-block;
-    font-weight: 400;
     font-size: calc(0.75*24px);
     line-height: calc(0.83*43px);
   }
 
   .explanations {
-    display: flex;
-    list-style: none;
     margin-top: calc(0.83*45px);
     padding-left: calc(0.75*27px);
   }
 
   .explanations-li {
     max-width: calc(0.75*158px);
-    font-weight: 400;
     font-size: calc(0.75*15px);
     line-height: calc(0.83*27px);
-    color: #535353;
   }
 
   .explanations-li {
@@ -262,14 +235,10 @@
   }
 
   .card {
-    position: relative;
-    display: flex;
     padding-left: calc(0.75*27px);
     padding-bottom: calc(0.83*15px);
     max-width: calc(0.75*1070px);
     min-height: calc(0.83*99px);
-    background: rgba(190, 218, 195, 0.7);
-    border-radius: 20px;
   }
 
   .card-li {
@@ -278,27 +247,21 @@
 
   .card-title {
     padding-top: calc(0.83*16px);
-    font-weight: 700;
     font-size: calc(0.75*24px);
     line-height: calc(0.83*33px);
-    word-wrap: break-word;
   }
 
   .adress {
-    font-weight: 400;
     font-size: calc(0.75*15px);
     line-height: calc(0.83*27px);
   }
 
   .second-block__card {
-    position: absolute;
     margin-top: calc(0.83*-1.9em);
-    top: 50%;
     right: calc(0.75*25px);
   }
 
   .number {
-    font-weight: 400;
     font-size: calc(0.75*24px);
     line-height: calc(0.83*43px);
     padding-top: calc(0.83*28px);
@@ -313,18 +276,11 @@
   }
 
   .progress-information__btn {
-    cursor: pointer;
-    display: flex;
     width: calc(0.75*239.62px);
     height: calc(0.83*54px);
-    background: #E0E0D6;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
     padding: calc(0.83*13px) calc(0.75*63px);
-    border-radius: 10px;
-    font-weight: 600;
     font-size: calc(0.75*15px);
     line-height: calc(0.83*28px);
-    color: rgba(27, 31, 59, 0.4);
   }
 }
 
@@ -347,25 +303,9 @@
     line-height: calc(0.71*20px);
   }
 
-  .wrapper {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .content {
-    flex: 1;
-  }
-
   .main-top-content {
-    flex: 1 0 auto;
-    display: flex;
     margin-left: calc(0.71*202px);
     margin-top: calc(0.71*65px);
-  }
-
-  .footer{
-    flex: 0 0 auto;
   }
 
   .profile-navigation {
@@ -377,41 +317,30 @@
 
   .profile-navigation li {
     font-size: calc(0.71*20px);
-    line-height: 177.69%;
+    line-height: calc(0.71*177.69%);
     margin-bottom: calc(0.71*16px);
   }
 
-  .profile-navigation li:last-child {
-    margin-bottom: 0;
-  }
-
   .title {
-    font-weight: 700;
     font-size: calc(0.71*28px);
     line-height: calc(0.71*38px);
     margin-bottom: calc(0.71*11px);
   }
 
   .description {
-    display: inline-block;
-    font-weight: 400;
     font-size: calc(0.71*24px);
     line-height: calc(0.71*43px);
   }
 
   .explanations {
-    display: flex;
-    list-style: none;
     margin-top: calc(0.71*45px);
     padding-left: calc(0.71*27px);
   }
 
   .explanations-li {
     max-width: calc(0.71*158px);
-    font-weight: 400;
     font-size: calc(0.71*15px);
     line-height: calc(0.71*27px);
-    color: #535353;
   }
 
   .explanations-li {
@@ -419,14 +348,10 @@
   }
 
   .card {
-    position: relative;
-    display: flex;
     padding-left: calc(0.71*27px);
     padding-bottom: calc(0.71*15px);
     max-width: calc(0.71*1070px);
     min-height: calc(0.71*99px);
-    background: rgba(190, 218, 195, 0.7);
-    border-radius: 20px;
   }
 
   .card-li {
@@ -435,27 +360,21 @@
 
   .card-title {
     padding-top: calc(0.71*16px);
-    font-weight: 700;
     font-size: calc(0.71*24px);
     line-height: calc(0.71*33px);
-    word-wrap: break-word;
   }
 
   .adress {
-    font-weight: 400;
     font-size: calc(0.71*15px);
     line-height: calc(0.71*27px);
   }
 
   .second-block__card {
-    position: absolute;
     margin-top: calc(0.71*-1.9em);
-    top: 50%;
     right: calc(0.71*25px);
   }
 
   .number {
-    font-weight: 400;
     font-size: calc(0.71*24px);
     line-height: calc(0.71*43px);
     padding-top: calc(0.71*28px);
@@ -470,17 +389,10 @@
   }
 
   .progress-information__btn {
-    cursor: pointer;
-    display: flex;
     width: calc(0.71*239.62px);
     height: calc(0.71*54px);
-    background: #E0E0D6;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
     padding: calc(0.71*13px) calc(0.71*63px);
-    border-radius: 10px;
-    font-weight: 600;
     font-size: calc(0.71*15px);
     line-height: calc(0.71*28px);
-    color: rgba(27, 31, 59, 0.4);
   }
 }

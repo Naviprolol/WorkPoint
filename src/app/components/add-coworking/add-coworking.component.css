@@ -119,6 +119,10 @@
     margin-left: 5px;
     background: #E0E0D6;
     border-radius: 10px;
+
+    /* -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; */
   }
 
   .filter-tags {
@@ -463,95 +467,69 @@
   }
 
   .card-title {
-    font-weight: 700;
     font-size: calc(0.75*28px);
     line-height: calc(0.83*38px);
     margin-bottom: calc(0.83*32px);
   }
 
   .flex {
-    display: flex;
     gap: calc(0.75*82px);
-  }
-
-  input {
-    cursor: pointer;
   }
 
   .input-field {
     width: calc(0.75*560px);
     height: calc(0.83*62px);
-    border-radius: 20px;
-    background: #E0E0D6;
     margin-bottom: calc(0.83*20px);
   }
 
   .input-field input {
     width: calc(0.75*520px);
     height: calc(0.83*52px);
-    font-weight: 400;
     font-size: calc(0.75*15px);
     line-height: calc(0.83*28px);
     padding-left: calc(0.75*28px);
     margin-top: calc(0.83*4px);
     margin-left: calc(0.75*5px);
-    background: inherit;
-    border-radius: 10px;
   }
 
   .description {
-    display: inline-block;
-    position: relative;
     width: calc(0.75*1200px);
     height: calc(0.83*279px);
-    border-radius: 20px;
-    background: #E0E0D6;
     margin-bottom: calc(0.83*32px);
-    vertical-align: bottom;
   }
 
   .description-input {
     width: calc(0.75*1165px);
-    font-weight: 300;
     font-size: calc(0.75*15px);
     line-height: calc(0.83*28px);
     padding-left: calc(0.75*28px);
     margin-top: calc(0.83*5px);
     margin-left: calc(0.75*2px);
-    background: inherit;
-    border-radius: 10px;
   }
 
   .filters h1 {
-    font-weight: 600;
     font-size: calc(0.75*26px);
     line-height: calc(0.83*35px);
     margin-bottom: calc(0.83*30px);
   }
 
   .input-field select {
-    border: none;
     width: calc(0.75*550px);
     height: calc(0.83*52px);
-    font-weight: 300;
     font-size: calc(0.75*15px);
     line-height: calc(0.83*28px);
     padding-left: calc(0.75*28px);
     margin-top: calc(0.83*4px);
     margin-left: calc(0.75*5px);
-    background: #E0E0D6;
-    border-radius: 10px;
   }
 
   .filter-tags {
-    position: relative;
     width: calc(0.75*1198px);
     height: calc(0.83*184px);
     margin-bottom: calc(0.83*24px);
   }
 
   .filter-tags .extra-information {
-    font-weight: 600;
     font-size: calc(0.75*20px);
     line-height: calc(0.83*27px);
   }
@@ -559,12 +537,10 @@
   .filter-tags h5 {
     font-size: calc(0.75*15px);
     line-height: calc(0.83*28px);
-    color: rgba(27, 31, 59, 0.4);
   }
 
   .pressed-tags {
     margin-top: calc(0.83*14px);
-    display: flex;
     gap: calc(0.75*22px);
   }
 
@@ -573,10 +549,6 @@
     max-width: calc(0.75*170px);
     font-size: calc(0.75*20px);
     line-height: calc(0.83*177.69%);
-    background: #E0E0D6;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
-    transition: all .2s ease-out;
   }
 
   .pressed-tag img {
@@ -589,12 +561,8 @@
   }
 
   .tags-container {
-    position: absolute;
-    bottom: 0;
     width: calc(0.75*1198px);
     height: calc(0.83*145px);
-    background: #D1E5D2;
-    border-radius: 10px;
   }
 
   .btn-settings {
@@ -608,7 +576,6 @@
   }
 
   .dropdown {
-    position: absolute;
     right: calc(0.75*20px);
     top: calc(0.83*40px);
   }
@@ -617,39 +584,11 @@
     padding-top: calc(0.83*12px);
     padding-left: calc(0.75*12px);
     padding-right: calc(0.75*12px);
-    background: #FBFBF5;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 7px;
-    visibility: hidden;
-    opacity: 0;
-    z-index: -1;
-    transition: all .2s ease-out;
-  }
-
-  .dropdown-menu.show {
-    z-index: 99;
-    visibility: visible;
-    opacity: 1;
-  }
-
-  .dropdown-menu button:hover {
-    opacity: 1;
   }
 
   .dropdown-link {
     margin-bottom: calc(0.83*12px);
-    display: block;
-    color: #494C62;
     padding: calc(0.83*11px) calc(0.75*11px);
-    opacity: 0.7;
-
-    box-sizing: border-box;
-    background: #E0E0D6;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
-
-    color: #000000;
-    border: 1px solid rgba(0, 0, 0, 0.1);
   }
 
   .dropdown-link .tag-name {
@@ -668,8 +607,6 @@
   .photo .first-photo {
     width: calc(0.75*620.55px);
     height: calc(0.83*364px);
-    background: rgba(190, 218, 195, 0.7);
-    border-radius: 20px;
   }
 
   .photo .second-photo,
@@ -686,7 +623,6 @@
 
   .btn-second-photo,
   .btn-third-photo {
-    position: absolute;
     width: calc(0.75*304px);
     height: calc(0.83*165px);
   }
@@ -694,7 +630,6 @@
   .preview-img1 {
     width: calc(0.75*620.55px);
     height: calc(0.83*364px);
-    border-radius: 20px;
   }
 
   .preview-img2,
@@ -704,35 +639,20 @@
   }
 
   .photo-container h1 {
-    font-weight: 600;
     font-size: calc(0.75*26px);
     line-height: calc(0.83*35px);
     margin-bottom: calc(0.83*12px);
   }
 
   .photo-container h2 {
-    font-weight: 300;
     font-size: calc(0.75*15px);
     line-height: calc(0.83*20px);
     margin-bottom: calc(0.83*28px);
   }
 
-  .dn {
-    display: none;
-  }
-
-  .btn-photo {}
-
   .buttons-submit {
-    display: flex;
     gap: calc(0.75*37px);
     margin-bottom: calc(0.83*150px);
-  }
-
-  .popup {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
   }
 
   .popup img {
@@ -743,10 +663,6 @@
   .button-add {
     width: calc(0.75*220px);
     height: calc(0.83*54px);
-    background-color: #E0E0D6;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
-    border-radius: 10px;
-
     font-size: calc(0.75*15px);
     line-height: calc(0.83*28px);
   }
@@ -754,18 +670,11 @@
   .button-return {
     width: calc(0.75*220px);
     height: calc(0.83*54px);
-    border: 1px solid #EDEDED;
-    filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.16));
-    border-radius: 10px;
     font-size: calc(0.75*15px);
     line-height: calc(0.83*28px);
   }
 
-
-
   .filter-labels {
-    display: flex;
-    flex-direction: column;
     margin-bottom: calc(0.83*16px);
   }
 
@@ -774,49 +683,26 @@
   }
 
   .contacts h1 {
-    font-weight: 600;
     font-size: calc(0.75*26px);
     line-height: calc(0.83*35px);
     margin-bottom: calc(0.83*30px);
   }
 
-
-  .custom-radio {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
-  }
-
   .custom-radio+label {
-    display: inline-flex;
-    align-items: center;
-    user-select: none;
     font-size: calc(0.75*22px);
     line-height: calc(0.83*30px);
-    font-weight: 400;
   }
 
   .custom-radio+label::before {
-    content: '';
-    display: inline-block;
     width: calc(0.75*22.6px);
     height: calc(0.83*24px);
     margin-right: calc(0.75*19px);
     margin-left: calc(0.75*15px);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 100% 100%;
   }
 
   .red-text {
     font-size: calc(0.75*12px);
-    display: inline-block;
-    color: red;
     padding-top: calc(0.83*10px);
-  }
-
-  .invalid {
-    border: 1px #CC0000 solid;
   }
 
   .description-warning {
@@ -851,95 +737,69 @@
   }
 
   .card-title {
-    font-weight: 700;
     font-size: calc(0.71*28px);
     line-height: calc(0.71*38px);
     margin-bottom: calc(0.71*32px);
   }
 
   .flex {
-    display: flex;
     gap: calc(0.71*82px);
-  }
-
-  input {
-    cursor: pointer;
   }
 
   .input-field {
     width: calc(0.71*560px);
     height: calc(0.71*62px);
-    border-radius: 20px;
-    background: #E0E0D6;
     margin-bottom: calc(0.71*20px);
   }
 
   .input-field input {
     width: calc(0.71*520px);
     height: calc(0.71*52px);
-    font-weight: 400;
     font-size: calc(0.71*15px);
     line-height: calc(0.71*28px);
     padding-left: calc(0.71*28px);
     margin-top: calc(0.71*4px);
     margin-left: calc(0.71*5px);
-    background: inherit;
-    border-radius: 10px;
   }
 
   .description {
-    display: inline-block;
-    position: relative;
     width: calc(0.71*1200px);
     height: calc(0.71*279px);
-    border-radius: 20px;
-    background: #E0E0D6;
     margin-bottom: calc(0.71*32px);
-    vertical-align: bottom;
   }
 
   .description-input {
     width: calc(0.71*1165px);
-    font-weight: 300;
     font-size: calc(0.71*15px);
     line-height: calc(0.71*28px);
     padding-left: calc(0.71*28px);
     margin-top: calc(0.71*5px);
     margin-left: calc(0.71*2px);
-    background: inherit;
-    border-radius: 10px;
   }
 
   .filters h1 {
-    font-weight: 600;
     font-size: calc(0.71*26px);
     line-height: calc(0.71*35px);
     margin-bottom: calc(0.71*30px);
   }
 
   .input-field select {
-    border: none;
     width: calc(0.71*550px);
     height: calc(0.71*52px);
-    font-weight: 300;
     font-size: calc(0.71*15px);
     line-height: calc(0.71*28px);
     padding-left: calc(0.71*28px);
     margin-top: calc(0.71*4px);
     margin-left: calc(0.71*5px);
-    background: #E0E0D6;
-    border-radius: 10px;
   }
 
   .filter-tags {
-    position: relative;
     width: calc(0.71*1198px);
     height: calc(0.71*184px);
     margin-bottom: calc(0.71*24px);
   }
 
   .filter-tags .extra-information {
-    font-weight: 600;
     font-size: calc(0.71*20px);
     line-height: calc(0.71*27px);
   }
@@ -947,12 +807,10 @@
   .filter-tags h5 {
     font-size: calc(0.71*15px);
     line-height: calc(0.71*28px);
-    color: rgba(27, 31, 59, 0.4);
   }
 
   .pressed-tags {
     margin-top: calc(0.71*14px);
-    display: flex;
     gap: calc(0.71*22px);
   }
 
@@ -961,10 +819,6 @@
     max-width: calc(0.71*170px);
     font-size: calc(0.71*20px);
     line-height: calc(0.71*177.69%);
-    background: #E0E0D6;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
-    transition: all .2s ease-out;
   }
 
   .pressed-tag img {
@@ -977,12 +831,8 @@
   }
 
   .tags-container {
-    position: absolute;
-    bottom: 0;
     width: calc(0.71*1198px);
     height: calc(0.71*145px);
-    background: #D1E5D2;
-    border-radius: 10px;
   }
 
   .btn-settings {
@@ -996,7 +846,6 @@
   }
 
   .dropdown {
-    position: absolute;
     right: calc(0.71*20px);
     top: calc(0.71*40px);
   }
@@ -1005,39 +854,11 @@
     padding-top: calc(0.71*12px);
     padding-left: calc(0.71*12px);
     padding-right: calc(0.71*12px);
-    background: #FBFBF5;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 7px;
-    visibility: hidden;
-    opacity: 0;
-    z-index: -1;
-    transition: all .2s ease-out;
-  }
-
-  .dropdown-menu.show {
-    z-index: 99;
-    visibility: visible;
-    opacity: 1;
-  }
-
-  .dropdown-menu button:hover {
-    opacity: 1;
   }
 
   .dropdown-link {
     margin-bottom: calc(0.71*12px);
-    display: block;
-    color: #494C62;
     padding: calc(0.71*11px) calc(0.71*11px);
-    opacity: 0.7;
-
-    box-sizing: border-box;
-    background: #E0E0D6;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
-
-    color: #000000;
-    border: 1px solid rgba(0, 0, 0, 0.1);
   }
 
   .dropdown-link .tag-name {
@@ -1056,8 +877,6 @@
   .photo .first-photo {
     width: calc(0.71*620.55px);
     height: calc(0.71*364px);
-    background: rgba(190, 218, 195, 0.7);
-    border-radius: 20px;
   }
 
   .photo .second-photo,
@@ -1074,7 +893,6 @@
 
   .btn-second-photo,
   .btn-third-photo {
-    position: absolute;
     width: calc(0.71*304px);
     height: calc(0.71*165px);
   }
@@ -1082,7 +900,6 @@
   .preview-img1 {
     width: calc(0.71*620.55px);
     height: calc(0.71*364px);
-    border-radius: 20px;
   }
 
   .preview-img2,
@@ -1092,35 +909,20 @@
   }
 
   .photo-container h1 {
-    font-weight: 600;
     font-size: calc(0.71*26px);
     line-height: calc(0.71*35px);
     margin-bottom: calc(0.71*12px);
   }
 
   .photo-container h2 {
-    font-weight: 300;
     font-size: calc(0.71*15px);
     line-height: calc(0.71*20px);
     margin-bottom: calc(0.71*28px);
   }
 
-  .dn {
-    display: none;
-  }
-
-  .btn-photo {}
-
   .buttons-submit {
-    display: flex;
     gap: calc(0.71*37px);
     margin-bottom: calc(0.71*150px);
-  }
-
-  .popup {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
   }
 
   .popup img {
@@ -1131,9 +933,6 @@
   .button-add {
     width: calc(0.71*220px);
     height: calc(0.71*54px);
-    background-color: #E0E0D6;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
-    border-radius: 10px;
     font-size: calc(0.71*15px);
     line-height: calc(0.71*28px);
   }
@@ -1141,18 +940,11 @@
   .button-return {
     width: calc(0.71*220px);
     height: calc(0.71*54px);
-    border: 1px solid #EDEDED;
-    filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.16));
-    border-radius: 10px;
     font-size: calc(0.71*15px);
     line-height: calc(0.71*28px);
   }
 
-
-
   .filter-labels {
-    display: flex;
-    flex-direction: column;
     margin-bottom: calc(0.71*16px);
   }
 
@@ -1161,49 +953,26 @@
   }
 
   .contacts h1 {
-    font-weight: 600;
     font-size: calc(0.71*26px);
     line-height: calc(0.71*35px);
     margin-bottom: calc(0.71*30px);
   }
 
-
-  .custom-radio {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
-  }
-
   .custom-radio+label {
-    display: inline-flex;
-    align-items: center;
-    user-select: none;
     font-size: calc(0.71*22px);
     line-height: calc(0.71*30px);
-    font-weight: 400;
   }
 
   .custom-radio+label::before {
-    content: '';
-    display: inline-block;
     width: calc(0.71*22.6px);
     height: calc(0.71*24px);
     margin-right: calc(0.71*19px);
     margin-left: calc(0.71*15px);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 100% 100%;
   }
 
   .red-text {
     font-size: calc(0.71*12px);
-    display: inline-block;
-    color: red;
     padding-top: calc(0.71*10px);
-  }
-
-  .invalid {
-    border: 1px #CC0000 solid;
   }
 
   .description-warning {
