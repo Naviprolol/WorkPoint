@@ -47,7 +47,11 @@ export class MainPageComponent {
 
   ngOnInit(): void {
     this.coworkingsService.getAll().subscribe(coworkings => {
-      this.coworkings = coworkings;
+      coworkings.forEach(coworking => {
+        if (coworking.status !== 'Отказано') {
+          this.coworkings.push(coworking)
+        }
+      });
       this.totelCoworkings = coworkings.length
       this.updateFilteredCoworkings();
     });
