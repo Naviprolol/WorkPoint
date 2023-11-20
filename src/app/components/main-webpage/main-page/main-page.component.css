@@ -236,20 +236,8 @@
 }
 
 @media screen and (max-width: 1450px) {
-  .pagination /deep/ .ngx-pagination .current {
-    background: rgba(190, 218, 195, 0.7);
-    border-radius: 10px;
-  }
-
-  .pagination /deep/ .ngx-pagination a:hover,
-  .ngx-pagination button:hover {
-    background: rgba(190, 218, 195, 0.7);
-    border-radius: 10px;
-  }
 
   .count-coworkings {
-    color: rgba(27, 31, 59, 0.8);
-    font-weight: 700;
     font-size: calc(0.75*19px);
     margin-left: calc(0.75*652px);
     margin-top: calc(0.83*53px);
@@ -261,14 +249,11 @@
     height: calc(0.83*413px);
     margin-left: calc(0.75*200px);
     margin-top: calc(0.83*70px);
-    border-radius: 20px;
     margin-bottom: calc(0.83*140px);
   }
 
   .banner-container .item {
-    width: 100%;
     height: calc(0.83*413px);
-    border-radius: 20px;
   }
 
   .banner-container .banner {
@@ -281,36 +266,24 @@
   }
 
   .banner-container p {
-    font-weight: 700;
     font-size: calc(0.75*48px);
     padding-top: calc(0.83*43px);
-    text-align: center;
   }
 
   .search {
-    display: flex;
     width: calc(0.75*1175px);
     margin-left: calc(0.75*412px);
-    justify-content: space-between;
   }
 
   .search-container {
-    display: flex;
     gap: calc(0.75*17px);
     width: calc(0.75*862px);
     height: calc(0.83*54px);
-    background: #FBFBF5;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
-    border-radius: 10px;
-    vertical-align: middle;
-    align-items: center;
   }
 
   .search-container-input {
     width: calc(0.75*862px);
     font-size: calc(0.75*15px);
-    background: #FBFBF5;
-    font-weight: 300;
   }
 
   .search-container img {
@@ -319,17 +292,10 @@
 
   .btn-find-coworking {
     width: calc(0.75*275px);
-    background: #E0E0D6;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
-    border-radius: 10px;
-    font-weight: 600;
-    color: rgba(27, 31, 59, 0.6);
     font-size: calc(0.75*15px);
   }
 
   .filter-container {
-    background: rgba(190, 218, 195, 0.7);
-    border-radius: 20px;
     width: calc(0.75*419px);
     height: calc(0.83*1100px);
     margin-left: calc(0.75*161px);
@@ -338,7 +304,6 @@
   }
 
   .filter-container h1 {
-    font-weight: 700;
     font-size: calc(0.75*28px);
     line-height: calc(0.83*38px);
     padding-top: calc(0.83*55px);
@@ -347,13 +312,10 @@
   }
 
   .filter-labels {
-    display: flex;
-    flex-direction: column;
     gap: calc(0.75*4px);
   }
 
   .filter-labels h2 {
-    font-weight: 600;
     font-size: calc(0.75*24px);
     line-height: calc(0.83*33px);
     padding-left: calc(0.75*56px);
@@ -361,7 +323,6 @@
   }
 
   .filter-labels h3 {
-    font-weight: 600;
     font-size: calc(0.75*24px);
     line-height: calc(0.83*33px);
   }
@@ -370,30 +331,16 @@
     margin-top: calc(0.83*16px);
   }
 
-  .custom-radio {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
-  }
-
   .custom-radio+label {
-    display: inline-flex;
-    align-items: center;
-    user-select: none;
     font-size: calc(0.75*24px);
-    line-height: 177.69%;
+    line-height: calc(0.83*177.69%);
   }
 
   .custom-radio+label::before {
-    content: '';
-    display: inline-block;
     width: calc(0.75*22.6px);
     height: calc(0.83*24px);
     margin-right: calc(0.75*19px);
     margin-left: calc(0.75*15px);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 100% 100%;
   }
 
   .coworking-type {
@@ -420,20 +367,7 @@
 }
 
 @media screen and (max-width: 1370px) {
-  .pagination /deep/ .ngx-pagination .current {
-    background: rgba(190, 218, 195, 0.7);
-    border-radius: 10px;
-  }
-
-  .pagination /deep/ .ngx-pagination a:hover,
-  .ngx-pagination button:hover {
-    background: rgba(190, 218, 195, 0.7);
-    border-radius: 10px;
-  }
-
   .count-coworkings {
-    color: rgba(27, 31, 59, 0.8);
-    font-weight: 700;
     font-size: calc(0.71*19px);
     margin-left: calc(0.71*652px);
     margin-top: calc(0.71*53px);
@@ -445,14 +379,11 @@
     height: calc(0.71*413px);
     margin-left: calc(0.71*200px);
     margin-top: calc(0.71*70px);
-    border-radius: 20px;
     margin-bottom: calc(0.71*140px);
   }
 
   .banner-container .item {
-    width: 100%;
     height: calc(0.71*413px);
-    border-radius: 20px;
   }
 
   .banner-container .banner {
@@ -465,36 +396,24 @@
   }
 
   .banner-container p {
-    font-weight: 700;
     font-size: calc(0.71*48px);
     padding-top: calc(0.71*43px);
-    text-align: center;
   }
 
   .search {
-    display: flex;
     width: calc(0.71*1175px);
     margin-left: calc(0.71*412px);
-    justify-content: space-between;
   }
 
   .search-container {
-    display: flex;
     gap: calc(0.71*17px);
     width: calc(0.71*862px);
     height: calc(0.71*54px);
-    background: #FBFBF5;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
-    border-radius: 10px;
-    vertical-align: middle;
-    align-items: center;
   }
 
   .search-container-input {
     width: calc(0.71*862px);
     font-size: calc(0.71*15px);
-    background: #FBFBF5;
-    font-weight: 300;
   }
 
   .search-container img {
@@ -503,17 +422,10 @@
 
   .btn-find-coworking {
     width: calc(0.71*275px);
-    background: #E0E0D6;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
-    border-radius: 10px;
-    font-weight: 600;
-    color: rgba(27, 31, 59, 0.6);
     font-size: calc(0.71*15px);
   }
 
   .filter-container {
-    background: rgba(190, 218, 195, 0.7);
-    border-radius: 20px;
     width: calc(0.71*419px);
     height: calc(0.71*1100px);
     margin-left: calc(0.71*161px);
@@ -522,7 +434,6 @@
   }
 
   .filter-container h1 {
-    font-weight: 700;
     font-size: calc(0.71*28px);
     line-height: calc(0.71*38px);
     padding-top: calc(0.71*55px);
@@ -531,13 +442,10 @@
   }
 
   .filter-labels {
-    display: flex;
-    flex-direction: column;
     gap: calc(0.71*4px);
   }
 
   .filter-labels h2 {
-    font-weight: 600;
     font-size: calc(0.71*24px);
     line-height: calc(0.71*33px);
     padding-left: calc(0.71*56px);
@@ -545,7 +453,6 @@
   }
 
   .filter-labels h3 {
-    font-weight: 600;
     font-size: calc(0.71*24px);
     line-height: calc(0.71*33px);
   }
@@ -554,30 +461,16 @@
     margin-top: calc(0.71*16px);
   }
 
-  .custom-radio {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
-  }
-
   .custom-radio+label {
-    display: inline-flex;
-    align-items: center;
-    user-select: none;
     font-size: calc(0.71*24px);
-    line-height: 177.69%;
+    line-height: calc(0.71*177.69%);
   }
 
   .custom-radio+label::before {
-    content: '';
-    display: inline-block;
     width: calc(0.71*22.6px);
     height: calc(0.71*24px);
     margin-right: calc(0.71*19px);
     margin-left: calc(0.71*15px);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 100% 100%;
   }
 
   .coworking-type {

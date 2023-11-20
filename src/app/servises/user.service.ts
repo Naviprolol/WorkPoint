@@ -36,30 +36,6 @@ export class UserService {
     return this.http.post<User>('https://www.1506815-cq40245.tw1.ru/user/settings', data, { headers: headers }) // https://1506815-cq40245.tw1.ru/user/settings
   }
 
-  uploadAd(name: string, city: string, address: string, price: string, email: string, photo: File): Observable<Ad> {
-    const token = localStorage.getItem('auth-token')
-    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json');
-
-    const status = "На проверке";
-
-    const data = {
-      name: name,
-      city: city,
-      address: address,
-      tariff: price,
-      email: email,
-    };
-
-    let formData = new FormData();
-    formData.append('payload', JSON.stringify(data))
-    formData.append('file', photo)
-
-    console.log(formData.get('file'))
-    console.log(formData.get('payload'))
-
-    return this.http.post<Ad>('https://www.1506815-cq40245.tw1.ru/ad/upload_ad', formData, { headers }) // https://www.1506815-cq40245.tw1.ru/report/dashboard
-  }
-
   editRole(role_id: number): Observable<User> {
     const token = localStorage.getItem('auth-token')
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
@@ -103,4 +79,30 @@ export class UserService {
 
     return this.http.delete<User>(`https://www.1506815-cq40245.tw1.ru/user/delete_favorite_place?id_fav_place=${id_fav_place}`, { headers })
   }
+
+  uploadAd(name: string, city: string, address: string, price: string, email: string, photo: File): Observable<Ad> {
+    const token = localStorage.getItem('auth-token')
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json');
+
+    const status = "На проверке";
+
+    const data = {
+      name: name,
+      city: city,
+      address: address,
+      tariff: price,
+      email: email,
+    };
+
+    let formData = new FormData();
+    formData.append('payload', JSON.stringify(data))
+    formData.append('file', photo)
+
+    console.log(formData.get('file'))
+    console.log(formData.get('payload'))
+
+    return this.http.post<Ad>('https://www.1506815-cq40245.tw1.ru/ad/upload_ad', formData, { headers }) // https://www.1506815-cq40245.tw1.ru/report/dashboard
+  }
+
+
 }

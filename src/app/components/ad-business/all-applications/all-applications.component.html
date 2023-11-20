@@ -1,0 +1,90 @@
+<div class="wrapper">
+  <app-header></app-header>
+
+  <div class="return-to-main">
+    <a routerLink="/">
+      <img src="assets/img/return-button.svg" alt="return-button" class="return-button">
+    </a>
+    <span>Вернуться к поиску</span>
+  </div>
+
+  <div class="main-top-content">
+
+    <div class="profile-navigation">
+      <ul>
+        <li><a routerLink="/favourites">Избранное</a></li>
+        <li><a routerLink="/profile">Настройки профиля</a></li>
+        <li><a routerLink="/place-settings">Настройки мест</a></li>
+        <li style="border-right: solid 2px black ;"><a routerLink="/ad-business">Продвижение</a></li>
+      </ul>
+    </div>
+
+    <div class="page-container">
+
+      <h1 class="title">
+        Продвижение
+      </h1>
+
+      <p class="description">
+        В данном разделе вы можете посмотреть статусы всех ваших заявок на рекламу заведений
+      </p>
+
+      <div class="sort-applications-container">
+        <h5>Все заявки</h5>
+        <div class="input-field date">
+          <select id="date" placeholder="Дата">
+            <option value="" disabled selected hidden>Дата</option>
+            <option value="По умолчанию">По умолчанию</option>
+            <option value="Сначала новые">Сначала новые</option>
+            <option value="Сначала старые">Сначала старые</option>
+          </select>
+        </div>
+        <div class="input-field status">
+          <select id="date" placeholder="Статус заявки">
+            <option value="" disabled selected hidden>Статус заявки</option>
+            <option value="Все">Все</option>
+            <option value="Сейчас идет">Сейчас идет</option>
+            <option value="Будет идти">Будет идти</option>
+            <option value="Промо-акция закончилась">Промо-акция закончилась</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="applications-container">
+        <table class="applications-table">
+          <thead>
+            <tr>
+              <th class="table-head-name">Название заведения</th>
+              <th>Дата подачи</th>
+              <th>Статус заявки</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <!-- *ngFor="let application of applicationsData" -->
+              <td class="first-block">
+                <p class="place-name">Simple Coffee</p>
+                <p class="place-address">Проспект Ленина, 46</p>
+              </td>
+              <td class="second-block centered-cell">дата1</td>
+              <td class="centered-cell">статус1</td>
+            </tr>
+
+            <tr>
+              <!-- *ngFor="let application of applicationsData" -->
+              <td class="first-block">
+                <p class="place-name">Simple Coffee</p>
+                <p class="place-address">Проспект Ленина, 46</p>
+              </td>
+              <td class="second-block centered-cell">дата1</td>
+              <td class="centered-cell">статус1</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<app-footer></app-footer>

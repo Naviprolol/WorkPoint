@@ -10,6 +10,8 @@ import { CoworkingItemComponent } from './components/main-webpage/coworking-item
 import { FavouritesPageComponent } from './components/favourites-page/favourites-page.component';
 import { PlaceSettingsComponent } from './components/place-settings/place-settings.component';
 import { AdBusinessComponent } from './components/ad-business/ad-business.component';
+import { AllApplicationsComponent } from './components/ad-business/all-applications/all-applications.component';
+import { AdminMainPageComponent } from './components/admin/admin-main-page/admin-main-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full' },
@@ -22,7 +24,9 @@ const routes: Routes = [
   { path: 'registration', component: RegistrationPageComponent },
   { path: 'favourites', canActivate: [AuthGuard], component: FavouritesPageComponent },
   { path: 'place-settings', canActivate: [AuthGuard], component: PlaceSettingsComponent },
-  { path: 'ad-business', canActivate: [AuthGuard], component: AdBusinessComponent }
+  { path: 'ad-business', canActivate: [AuthGuard], component: AdBusinessComponent },
+  { path: 'ad-business/applications', canActivate: [AuthGuard], component: AllApplicationsComponent },
+  { path: 'admin/main', component: AdminMainPageComponent }
 ];
 
 @NgModule({

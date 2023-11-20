@@ -178,47 +178,24 @@
 
 @media screen and (max-width: 1450px) {
   .header-container {
-    display: flex;
     width: calc(0.75*1600px);
     height: calc(0.83*75px);
     margin-left: calc(0.75*160px);
     margin-top: calc(0.83*50px);
-    border-bottom: 2px solid #e9e9e9;
-    justify-content: space-between;
     padding-bottom: calc(0.83*5px);
   }
 
-  .header-left-side {
-    display: flex;
-    vertical-align: middle;
-    align-items: center;
-  }
-
-  .header-right-side {
-    display: flex;
-    vertical-align: middle;
-    align-items: center;
-  }
-
   .title {
-    font-family: 'Open Sans';
-    font-weight: 300;
     font-size: calc(0.75*48px);
     line-height: calc(0.83*65px);
     margin-right: calc(0.75*19px);
   }
 
   .logo-img {
-    position: absolute;
     width: calc(0.75*50px);
     height: calc(0.83*49.74px);
     left: calc(0.75*153px);
     top: calc(0.83*60px);
-
-    background: linear-gradient(341.04deg, #BEDAC3 10.49%, rgba(255, 255, 255, 0) 100.29%);
-    filter: drop-shadow(0px 7.935px 19.8375px rgba(250, 196, 201, 0.2));
-    transform: rotate(117.88deg);
-    border-radius: 50%;
   }
 
   .location-img {
@@ -235,16 +212,11 @@
   }
 
   .btn-add-coworking {
-    background: #E0E0D6;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
-    border-radius: 10px;
     width: calc(0.75*211px);
     height: calc(0.83*54px);
     margin-right: calc(0.75*29px);
-    font-weight: 600;
     font-size: calc(0.75*15px);
     line-height: calc(0.83*28px);
-    color: rgba(27, 31, 59, 0.6);
   }
 
   .btn-notification {
@@ -272,7 +244,6 @@
   .profile-name {
     font-size: calc(0.75*15px);
     line-height: calc(0.83*28px);
-    color: rgba(27, 31, 59, 0.8);
   }
 
   .sign-in {
@@ -284,103 +255,46 @@
     margin-right: calc(0.75*7px);
   }
 
-  .dropdown {
-    display: flex;
-  }
-
   .dropdown-menu {
-    position: absolute;
     margin-top: calc(0.83*30px);
-    background: #FBFBF5;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 7px;
-    visibility: hidden;
-    opacity: 0;
-    z-index: -1;
-    transition: all .2s ease-out;
-  }
-
-  .dropdown-menu.show {
-    z-index: 99;
-    visibility: visible;
-    opacity: 1;
   }
 
   .dropdown-menu a {
-    display: block;
-    color: #494C62;
     padding: calc(0.83*11px) calc(0.75*11px);
-    opacity: 0.7;
     font-size: calc(0.75*16px);
-  }
-
-  .dropdown-menu a:hover {
-    opacity: 1;
   }
 
   .btn-settings {
     height: calc(0.83*10px);
     width: calc(0.83*10px);
-    position: relative;
   }
 
   .btn-settings-img {
     height: calc(0.83*10px);
     width: calc(0.83*10px);
   }
-
-  .settings li {
-    position: relative;
-  }
-
-  /* .settings li a {
-    display: block;
-  } */
 }
 
 @media screen and (max-width: 1370px) {
   .header-container {
-    display: flex;
     width: calc(0.71*1600px);
     height: calc(0.71*75px);
     margin-left: calc(0.71*160px);
     margin-top: calc(0.71*50px);
-    border-bottom: 2px solid #e9e9e9;
-    justify-content: space-between;
     padding-bottom: calc(0.71*5px);
   }
 
-  .header-left-side {
-    display: flex;
-    vertical-align: middle;
-    align-items: center;
-  }
-
-  .header-right-side {
-    display: flex;
-    vertical-align: middle;
-    align-items: center;
-  }
-
   .title {
-    font-family: 'Open Sans';
-    font-weight: 300;
     font-size: calc(0.71*48px);
     line-height: calc(0.71*65px);
     margin-right: calc(0.71*19px);
   }
 
   .logo-img {
-    position: absolute;
     width: calc(0.71*50px);
     height: calc(0.71*49.74px);
     left: calc(0.71*153px);
     top: calc(0.71*60px);
-
-    background: linear-gradient(341.04deg, #BEDAC3 10.49%, rgba(255, 255, 255, 0) 100.29%);
-    filter: drop-shadow(0px 7.935px 19.8375px rgba(250, 196, 201, 0.2));
-    transform: rotate(117.88deg);
-    border-radius: 50%;
   }
 
   .location-img {
@@ -397,16 +311,11 @@
   }
 
   .btn-add-coworking {
-    background: #E0E0D6;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
-    border-radius: 10px;
     width: calc(0.71*211px);
     height: calc(0.71*54px);
     margin-right: calc(0.71*29px);
-    font-weight: 600;
     font-size: calc(0.71*15px);
     line-height: calc(0.71*28px);
-    color: rgba(27, 31, 59, 0.6);
   }
 
   .btn-notification {
@@ -434,7 +343,6 @@
   .profile-name {
     font-size: calc(0.71*15px);
     line-height: calc(0.71*28px);
-    color: rgba(27, 31, 59, 0.8);
     margin-top: 3px;
   }
 
@@ -447,52 +355,22 @@
     margin-right: calc(0.71*7px);
   }
 
-  .dropdown {
-    display: flex;
-  }
-
   .dropdown-menu {
-    position: absolute;
     margin-top: calc(0.71*30px);
-    background: #FBFBF5;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 7px;
-    visibility: hidden;
-    opacity: 0;
-    z-index: -1;
-    transition: all .2s ease-out;
-  }
-
-  .dropdown-menu.show {
-    z-index: 99;
-    visibility: visible;
-    opacity: 1;
   }
 
   .dropdown-menu a {
-    display: block;
-    color: #494C62;
     padding: calc(0.71*11px) calc(0.71*11px);
-    opacity: 0.7;
     font-size: calc(0.71*16px);
-  }
-
-  .dropdown-menu a:hover {
-    opacity: 1;
   }
 
   .btn-settings {
     height: calc(0.71*10px);
     width: calc(0.71*10px);
-    position: relative;
   }
 
   .btn-settings-img {
     height: calc(0.71*10px);
     width: calc(0.71*10px);
-  }
-
-  .settings li {
-    position: relative;
   }
 }

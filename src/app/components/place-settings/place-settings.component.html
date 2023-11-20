@@ -1,59 +1,100 @@
-<app-header></app-header>
+<div class="wrapper">
+  <app-header></app-header>
 
-<div class="return-to-main">
-  <a routerLink="/">
-    <img src="assets/img/return-button.svg" alt="return-button" class="return-button">
-  </a>
-  <span>Вернуться к поиску</span>
-</div>
-
-<div class="main-top-content" *ngIf="user">
-
-  <div class="profile-navigation">
-    <ul>
-      <li><a routerLink="/favourites">Избранное</a></li>
-      <li><a routerLink="/profile">Настройки профиля</a></li>
-      <li style="border-right: solid 2px black ;"><a routerLink="/place-settings">Настройки мест</a></li>
-      <li *ngIf="user.role_id == 2"><a routerLink="/ad-business">Продвижение</a></li>
-    </ul>
+  <div class="return-to-main">
+    <a routerLink="/">
+      <img src="assets/img/return-button.svg" alt="return-button" class="return-button">
+    </a>
+    <span>Вернуться к поиску</span>
   </div>
 
-  <div class="place-information">
-    <h1 class="title">
-      Ваши места
-    </h1>
+  <div class="main-top-content" *ngIf="user">
 
-    <p class="description">
-      В данном разделе вы также можете отследить статистику вашего заведения
-    </p>
-
-    <div class="explanations" *ngIf="userCoworkings.length > 0">
-      <h5 class="explanations-li">
-        Название
-      </h5>
+    <div class="profile-navigation">
+      <ul>
+        <li><a routerLink="/favourites">Избранное</a></li>
+        <li><a routerLink="/profile">Настройки профиля</a></li>
+        <li style="border-right: solid 2px black ;"><a routerLink="/place-settings">Настройки мест</a></li>
+        <li *ngIf="user.role_id == 2"><a routerLink="/ad-business">Продвижение</a></li>
+      </ul>
     </div>
 
-    <ul class="cards">
-      <li class="card-li" *ngFor="let userCoworking of userCoworkings">
-        <div class="card">
-          <div class="first-block__card">
-            <p class="card-title">
-              <a [routerLink]="['/main', userCoworking.id]">{{userCoworking.name}}</a>
-            </p>
-            <p class="adress">
-              {{userCoworking.address}}
-            </p>
-          </div>
-          <div class="second-block__card">
-            <button class="progress-information__btn" [routerLink]="['/main/add', userCoworking.id]">
-              Редактировать
-            </button>
-          </div>
-        </div>
-      </li>
-    </ul>
+    <div class="place-information">
+      <h1 class="title">
+        Ваши места
+      </h1>
 
+      <p class="description">
+        В данном разделе вы также можете отследить статистику вашего заведения
+      </p>
+
+      <div class="explanations" *ngIf="userCoworkings.length > 0">
+        <h5 class="explanations-li">
+          Название
+        </h5>
+      </div>
+
+      <ul class="cards">
+        <li class="card-li" *ngFor="let userCoworking of userCoworkings">
+          <div class="card" *ngIf="userCoworking.status == 'На проверке'">
+            <div class="first-block__card">
+              <p class="card-title">
+                <a [routerLink]="['/main', userCoworking.id]">{{userCoworking.name}}</a>
+              </p>
+              <p class="adress">
+                {{userCoworking.address}}
+              </p>
+            </div>
+            <div class="second-block__card">
+              <button class="progress-information__btn" [routerLink]="['/main/add', userCoworking.id]">
+                Редактировать
+              </button>
+            </div>
+          </div>
+
+          <div class="card denied" *ngIf="userCoworking.status == 'Отказано'">
+            <div class="first-block__card">
+              <p class="card-title">
+                <a [routerLink]="['/main', userCoworking.id]">{{userCoworking.name}}</a>
+              </p>
+              <p class="adress">
+                {{userCoworking.address}}
+              </p>
+            </div>
+            <div class="information-description">
+              <p class="highlighted-text">
+                <span>Ваша заявка на добавление места отклонена</span>
+              </p>
+              <img src="assets/img/denied.svg" alt="denied">
+              <div class="tooltip">
+                <p class="tooltip-text">
+                  Ваша заявка на добавление места отклонена администратором по причине несоответствия указанным
+                  требованиям.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="card in-progress denied" *ngIf="userCoworking.status == 'На проверке'">
+            <div class="first-block__card">
+              <p class="card-title">
+                <a [routerLink]="['/main', userCoworking.id]">{{userCoworking.name}}</a>
+              </p>
+              <p class="adress">
+                {{userCoworking.address}}
+              </p>
+            </div>
+            <div class="information-description">
+              <p>
+                Ваша заявка на добавление места в обработке
+              </p>
+              <img src="assets/img/clock-icon.svg" alt="denied">
+            </div>
+          </div> -->
+        </li>
+      </ul>
+
+    </div>
   </div>
 </div>
-
 <app-footer></app-footer>

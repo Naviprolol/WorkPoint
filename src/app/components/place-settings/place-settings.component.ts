@@ -25,6 +25,12 @@ export class PlaceSettingsComponent implements OnInit {
 
     this.coworkingsService.getCoworkingsByToken().subscribe(coworkings => {
       this.userCoworkings = coworkings
+      console.log(this.userCoworkings)
+      // coworkings.forEach(coworking => {
+      //     if (coworking.status === 'На проверке') {
+
+      //     }
+      //   });
     });
   }
 
