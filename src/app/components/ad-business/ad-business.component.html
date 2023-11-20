@@ -32,7 +32,7 @@
       </p>
 
       <div class="all-requests-container">
-        <button type="button" class="all-requests" [routerLink]="[]">
+        <button type="button" class="all-requests" routerLink="/ad-business/applications">
           <p>Посмотреть все заявки</p>
         </button>
       </div>
@@ -119,10 +119,14 @@
         <div class="photo-baner">
           <input id="banner" class="dn" type="file" name="banner" (change)="onFileUpload($event)" #banner>
           <label for="banner"></label>
-          <button class="btn-photo-baner" type="button" (click)="triggerClick()">Прикрепить файл</button>
+          <button class="btn-photo-baner" type="button" (click)="triggerClick()">
+            <h5>Прикрепить файл</h5>
+            <img src="assets/img/upload-file.svg" alt="upload-file">
+          </button>
         </div>
-      </div>
 
+        <p *ngIf="banner.files && banner.files.length > 0">{{ banner.files[0].name }}</p>
+      </div>
       <button class="button-send" type="submit" [disabled]="form.invalid || form.disabled"
         (click)="[onClick(), showPopupAndRedirect()]">
         <!-- Доделать вывод плохого сообщения -->

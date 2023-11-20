@@ -100,6 +100,60 @@
     min-height: 99px;
     background: rgba(190, 218, 195, 0.7);
     border-radius: 20px;
+    align-items: center;
+  }
+
+  .denied {
+    background: #E0E0D6;
+  }
+
+  .information-description {
+    display: flex;
+    margin-left: 140px;
+    margin-top: 15px;
+    position: relative;
+    align-items: center;
+  }
+
+  .information-description img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .tooltip {
+    visibility: hidden;
+    width: 490px;
+    background: #FFFFD7;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    top: calc(100% + 10px);
+    /* Расположение под блоком .information-description */
+    left: 46%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: ease-in-out 0.3s;
+  }
+
+  .tooltip-text {
+    width: 350px;
+    font-size: 15px;
+    font-weight: 300;
+    padding: 19px 60px 19px 60px;
+  }
+
+  .information-description:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .highlighted-text {
+    text-decoration: underline 1px;
+    cursor: pointer;
+    font-size: 22px;
+    margin-right: 22px;
   }
 
   .card-li {
@@ -239,11 +293,39 @@
     min-height: calc(0.83*99px);
   }
 
+  .information-description {
+    margin-left: calc(0.75*140px);
+    margin-top: calc(0.83*15px);
+  }
+
+  .information-description img {
+    width: calc(0.83*26px);
+    height: calc(0.83*26px);
+  }
+
+  .tooltip {
+    width: calc(0.75*490px);
+    top: calc(100% + calc(0.83*10px));
+    left: 46%;
+  }
+
+  .tooltip-text {
+    width: calc(0.75*350px);
+    font-size: calc(0.75*15px);
+    padding: calc(0.83*19px) calc(0.75*60px) calc(0.83*19px) calc(0.75*60px);
+  }
+
+  .highlighted-text {
+    font-size: calc(0.75*22px);
+    margin-right: calc(0.75*22px);
+  }
+
   .card-li {
     margin-bottom: calc(0.83*30px);
   }
 
   .card-title {
+    width: calc(0.75*165px);
     padding-top: calc(0.83*16px);
     font-size: calc(0.75*24px);
     line-height: calc(0.83*33px);
@@ -352,11 +434,39 @@
     min-height: calc(0.71*99px);
   }
 
+  .information-description {
+    margin-left: calc(0.71*140px);
+    margin-top: calc(0.71*15px);
+  }
+
+  .information-description img {
+    width: calc(0.71*26px);
+    height: calc(0.71*26px);
+  }
+
+  .tooltip {
+    width: calc(0.71*490px);
+    top: calc(100% + calc(0.71*10px));
+    left: 46%;
+  }
+
+  .tooltip-text {
+    width: calc(0.71*350px);
+    font-size: calc(0.71*15px);
+    padding: calc(0.71*19px) calc(0.71*60px) calc(0.71*19px) calc(0.71*60px);
+  }
+
+  .highlighted-text {
+    font-size: calc(0.71*22px);
+    margin-right: calc(0.71*22px);
+  }
+
   .card-li {
     margin-bottom: calc(0.71*30px);
   }
 
   .card-title {
+    width: calc(0.71*165px);
     padding-top: calc(0.71*16px);
     font-size: calc(0.71*24px);
     line-height: calc(0.71*33px);
@@ -392,5 +502,6 @@
     padding: calc(0.71*13px) calc(0.71*63px);
     font-size: calc(0.71*15px);
     line-height: calc(0.71*28px);
+
   }
 }

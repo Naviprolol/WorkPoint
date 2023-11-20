@@ -23,6 +23,7 @@ export interface ICoworking {
   tags: any[]
   user_id: number
   photos: File[]
+  status: string
 }
 
 export interface User {

@@ -31,6 +31,8 @@ import { TuiRootModule, TuiButtonModule } from '@taiga-ui/core';
 import { TuiCarouselModule, TuiIslandModule, TuiPaginationModule } from '@taiga-ui/kit';
 
 import { AngularYandexMapsModule, YaConfig } from 'angular8-yandex-maps';
+import { AllApplicationsComponent } from './components/ad-business/all-applications/all-applications.component';
+import { AdminMainPageComponent } from './components/admin/admin-main-page/admin-main-page.component';
 
 const mapConfig: YaConfig = {
   apikey: '4d882b8c-882e-4fd7-8097-d924a789563f',
@@ -56,6 +58,8 @@ const mapConfig: YaConfig = {
     FavouritesPageComponent,
     PlaceSettingsComponent,
     AdBusinessComponent,
+    AllApplicationsComponent,
+    AdminMainPageComponent,
   ],
   imports: [
     BrowserModule,

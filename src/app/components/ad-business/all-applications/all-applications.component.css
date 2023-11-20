@@ -1,0 +1,425 @@
+@media screen and (max-width: 5000px) {
+  .return-to-main {
+    display: flex;
+    width: 180px;
+    margin-left: 168px;
+    margin-bottom: 65px;
+    margin-top: 18px;
+    align-items: center;
+  }
+
+  .return-button {
+    margin-right: 18px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 16px;
+    height: 16px;
+  }
+
+  .return-to-main span {
+    font-size: 15px;
+    line-height: 20px;
+    color: rgba(27, 31, 59, 0.65);
+  }
+
+  .wrapper {
+    min-height: calc(100vh - 150px);
+    /* 150px - отступ сверху футера */
+  }
+
+  .main-top-content {
+    display: flex;
+    margin-left: 202px;
+    margin-bottom: 100px;
+  }
+
+  .profile-navigation {
+    width: 238px;
+    margin-right: 60px;
+    margin-top: 31px;
+  }
+
+  .profile-navigation li {
+    font-size: 20px;
+    line-height: 177.69%;
+    margin-bottom: 16px;
+  }
+
+  .profile-navigation li:last-child {
+    margin-bottom: 0;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+    margin-bottom: 32px;
+  }
+
+  .description {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 43px;
+    max-width: 1070px;
+    margin-bottom: 30px;
+  }
+
+  .sort-applications-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 22px;
+    width: 960px;
+  }
+
+  .sort-applications-container h5 {
+    color: #000;
+    font-size: 26px;
+    font-weight: 600;
+    margin-right: 204px;
+  }
+
+  input {
+    cursor: pointer;
+  }
+
+  .input-field select {
+    border: none;
+    width: 280px;
+    height: 54px;
+    padding-left: 19px;
+
+    border-radius: 10px;
+    color: #000;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 28px;
+    font-family: 'Open Sans';
+    background: #E0E0D6;
+  }
+
+  .sort-applications-container .date {
+    margin-right: 50px;
+  }
+
+  .applications-container {
+    width: 960px;
+    border-radius: 10px;
+    border: 10px solid #D1E5D2;
+    box-sizing: border-box;
+  }
+
+  .applications-table {
+    margin-top: 39px;
+    margin-left: 58px;
+  }
+
+  .applications-table .table-head-name {
+    padding-bottom: 80px;
+  }
+
+  .applications-table th {
+    color: #000;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .applications-table th,
+  .applications-table td {
+    padding-right: 43px;
+    box-sizing: border-box;
+    /* учитываем padding в общей ширине */
+  }
+
+  .applications-table .place-name {
+    color: #000;
+    font-size: 25px;
+    font-weight: 700;
+  }
+
+  .applications-table .first-block {
+    max-width: 300px;
+  }
+
+  .applications-table .place-address {
+    color: #000;
+    font-size: 15px;
+    line-height: 177.688%;
+  }
+
+  .applications-table td:not(:first-child) {
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    vertical-align: middle;
+  }
+
+  .applications-table tbody {
+    border-collapse: separate;
+    border-spacing: 0 15px;
+  }
+
+  .applications-table {
+    margin-bottom: 40px;
+  }
+
+
+  .applications-table .centered-cell {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .return-to-main {
+    width: calc(0.75*180px);
+    margin-left: calc(0.75*168px);
+    margin-bottom: calc(0.83*65px);
+    margin-top: calc(0.83*18px);
+  }
+
+  .return-button {
+    margin-right: calc(0.75 * 18px);
+    margin-top: auto;
+    margin-bottom: auto;
+    width: calc(0.75 * 16px);
+    height: calc(0.83 * 16px);
+  }
+
+  .return-to-main span {
+    font-size: calc(0.75 * 15px);
+    line-height: calc(0.83 * 20px);
+  }
+
+  .main-top-content {
+    margin-left: calc(0.75 * 202px);
+    margin-bottom: calc(0.83 * 100px);
+  }
+
+  .profile-navigation {
+    width: calc(0.75 * 238px);
+    margin-right: calc(0.75 * 60px);
+    margin-top: calc(0.83 * 31px);
+  }
+
+  .profile-navigation li {
+    font-size: calc(0.75 * 20px);
+    line-height: calc(0.83 * 177.69%);
+    margin-bottom: calc(0.83 * 16px);
+  }
+
+  .profile-navigation li:last-child {
+    margin-bottom: 0;
+  }
+
+  .title {
+    font-size: calc(0.75 * 28px);
+    line-height: calc(0.83 * 38px);
+    margin-bottom: calc(0.83 * 32px);
+  }
+
+  .description {
+    font-size: calc(0.75 * 24px);
+    line-height: calc(0.83 * 43px);
+    max-width: calc(0.75 * 1070px);
+    margin-bottom: calc(0.83 * 30px);
+  }
+
+  .sort-applications-container {
+    margin-bottom: calc(0.83 * 22px);
+    width: calc(0.75 * 960px);
+  }
+
+  .sort-applications-container h5 {
+    font-size: calc(0.75 * 26px);
+    margin-right: calc(0.75 * 204px);
+  }
+
+  .input-field select {
+    width: calc(0.75 * 280px);
+    height: calc(0.83 * 54px);
+    padding-left: calc(0.75 * 19px);
+    font-size: calc(0.75 * 15px);
+    line-height: calc(0.83 * 28px);
+  }
+
+  .sort-applications-container .date {
+    margin-right: calc(0.75 * 50px);
+  }
+
+  .applications-container {
+    width: calc(0.75 * 960px);
+  }
+
+  .applications-table {
+    margin-top: calc(0.83 * 39px);
+    margin-left: calc(0.75 * 58px);
+  }
+
+  .applications-table .table-head-name {
+    padding-bottom: calc(0.83 * 80px);
+  }
+
+  .applications-table th {
+    font-size: calc(0.75 * 24px);
+  }
+
+  .applications-table th,
+  .applications-table td {
+    padding-right: calc(0.75 * 43px);
+  }
+
+  .applications-table .place-name {
+    font-size: calc(0.75 * 25px);
+  }
+
+  .applications-table .first-block {
+    max-width: calc(0.75 * 300px);
+  }
+
+  .applications-table .place-address {
+    font-size: calc(0.75 * 15px);
+    line-height: calc(0.83 * 177.688%);
+  }
+
+  .applications-table td:not(:first-child) {
+    font-size: calc(0.75 * 24px);
+  }
+
+  .applications-table tbody {
+    border-collapse: separate;
+    border-spacing: 0 calc(0.83 * 15px);
+  }
+
+  .applications-table {
+    margin-bottom: calc(0.83 * 40px);
+  }
+}
+
+@media screen and (max-width: 1370px) {
+  .return-to-main {
+    width: calc(0.71 * 180px);
+    margin-left: calc(0.71 * 168px);
+    margin-bottom: calc(0.71 * 65px);
+    margin-top: calc(0.71 * 18px);
+  }
+
+  .return-button {
+    margin-right: calc(0.71 * 18px);
+    margin-top: auto;
+    margin-bottom: auto;
+    width: calc(0.71 * 16px);
+    height: calc(0.71 * 16px);
+  }
+
+  .return-to-main span {
+    font-size: calc(0.71 * 15px);
+    line-height: calc(0.71 * 20px);
+  }
+
+  .main-top-content {
+    margin-left: calc(0.71 * 202px);
+    margin-bottom: calc(0.71 * 100px);
+  }
+
+  .profile-navigation {
+    width: calc(0.71 * 238px);
+    margin-right: calc(0.71 * 60px);
+    margin-top: calc(0.71 * 31px);
+  }
+
+  .profile-navigation li {
+    font-size: calc(0.71 * 20px);
+    line-height: calc(0.71 * 177.69%);
+    margin-bottom: calc(0.71 * 16px);
+  }
+
+  .profile-navigation li:last-child {
+    margin-bottom: 0;
+  }
+
+  .title {
+    font-size: calc(0.71 * 28px);
+    line-height: calc(0.71 * 38px);
+    margin-bottom: calc(0.71 * 32px);
+  }
+
+  .description {
+    font-size: calc(0.71 * 24px);
+    line-height: calc(0.71 * 43px);
+    max-width: calc(0.71 * 1070px);
+    margin-bottom: calc(0.71 * 30px);
+  }
+
+  .sort-applications-container {
+    margin-bottom: calc(0.71 * 22px);
+    width: calc(0.71 * 960px);
+  }
+
+  .sort-applications-container h5 {
+    font-size: calc(0.71 * 26px);
+    margin-right: calc(0.71 * 204px);
+  }
+
+  .input-field select {
+    width: calc(0.71 * 280px);
+    height: calc(0.71 * 54px);
+    padding-left: calc(0.71 * 19px);
+    font-size: calc(0.71 * 15px);
+    line-height: calc(0.71 * 28px);
+  }
+
+  .sort-applications-container .date {
+    margin-right: calc(0.71 * 50px);
+  }
+
+  .applications-container {
+    width: calc(0.71 * 960px);
+  }
+
+  .applications-table {
+    margin-top: calc(0.71 * 39px);
+    margin-left: calc(0.71 * 58px);
+  }
+
+  .applications-table .table-head-name {
+    padding-bottom: calc(0.71 * 80px);
+  }
+
+  .applications-table th {
+    font-size: calc(0.71 * 24px);
+  }
+
+  .applications-table th,
+  .applications-table td {
+    padding-right: calc(0.71 * 43px);
+  }
+
+  .applications-table .place-name {
+    font-size: calc(0.71 * 25px);
+  }
+
+  .applications-table .first-block {
+    max-width: calc(0.71 * 300px);
+  }
+
+  .applications-table .place-address {
+    font-size: calc(0.71 * 15px);
+    line-height: calc(0.71 * 177.688%);
+  }
+
+  .applications-table td:not(:first-child) {
+    font-size: calc(0.71 * 24px);
+  }
+
+  .applications-table tbody {
+    border-collapse: separate;
+    border-spacing: 0 calc(0.71 * 15px);
+  }
+
+  .applications-table {
+    margin-bottom: calc(0.71 * 40px);
+  }
+}
