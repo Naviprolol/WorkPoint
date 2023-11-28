@@ -33,6 +33,8 @@ import { TuiCarouselModule, TuiIslandModule, TuiPaginationModule } from '@taiga-
 import { AngularYandexMapsModule, YaConfig } from 'angular8-yandex-maps';
 import { AllApplicationsComponent } from './components/ad-business/all-applications/all-applications.component';
 import { AdminMainPageComponent } from './components/admin/admin-main-page/admin-main-page.component';
+import { RequestsToAddComponent } from './components/admin/requests-to-add/requests-to-add.component';
+import { RequestComponent } from './components/admin/requests-to-add/request/request.component';
 
 const mapConfig: YaConfig = {
   apikey: '4d882b8c-882e-4fd7-8097-d924a789563f',
@@ -60,6 +62,8 @@ const mapConfig: YaConfig = {
     AdBusinessComponent,
     AllApplicationsComponent,
     AdminMainPageComponent,
+    RequestsToAddComponent,
+    RequestComponent,
   ],
   imports: [
     BrowserModule,

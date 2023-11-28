@@ -24,6 +24,7 @@ export interface ICoworking {
   user_id: number
   photos: File[]
   status: string
+  created_at: string
 }
 
 export interface User {

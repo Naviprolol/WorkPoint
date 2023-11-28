@@ -1,0 +1,95 @@
+<app-header></app-header>
+<div class="return-to-main">
+  <a routerLink="/admin/main">
+    <img src="assets/img/return-button.svg" alt="return-button" class="return-button">
+  </a>
+  <span>Вернуться на главную</span>
+</div>
+
+<div class="content-container">
+  <h1>Рассмотрение заявки на добавление места</h1>
+  <h2>Дата подачи заявки: 13.10.2023</h2>
+
+  <div class="application-container">
+    <div class="content" *ngIf="coworking">
+      <div class="place-title place flex">
+        <p class="text-left-side">Название заведения:</p>
+        <p class="text-right-side">{{ coworking.name }}</p>
+      </div>
+      <div class="place-city place flex">
+        <p class="text-left-side">Город:</p>
+        <p class="text-right-side">{{ coworking.city }}</p>
+      </div>
+      <div class="place-district place flex">
+        <p class="text-left-side">Район:</p>
+        <p class="text-right-side">{{ coworking.district }}</p>
+      </div>
+      <div class="place-address place flex">
+        <p class="text-left-side">Адрес:</p>
+        <p class="text-right-side">{{ coworking.address }}</p>
+      </div>
+      <div class="place-description place flex">
+        <p class="text-left-side">Описание:</p>
+        <p class="text-right-side description">{{ coworking.description }}</p>
+      </div>
+      <div class="place-hours place flex">
+        <p class="text-left-side">Часы работы:</p>
+        <p class="text-right-side">{{ coworking.opening_hours }}</p>
+      </div>
+      <div class="place-type place flex">
+        <p class="text-left-side">Тип заведения:</p>
+        <p class="text-right-side">{{ coworking.type_cafe }}</p>
+      </div>
+      <div class="place-cost place flex">
+        <p class="text-left-side">Стоимость:</p>
+        <p class="text-right-side">{{ coworking.cost }}</p>
+      </div>
+      <div class="place-tags place flex">
+        <p class="text-left-side">Дополнительно:</p>
+        <p class="text-right-side">{{ tags.join(', ') }}</p>
+      </div>
+      <div class="place-contacts place flex">
+        <p class="text-left-side">Контакты:</p>
+        <div>
+          <p class="text-right-side"><span>Телефон заведения: </span>{{ coworking.company_phone }}</p>
+          <p class="text-right-side"><span>Эл.почта: </span>{{ coworking.email }}</p>
+          <p class="text-right-side"><span>Сайт: </span>{{ coworking.site }}</p>
+        </div>
+      </div>
+      <div class="place-photo place flex">
+        <p class="text-left-side">Фотографии:</p>
+        <div class="photo-container">
+          <button (click)="prevPhoto()" class="prev-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M10.7071 3.29289C11.0976 3.68342 11.0976 4.31658 10.7071 4.70711L7.41421 8L10.7071 11.2929C11.0976 11.6834 11.0976 12.3166 10.7071 12.7071C10.3166 13.0976 9.68342 13.0976 9.29289 12.7071L5.29289 8.70711C4.90237 8.31658 4.90237 7.68342 5.29289 7.29289L9.29289 3.29289C9.68342 2.90237 10.3166 2.90237 10.7071 3.29289Z"
+                fill="#1B1F3B" fill-opacity="0.8" />
+            </svg>
+          </button>
+          <img [src]="currentPhoto" onerror="this.src='assets/img/logo.svg'" class="text-right-side photo" alt="img">
+          <button (click)="nextPhoto()" class="next-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M5.29289 12.7071C4.90237 12.3166 4.90237 11.6834 5.29289 11.2929L8.58579 8L5.29289 4.70711C4.90237 4.31658 4.90237 3.68342 5.29289 3.29289C5.68342 2.90237 6.31658 2.90237 6.70711 3.29289L10.7071 7.29289C11.0976 7.68342 11.0976 8.31658 10.7071 8.70711L6.70711 12.7071C6.31658 13.0976 5.68342 13.0976 5.29289 12.7071Z"
+                fill="#1B1F3B" fill-opacity="0.8" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button (click)="[onSubmitApproved(), showPopupAndRedirect()]" class="btn approved">
+          Одобрить
+        </button>
+        <button type=" button" class="btn deny">Отказать</button>
+      </div>
+    </div>
+  </div>
+  <button type="button" class="return" routerLink="/admin/requests-to-add">Назад</button>
+
+  <div class="overlay" *ngIf="showPopup"></div>
+
+  <div class="popup" *ngIf="showPopup">
+    <img src="assets/admin/approved.svg" alt="Заявка одобрена!">
+  </div>
+</div>
