@@ -15,7 +15,7 @@
         <li><a routerLink="/favourites">Избранное</a></li>
         <li><a routerLink="/profile">Настройки профиля</a></li>
         <li style="border-right: solid 2px black ;"><a routerLink="/place-settings">Настройки мест</a></li>
-        <li *ngIf="user.role_id == 2"><a routerLink="/ad-business">Продвижение</a></li>
+        <li *ngIf="user.role_id == 2 || user.role_id == 3"><a routerLink="/ad-business">Продвижение</a></li>
       </ul>
     </div>
 
@@ -36,7 +36,7 @@
 
       <ul class="cards">
         <li class="card-li" *ngFor="let userCoworking of userCoworkings">
-          <div class="card" *ngIf="userCoworking.status == 'На проверке'">
+          <div class="card" *ngIf="userCoworking.status == 'Одобрено'">
             <div class="first-block__card">
               <p class="card-title">
                 <a [routerLink]="['/main', userCoworking.id]">{{userCoworking.name}}</a>
@@ -62,7 +62,7 @@
               </p>
             </div>
             <div class="information-description">
-              <p class="highlighted-text">
+              <p class="highlighted-text-denied">
                 <span>Ваша заявка на добавление места отклонена</span>
               </p>
               <img src="assets/img/denied.svg" alt="denied">
@@ -75,7 +75,7 @@
             </div>
           </div>
 
-          <!-- <div class="card in-progress denied" *ngIf="userCoworking.status == 'На проверке'">
+          <div class="card in-progress denied" *ngIf="userCoworking.status == 'На проверке'">
             <div class="first-block__card">
               <p class="card-title">
                 <a [routerLink]="['/main', userCoworking.id]">{{userCoworking.name}}</a>
@@ -85,12 +85,12 @@
               </p>
             </div>
             <div class="information-description">
-              <p>
-                Ваша заявка на добавление места в обработке
+              <p class="highlighted-text">
+                <span>Ваша заявка на добавление места в обработке</span>
               </p>
               <img src="assets/img/clock-icon.svg" alt="denied">
             </div>
-          </div> -->
+          </div>
         </li>
       </ul>
 

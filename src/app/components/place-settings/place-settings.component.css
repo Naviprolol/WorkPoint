@@ -94,10 +94,11 @@
   .card {
     padding-left: 27px;
     padding-bottom: 15px;
+    box-sizing: border-box;
     position: relative;
     display: flex;
-    max-width: 1070px;
-    min-height: 99px;
+    width: 1070px;
+    height: 99px;
     background: rgba(190, 218, 195, 0.7);
     border-radius: 20px;
     align-items: center;
@@ -109,7 +110,7 @@
 
   .information-description {
     display: flex;
-    margin-left: 140px;
+    margin-left: 282px;
     margin-top: 15px;
     position: relative;
     align-items: center;
@@ -149,9 +150,14 @@
     opacity: 1;
   }
 
-  .highlighted-text {
+  .highlighted-text-denied {
     text-decoration: underline 1px;
     cursor: pointer;
+    font-size: 22px;
+    margin-right: 39px;
+  }
+
+  .highlighted-text {
     font-size: 22px;
     margin-right: 22px;
   }
@@ -289,12 +295,12 @@
   .card {
     padding-left: calc(0.75*27px);
     padding-bottom: calc(0.83*15px);
-    max-width: calc(0.75*1070px);
-    min-height: calc(0.83*99px);
+    width: calc(0.75*1070px);
+    height: calc(0.83*99px);
   }
 
   .information-description {
-    margin-left: calc(0.75*140px);
+    margin-left: calc(0.75*282px);
     margin-top: calc(0.83*15px);
   }
 
@@ -305,14 +311,20 @@
 
   .tooltip {
     width: calc(0.75*490px);
-    top: calc(100% + calc(0.83*10px));
+    top: calc(100% + 10px);
     left: 46%;
+    transform: translateX(-50%);
   }
 
   .tooltip-text {
     width: calc(0.75*350px);
     font-size: calc(0.75*15px);
     padding: calc(0.83*19px) calc(0.75*60px) calc(0.83*19px) calc(0.75*60px);
+  }
+
+  .highlighted-text-denied {
+    font-size: calc(0.75*22px);
+    margin-right: calc(0.75*39px);
   }
 
   .highlighted-text {
@@ -430,12 +442,12 @@
   .card {
     padding-left: calc(0.71*27px);
     padding-bottom: calc(0.71*15px);
-    max-width: calc(0.71*1070px);
-    min-height: calc(0.71*99px);
+    width: calc(0.71*1070px);
+    height: calc(0.71*99px);
   }
 
   .information-description {
-    margin-left: calc(0.71*140px);
+    margin-left: calc(0.71*282px);
     margin-top: calc(0.71*15px);
   }
 
@@ -446,14 +458,20 @@
 
   .tooltip {
     width: calc(0.71*490px);
-    top: calc(100% + calc(0.71*10px));
+    top: calc(100% + 10px);
     left: 46%;
+    transform: translateX(-50%);
   }
 
   .tooltip-text {
     width: calc(0.71*350px);
     font-size: calc(0.71*15px);
     padding: calc(0.71*19px) calc(0.71*60px) calc(0.71*19px) calc(0.71*60px);
+  }
+
+  .highlighted-text-denied {
+    font-size: calc(0.71*22px);
+    margin-right: calc(0.71*39px);
   }
 
   .highlighted-text {
