@@ -47,15 +47,15 @@
     color: rgba(27, 31, 59, 0.8);
     font-weight: 700;
     font-size: 19px;
-    margin-left: 652px;
+    margin-left: 33.958vw;
     margin-top: 53px;
     margin-bottom: 19px;
   }
 
   .banner-container {
-    width: 1400px;
+    width: 72.916vw;
     height: 413px;
-    margin-left: 200px;
+    margin-left: 10.4vw;
     margin-top: 70px;
     border-radius: 20px;
     margin-bottom: 140px;
@@ -65,10 +65,11 @@
     width: 100%;
     height: 413px;
     border-radius: 20px;
+    cursor: pointer;
   }
 
   .banner-container .banner {
-    width: 1400px;
+    width: 72.916vw;
     height: 413px;
   }
 
@@ -85,15 +86,15 @@
 
   .search {
     display: flex;
-    width: 1175px;
-    margin-left: 412px;
+    width: 61.1979vw;
+    margin-left: 21.458vw;
     justify-content: space-between;
   }
 
   .search-container {
     display: flex;
     gap: 17px;
-    width: 862px;
+    width: 44.8958vw;
     height: 54px;
     background: #FBFBF5;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
@@ -103,14 +104,14 @@
   }
 
   .search-container-input {
-    width: 862px;
+    width: 44.89583vw;
     font-size: 15px;
     background: #FBFBF5;
     font-weight: 300;
   }
 
   .search-container img {
-    margin-left: 28px;
+    margin-left: 1.4583vw;
   }
 
   .btn-find-coworking:hover {
@@ -123,7 +124,7 @@
   }
 
   .btn-find-coworking {
-    width: 275px;
+    width: 14.3229vw;
     background-color: #E0E0D6 !important;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
@@ -135,11 +136,11 @@
   .filter-container {
     background: rgba(190, 218, 195, 0.7);
     border-radius: 20px;
-    width: 419px;
+    width: 21.8229vw;
     height: 1100px;
-    margin-left: 161px;
+    margin-left: 8.3854vw;
     margin-bottom: 271px;
-    margin-right: 60px;
+    margin-right: 3.125vw;
   }
 
   .filter-container h1 {
@@ -192,10 +193,10 @@
   .custom-radio+label::before {
     content: '';
     display: inline-block;
-    width: 22.6px;
+    width: 1.177vw;
     height: 24px;
-    margin-right: 19px;
-    margin-left: 15px;
+    margin-right: 0.98958vw;
+    margin-left: 0.78125vw;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 100% 100%;

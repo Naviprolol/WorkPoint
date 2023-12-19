@@ -1,6 +1,6 @@
 @media screen and (max-width: 5000px) {
   .coworking {
-    width: 1120px;
+    width: 58.33vw;
     height: 571px;
     background: rgba(190, 218, 195, 0.7);
     border-radius: 20px;
@@ -17,11 +17,11 @@
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 28px;
+    font-size: 1.4583vw;
     color: #000000;
     margin-top: 26px;
-    margin-left: 54px;
-    margin-right: 16px;
+    margin-left: 2.8125vw;
+    margin-right: 0.833vw;
   }
 
   .img-good-place {
@@ -36,16 +36,16 @@
 
   .coworking-rating-container {
     display: flex;
-    margin-right: 64px;
+    margin-right: 3.333vw;
   }
 
   .coworking-rating {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1.25vw;
     margin-top: 33px;
-    margin-right: 12px;
+    margin-right: 0.625vw;
   }
 
   .img-star {
@@ -59,34 +59,34 @@
   }
 
   .coworking-image img {
-    margin-left: 54px;
+    margin-left: 2.8125vw;
     border-radius: 20px;
-    margin-right: 51px;
-    width: 480px;
+    margin-right: 2.65625vw;
+    width: 25vw;
     height: 415px;
   }
 
   .coworking-description {
-    width: 460px;
+    width: 23.9583vw;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 300;
-    font-size: 24px;
+    font-size: 1.25vw;
     line-height: 177.69%;
     margin-bottom: 42px;
   }
 
   .coworking-adress-container {
     display: flex;
-    gap: 29px;
-    font-size: 20px;
+    gap: 1.5104vw;
+    font-size: 1.04vw;
     margin-bottom: 28px;
   }
 
   .coworking-time-container {
     display: flex;
-    gap: 26px;
-    font-size: 20px;
+    gap: 1.35417vw;
+    font-size: 1.0417vw;
   }
 
   .coworking-content {
@@ -95,7 +95,7 @@
 
   .coworking-map-and-favorite-container {
     display: flex;
-    gap: 54px;
+    gap: 2.8125vw;
     position: absolute;
     bottom: 0;
   }
@@ -120,7 +120,7 @@
 
   .coworking-map {
     border-radius: 10px;
-    width: 275px;
+    width: 14.3229vw;
     height: 54px;
     text-align: center;
     background: #5E9C76;
@@ -129,7 +129,7 @@
   }
 
   .coworking-map p {
-    font-size: 15px;
+    font-size: 0.78125vw;
     line-height: 28px;
     color: #FFFFFF;
     font-weight: 600;

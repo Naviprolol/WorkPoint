@@ -138,31 +138,25 @@
 
   input {
     cursor: pointer;
-  }
-
-  .input-field {
-    width: 560px;
-    height: 62px;
-    border-radius: 20px;
-    background: #E0E0D6;
-    margin-bottom: 20px;
+    background-color: inherit;
   }
 
   .email {
     margin-bottom: 39px;
   }
 
-  .input-field input {
-    width: 520px;
-    height: 52px;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 28px;
-    padding-left: 28px;
-    margin-top: 4px;
-    margin-left: 5px;
-    background: inherit;
-    border-radius: 10px;
+  .input-field .big-input {
+    width: 460px;
+  }
+
+  .input-date input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
   }
 
   .red-text {
@@ -209,6 +203,7 @@
     height: 203px;
     background: #D1E5D2;
     border-radius: 20px;
+    box-sizing: border-box;
   }
 
   label {
@@ -233,7 +228,7 @@
     font-size: 20px;
     line-height: 36px;
     color: #000000;
-    margin-left: 30%;
+    margin-left: 110px;
   }
 
   .dn {
@@ -322,6 +317,77 @@
     width: 555px;
     height: 292px;
   }
+
+  .date-container p {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 177.688%;
+    margin-bottom: 30px;
+  }
+
+  .input-containers {
+    display: flex;
+    gap: 126px;
+    margin-bottom: 75px;
+  }
+
+  .status {
+    margin-bottom: 30px;
+  }
+
+  .status-small {
+    width: 212px;
+  }
+
+  .status-small p {
+    color: #F00;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 28px;
+  }
+
+  .status-big {
+    width: 480px;
+  }
+
+  .status .position-container {
+    width: inherit;
+    height: 62px;
+    padding-left: 19px;
+    border-radius: 10px;
+    background: #E0E0D6;
+    box-sizing: border-box;
+  }
+
+  .status .position-container .position-label,
+  .status .position-container .position-label {
+    font-size: 20px;
+    line-height: 35.538px;
+  }
+
+  .status .position-container .status-label,
+  .status .position-container .status-label {
+    margin-top: 5px;
+    color: var(--text-03, rgba(27, 31, 59, 0.40));
+    font-size: 15px;
+    white-space: nowrap;
+  }
+
+  .position-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.52vw;
+    position: relative;
+  }
+
+  .type-select__icon {
+    padding-right: 25px;
+  }
+
+  .status-label span {
+    color: red;
+  }
 }
 
 @media screen and (max-width: 1450px) {
@@ -401,24 +467,8 @@
     line-height: calc(0.83*36px);
   }
 
-  .input-field {
-    width: calc(0.75*560px);
-    height: calc(0.83*62px);
-    margin-bottom: calc(0.83*20px);
-  }
-
   .email {
     margin-bottom: calc(0.83*39px);
-  }
-
-  .input-field input {
-    width: calc(0.75*520px);
-    height: calc(0.83*52px);
-    font-size: calc(0.75*15px);
-    line-height: calc(0.83*28px);
-    padding-left: calc(0.75*28px);
-    margin-top: calc(0.83*4px);
-    margin-left: calc(0.75*5px);
   }
 
   .red-text {
@@ -508,6 +558,37 @@
     height: calc(0.83*292px);
   }
 
+  .date-container p {
+    font-size: calc(0.75*20px);
+    line-height: calc(0.83*177.688%);
+    margin-bottom: calc(0.83*30px);
+  }
+
+  .input-containers {
+    gap: calc(0.75*126px);
+    margin-bottom: calc(0.83*75px);
+  }
+
+  .status .position-container {
+    width: calc(0.75*212px);
+    height: calc(0.83*54px);
+    padding-left: calc(0.75*19px);
+  }
+
+  .status .position-container .position-label,
+  .status .position-container .position-label {
+    font-size: calc(0.75*15px);
+    line-height: calc(0.83*28px);
+  }
+
+  .status .position-container .status-label,
+  .status .position-container .status-label {
+    font-size: calc(0.75*15px);
+  }
+
+  .type-select__icon {
+    padding-right: calc(0.75*25px);
+  }
 }
 
 @media screen and (max-width: 1370px) {
@@ -587,24 +668,8 @@
     line-height: calc(0.71*36px);
   }
 
-  .input-field {
-    width: calc(0.71*560px);
-    height: calc(0.71*62px);
-    margin-bottom: calc(0.71*20px);
-  }
-
   .email {
     margin-bottom: calc(0.71*39px);
-  }
-
-  .input-field input {
-    width: calc(0.71*520px);
-    height: calc(0.71*52px);
-    font-size: calc(0.71*15px);
-    line-height: calc(0.71*28px);
-    padding-left: calc(0.71*28px);
-    margin-top: calc(0.71*4px);
-    margin-left: calc(0.71*5px);
   }
 
   .red-text {
@@ -691,6 +756,38 @@
   .popup img {
     width: calc(0.71*555px);
     height: calc(0.71*292px);
+  }
+
+  .date-container p {
+    font-size: calc(0.71*20px);
+    line-height: calc(0.71*177.688%);
+    margin-bottom: calc(0.71*30px);
+  }
+
+  .input-containers {
+    gap: calc(0.71*126px);
+    margin-bottom: calc(0.71*75px);
+  }
+
+  .status .position-container {
+    width: calc(0.71*212px);
+    height: calc(0.71*54px);
+    padding-left: calc(0.71*19px);
+  }
+
+  .status .position-container .position-label,
+  .status .position-container .position-label {
+    font-size: calc(0.71*15px);
+    line-height: calc(0.71*28px);
+  }
+
+  .status .position-container .status-label,
+  .status .position-container .status-label {
+    font-size: calc(0.71*15px);
+  }
+
+  .type-select__icon {
+    padding-right: calc(0.71*25px);
   }
 
 }

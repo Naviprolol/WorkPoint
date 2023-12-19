@@ -35,6 +35,9 @@ import { AllApplicationsComponent } from './components/ad-business/all-applicati
 import { AdminMainPageComponent } from './components/admin/admin-main-page/admin-main-page.component';
 import { RequestsToAddComponent } from './components/admin/requests-to-add/requests-to-add.component';
 import { RequestComponent } from './components/admin/requests-to-add/request/request.component';
+import { RequestsToAppComponent } from './components/admin/requests-to-app/requests-to-app.component';
+import { AdPlacesComponent } from './components/ad-business/places/places.component';
+import { AppRequestComponent } from './components/admin/requests-to-app/app-request/app-request.component';
 
 const mapConfig: YaConfig = {
   apikey: '4d882b8c-882e-4fd7-8097-d924a789563f',
@@ -64,6 +67,9 @@ const mapConfig: YaConfig = {
     AdminMainPageComponent,
     RequestsToAddComponent,
     RequestComponent,
+    RequestsToAppComponent,
+    AdPlacesComponent,
+    AppRequestComponent,
   ],
   imports: [
     BrowserModule,

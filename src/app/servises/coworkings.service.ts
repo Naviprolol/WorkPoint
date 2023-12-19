@@ -23,7 +23,7 @@ export class CoworkingsService {
     const token = localStorage.getItem('auth-token')
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`)
 
-    return this.http.get<ICoworking[]>('https://www.1506815-cq40245.tw1.ru/user/', { headers: headers }) // https://1506815-cq40245.tw1.ru/user/
+    return this.http.get<ICoworking[]>('https://www.1506815-cq40245.tw1.ru/user/place', { headers: headers }) // https://1506815-cq40245.tw1.ru/user/
   }
 
   create(user_id: number, name: string, city: string, district: string, address: string, description: string, workHours: string,

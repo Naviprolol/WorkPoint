@@ -1,7 +1,7 @@
 @media screen and (max-width: 5000px) {
   .return-to-main {
     display: flex;
-    margin-left: 168px;
+    margin-left: 8.75vw;
     margin-bottom: 70px;
     margin-top: 18px;
     align-items: center;
@@ -28,14 +28,11 @@
   .content-container h1 {
     font-size: 28px;
     font-weight: 700;
-    line-height: normal;
     margin-bottom: 52px;
   }
 
   .content-container h2 {
     font-size: 28px;
-    line-height: normal;
-    margin-left: 90px;
     margin-bottom: 26px;
   }
 
@@ -56,10 +53,9 @@
   }
 
   .text-left-side {
-    min-width: 311px;
+    min-width: 415px;
     font-size: 20px;
     line-height: 177.688%;
-    /* 35.538px */
   }
 
   .text-right-side {
@@ -68,24 +64,10 @@
     font-weight: 600;
     line-height: 177.688%;
     word-wrap: break-word;
-    /* 35.538px */
-  }
-
-  .text-right-side span {
-    font-size: 20px;
-    line-height: 177.688%;
-    word-wrap: break-word;
-    /* 35.538px */
   }
 
   .place {
     margin-bottom: 28px;
-  }
-
-  .description {
-    font-size: 22px;
-    font-weight: 300;
-    line-height: 177.688%;
   }
 
   .photo-container {
@@ -94,37 +76,9 @@
   }
 
   .photo {
-    width: 343px;
-    height: 165px;
+    width: 379px;
+    height: 328px;
     border-radius: 20px;
-  }
-
-  .prev-button,
-  .next-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: transparent;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #1B1F3B;
-  }
-
-  .prev-button {
-    left: 15px;
-  }
-
-  .next-button {
-    right: 15px;
-  }
-
-  .photo button {
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    margin: 0 10px;
   }
 
   .buttons .btn {

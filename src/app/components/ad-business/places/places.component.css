@@ -1,0 +1,174 @@
+@media screen and (max-width: 5000px) {
+  .return-to-main {
+    display: flex;
+    width: 180px;
+    margin-left: 168px;
+    margin-bottom: 65px;
+    margin-top: 18px;
+    align-items: center;
+  }
+
+  .return-button {
+    margin-right: 18px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 16px;
+    height: 16px;
+  }
+
+  .return-to-main span {
+    font-size: 15px;
+    line-height: 20px;
+    color: rgba(27, 31, 59, 0.65);
+  }
+
+  .wrapper {
+    min-height: calc(100vh - 150px);
+    /* 150px - отступ сверху футера */
+  }
+
+  .main-top-content {
+    display: flex;
+    margin-left: 202px;
+    margin-bottom: 100px;
+  }
+
+  .profile-navigation {
+    width: 238px;
+    margin-right: 60px;
+    margin-top: 31px;
+  }
+
+  .profile-navigation li {
+    font-size: 20px;
+    line-height: 177.69%;
+    margin-bottom: 16px;
+  }
+
+  .profile-navigation li:last-child {
+    margin-bottom: 0;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+    margin-bottom: 32px;
+  }
+
+  .your-places {
+    margin-bottom: 57px;
+  }
+
+  .description {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 43px;
+    max-width: 1070px;
+    margin-bottom: 30px;
+  }
+
+  .all-requests-container {
+    margin-bottom: 98px;
+  }
+
+  .all-requests-container button:hover {
+    background-color: #EDFAED;
+    outline: 1px solid #6A6D79;
+  }
+
+  .all-requests-container button:active {
+    background: #8EBD9D !important;
+  }
+
+
+  .all-requests {
+    border-radius: 10px;
+    width: 234px;
+    height: 54px;
+    text-align: center;
+    background: #E0E0D6;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.16);
+  }
+
+  .all-requests p {
+    color: var(--text-03, rgba(27, 31, 59, 0.40));
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 28px;
+  }
+
+  .cards {
+    margin-bottom: 150px;
+  }
+
+  .cards .card-li {
+    width: 1070px;
+    height: 99px;
+    margin-bottom: 30px;
+  }
+
+  .cards .card {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    background: rgba(190, 218, 195, 0.70);
+    border-radius: 20px;
+  }
+
+  .cards .denied {
+    background: #E0E0D6;
+  }
+
+  .cards .approved {
+    background: #E0E0D6;
+  }
+
+  .card .first-block__card {
+    height: inherit;
+    padding-top: 16px;
+    padding-left: 27px;
+    box-sizing: border-box;
+  }
+
+  .card-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 14px;
+  }
+
+  .adress {
+    font-size: 15px;
+  }
+
+  .third-block_card {
+    margin-left: auto;
+    margin-right: 36px;
+  }
+
+  .third-block_card .watch-application {
+    width: 240px;
+    height: 54px;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.16);
+  }
+
+  .third-block_card .watch-application:hover {
+    background-color: #EDFAED;
+  }
+
+  .third-block_card .watch-application:active {
+    background: #8EBD9D !important;
+  }
+
+  .third-block_card .watch-application span {
+    color: var(--text-03, rgba(27, 31, 59, 0.40));
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 28px;
+  }
+
+}
