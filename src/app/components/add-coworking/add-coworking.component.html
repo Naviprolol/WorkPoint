@@ -237,8 +237,8 @@
   <div class="buttons-submit">
 
     <div>
-      <button class="button-add" type="submit" (click)="showPopupAndRedirect()"
-        [disabled]="form.invalid || form.disabled || !image1">{{isNew ? 'Добавить': 'Сохранить'}}
+      <button class="button-add" type="submit" [disabled]="form.invalid || form.disabled || !image1">{{isNew ?
+        'Добавить': 'Сохранить'}}
       </button>
 
       <div>
@@ -252,9 +252,9 @@
       {{isNew ? 'Отмена' : 'Удалить'}}
     </button>
 
-    <div class="overlay" *ngIf="showPopup"></div>
+    <div class="overlay" *ngIf="showGoodPopup"></div>
 
-    <div class="popup" *ngIf="showPopup">
+    <div class="popup" *ngIf="showGoodPopup">
       <img src="assets/img/add-coworking.svg" alt="add-coworking" *ngIf="isNew">
       <img src="assets/img/update-coworking.svg" alt="update-coworking" *ngIf="!isNew">
     </div>

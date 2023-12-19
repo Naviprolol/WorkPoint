@@ -34,7 +34,7 @@
         <a routerLink="/profile" class="dropdown-link">Настройки профиля</a>
         <a routerLink="/place-settings" class="dropdown-link">Настройки мест</a>
         <div *ngIf="user">
-          <a routerLink="/ad-business" class="dropdown-link"
+          <a routerLink="/ad-business/places" class="dropdown-link"
             *ngIf="user.role_id == 2 || user.role_id == 3">Продвижение</a>
         </div>
         <a href="#" class="dropdown-link" (click)="logout($event)">Выход</a>

@@ -57,10 +57,17 @@ export interface Review {
   showFullDescription: boolean
 }
 
-export interface Ad {
-  name: string,
-  city: string,
-  address: string,
-  tariff: string,
+export interface IAd {
+  id: number
+  user_id: number
+  id_place: number
+  name: string
+  city: string
+  address: string
+  tariff: string
   email: string
+  status: string
+  date_to: string
+  date_from: string
+  photo: string
 }

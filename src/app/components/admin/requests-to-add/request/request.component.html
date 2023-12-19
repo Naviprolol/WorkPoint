@@ -6,12 +6,12 @@
   <span>Вернуться на главную</span>
 </div>
 
-<div class="content-container">
+<div class="content-container" *ngIf="coworking">
   <h1>Рассмотрение заявки на добавление места</h1>
-  <h2>Дата подачи заявки: 13.10.2023</h2>
+  <h2>Дата подачи заявки: {{coworking.created_at | date: 'dd.MM.yyyy' }}</h2>
 
   <div class="application-container">
-    <div class="content" *ngIf="coworking">
+    <div class="content">
       <div class="place-title place flex">
         <p class="text-left-side">Название заведения:</p>
         <p class="text-right-side">{{ coworking.name }}</p>
@@ -78,10 +78,8 @@
       </div>
 
       <div class="buttons">
-        <button (click)="[onSubmitApproved(), showPopupAndRedirect()]" class="btn approved">
-          Одобрить
-        </button>
-        <button type=" button" class="btn deny">Отказать</button>
+        <button (click)="[onSubmitApproved(), showPopupAndRedirect()]" class="btn approved">Одобрить</button>
+        <button (click)="[onSubmitDenied(), showPopupAndRedirect()]" class="btn deny">Отказать</button>
       </div>
     </div>
   </div>
@@ -90,6 +88,7 @@
   <div class="overlay" *ngIf="showPopup"></div>
 
   <div class="popup" *ngIf="showPopup">
-    <img src="assets/admin/approved.svg" alt="Заявка одобрена!">
+    <img src="assets/admin/approved.svg" *ngIf="flag" alt="Заявка одобрена!">
+    <img src="assets/admin/denied.svg" *ngIf="!flag" alt="Заявка отклонена!">
   </div>
 </div>

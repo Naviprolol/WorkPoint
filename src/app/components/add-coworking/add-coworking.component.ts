@@ -18,7 +18,7 @@ export class AddCoworkingComponent implements OnInit {
 
   isNew: boolean = true
   ifClicked: boolean = false
-  showPopup: boolean = false
+  showGoodPopup: boolean = false
   form: FormGroup
   coworking: ICoworking
   selectedTags: string[] = [];
@@ -205,6 +205,11 @@ export class AddCoworkingComponent implements OnInit {
     obs$.subscribe(
       coworking => {
         this.coworking = coworking
+        this.showGoodPopup = true;
+        setTimeout(() => {
+          this.closePopup();
+          this.router.navigate(['/place-settings'])
+        }, 2000);
         // console.log('Изменения сохранены')
         this.form.enable()
       },
@@ -237,16 +242,15 @@ export class AddCoworkingComponent implements OnInit {
     this.flag = true;
   }
 
-  showPopupAndRedirect() {
-    this.showPopup = true;
-    setTimeout(() => {
-      this.closePopup();
-      this.router.navigate(['/place-settings'])
-    }, 2000);
-  }
+  // showPopupAndRedirect() {
+  //   setTimeout(() => {
+  //     this.closePopup();
+  //     this.router.navigate(['/place-settings'])
+  //   }, 2000);
+  // }
 
   closePopup() {
-    this.showPopup = false;
+    this.showGoodPopup = false;
   }
 
 }

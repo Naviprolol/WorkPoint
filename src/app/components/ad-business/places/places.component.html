@@ -1,0 +1,66 @@
+<div class="wrapper">
+  <app-header></app-header>
+
+  <div class="return-to-main">
+    <a routerLink="/">
+      <img src="assets/img/return-button.svg" alt="return-button" class="return-button">
+    </a>
+    <span>Вернуться к поиску</span>
+  </div>
+
+  <div class="main-top-content" *ngIf="user">
+
+    <div class="profile-navigation">
+      <ul>
+        <li><a routerLink="/favourites">Избранное</a></li>
+        <li><a routerLink="/profile">Настройки профиля</a></li>
+        <li><a routerLink="/place-settings">Настройки мест</a></li>
+        <li style="border-right: solid 2px black ;" *ngIf="user.role_id == 2 || user.role_id == 3"><a
+            routerLink="/ad-business/places">Продвижение</a></li>
+      </ul>
+    </div>
+
+    <div class="places-information">
+
+      <h1 class="title">
+        Продвижение
+      </h1>
+
+      <p class="description">
+        В данном разделе вы можете приобрести рекламу, которая повысит посещаемость и увеличит просмотры вашего
+        заведения
+      </p>
+
+      <div class="all-requests-container">
+        <button type="button" class="all-requests" routerLink="/ad-business/applications">
+          <p>Посмотреть все заявки</p>
+        </button>
+      </div>
+
+      <h1 class="title your-places">Ваши места</h1>
+
+      <ul class="cards">
+        <li class="card-li" *ngFor="let coworking of userCoworkings">
+          <div class="card">
+            <div class="first-block__card">
+              <p class="card-title">
+                <a [routerLink]="['/main', coworking.id]">{{coworking.name}}</a>
+              </p>
+              <p class="adress">
+                {{coworking.city}}
+                {{coworking.address}}
+              </p>
+            </div>
+            <div class="third-block_card">
+              <button class="watch-application" type="button" [routerLink]="['/ad-business/places', coworking.id]">
+                <span>Продвигать</span>
+              </button>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

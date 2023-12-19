@@ -15,6 +15,9 @@ import { AdminMainPageComponent } from './components/admin/admin-main-page/admin
 import { RequestsToAddComponent } from './components/admin/requests-to-add/requests-to-add.component';
 import { RequestComponent } from './components/admin/requests-to-add/request/request.component';
 import { AdminGuard } from './shared/classes/admin.guard';
+import { RequestsToAppComponent } from './components/admin/requests-to-app/requests-to-app.component';
+import { AdPlacesComponent } from './components/ad-business/places/places.component';
+import { AppRequestComponent } from './components/admin/requests-to-app/app-request/app-request.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full' },
@@ -27,11 +30,14 @@ const routes: Routes = [
   { path: 'registration', component: RegistrationPageComponent },
   { path: 'favourites', canActivate: [AuthGuard], component: FavouritesPageComponent },
   { path: 'place-settings', canActivate: [AuthGuard], component: PlaceSettingsComponent },
-  { path: 'ad-business', canActivate: [AuthGuard], component: AdBusinessComponent },
+  { path: 'ad-business/places', canActivate: [AuthGuard], component: AdPlacesComponent },
+  { path: 'ad-business/places/:id', canActivate: [AuthGuard], component: AdBusinessComponent },
   { path: 'ad-business/applications', canActivate: [AuthGuard], component: AllApplicationsComponent },
   { path: 'admin/main', canActivate: [AuthGuard, AdminGuard], component: AdminMainPageComponent },
   { path: 'admin/requests-to-add', canActivate: [AuthGuard, AdminGuard], component: RequestsToAddComponent },
-  { path: 'admin/requests-to-add/request/:id', canActivate: [AuthGuard, AdminGuard], component: RequestComponent }
+  { path: 'admin/requests-to-add/request/:id', canActivate: [AuthGuard, AdminGuard], component: RequestComponent },
+  { path: 'admin/requests-to-app', canActivate: [AuthGuard, AdminGuard], component: RequestsToAppComponent },
+  { path: 'admin/requests-to-app/request/:id', canActivate: [AuthGuard, AdminGuard], component: AppRequestComponent }
 ];
 
 @NgModule({

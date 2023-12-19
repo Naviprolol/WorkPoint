@@ -16,7 +16,7 @@
         <li><a routerLink="/profile">Настройки профиля</a></li>
         <li><a routerLink="/place-settings">Настройки мест</a></li>
         <li style="border-right: solid 2px black ;" *ngIf="user.role_id == 2 || user.role_id == 3"><a
-            routerLink="/ad-business">Продвижение</a></li>
+            routerLink="/ad-business/places">Продвижение</a></li>
       </ul>
     </div>
 
@@ -42,33 +42,48 @@
       </h2>
 
       <div>
-        <div class="input-field name" [ngClass]="{'invalid': form.get('name')?.invalid && form.get('name')?.touched}">
-          <input id="name" placeholder="Название заведения" type="text" formControlName="name">
-          <label for="name"></label>
+        <div class="status status-big">
+          <div class="position-container"
+            [ngClass]="{'invalid': form.get('name')?.invalid && form.get('name')?.touched}">
+            <div class="input-field">
+              <div class="status-label">Название заведения <span>*</span></div>
+              <input class="position-label big-input" id="name" type="text" formControlName="name">
+              <label for="name"></label>
+            </div>
+          </div>
           <span class="red-text" *ngIf="form.get('name')?.invalid && form.get('name')?.touched">
             <span *ngIf="form.get('name')?.errors?.['required']">Обязательное поле</span>
           </span>
-
         </div>
 
-        <div class="input-field city" [ngClass]="{'invalid': form.get('city')?.invalid && form.get('city')?.touched}">
-          <input id="city" placeholder="Город" type="text" formControlName="city">
-          <label for="city"></label>
+        <div class="status status-big">
+          <div class="position-container"
+            [ngClass]="{'invalid': form.get('city')?.invalid && form.get('city')?.touched}">
+            <div class="input-field">
+              <div class="status-label">Город <span>*</span></div>
+              <input class="position-label big-input" id="city" type="text" formControlName="city">
+              <label for="city"></label>
+            </div>
+          </div>
           <span class="red-text" *ngIf="form.get('city')?.invalid && form.get('city')?.touched">
             <span *ngIf="form.get('city')?.errors?.['required']">Обязательное поле</span>
           </span>
         </div>
 
-        <div class="flex">
-          <div class="input-field address"
+        <div class="status status-big">
+          <div class="position-container"
             [ngClass]="{'invalid': form.get('address')?.invalid && form.get('address')?.touched}">
-            <input id="address" placeholder="Адрес" type="text" formControlName="address">
-            <label for="address"></label>
-            <span class="red-text" *ngIf="form.get('address')?.invalid && form.get('address')?.touched">
-              <span *ngIf="form.get('address')?.errors?.['required']">Обязательное поле</span>
-            </span>
+            <div class="input-field">
+              <div class="status-label">Адрес <span>*</span></div>
+              <input class="position-label big-input" id="address" type="text" formControlName="address">
+              <label for="address"></label>
+            </div>
           </div>
+          <span class="red-text" *ngIf="form.get('address')?.invalid && form.get('address')?.touched">
+            <span *ngIf="form.get('address')?.errors?.['required']">Обязательное поле</span>
+          </span>
         </div>
+
       </div>
 
       <h3 class="subtitle2">
@@ -79,21 +94,21 @@
         <div class="card" style="margin-right: 50px;">
           <div class="radio">
             <input type="radio" class="custom-radio custom-radio_single" id="1day" name="price" value="На 1 день"
-              formControlName="price">
+              formControlName="price" (change)="onStartDateChange()">
             <label for="1day">На 1 день</label>
           </div>
           <p class="card__description">
             Позволит увеличить просмотры вашего заведения и повысит посещаемость
           </p>
           <p class="price">
-            199р
+            99р
           </p>
         </div>
 
         <div class="card">
           <div class="radio">
             <input type="radio" class="custom-radio custom-radio_single" id="7days" name="price" value="На 7 дней"
-              formControlName="price">
+              formControlName="price" (change)="onStartDateChange()">
             <label for="7days">На 7 дней</label>
           </div>
           <p class="card__description">
@@ -105,11 +120,50 @@
         </div>
       </div>
 
-      <div class="input-field email" [ngClass]="{'invalid': form.get('email')?.invalid && form.get('email')?.touched}">
-        <input id="email" placeholder="Электронная почта" type="text" formControlName="email">
-        <label for="email"></label>
+      <div class="date-container">
+        <p>Даты действия рекламы</p>
+
+        <div class="input-containers">
+          <div class="status status-small">
+            <div class="position-container">
+              <div class="input-date">
+                <div class="status-label">Дата начала <span>*</span></div>
+                <input type="date" class="datepicker-input position-label" formControlName="date_from"
+                  (input)="onStartDateChange()">
+              </div>
+              <div class="type-select__icon">
+                <img src="assets/img/date-picker.svg" alt="date">
+              </div>
+            </div>
+            <!-- <p *ngIf="">К сожалению, выбранная дата уже занята. Введите другую</p> -->
+          </div>
+
+          <div class="status status-small">
+            <div class="position-container">
+              <div class="input-date">
+                <div class="status-label">Дата окончания <span>*</span></div>
+                <div class="position-label">{{ date_to | date: 'dd.MM.yyyy' }}</div>
+                <div class="position-label" style="opacity: 0;" *ngIf="!date_to">.</div>
+              </div>
+              <div class="type-select__icon">
+                <img src="assets/img/date-picker.svg" alt="date">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="status status-big">
+        <div class="position-container"
+          [ngClass]="{'invalid': form.get('email')?.invalid && form.get('email')?.touched}">
+          <div class="input-field">
+            <div class="status-label">Электронная почта <span>*</span></div>
+            <input class="position-label big-input" id="email" type="text" formControlName="email">
+            <label for="email"></label>
+          </div>
+        </div>
         <span class="red-text" *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
-          <span *ngIf="form.get('city')?.errors?.['required']">Обязательное поле</span>
+          <span *ngIf="form.get('email')?.errors?.['required']">Обязательное поле</span>
         </span>
       </div>
 
@@ -127,7 +181,7 @@
 
         <p *ngIf="banner.files && banner.files.length > 0">{{ banner.files[0].name }}</p>
       </div>
-      <button class="button-send" type="submit" [disabled]="form.invalid || form.disabled"
+      <button class="button-send" type="submit" [disabled]="form.invalid || form.disabled || !isFileUploaded"
         (click)="[onClick(), showPopupAndRedirect()]">
         <!-- Доделать вывод плохого сообщения -->
         Отправить заявку

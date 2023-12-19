@@ -15,7 +15,7 @@
         <li><a routerLink="/favourites">Избранное</a></li>
         <li><a routerLink="/profile">Настройки профиля</a></li>
         <li><a routerLink="/place-settings">Настройки мест</a></li>
-        <li style="border-right: solid 2px black ;"><a routerLink="/ad-business">Продвижение</a></li>
+        <li style="border-right: solid 2px black ;"><a routerLink="/ad-business/places">Продвижение</a></li>
       </ul>
     </div>
 
@@ -31,22 +31,58 @@
 
       <div class="sort-applications-container">
         <h5>Все заявки</h5>
-        <div class="input-field date">
-          <select id="date" placeholder="Дата">
-            <option value="" disabled selected hidden>Дата</option>
-            <option value="По умолчанию">По умолчанию</option>
-            <option value="Сначала новые">Сначала новые</option>
-            <option value="Сначала старые">Сначала старые</option>
-          </select>
-        </div>
-        <div class="input-field status">
-          <select id="date" placeholder="Статус заявки">
-            <option value="" disabled selected hidden>Статус заявки</option>
-            <option value="Все">Все</option>
-            <option value="Сейчас идет">Сейчас идет</option>
-            <option value="Будет идти">Будет идти</option>
-            <option value="Промо-акция закончилась">Промо-акция закончилась</option>
-          </select>
+        <div class="input-containers">
+          <div class="status">
+            <div class="position-container" (click)="toggleDropdownDate()"
+              [ngClass]="{'type-select--active': dropdownOpenDate}">
+              <div>
+                <div class="status-label">Дата</div>
+                <div class="position-label"> {{ selectedDate }} </div>
+              </div>
+              <div class="type-select__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M1.29289 5.29289C1.68342 4.90237 2.31658 4.90237 2.70711 5.29289L6 8.58579L9.29289 5.29289C9.68342 4.90237 10.3166 4.90237 10.7071 5.29289C11.0976 5.68342 11.0976 6.31658 10.7071 6.70711L6.70711 10.7071C6.31658 11.0976 5.68342 11.0976 5.29289 10.7071L1.29289 6.70711C0.902369 6.31658 0.902369 5.68342 1.29289 5.29289Z"
+                    fill="#1B1F3B" fill-opacity="0.8" />
+                </svg>
+              </div>
+
+              <div class="position-dropdown dropdown-date" [ngClass]="{'show': dropdownOpenDate}">
+                <div class="position-option" *ngFor="let date of dates" (click)="toggleDate(date)"
+                  [ngClass]="{'position-option--selected': date === selectedDate}">
+                  <img src="assets/img/filter-single-default.svg" alt="filter" *ngIf="date !== selectedDate">
+                  <img src="assets/img/filter-single-checked.svg" alt="filter" *ngIf="date === selectedDate">
+                  {{ date }}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="status">
+            <div class="position-container" (click)="toggleDropdownStatus()"
+              [ngClass]="{'type-select--active': dropdownOpenStatus}">
+              <div>
+                <div class="status-label">Статус</div>
+                <div class="position-label"> {{ statusesMap[selectedStatus] }} </div>
+              </div>
+              <div class="type-select__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M1.29289 5.29289C1.68342 4.90237 2.31658 4.90237 2.70711 5.29289L6 8.58579L9.29289 5.29289C9.68342 4.90237 10.3166 4.90237 10.7071 5.29289C11.0976 5.68342 11.0976 6.31658 10.7071 6.70711L6.70711 10.7071C6.31658 11.0976 5.68342 11.0976 5.29289 10.7071L1.29289 6.70711C0.902369 6.31658 0.902369 5.68342 1.29289 5.29289Z"
+                    fill="#1B1F3B" fill-opacity="0.8" />
+                </svg>
+              </div>
+
+              <div class="position-dropdown dropdown-status" [ngClass]="{'show': dropdownOpenStatus}">
+                <div class="position-option" *ngFor="let status of statuses" (click)="toggleStatus(status)"
+                  [ngClass]="{'position-option--selected': status === selectedStatus}">
+                  <img src="assets/img/filter-single-default.svg" alt="filter" *ngIf="status !== selectedStatus">
+                  <img src="assets/img/filter-single-checked.svg" alt="filter" *ngIf="status === selectedStatus">
+                  {{ statusesMap[status] }}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -55,29 +91,54 @@
           <thead>
             <tr>
               <th class="table-head-name">Название заведения</th>
-              <th>Дата подачи</th>
+              <th>Дата начала</th>
               <th>Статус заявки</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <!-- *ngFor="let application of applicationsData" -->
+            <tr *ngFor="let application of filteredApplications">
               <td class="first-block">
-                <p class="place-name">Simple Coffee</p>
-                <p class="place-address">Проспект Ленина, 46</p>
+                <p class="place-name">{{application.name}}</p>
+                <p class="place-address">{{application.address}}</p>
               </td>
-              <td class="second-block centered-cell">дата1</td>
-              <td class="centered-cell">статус1</td>
-            </tr>
-
-            <tr>
-              <!-- *ngFor="let application of applicationsData" -->
-              <td class="first-block">
-                <p class="place-name">Simple Coffee</p>
-                <p class="place-address">Проспект Ленина, 46</p>
+              <td class="second-block centered-cell">{{application.date_from | date: 'dd.MM.yyyy' }}</td>
+              <td class="centered-cell" *ngIf="application.status === 'На проверке'">
+                в обработке<img src="assets/img/wait.svg" alt="wait">
               </td>
-              <td class="second-block centered-cell">дата1</td>
-              <td class="centered-cell">статус1</td>
+              <td class="centered-cell" *ngIf="application.status === 'Одобрено'">
+                <ng-container *ngIf="isActivePromo(application.date_from, application.date_to)">
+                  сейчас идет<img src="assets/img/accepted.svg" alt="accepted">
+                </ng-container>
+                <ng-container *ngIf="isFuturePromo(application.date_from)">
+                  <div class="information-description">
+                    <p class="highlighted-text">
+                      <span>будет идти</span><img src="assets/img/calendar.svg" alt="calendar">
+                    </p>
+                    <div class="tooltip">
+                      <p class="tooltip-text">
+                        Промо-акция будет идти с {{application.date_from | date: 'dd.MM.yyyy'}} по {{application.date_to
+                        | date: 'dd.MM.yyyy'}}.
+                      </p>
+                    </div>
+                  </div>
+                </ng-container>
+                <ng-container *ngIf="isPastPromo(application.date_to)">
+                  <div class="information-description">
+                    <p class="highlighted-text">
+                      <span>промо-акция закончилась</span><img src="assets/img/ended.svg" alt="ended">
+                    </p>
+                    <div class="tooltip">
+                      <p class="tooltip-text">
+                        Промо-акция длилась c {{application.date_from | date: 'dd.MM.yyyy'}} по {{application.date_to
+                        | date: 'dd.MM.yyyy'}}.
+                      </p>
+                    </div>
+                  </div>
+                </ng-container>
+              </td>
+              <td class="centered-cell" *ngIf="application.status === 'Отказано'">
+                отказано<img src="assets/img/ended.svg" alt="ended">
+              </td>
             </tr>
           </tbody>
         </table>

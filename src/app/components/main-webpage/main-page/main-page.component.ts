@@ -1,8 +1,10 @@
 import { Component, ElementRef, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { ICoworking } from 'src/app/interfaces/interfaces';
+import { IAd, ICoworking } from 'src/app/interfaces/interfaces';
+import { AdService } from 'src/app/servises/ad.service';
 import { CoworkingsService } from 'src/app/servises/coworkings.service';
+import { isActivePromo } from 'src/app/shared/functions';
 
 
 @Component({
@@ -31,19 +33,17 @@ export class MainPageComponent {
 
   index: number = 0;
 
-  readonly items: string[] = [
-    'assets/img/banner2.svg',
-    'https://rg.ru/uploads/images/187/07/30/11.jpg',
-    'https://cdn.forbes.ru/files/c/1082x683/photo_galleries/1920-02_tcm-3173-1834873.jpg__1582289253__55999.webp',
-    'https://kolesa-uploads.ru/-/83dbe048-3f57-4dcd-844f-c44a6c844492/25773-1394788268-52430x306714.jpg',
+  ads: IAd[] = [];
+
+  readonly items: { photo: string, id_place: number }[] = [
+    { photo: 'assets/img/banner.svg', id_place: -1 },
   ];
 
   constructor(
     private coworkingsService: CoworkingsService,
     private elementRef: ElementRef,
-    private router: Router) {
-
-  }
+    private adService: AdService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.coworkingsService.getAll().subscribe(coworkings => {
@@ -56,6 +56,25 @@ export class MainPageComponent {
       this.totelCoworkings = coworkings.length
       this.updateFilteredCoworkings();
     });
+    this.adService.getAllAds().subscribe((ads) => {
+      this.ads = ads
+      console.log(this.ads)
+      this.ads.forEach(ad => {
+        if (ad.status === 'Одобрено' && isActivePromo(ad.date_from, ad.date_to)) {
+          this.items.push({
+            photo: ad.photo,
+            id_place: ad.id_place
+          });
+        }
+      });
+    })
+  }
+
+  onBannerClick(id_place: number) {
+    if (id_place === -1) {
+      return;
+    }
+    this.router.navigate(['/main', id_place]);
   }
 
   scrollToElement(element: string): void {

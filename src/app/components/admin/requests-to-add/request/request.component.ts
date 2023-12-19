@@ -16,6 +16,7 @@ export class RequestComponent implements OnInit {
   currentPhoto: string
   currentIndex: number = 0;
   showPopup: boolean = false
+  flag: boolean;
 
   constructor(
     private route: ActivatedRoute,
@@ -65,23 +66,17 @@ export class RequestComponent implements OnInit {
   }
 
   onSubmitApproved() {
+    this.flag = true;
     this.adminService.changePlaceStatus(this.coworking.id, 'Одобрено').subscribe(() => {
       console.log('Место одобрено!')
     })
-    // this.userService.editRole(2).subscribe(
-    //   user => {
-    //     setTimeout(() => {
-    //       this.user.role_id = user.role_id
-    //     }, 2000)
-    //     this.successText = 'Вы успешно перешли на бизнес-аккаунт!'
-    //     // console.log('Изменения сохранены')
-    //   },
-    //   error => {
-    //     console.log('ERRRRROR!')
-    //     console.log(this.user)
-    //     this.form.enable()
-    //   }
-    // )
+  }
+
+  onSubmitDenied() {
+    this.flag = false;
+    this.adminService.changePlaceStatus(this.coworking.id, 'Отказано').subscribe(() => {
+      console.log('Отказано')
+    })
   }
 
 }

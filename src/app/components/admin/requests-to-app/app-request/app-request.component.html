@@ -1,0 +1,51 @@
+<app-header></app-header>
+<div class="return-to-main">
+  <a routerLink="/admin/main">
+    <img src="assets/img/return-button.svg" alt="return-button" class="return-button">
+  </a>
+  <span>Вернуться на главную</span>
+</div>
+
+<div class="content-container" *ngIf="ad">
+  <h1>Рассмотрение заявки на продвижение места</h1>
+  <h2>Дата получения заявки: {{ad.date_from| date: 'dd.MM.yyyy' }}</h2>
+
+  <div class="application-container">
+    <div class="content">
+      <div class="place-title place flex">
+        <p class="text-left-side">Название заведения:</p>
+        <p class="text-right-side">{{ ad.name }}</p>
+      </div>
+      <div class="place-city place flex">
+        <p class="text-left-side">Город:</p>
+        <p class="text-right-side">{{ ad.city }}</p>
+      </div>
+      <div class="place-address place flex">
+        <p class="text-left-side">Адрес:</p>
+        <p class="text-right-side">{{ ad.address }}</p>
+      </div>
+      <div class="place-tariff place flex">
+        <p class="text-left-side">Количество дней:</p>
+        <p class="text-right-side">{{ ad.tariff }}</p>
+      </div>
+      <div class="place-photo place flex">
+        <p class="text-left-side">Рекламный банер:</p>
+        <div class="photo-container">
+          <img src="{{ad.photo}}" class="text-right-side photo" alt="img">
+        </div>
+      </div>
+      <div class="buttons">
+        <button (click)="[onSubmitApproved(), showPopupAndRedirect()]" class="btn approved">Одобрить</button>
+        <button (click)="[onSubmitDenied(), showPopupAndRedirect()]" class="btn deny">Отказать</button>
+      </div>
+    </div>
+  </div>
+  <button type="button" class="return" routerLink="/admin/requests-to-app">Назад</button>
+
+  <div class="overlay" *ngIf="showPopup"></div>
+
+  <div class="popup" *ngIf="showPopup">
+    <img src="assets/admin/approved.svg" *ngIf="flag" alt="Заявка одобрена!">
+    <img src="assets/admin/denied.svg" *ngIf="!flag" alt="Заявка отклонена!">
+  </div>
+</div>

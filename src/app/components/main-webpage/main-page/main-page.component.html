@@ -8,7 +8,8 @@
   <div class="carousel" *ngIf="items.length !== 0">
     <tui-carousel [(index)]="index" [duration]="2000">
       <ng-container *ngFor="let item of items; let i = index">
-        <img *tuiItem alt="" draggable="false" src="{{ item }}" class="item" [class.item_active]="i === index + 1" />
+        <img *tuiItem alt="" draggable="false" src="{{ item.photo }}" class="item" [class.item_active]="i === index + 1"
+          (click)="onBannerClick(item.id_place)">
       </ng-container>
     </tui-carousel>
     <tui-pagination size="s" class="carousel-pagination" [length]="items.length" [(index)]="index"></tui-pagination>
