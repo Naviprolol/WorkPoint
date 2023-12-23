@@ -7,7 +7,7 @@
 </div>
 
 <div class="content-container">
-  <h1>Все заявки на добавление места</h1>
+  <h1>Все заявки на продвижение места</h1>
 
 
   <div class="input-containers">
@@ -26,7 +26,7 @@
           </svg>
         </div>
 
-        <div class="position-dropdown" [ngClass]="{'show': dropdownOpenDate}">
+        <div class="position-dropdown small" [ngClass]="{'show': dropdownOpenDate}">
           <div class="position-option" *ngFor="let date of dates" (click)="toggleDate(date)"
             [ngClass]="{'position-option--selected': date === selectedDate}">
             <img src="assets/img/filter-single-default.svg" alt="filter" *ngIf="date !== selectedDate">
@@ -124,8 +124,13 @@
             <h4>{{ ad.date_from | date: 'dd.MM.yyyy' }}</h4>
           </div>
           <div class="information-description">
-            <p class="highlighted-text" [routerLink]="['/admin/requests-to-app/request', ad.id]">
+            <p class="highlighted-text" [routerLink]="['/admin/requests-to-app/request', ad.id]"
+              *ngIf="isActivePromo(ad.date_from, ad.date_to)">
               Одобрена
+            </p>
+            <p class="highlighted-text" [routerLink]="['/admin/requests-to-app/request', ad.id]"
+              *ngIf="!isActivePromo(ad.date_from, ad.date_to)">
+              Срок истёк
             </p>
             <img src="assets/img/approved.svg" alt="approved">
           </div>

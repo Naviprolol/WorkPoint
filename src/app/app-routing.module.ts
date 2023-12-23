@@ -18,6 +18,7 @@ import { AdminGuard } from './shared/classes/admin.guard';
 import { RequestsToAppComponent } from './components/admin/requests-to-app/requests-to-app.component';
 import { AdPlacesComponent } from './components/ad-business/places/places.component';
 import { AppRequestComponent } from './components/admin/requests-to-app/app-request/app-request.component';
+import { AdminBannersComponent } from './components/admin/admin-banners/admin-banners.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full' },
@@ -37,7 +38,8 @@ const routes: Routes = [
   { path: 'admin/requests-to-add', canActivate: [AuthGuard, AdminGuard], component: RequestsToAddComponent },
   { path: 'admin/requests-to-add/request/:id', canActivate: [AuthGuard, AdminGuard], component: RequestComponent },
   { path: 'admin/requests-to-app', canActivate: [AuthGuard, AdminGuard], component: RequestsToAppComponent },
-  { path: 'admin/requests-to-app/request/:id', canActivate: [AuthGuard, AdminGuard], component: AppRequestComponent }
+  { path: 'admin/requests-to-app/request/:id', canActivate: [AuthGuard, AdminGuard], component: AppRequestComponent },
+  { path: 'admin/banners', canActivate: [AuthGuard, AdminGuard], component: AdminBannersComponent }
 ];
 
 @NgModule({

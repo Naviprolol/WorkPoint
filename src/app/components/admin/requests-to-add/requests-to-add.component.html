@@ -52,7 +52,7 @@
           </svg>
         </div>
 
-        <div class="position-dropdown" [ngClass]="{'show': dropdownOpenStatus}">
+        <div class="position-dropdown big" [ngClass]="{'show': dropdownOpenStatus}">
           <div class="position-option" *ngFor="let role of roles" (click)="toggleRole(role)"
             [ngClass]="{'position-option--selected': role === selectedRole}">
             <img src="assets/img/filter-single-default.svg" alt="filter" *ngIf="role !== selectedRole">

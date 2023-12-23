@@ -1,0 +1,52 @@
+<app-header></app-header>
+<div class="return-to-main">
+  <a routerLink="/admin/main">
+    <img src="assets/img/return-button.svg" alt="return-button" class="return-button">
+  </a>
+  <span>Вернуться на главную</span>
+</div>
+
+<div class="content-container">
+  <h1>Рассмотрение заявки на добавление места</h1>
+
+  <div class="header-container">
+    <h2>Активные банеры</h2>
+    <div class="status">
+      <div class="position-container" (click)="toggleDropdownDate()"
+        [ngClass]="{'type-select--active': dropdownOpenDate}">
+        <div>
+          <div class="status-label">Дата</div>
+          <div class="position-label"> {{ selectedDate }} </div>
+        </div>
+        <div class="type-select__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M1.29289 5.29289C1.68342 4.90237 2.31658 4.90237 2.70711 5.29289L6 8.58579L9.29289 5.29289C9.68342 4.90237 10.3166 4.90237 10.7071 5.29289C11.0976 5.68342 11.0976 6.31658 10.7071 6.70711L6.70711 10.7071C6.31658 11.0976 5.68342 11.0976 5.29289 10.7071L1.29289 6.70711C0.902369 6.31658 0.902369 5.68342 1.29289 5.29289Z"
+              fill="#1B1F3B" fill-opacity="0.8" />
+          </svg>
+        </div>
+
+        <div class="position-dropdown" [ngClass]="{'show': dropdownOpenDate}">
+          <div class="position-option" *ngFor="let date of dates" (click)="toggleDate(date)"
+            [ngClass]="{'position-option--selected': date === selectedDate}">
+            <img src="assets/img/filter-single-default.svg" alt="filter" *ngIf="date !== selectedDate">
+            <img src="assets/img/filter-single-checked.svg" alt="filter" *ngIf="date === selectedDate">
+            {{ date }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ul class="banners">
+    <li class="banner" *ngFor="let ad of filteredAds">
+      <img src="{{ad.photo}}" alt="banner" routerLink="/main/{{ad.id_place}}">
+      <h3 class="ended" *ngIf="isPastPromo(ad.date_to)">СРОК ИСТЕК!</h3>
+      <h3 class="dates" *ngIf="!isPastPromo(ad.date_to)">{{ad.date_from | date: 'dd.MM.yyyy'}}-{{ad.date_to
+        | date: 'dd.MM.yyyy'}}</h3>
+      <button type="button" class="delete-btn" [ngClass]="{'ongoing': !isPastPromo(ad.date_to)}">Удалить</button>
+    </li>
+  </ul>
+
+
+</div>

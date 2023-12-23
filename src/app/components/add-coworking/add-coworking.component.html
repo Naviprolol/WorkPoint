@@ -252,13 +252,17 @@
       {{isNew ? 'Отмена' : 'Удалить'}}
     </button>
 
-    <div class="overlay" *ngIf="showGoodPopup"></div>
+    <div class="overlay" *ngIf="showGoodPopup || showBadPopup"></div>
 
     <div class="popup" *ngIf="showGoodPopup">
       <img src="assets/img/add-coworking.svg" alt="add-coworking" *ngIf="isNew">
       <img src="assets/img/update-coworking.svg" alt="update-coworking" *ngIf="!isNew">
     </div>
 
+    <div class="popup" *ngIf="showBadPopup">
+      <img src="assets/img/add-coworking-negative.svg" alt="add-coworking-negative" *ngIf="isNew">
+      <img src="assets/img/update-coworking-negative.svg" alt="update-coworking-negative" *ngIf="!isNew">
+    </div>
 
   </div>
 

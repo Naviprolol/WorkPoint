@@ -125,17 +125,17 @@
 
         <div class="input-containers">
           <div class="status status-small">
-            <div class="position-container">
+            <div class="position-container" [ngClass]="{'red': !flag}">
               <div class="input-date">
                 <div class="status-label">Дата начала <span>*</span></div>
                 <input type="date" class="datepicker-input position-label" formControlName="date_from"
-                  (input)="onStartDateChange()">
+                  (input)="[onStartDateChange(), checkCountAds()]">
               </div>
               <div class="type-select__icon">
                 <img src="assets/img/date-picker.svg" alt="date">
               </div>
             </div>
-            <!-- <p *ngIf="">К сожалению, выбранная дата уже занята. Введите другую</p> -->
+            <p *ngIf="!flag">К сожалению, выбранная дата уже занята. Введите другую</p>
           </div>
 
           <div class="status status-small">
@@ -181,7 +181,7 @@
 
         <p *ngIf="banner.files && banner.files.length > 0">{{ banner.files[0].name }}</p>
       </div>
-      <button class="button-send" type="submit" [disabled]="form.invalid || form.disabled || !isFileUploaded"
+      <button class="button-send" type="submit" [disabled]="form.invalid || form.disabled || !isFileUploaded || !flag"
         (click)="[onClick(), showPopupAndRedirect()]">
         <!-- Доделать вывод плохого сообщения -->
         Отправить заявку

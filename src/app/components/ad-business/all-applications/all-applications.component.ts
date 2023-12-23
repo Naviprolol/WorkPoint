@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import * as moment from 'moment';
+import { IAd, ICoworking } from 'src/app/interfaces/interfaces';
 import { AdService } from 'src/app/servises/ad.service';
-import { isActivePromo } from 'src/app/shared/functions';
+import { CoworkingsService } from 'src/app/servises/coworkings.service';
+import { checkTime, isActivePromo } from 'src/app/shared/functions';
 
 @Component({
   selector: 'app-all-applications',
@@ -9,8 +11,9 @@ import { isActivePromo } from 'src/app/shared/functions';
   styleUrls: ['./all-applications.component.css']
 })
 export class AllApplicationsComponent implements OnInit {
-  applications: any = []
-  filteredApplications: any = []
+  applications: IAd[] = []
+  filteredApplications: IAd[] = []
+  coworkings: ICoworking[] = []
 
   selectedDate: string = 'Сначала новые';
   dates: string[] = ['Сначала новые', 'Сначала старые'];
@@ -29,16 +32,34 @@ export class AllApplicationsComponent implements OnInit {
 
 
   constructor(
-    private adService: AdService
+    private adService: AdService,
+    private coworkingsService: CoworkingsService
   ) { }
 
   ngOnInit(): void {
     this.adService.getAllAds().subscribe((ads) => {
       this.applications = ads;
-      this.filteredApplications = this.applications
-      this.sortNewToOld();
-      console.log(this.applications);
+      this.coworkingsService.getAll().subscribe((coworkings) => {
+        this.coworkings = coworkings;
+        this.filterAdsByPlaceId();
+        this.filteredApplications = this.applications
+        this.sortNewToOld()
+        // this.filteredApplications.forEach(app => {
+        //   if (app.date_from === '2023-12-22') {
+        //     checkTime(app)
+        //   }
+        // });
+      });
+      console.log(ads)
     })
+  }
+
+  filterAdsByPlaceId(): void {
+    if (this.applications && this.coworkings) {
+      this.applications = this.applications.filter(ad => {
+        return this.coworkings.some(coworking => coworking.id === ad.id_place);
+      });
+    }
   }
 
   toggleDate(date: string): void {
@@ -76,9 +97,33 @@ export class AllApplicationsComponent implements OnInit {
   }
 
   filterApplications(): void {
-    this.filteredApplications = this.applications.filter((application: any) => (
-      this.selectedStatus === 'Все' || application.status === this.selectedStatus
-    ));
+    this.filteredApplications = this.applications.filter((application: any) => {
+      if (this.selectedStatus === 'Все') {
+        return true; // Показываем все места для выбранного статуса "Все"
+      }
+
+      // Фильтрация по статусам
+      if (this.selectedStatus === 'На проверке') {
+        return application.status === 'На проверке';
+      } else if (this.selectedStatus === 'Сейчас идет') {
+        return (
+          application.status === 'Одобрено' &&
+          this.isActivePromo(application.date_from, application.date_to)
+        );
+      } else if (this.selectedStatus === 'Будет идти') {
+        return (
+          application.status === 'Одобрено' &&
+          new Date() < new Date(application.date_from)
+        );
+      } else if (this.selectedStatus === 'Промо-акция закончилась') {
+        return (
+          application.status === 'Одобрено' &&
+          new Date() > new Date(application.date_to)
+        );
+      }
+
+      return false; // Если не соответствует ни одному условию, не показываем
+    });
   }
 
   isActivePromo(dateFrom: string, dateTo: string): boolean {

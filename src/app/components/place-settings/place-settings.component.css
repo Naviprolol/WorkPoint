@@ -105,7 +105,7 @@
   }
 
   .denied {
-    background: #E0E0D6;
+    background: rgba(221, 223, 224, 0.70);
   }
 
   .information-description {
@@ -154,12 +154,12 @@
     text-decoration: underline 1px;
     cursor: pointer;
     font-size: 22px;
-    margin-right: 39px;
+    margin-right: 13px;
   }
 
   .highlighted-text {
     font-size: 22px;
-    margin-right: 22px;
+    margin-right: 8px;
   }
 
   .card-li {
@@ -167,7 +167,7 @@
   }
 
   .card-title {
-    width: 440px;
+    width: 525px;
     padding-top: 16px;
     font-weight: 700;
     font-size: 24px;
@@ -206,11 +206,12 @@
   .progress-information__btn {
     cursor: pointer;
     display: flex;
+    align-items: center;
+    justify-content: center;
     width: 239.62px;
     height: 54px;
     background: #E0E0D6;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
-    padding: 13px 63px;
     border-radius: 10px;
     font-weight: 600;
     font-size: 15px;
@@ -324,12 +325,12 @@
 
   .highlighted-text-denied {
     font-size: calc(0.75*22px);
-    margin-right: calc(0.75*39px);
+    margin-right: calc(0.75*13px);
   }
 
   .highlighted-text {
     font-size: calc(0.75*22px);
-    margin-right: calc(0.75*22px);
+    margin-right: calc(0.75*8px);
   }
 
   .card-li {
@@ -337,7 +338,7 @@
   }
 
   .card-title {
-    width: calc(0.75*440px);
+    width: calc(0.75*525px);
     padding-top: calc(0.83*16px);
     font-size: calc(0.75*24px);
     line-height: calc(0.83*33px);
@@ -471,12 +472,12 @@
 
   .highlighted-text-denied {
     font-size: calc(0.71*22px);
-    margin-right: calc(0.71*39px);
+    margin-right: calc(0.71*13px);
   }
 
   .highlighted-text {
     font-size: calc(0.71*22px);
-    margin-right: calc(0.71*22px);
+    margin-right: calc(0.71*8px);
   }
 
   .card-li {
@@ -484,7 +485,7 @@
   }
 
   .card-title {
-    width: calc(0.71*440px);
+    width: calc(0.71*525px);
     padding-top: calc(0.71*16px);
     font-size: calc(0.71*24px);
     line-height: calc(0.71*33px);

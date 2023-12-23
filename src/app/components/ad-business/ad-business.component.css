@@ -388,6 +388,19 @@
   .status-label span {
     color: red;
   }
+
+  .red {
+    background: rgba(255, 0, 0, 0.40) !important;
+  }
+
+  .button-send:hover {
+    background-color: #EDFAED;
+    outline: 1px solid #6A6D79;
+  }
+
+  .button-send:active {
+    background: #8EBD9D !important;
+  }
 }
 
 @media screen and (max-width: 1450px) {

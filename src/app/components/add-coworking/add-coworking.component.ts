@@ -19,6 +19,7 @@ export class AddCoworkingComponent implements OnInit {
   isNew: boolean = true
   ifClicked: boolean = false
   showGoodPopup: boolean = false
+  showBadPopup: boolean = false
   form: FormGroup
   coworking: ICoworking
   selectedTags: string[] = [];
@@ -181,23 +182,33 @@ export class AddCoworkingComponent implements OnInit {
         this.form.value.email, this.form.value.site)
 
       this.coworkingsService.updatePhoto(this.coworking.id, this.image1, this.image2, this.image3).subscribe(
-        coworking => {
-          this.coworking = coworking
+        () => {
           console.log('Фото обновлено')
         },
         error => {
           console.log('Что то пошло не так с обновлением фото')
           console.log(error)
+          this.showBadPopup = true;
+          setTimeout(() => {
+            this.closePopup();
+            this.router.navigate(['/place-settings'])
+          }, 2000);
+          this.form.enable()
         }
       )
       this.coworkingsService.updateTags(this.coworking.id, this.form.value.tags).subscribe(
-        coworking => {
-          this.coworking = coworking
+        () => {
           console.log('Теги обновлены')
         },
         error => {
           console.log('Что то пошло не так с обновлением тегов')
           console.log(error)
+          this.showBadPopup = true;
+          setTimeout(() => {
+            this.closePopup();
+            this.router.navigate(['/place-settings'])
+          }, 2000);
+          this.form.enable()
         }
       )
     }
@@ -217,6 +228,11 @@ export class AddCoworkingComponent implements OnInit {
         console.log('ERRRRROR!')
         console.log(error)
         console.log(this.coworking)
+        this.showBadPopup = true;
+        setTimeout(() => {
+          this.closePopup();
+          this.router.navigate(['/place-settings'])
+        }, 2000);
         this.form.enable()
       }
     )
@@ -251,6 +267,7 @@ export class AddCoworkingComponent implements OnInit {
 
   closePopup() {
     this.showGoodPopup = false;
+    this.showBadPopup = false;
   }
 
 }

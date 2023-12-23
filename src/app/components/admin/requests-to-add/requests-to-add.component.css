@@ -237,6 +237,10 @@
     /* padding: 0.926vh 0; */
     width: 100%;
     transition: opacity 0.2s ease-out, height 0.2s ease-out;
+    height: 110px;
+  }
+
+  .big {
     height: 165px;
   }
 
@@ -259,15 +263,6 @@
 
   .position-option:hover {
     opacity: 0.5;
-  }
-
-  .position-option:active {
-    /* background-color: greenyellow; */
-  }
-
-  .position-option:active,
-  .position-option--selected {
-    /* background-color: greenyellow; */
   }
 
 }

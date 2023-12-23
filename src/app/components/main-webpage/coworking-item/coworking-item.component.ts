@@ -58,6 +58,7 @@ export class CoworkingItemComponent implements OnInit {
     this.coworkingsService.getCoworkingById(coworkingIdFromRouteINT).subscribe(coworking => {
       this.coworking = coworking
       this.coworking.photo = this.coworking.photo.split('#')
+      this.coworking.photo.pop();
       console.log(this.coworking)
       this.tags = this.coworking.tags
     })

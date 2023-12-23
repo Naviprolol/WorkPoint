@@ -1,11 +1,12 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ICoworking, User } from 'src/app/interfaces/interfaces';
+import { IAd, ICoworking, User } from 'src/app/interfaces/interfaces';
 import { UserService } from 'src/app/servises/user.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { CoworkingsService } from 'src/app/servises/coworkings.service';
 import { switchMap } from 'rxjs/operators';
 import { AdService } from 'src/app/servises/ad.service';
+import { isActivePromo } from 'src/app/shared/functions';
 @Component({
   selector: 'app-ad-business',
   templateUrl: './ad-business.component.html',
@@ -14,6 +15,7 @@ import { AdService } from 'src/app/servises/ad.service';
 export class AdBusinessComponent implements OnInit {
   form: FormGroup;
   coworking: ICoworking;
+  coworkings: ICoworking[];
   report: any;
   accessText: string = 'Все поля должны быть заполнены';
   user: User;
@@ -23,6 +25,7 @@ export class AdBusinessComponent implements OnInit {
   banner: File;
   @ViewChild('banner') inputRef: ElementRef;
   date_to: string;
+  flag: boolean = true;
 
   constructor(
     private userService: UserService,
@@ -33,6 +36,10 @@ export class AdBusinessComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+
+    this.coworkingService.getAll().subscribe((coworkings) => {
+      this.coworkings = coworkings;
+    })
 
     this.form = new FormGroup({
       name: new FormControl(null, [Validators.required]),
@@ -140,6 +147,42 @@ export class AdBusinessComponent implements OnInit {
     const [datePart,] = dateString.split('T');
     const [year, month, day] = datePart.split('-');
     return `${year}-${month}-${day}`;
+  }
+
+  checkCountAds() {
+    const selectedStartDate = new Date(this.form.value.date_from);
+    const selectedEndDate = new Date(this.date_to);
+    console.log('Выбранное время начала: ', selectedStartDate)
+    console.log('Выбранное время окончания: ', selectedEndDate)
+    this.adService.getAllAds().subscribe(ads => {
+      ads = ads.filter(ad => ad.status === 'Одобрено');
+      ads = ads.filter(ad => {
+        const adStartDate = new Date(ad.date_from);
+        const adEndDate = new Date(ad.date_to);
+        return adStartDate <= selectedEndDate && adEndDate > selectedStartDate;
+      });
+      ads = this.filterAdsByPlaceId(ads);
+      console.log(ads)
+      if (ads.length >= 4) {
+        this.flag = false;
+      }
+      else {
+        this.flag = true;
+      }
+    })
+  }
+
+  filterAdsByPlaceId(ads: IAd[]): IAd[] {
+    if (ads && this.coworkings) {
+      return ads.filter(ad => {
+        return this.coworkings.some(coworking => coworking.id === ad.id_place);
+      });
+    }
+    return ads;
+  }
+
+  isActivePromo(dateFrom: string, dateTo: string): boolean {
+    return isActivePromo(dateFrom, dateTo);
   }
 
 }
