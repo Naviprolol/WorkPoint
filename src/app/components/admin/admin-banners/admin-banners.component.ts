@@ -1,45 +1,41 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import * as moment from 'moment';
 import { IAd, ICoworking } from 'src/app/interfaces/interfaces';
 import { AdService } from 'src/app/servises/ad.service';
+import { AdminService } from 'src/app/servises/admin.service';
 import { CoworkingsService } from 'src/app/servises/coworkings.service';
-import { isActivePromo } from 'src/app/shared/functions';
 
 @Component({
-  selector: 'app-requests-to-app',
-  templateUrl: './requests-to-app.component.html',
-  styleUrls: ['./requests-to-app.component.css']
+  selector: 'app-admin-banners',
+  templateUrl: './admin-banners.component.html',
+  styleUrls: ['./admin-banners.component.css']
 })
-export class RequestsToAppComponent {
-  dropdownOpenStatus: boolean = false;
+export class AdminBannersComponent implements OnInit {
   dropdownOpenDate: boolean = false;
-  selectedRole: string = 'Все';
-  ads: IAd[] = [];
-  filteredAds: IAd[] = [];
-  roles: string[] = ['Все', 'Одобрено', 'Отказано'];
-  rolesMap: { [key: string]: string } = {
-    'Все': 'Все',
-    'Одобрено': 'Одобренные',
-    'Отказано': 'Отклоненные',
-  };
-  coworkings: ICoworking[] = [];
+  ads: IAd[] = []
+  filteredAds: IAd[] = []
+  coworkings: ICoworking[] = []
 
   selectedDate: string = 'Сначала новые'
   dates: string[] = ['Сначала новые', 'Сначала старые']
 
   constructor(
+    private adminService: AdminService,
     private adService: AdService,
     private coworkingsService: CoworkingsService
   ) { }
 
   ngOnInit(): void {
     this.adService.getAllAds().subscribe((ads) => {
+      console.log(ads)
+      ads = ads.filter(ad => ad.status === 'Одобрено');
       this.ads = ads;
       this.coworkingsService.getAll().subscribe((coworkings) => {
         this.coworkings = coworkings;
         this.filterAdsByPlaceId();
         this.filteredAds = this.ads
         this.sortNewToOld()
+        this.filteredAds.sort()
       });
       console.log(ads)
     })
@@ -53,17 +49,14 @@ export class RequestsToAppComponent {
     }
   }
 
-  toggleDropdownStatus(): void {
-    this.dropdownOpenStatus = !this.dropdownOpenStatus;
+  isPastPromo(dateTo: string): boolean {
+    const currentDate = new Date();
+    const endDate = new Date(dateTo);
+    return currentDate > endDate;
   }
 
   toggleDropdownDate(): void {
     this.dropdownOpenDate = !this.dropdownOpenDate;
-  }
-
-  toggleRole(role: string): void {
-    this.selectedRole = role;
-    this.filterCoworkings();
   }
 
   toggleDate(date: string): void {
@@ -75,25 +68,24 @@ export class RequestsToAppComponent {
     }
   }
 
-  filterByName(): void {
-    this.filterCoworkings();
-  }
-
-  filterCoworkings(): void {
-    this.filteredAds = this.ads.filter(ad => (
-      this.selectedRole === 'Все' || ad.status === this.selectedRole
-    ));
-  }
-
   sortOldToNew(): void {
-    this.filteredAds.sort((adFirst: IAd, adSecond: IAd) => moment(adFirst.id).diff(moment(adSecond.id)));
+    const activeAds = this.filteredAds.filter(ad => !this.isPastPromo(ad.date_to));
+    const pastAds = this.filteredAds.filter(ad => this.isPastPromo(ad.date_to));
+
+    activeAds.sort((a, b) => moment(a.date_to).diff(moment(b.date_to)));
+    pastAds.sort((a, b) => moment(a.date_to).diff(moment(b.date_to)));
+
+    this.filteredAds = [...activeAds, ...pastAds];
   }
 
   sortNewToOld(): void {
-    this.filteredAds.sort((adFirst: IAd, adSecond: IAd) => moment(adSecond.id).diff(moment(adFirst.id)));
+    const activeAds = this.filteredAds.filter(ad => !this.isPastPromo(ad.date_to));
+    const pastAds = this.filteredAds.filter(ad => this.isPastPromo(ad.date_to));
+
+    activeAds.sort((a, b) => moment(b.date_to).diff(moment(a.date_to)));
+    pastAds.sort((a, b) => moment(b.date_to).diff(moment(a.date_to)));
+
+    this.filteredAds = [...activeAds, ...pastAds];
   }
 
-  isActivePromo(dateFrom: string, dateTo: string): boolean {
-    return isActivePromo(dateFrom, dateTo);
-  }
 }

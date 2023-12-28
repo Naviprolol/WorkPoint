@@ -1,0 +1,128 @@
+@media screen and (max-width: 5000px) {
+  .return-to-main {
+    display: flex;
+    margin-left: 8.75vw;
+    margin-bottom: 134px;
+    margin-top: 18px;
+    align-items: center;
+  }
+
+  .return-button {
+    margin-right: 18px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 16px;
+    height: 16px;
+  }
+
+  .return-to-main span {
+    font-size: 15px;
+    line-height: 20px;
+    color: rgba(27, 31, 59, 0.65);
+  }
+
+  .content-container {
+    margin-left: 20.83vw;
+  }
+
+  .search {
+    display: flex;
+    gap: 38px;
+    margin-bottom: 138px;
+  }
+
+  .search-container {
+    display: flex;
+    gap: 17px;
+    width: 44.8958vw;
+    height: 54px;
+    background: #FBFBF5;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+    vertical-align: middle;
+    align-items: center;
+  }
+
+  .search-container-input {
+    width: 44.89583vw;
+    font-size: 15px;
+    background: #FBFBF5;
+    font-weight: 300;
+  }
+
+  .search-container img {
+    margin-left: 1.4583vw;
+  }
+
+  .btn-find-employee:hover {
+    background-color: #EDFAED;
+    outline: 1px solid #6A6D79;
+  }
+
+  .btn-find-employee:active {
+    background: #8EBD9D !important;
+  }
+
+  .btn-find-employee {
+    width: 191px;
+    background-color: #E0E0D6 !important;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+    font-weight: 600;
+    color: rgba(27, 31, 59, 0.6);
+    font-size: 15px;
+  }
+
+  .users {
+    margin-left: 63px;
+  }
+
+  .users .user {
+    display: flex;
+    width: 956.617px;
+    margin-bottom: 68px;
+  }
+
+  .users .user .avatar {
+    width: 70px;
+    height: 70px;
+    border: 2px #5E9C76 solid;
+    box-sizing: border-box;
+    border-radius: 50%;
+    margin-right: 27px;
+  }
+
+  .users .user .user-information .user-name {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 7px;
+  }
+
+  .users .user .user-information .user-role {
+    font-size: 15px;
+    line-height: 28px;
+  }
+
+  .users .user .change-status-btn {
+    margin-left: auto;
+    width: 239.617px;
+    height: 54px;
+    border-radius: 10px;
+    background: rgba(190, 218, 195, 0.70);
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.16);
+
+    color: var(--text-03, rgba(27, 31, 59, 0.40));
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 28px;
+  }
+
+  .users .user .change-status-btn:hover {
+    background-color: #EDFAED;
+    outline: 1px solid #6A6D79;
+  }
+
+  .users .user .change-status-btn:active {
+    background: #8EBD9D !important;
+  }
+}

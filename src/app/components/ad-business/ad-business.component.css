@@ -340,10 +340,11 @@
   }
 
   .status-small p {
+    width: 212px;
     color: #F00;
     font-size: 13px;
-    font-weight: 400;
     line-height: 28px;
+    position: absolute;
   }
 
   .status-big {
@@ -387,6 +388,19 @@
 
   .status-label span {
     color: red;
+  }
+
+  .red {
+    background: rgba(255, 0, 0, 0.40) !important;
+  }
+
+  .button-send:hover {
+    background-color: #EDFAED;
+    outline: 1px solid #6A6D79;
+  }
+
+  .button-send:active {
+    background: #8EBD9D !important;
   }
 }
 
@@ -567,6 +581,24 @@
   .input-containers {
     gap: calc(0.75*126px);
     margin-bottom: calc(0.83*75px);
+  }
+
+  .status {
+    margin-bottom: calc(0.83*30px);
+  }
+
+  .status-small {
+    width: calc(0.75*212px);
+  }
+
+  .status-small p {
+    width: calc(0.75*212px);
+    font-size: calc(0.75*13px);
+    line-height: calc(0.83*28px);
+  }
+
+  .status-big {
+    width: calc(0.75*480px);
   }
 
   .status .position-container {
@@ -767,6 +799,24 @@
   .input-containers {
     gap: calc(0.71*126px);
     margin-bottom: calc(0.71*75px);
+  }
+
+  .status {
+    margin-bottom: calc(0.71*30px);
+  }
+
+  .status-small {
+    width: calc(0.71*212px);
+  }
+
+  .status-small p {
+    width: calc(0.71*212px);
+    font-size: calc(0.71*13px);
+    line-height: calc(0.71*28px);
+  }
+
+  .status-big {
+    width: calc(0.71*480px);
   }
 
   .status .position-container {

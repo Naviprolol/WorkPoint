@@ -1,0 +1,31 @@
+<app-header></app-header>
+<div class="return-to-main">
+  <a routerLink="/admin/main">
+    <img src="assets/img/return-button.svg" alt="return-button" class="return-button">
+  </a>
+  <span>Вернуться на главную</span>
+</div>
+
+<div class="content-container">
+  <div class="search">
+    <div class="search-container" id="searchInput">
+      <img src="assets/img/search.svg" alt="search">
+      <input type="text" placeholder="Введите ФИО" class="search-container-input">
+      <!-- [(ngModel)]="searchText" (keyup.enter)="filterByText()" -->
+    </div>
+    <button class="btn-find-employee" type="button">
+      Найти
+    </button>
+  </div>
+
+  <ul class="users">
+    <li class="user">
+      <img src="assets\img\map.png" alt="avatar" class="avatar">
+      <div class="user-information">
+        <h1 class="user-name">Иванов Иван Иванович</h1>
+        <h2 class="user-role">Пользователь</h2>
+      </div>
+      <button type="button" class="change-status-btn">Сделать администратором</button>
+    </li>
+  </ul>
+</div>

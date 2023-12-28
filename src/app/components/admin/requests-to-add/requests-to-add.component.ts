@@ -24,8 +24,8 @@ export class RequestsToAddComponent implements OnInit {
     // Другие значения статусов, если есть
   };
 
-  selectedDate: string = 'По умолчанию'
-  dates: string[] = ['По умолчанию', 'Сначала новые', 'Сначала старые']
+  selectedDate: string = 'Сначала новые'
+  dates: string[] = ['Сначала новые', 'Сначала старые']
 
   constructor(
     private coworkingsService: CoworkingsService
@@ -58,7 +58,7 @@ export class RequestsToAddComponent implements OnInit {
 
   toggleDate(date: string): void {
     this.selectedDate = date;
-    if (date === 'Сначала новые' || date === 'По умолчанию') {
+    if (date === 'Сначала новые') {
       this.sortNewToOld();
     } else if (date === 'Сначала старые') {
       this.sortOldToNew();

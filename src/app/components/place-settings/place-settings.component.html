@@ -63,7 +63,7 @@
             </div>
             <div class="information-description">
               <p class="highlighted-text-denied">
-                <span>Ваша заявка на добавление места отклонена</span>
+                <span>Отклонена</span>
               </p>
               <img src="assets/img/denied.svg" alt="denied">
               <div class="tooltip">
@@ -72,6 +72,11 @@
                   требованиям.
                 </p>
               </div>
+            </div>
+            <div class="second-block__card">
+              <button class="progress-information__btn" (click)="deleteCoworking(userCoworking)">
+                <span>Удалить</span>
+              </button>
             </div>
           </div>
 
@@ -86,9 +91,14 @@
             </div>
             <div class="information-description">
               <p class="highlighted-text">
-                <span>Ваша заявка на добавление места в обработке</span>
+                <span>В обработке</span>
               </p>
               <img src="assets/img/clock-icon.svg" alt="denied">
+            </div>
+            <div class="second-block__card">
+              <button class="progress-information__btn" [routerLink]="['/main/add', userCoworking.id]">
+                Редактировать
+              </button>
             </div>
           </div>
         </li>

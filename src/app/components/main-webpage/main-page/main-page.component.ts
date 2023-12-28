@@ -58,16 +58,28 @@ export class MainPageComponent {
     });
     this.adService.getAllAds().subscribe((ads) => {
       this.ads = ads
-      console.log(this.ads)
-      this.ads.forEach(ad => {
-        if (ad.status === 'Одобрено' && isActivePromo(ad.date_from, ad.date_to)) {
-          this.items.push({
-            photo: ad.photo,
-            id_place: ad.id_place
-          });
-        }
+      this.coworkingsService.getAll().subscribe((coworkings) => {
+        this.coworkings = coworkings;
+        this.filterAdsByPlaceId();
+        console.log(this.ads)
+        this.ads.forEach(ad => {
+          if (ad.status === 'Одобрено' && isActivePromo(ad.date_from, ad.date_to)) {
+            this.items.push({
+              photo: ad.photo,
+              id_place: ad.id_place
+            });
+          }
+        });
       });
     })
+  }
+
+  filterAdsByPlaceId(): void {
+    if (this.ads && this.coworkings) {
+      this.ads = this.ads.filter(ad => {
+        return this.coworkings.some(coworking => coworking.id === ad.id_place);
+      });
+    }
   }
 
   onBannerClick(id_place: number) {

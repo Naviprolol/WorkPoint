@@ -2,7 +2,7 @@
   .return-to-main {
     display: flex;
     margin-left: 8.75vw;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
     margin-top: 18px;
     align-items: center;
   }
@@ -22,155 +22,79 @@
   }
 
   .content-container {
-    margin-left: 21.88vw;
+    margin-left: 363px;
   }
 
   .content-container h1 {
-    color: #000;
+    margin-left: 240px;
     font-size: 28px;
     font-weight: 700;
     line-height: normal;
-    margin-bottom: 23px;
+    margin-bottom: 17px;
   }
 
-  .sort-applications-container {
+  .content-container h2 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 158px;
+  }
+
+  .banners .banner {
     display: flex;
-    margin-bottom: 48px;
+    align-items: center;
+    margin-bottom: 100px;
   }
 
-  input {
-    cursor: pointer;
-  }
-
-  .input-field select {
-    border: none;
-    width: 280px;
-    height: 54px;
-    padding-left: 19px;
+  .banners .banner img {
+    width: 379px;
+    height: 328px;
     border-radius: 10px;
-    color: #000;
-    font-size: 15px;
+  }
+
+  .banners .banner .ended {
+    margin-left: 241px;
+    font-size: 24px;
     font-weight: 600;
-    line-height: 28px;
-    font-family: 'Open Sans';
-    background: #E0E0D6;
+    line-height: 177.688%;
+    margin-right: 251px;
   }
 
-  .sort-applications-container .date {
-    margin-right: 50px;
-  }
-
-  .content-header {
-    display: flex;
-    gap: 313px;
-    margin-left: 2.08vw;
-    margin-bottom: 14px;
-  }
-
-  .content-container h5 {
-    color: #535353;
-    font-size: 15px;
-    font-weight: 400;
+  .banners .banner .dates {
+    margin-left: 196px;
+    margin-right: 197px;
+    font-size: 24px;
     line-height: 177.688%;
   }
 
-  .cards .card-li {
-    width: 1070px;
-    height: 99px;
-    margin-bottom: 30px;
-  }
-
-  .cards .card {
-    height: inherit;
-    display: flex;
-    align-items: center;
-    background: rgba(190, 218, 195, 0.70);
-    border-radius: 20px;
-  }
-
-  .cards .denied {
-    background: #E0E0D6;
-  }
-
-  .cards .approved {
-    background: #E0E0D6;
-  }
-
-  .card .first-block__card {
-    width: 460px;
-    height: inherit;
-    padding-top: 16px;
-    padding-left: 27px;
-    margin-right: 5px;
-    box-sizing: border-box;
-  }
-
-  .card-title {
-    font-size: 24px;
-    font-weight: 700;
-    line-height: normal;
-    margin-bottom: 14px;
-  }
-
-  .adress {
-    font-size: 15px;
-  }
-
-  .second-block__card {
-    width: 80px;
-  }
-
-  .second-block__card h4 {
-    font-size: 15px;
-  }
-
-  .third-block_card {
-    margin-left: auto;
-    margin-right: 36px;
-  }
-
-  .third-block_card .watch-application {
-    width: 240px;
+  .banners .banner .delete-btn {
+    width: 163px;
     height: 54px;
     border-radius: 10px;
-    background: #FBFBF5;
+    background: #BED2C1;
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.16);
-  }
-
-  .third-block_card .watch-application:hover {
-    background-color: #EDFAED;
-  }
-
-  .third-block_card .watch-application:active {
-    background: #8EBD9D !important;
-  }
-
-  .third-block_card .watch-application span {
     color: var(--text-03, rgba(27, 31, 59, 0.40));
     font-size: 15px;
     font-weight: 600;
     line-height: 28px;
   }
 
-  .information-description {
-    display: flex;
-    margin-left: auto;
-    margin-right: 60px;
-    gap: 27px;
+  .banners .banner .delete-btn:hover {
+    background-color: #EDFAED;
+    outline: 1px solid #6A6D79;
   }
 
-  .information-description .highlighted-text {
-    font-size: 15px;
-    font-weight: 600;
-    line-height: 28px;
+  .banners .banner .delete-btn:active {
+    background: #8EBD9D !important;
   }
 
+  .banners .banner .ongoing {
+    background: #E0E0D6;
+  }
 
-
-  .input-containers {
+  .header-container {
     display: flex;
-    gap: 48px;
-    margin-bottom: 50px;
+    gap: 629px;
   }
 
   .status {
@@ -237,10 +161,6 @@
     /* padding: 0.926vh 0; */
     width: 100%;
     transition: opacity 0.2s ease-out, height 0.2s ease-out;
-    height: 165px;
-  }
-
-  .small {
     height: 110px;
   }
 
@@ -263,15 +183,6 @@
 
   .position-option:hover {
     opacity: 0.5;
-  }
-
-  .position-option:active {
-    /* background-color: greenyellow; */
-  }
-
-  .position-option:active,
-  .position-option--selected {
-    /* background-color: greenyellow; */
   }
 
 }

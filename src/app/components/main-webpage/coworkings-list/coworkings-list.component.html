@@ -4,10 +4,11 @@
       <div class="coworking-title-container">
         <a class="coworking-title"> {{coworking.name}} </a>
         <img src="assets/img/good-place.svg" alt="good-place" class="img-good-place"
-          [ngStyle]="{ visibility: coworking.rating < 3.5 ? 'hidden' : '' }">
+          [ngStyle]="{ visibility: averageRating > 3 ? 'visible' : 'hidden' }">
       </div>
       <div class="coworking-rating-container">
-        <p class="coworking-rating"> {{coworking.rating}} </p>
+        <p class="coworking-rating">{{averageRating}}</p>
+        <!-- {{coworking.rating}}  -->
         <img src="assets/img/star.svg" alt="star" class="img-star">
       </div>
     </div>
