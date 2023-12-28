@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { TuiHideSelectedPipe } from '@taiga-ui/kit';
 import { ICoworking, User } from 'src/app/interfaces/interfaces';
 import { CoworkingsService } from 'src/app/servises/coworkings.service';
+import { ReviewService } from 'src/app/servises/review.service';
 import { UserService } from 'src/app/servises/user.service';
 
 @Component({
@@ -18,10 +19,13 @@ export class CoworkingsListComponent implements OnInit {
   user: User
   favoritePlaces: any
   favoriteIDs: number[] = []
+  rating: number[] = []
+  averageRating: number;
 
   constructor(
     private router: Router,
-    private userService: UserService
+    private userService: UserService,
+    private reviewService: ReviewService
   ) { }
 
   ngOnInit(): void {
@@ -49,6 +53,17 @@ export class CoworkingsListComponent implements OnInit {
           this.favoriteIDs.push(favoritePlace.place_id)
         }
       });
+    })
+
+    this.reviewService.getReviewsByIdPlace(this.coworking.id).subscribe((reviews) => {
+      this.rating = reviews.map(review => review.rank);
+      const sum = this.rating.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+      const average = sum / this.rating.length;
+      this.averageRating = average;
+      this.averageRating = parseFloat(average.toFixed(2));
+      if (Number.isNaN(this.averageRating) || this.averageRating === null) {
+        this.averageRating = 0;
+      }
     })
 
   }

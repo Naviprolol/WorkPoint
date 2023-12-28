@@ -22,7 +22,6 @@ export class CoworkingItemComponent implements OnInit {
   review: Review
   allReviews: Review[] = []
   coworkings: ICoworking[] = []
-  userPlaces: ICoworking[] = []
   user: User
   sortedItems: Review[] = []
 
@@ -31,6 +30,9 @@ export class CoworkingItemComponent implements OnInit {
   UPRating: boolean = false
   isButtonDayActive: boolean = true
   isButtonRatingActive: boolean = false
+
+  rating: number[] = []
+  averageRating: number;
 
   parameters: ymaps.control.ISearchControlParameters = {
     options: {
@@ -45,10 +47,7 @@ export class CoworkingItemComponent implements OnInit {
   constructor(private route: ActivatedRoute,
     private coworkingsService: CoworkingsService,
     private reviewService: ReviewService,
-    private userService: UserService,
-    private router: Router) {
-
-  }
+    private userService: UserService) { }
 
   ngOnInit() {
 
@@ -59,17 +58,19 @@ export class CoworkingItemComponent implements OnInit {
       this.coworking = coworking
       this.coworking.photo = this.coworking.photo.split('#')
       this.coworking.photo.pop();
-      console.log(this.coworking)
       this.tags = this.coworking.tags
-    })
 
-    //
-    this.coworkingsService.getCoworkingsByToken().subscribe(coworkings => {
-      this.userPlaces = coworkings
-      // console.log('userPlaces', this.userPlaces)
+      this.reviewService.getReviewsByIdPlace(this.coworking.id).subscribe((reviews) => {
+        this.rating = reviews.map(review => review.rank);
+        const sum = this.rating.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+        const average = sum / this.rating.length;
+        this.averageRating = average;
+        this.averageRating = parseFloat(average.toFixed(2));
+        if (Number.isNaN(this.averageRating) || this.averageRating === null) {
+          this.averageRating = 0;
+        }
+      })
     })
-    //
-
 
     this.form = new FormGroup({
       rating: new FormControl(null, [Validators.required]),

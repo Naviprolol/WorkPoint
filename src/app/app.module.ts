@@ -39,6 +39,7 @@ import { RequestsToAppComponent } from './components/admin/requests-to-app/reque
 import { AdPlacesComponent } from './components/ad-business/places/places.component';
 import { AppRequestComponent } from './components/admin/requests-to-app/app-request/app-request.component';
 import { AdminBannersComponent } from './components/admin/admin-banners/admin-banners.component';
+import { AdminRoleComponent } from './components/admin/admin-role/admin-role.component';
 
 const mapConfig: YaConfig = {
   apikey: '4d882b8c-882e-4fd7-8097-d924a789563f',
@@ -72,6 +73,7 @@ const mapConfig: YaConfig = {
     AdPlacesComponent,
     AppRequestComponent,
     AdminBannersComponent,
+    AdminRoleComponent,
   ],
   imports: [
     BrowserModule,

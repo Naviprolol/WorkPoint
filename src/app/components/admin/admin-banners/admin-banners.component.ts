@@ -27,6 +27,7 @@ export class AdminBannersComponent implements OnInit {
 
   ngOnInit(): void {
     this.adService.getAllAds().subscribe((ads) => {
+      console.log(ads)
       ads = ads.filter(ad => ad.status === 'Одобрено');
       this.ads = ads;
       this.coworkingsService.getAll().subscribe((coworkings) => {
@@ -34,6 +35,7 @@ export class AdminBannersComponent implements OnInit {
         this.filterAdsByPlaceId();
         this.filteredAds = this.ads
         this.sortNewToOld()
+        this.filteredAds.sort()
       });
       console.log(ads)
     })
@@ -67,11 +69,23 @@ export class AdminBannersComponent implements OnInit {
   }
 
   sortOldToNew(): void {
-    this.filteredAds.sort((adFirst: IAd, adSecond: IAd) => moment(adFirst.id).diff(moment(adSecond.id)));
+    const activeAds = this.filteredAds.filter(ad => !this.isPastPromo(ad.date_to));
+    const pastAds = this.filteredAds.filter(ad => this.isPastPromo(ad.date_to));
+
+    activeAds.sort((a, b) => moment(a.date_to).diff(moment(b.date_to)));
+    pastAds.sort((a, b) => moment(a.date_to).diff(moment(b.date_to)));
+
+    this.filteredAds = [...activeAds, ...pastAds];
   }
 
   sortNewToOld(): void {
-    this.filteredAds.sort((adFirst: IAd, adSecond: IAd) => moment(adSecond.id).diff(moment(adFirst.id)));
+    const activeAds = this.filteredAds.filter(ad => !this.isPastPromo(ad.date_to));
+    const pastAds = this.filteredAds.filter(ad => this.isPastPromo(ad.date_to));
+
+    activeAds.sort((a, b) => moment(b.date_to).diff(moment(a.date_to)));
+    pastAds.sort((a, b) => moment(b.date_to).diff(moment(a.date_to)));
+
+    this.filteredAds = [...activeAds, ...pastAds];
   }
 
 }

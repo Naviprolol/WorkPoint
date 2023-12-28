@@ -19,19 +19,19 @@
     font-weight: 700;
     font-size: 1.4583vw;
     color: #000000;
-    margin-top: 26px;
     margin-left: 2.8125vw;
     margin-right: 0.833vw;
   }
 
   .img-good-place {
-    margin-top: 34px;
     width: 22px;
     height: 22px;
   }
 
   .coworking-title-container {
     display: flex;
+    margin-top: 26px;
+    align-items: center;
   }
 
   .coworking-rating-container {
@@ -152,11 +152,16 @@
   }
 
   .coworking-title {
+    font-size: calc(0.75*28px);
+    margin-left: calc(0.75*54px);
+    margin-right: calc(0.75*16px);
+  }
+
+  .coworking-title-container {
     margin-top: calc(0.83*26px);
   }
 
   .img-good-place {
-    margin-top: calc(0.83*34px);
     width: calc(0.75*22px);
     height: calc(0.75*22px);
   }
@@ -216,13 +221,15 @@
 
   .coworking-title {
     font-size: calc(0.71*28px);
-    margin-top: calc(0.71*26px);
     margin-left: calc(0.71*54px);
     margin-right: calc(0.71*16px);
   }
 
+  .coworking-title-container {
+    margin-top: calc(0.71*26px);
+  }
+
   .img-good-place {
-    margin-top: calc(0.71*34px);
     width: calc(0.71*22px);
     height: calc(0.71*22px);
   }

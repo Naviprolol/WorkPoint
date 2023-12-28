@@ -150,19 +150,16 @@ export class AdBusinessComponent implements OnInit {
   }
 
   checkCountAds() {
-    const selectedStartDate = new Date(this.form.value.date_from);
-    const selectedEndDate = new Date(this.date_to);
-    console.log('Выбранное время начала: ', selectedStartDate)
-    console.log('Выбранное время окончания: ', selectedEndDate)
+    const selectedStartDate = new Date(this.form.value.date_from + 'T00:00:00');
+    const selectedEndDate = new Date(this.date_to + 'T00:00:00');
     this.adService.getAllAds().subscribe(ads => {
       ads = ads.filter(ad => ad.status === 'Одобрено');
       ads = ads.filter(ad => {
-        const adStartDate = new Date(ad.date_from);
-        const adEndDate = new Date(ad.date_to);
+        const adStartDate = new Date(ad.date_from + 'T00:00:00');
+        const adEndDate = new Date(ad.date_to + 'T00:00:00');
         return adStartDate <= selectedEndDate && adEndDate > selectedStartDate;
       });
       ads = this.filterAdsByPlaceId(ads);
-      console.log(ads)
       if (ads.length >= 4) {
         this.flag = false;
       }
