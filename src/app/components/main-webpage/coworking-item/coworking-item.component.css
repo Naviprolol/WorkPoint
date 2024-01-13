@@ -1,131 +1,131 @@
 @media screen and (max-width: 5000px) {
   .return-to-main {
     display: flex;
-    width: 180px;
-    margin-left: 168px;
-    margin-bottom: 65px;
-    margin-top: 18px;
+    width: 9.375vw;
+    margin-left: 8.75vw;
+    margin-bottom: 6.018518518518518vh;
+    margin-top: 1.6666666666666667vh;
     align-items: center;
   }
 
   .return-button {
-    margin-right: 18px;
+    margin-right: 0.9375vw;
     margin-top: auto;
     margin-bottom: auto;
-    width: 16px;
-    height: 16px;
+    width: 0.8333333333333334vw;
+    height: 1.4814814814814816vh;
   }
 
   .return-to-main span {
-    font-size: 15px;
-    line-height: 20px;
+    font-size: 0.78125vw;
+    line-height: 1.8518518518518516vh;
     color: rgba(27, 31, 59, 0.65);
   }
 
   .line {
     position: absolute;
-    height: 700px;
-    left: 1266.71px;
-    top: 900px;
+    height: 64.81481481481481vh;
+    left: 65.9744791666vw;
+    top: 83.33333333vh;
     border: 1px solid #DDDFE0;
     box-shadow: inset 0px -1px 0px rgba(221, 223, 224, 0.7);
   }
 
   .return {
-    margin-left: 164px;
-    margin-top: 18px;
-    margin-bottom: 68px;
-    font-size: 15px;
-    line-height: 20px;
+    margin-left: 8.541666666666666vw;
+    margin-top: 1.6666666666666667vh;
+    margin-bottom: 6.296296296296296vh;
+    font-size: 0.78125vw;
+    line-height: 1.8518518518518516vh;
     color: rgba(27, 31, 59, 0.65);
   }
 
   .return img {
-    padding-right: 14px;
+    padding-right: 0.729166vw;
   }
 
   .information {
-    margin-left: 280px;
+    margin-left: 14.583333333333334vw;
   }
 
   .main-information {
-    width: 1360px;
-    margin-bottom: 43px;
+    width: 70.83333333333334vw;
+    margin-bottom: 3.981481481481482vh;
   }
 
   .title-container {
     display: flex;
     align-items: center;
-    margin-bottom: 44px;
+    margin-bottom: 4.074074074074074vh;
   }
 
   .title {
     font-weight: 700;
-    font-size: 28px;
-    line-height: 38px;
+    font-size: 1.4583333333333333vw;
+    line-height: 3.5185185185185186vh;
     color: #000000;
-    margin-right: 5px;
+    margin-right: 0.26041666666666663vw;
   }
 
   .img-good-place {
-    margin-right: 27px;
-    margin-top: 2px;
-    width: 22px;
-    height: 22px;
+    margin-right: 1.40625vw;
+    margin-top: 0.1851851851851852vh;
+    width: 1.1458333333333333vw;
+    height: 2.037037037037037vh;
   }
 
   .img-star {
-    width: 22px;
-    height: 21.02px;
+    width: 1.1458333333333333vw;
+    height: 1.9462962962962964vh;
   }
 
   .img-coworking-address {
-    width: 20px;
-    height: 24px;
+    width: 1.0416666666666665vw;
+    height: 2.2222222222222223vh;
   }
 
   .img-coworking-time {
-    width: 22px;
-    height: 22px;
+    width: 1.1458333333333333vw;
+    height: 2.037037037037037vh;
   }
 
   .img-coworking-phone {
-    width: 22.5px;
-    height: 27px;
+    width: 1.171875vw;
+    height: 2.5vh;
   }
 
   .coworking-rating {
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1.25vw;
     line-height: 177.69%;
-    margin-right: 11px;
+    margin-right: 0.5729166666666666vw;
   }
 
   .photo-container {
     display: flex;
-    width: 1320px;
-    height: 522px;
-    margin-bottom: 55px;
+    width: 68.75vw;
+    height: 48.333333333333336vh;
+    margin-bottom: 5.092592592592593vh;
   }
 
   .first-photo {
-    width: 950px;
-    height: 522px;
+    width: 49.47916666666667vw;
+    height: 48.333333333333336vh;
     border-radius: 20px;
   }
 
   .second-photo {
-    margin-left: 52px;
-    width: 310px;
-    height: 250px;
+    margin-left: 2.7083333333333335vw;
+    width: 16.145833333333336vw;
+    height: 23.14814814814815vh;
     border-radius: 20px;
-    margin-bottom: 21px;
+    margin-bottom: 1.9444444444444444vh;
   }
 
   .third-photo {
-    margin-left: 52px;
-    width: 310px;
-    height: 250px;
+    margin-left: 2.7083333333333335vw;
+    width: 16.145833333333336vw;
+    height: 23.14814814814815vh;
     border-radius: 20px;
   }
 
@@ -135,83 +135,83 @@
 
   .flex-description {
     display: flex;
-    gap: 54px;
+    gap: 2.8125vw;
   }
 
   .left-side {
-    width: 962px;
+    width: 50.10416666666667vw;
   }
 
   .coworking-description {
     font-weight: 300;
-    font-size: 22px;
+    font-size: 1.1458333333333333vw;
     line-height: 177.69%;
-    margin-bottom: 5px;
+    margin-bottom: 0.4629629629629629vh;
   }
 
   .coworking-map p {
     font-weight: 600;
-    font-size: 24px;
-    line-height: 33px;
-    margin-bottom: 38px;
+    font-size: 1.25vw;
+    line-height: 3.0555555555555554vh;
+    margin-bottom: 3.5185185185185186vh;
   }
 
   .coworking-map .map {
-    margin-bottom: 63px;
+    margin-bottom: 5.833333333333333vh;
   }
 
   .map-container {
-    width: 950px;
-    height: 571px;
+    width: 49.47916666666667vw;
+    height: 52.87037037037037vh;
   }
 
   .right-side {
-    width: 345px;
-    margin-top: 43px;
+    width: 17.96875vw;
+    margin-top: 3.981481481481482vh;
   }
 
   .coworking-adress-container {
     display: flex;
-    gap: 25px;
+    gap: 1.3020833333333335vw;
     align-items: center;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.0416666666666665vw;
     line-height: 177.69%;
-    margin-bottom: 15px;
+    margin-bottom: 1.3888888888888888vh;
   }
 
   .coworking-time-container {
     display: flex;
-    gap: 24px;
+    gap: 1.25vw;
     align-items: center;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.0416666666666665vw;
     line-height: 177.69%;
-    margin-bottom: 70px;
+    margin-bottom: 6.481481481481481vh;
   }
 
   .tags {
-    margin-bottom: 70px;
+    margin-bottom: 6.481481481481481vh;
   }
 
   .tags p {
     font-weight: 600;
-    font-size: 24px;
-    line-height: 33px;
-    margin-bottom: 27px;
+    font-size: 1.25vw;
+    line-height: 3.0555555555555554vh;
+    margin-bottom: 2.5vh;
   }
 
   .coworking-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 0.78125vw;
   }
 
   .coworking-tag {
     text-align: center;
     width: fit-content;
-    padding: 1px 20px;
-    font-size: 20px;
+    padding: 1px 1.041666vw;
+    font-size: 1.0416666666666665vw;
     line-height: 177.69%;
     background: #E0E0D6;
     border-radius: 20px;
@@ -219,32 +219,32 @@
 
   .contacts p {
     font-weight: 600;
-    font-size: 24px;
-    line-height: 33px;
-    margin-bottom: 37px;
+    font-size: 1.25vw;
+    line-height: 3.0555555555555554vh;
+    margin-bottom: 3.425925925925926vh;
   }
 
   .phone-information {
     display: flex;
-    gap: 22.5px;
+    gap: 1.171875vw;
     align-items: center;
   }
 
   .phone-information span {
-    font-size: 20px;
+    font-size: 1.0416666666666665vw;
     line-height: 177.69%;
   }
 
   .add-review {
-    width: 1147px;
-    margin-bottom: 26px;
+    width: 59.739583333333336vw;
+    margin-bottom: 2.4074074074074074vh;
   }
 
   .reviews-title {
     font-weight: 600;
-    font-size: 24px;
-    line-height: 33px;
-    margin-bottom: 26px;
+    font-size: 1.25vw;
+    line-height: 3.0555555555555554vh;
+    margin-bottom: 2.4074074074074074vh;
   }
 
   .add-rating {
@@ -252,35 +252,35 @@
   }
 
   .review-input-field {
-    width: 1150px;
+    width: 59.895833333333336vw;
     background: rgba(190, 218, 195, 0.7);
     border-radius: 10px;
-    height: 62px;
-    margin-bottom: 35px;
-    margin-top: 27px;
+    height: 5.7407407407407405vh;
+    margin-bottom: 3.2407407407407405vh;
+    margin-top: 2.5vh;
   }
 
   .review-input-field input {
-    width: calc(100% - 20px);
+    width: calc(100% - 1.04166vw);
     height: 100%;
     font-weight: 300;
-    font-size: 22px;
+    font-size: 1.1458333333333333vw;
     line-height: 177.69%;
     background: inherit;
     border-radius: 10px;
-    padding-left: 20px;
+    padding-left: 1.0416666666666665vw;
   }
 
   .btn-review {
-    width: 250px;
-    height: 54px;
+    width: 13.020833333333334vw;
+    height: 5.0vh;
     background: #E0E0D6;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
-    margin-left: 900px;
+    margin-left: 46.875vw;
     font-weight: 600;
-    font-size: 15px;
-    line-height: 28px;
+    font-size: 0.78125vw;
+    line-height: 2.5925925925925926vh;
     color: rgba(27, 31, 59, 0.6);
   }
 
@@ -295,21 +295,21 @@
 
   .sorting-reviews {
     display: flex;
-    margin-bottom: 37px;
-    font-size: 20px;
+    margin-bottom: 3.425925925925926vh;
+    font-size: 1.0416666666666665vw;
     line-height: 177.69%;
     align-items: center;
   }
 
   .sorting-reviews b {
-    margin-right: 23px;
+    margin-right: 1.1979166666666667vw;
     color: #000000;
   }
 
   .sorting-reviews .sort-by-date {
     position: relative;
-    width: 100px;
-    margin-right: 29px;
+    width: 5.208333333333334vw;
+    margin-right: 1.5104166666666667vw;
   }
 
   .sorting-reviews .sort-by-date span:hover {
@@ -322,14 +322,14 @@
 
   .arrow {
     position: absolute;
-    top: 11px;
+    top: 1.0185185185185vh;
     vertical-align: middle;
-    width: 16px;
-    height: 16px;
+    width: 0.8333333333333334vw;
+    height: 1.4814814814814816vh;
   }
 
   .sorting-reviews .sort-by-date span {
-    margin-right: 5px;
+    margin-right: 0.26041666666666663vw;
   }
 
   .sorting-reviews .sort-by-rating {
@@ -337,7 +337,7 @@
   }
 
   .sorting-reviews .sort-by-rating span {
-    margin-right: 5px;
+    margin-right: 0.26041666666666663vw;
   }
 
   .blue-button {
@@ -345,40 +345,41 @@
   }
 
   .review {
-    margin-bottom: 51px;
+    margin-bottom: 4.722222222222222vh;
   }
 
   .review-title-container {
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 0.9259259259259258vh;
   }
 
   .review .avatar {
-    margin-right: 27px;
-    width: 70px;
-    height: 70px;
+    margin-right: 1.40625vw;
+    width: 3.6458333333333335vw;
+    height: 6.481481481481481vh;
   }
 
   .review-title {
     position: relative;
+    min-width: 17.1875vw;
   }
 
   .review-name-date {
     display: flex;
     align-items: center;
-    margin-bottom: 5px;
+    margin-bottom: 0.4629629629629629vh;
   }
 
   .review-name {
     font-weight: 600;
-    font-size: 22px;
-    line-height: 30px;
-    margin-right: 8px;
+    font-size: 1.1458333333333333vw;
+    line-height: 2.7777777777777777vh;
+    margin-right: 0.4166666666666667vw;
   }
 
   .review-time {
-    padding-top: 5px;
-    font-size: 15px;
+    padding-top: 0.462962vh;
+    font-size: 0.78125vw;
     line-height: 177.69%;
     color: #535353;
   }
@@ -386,13 +387,13 @@
   .review-rating {}
 
   .rating {
-    width: 161px;
-    height: 24px;
+    width: 8.385416666666666vw;
+    height: 2.2222222222222223vh;
   }
 
   .review-description {
-    width: 1120px;
-    font-size: 22px;
+    width: 58.333333333333336vw;
+    font-size: 1.1458333333333333vw;
     line-height: 177.69%;
     word-wrap: break-word;
   }
@@ -406,568 +407,98 @@
     text-decoration-thickness: 1px;
     color: #4DA8F7;
   }
-}
 
-@media screen and (max-width: 1450px) {
-  .return-to-main {
-    width: calc(0.75*250px);
-    margin-left: calc(0.75*180px);
-    margin-bottom: calc(0.83*65px);
-    margin-top: calc(0.83*18px);
-  }
-
-  .return-button {
-    margin-right: calc(0.75*18px);
-    width: calc(0.75*16px);
-    height: calc(0.75*16px);
-  }
-
-  .return-to-main span {
-    font-size: calc(0.75*15px);
-  }
-
-  .line {
-    height: calc(0.83*700px);
-    left: calc(0.75*1266.71px);
-    top: calc(0.83*900px);
-  }
-
-  .information {
-    margin-left: calc(0.75*280px);
-  }
-
-  .main-information {
-    width: calc(0.75*1360px);
-    margin-bottom: calc(0.83*43px);
-  }
-
-  .title-container {
-    margin-bottom: calc(0.83*44px);
-  }
-
-  .title {
-    font-size: calc(0.75*28px);
-    line-height: calc(0.83*38px);
-    margin-right: calc(0.75*5px);
-  }
-
-  .img-good-place {
-    margin-right: calc(0.75*27px);
-    width: calc(0.75*22px);
-    height: calc(0.75*22px);
-    margin-top: calc(0.83*2px);
-  }
-
-  .img-star {
-    width: calc(0.75*22px);
-    height: calc(0.75*21.02px);
-  }
-
-  .img-coworking-address {
-    width: calc(0.75*20px);
-    height: calc(0.75*24px);
-  }
-
-  .img-coworking-time {
-    width: calc(0.75*22px);
-    height: calc(0.75*22px);
-  }
-
-  .img-coworking-phone {
-    width: calc(0.75*22.5px);
-    height: calc(0.75*27px);
-  }
-
-  .coworking-rating {
-    font-size: calc(0.75*24px);
-    line-height: calc(0.83*177.69%);
-    margin-right: calc(0.75*11px);
-  }
-
-  .photo-container {
-    width: calc(0.75*1320px);
-    height: calc(0.83*522px);
-    margin-bottom: calc(0.83*55px);
-  }
-
-  .first-photo {
-    width: calc(0.75*950px);
-    height: calc(0.83*522px);
-  }
-
-  .second-photo {
-    margin-left: calc(0.75*52px);
-    width: calc(0.75*310px);
-    height: calc(0.83*250px);
-    margin-bottom: calc(0.83*21px);
-  }
-
-  .third-photo {
-    margin-left: calc(0.75*52px);
-    width: calc(0.75*310px);
-    height: calc(0.83*250px);
-  }
-
-  .flex-description {
-    gap: calc(0.75*54px);
-  }
-
-  .left-side {
-    width: calc(0.75*962px);
-  }
-
-  .coworking-description {
-    font-size: calc(0.75*22px);
-    line-height: calc(0.83*177.69%);
-    margin-bottom: calc(0.83*5px);
-  }
-
-  .coworking-map p {
-    font-size: calc(0.75*24px);
-    line-height: calc(0.83*33px);
-    margin-bottom: calc(0.83*38px);
-  }
-
-  .coworking-map .map {
-    margin-bottom: calc(0.83*63px);
-  }
-
-  .map-container {
-    width: calc(0.75*950px);
-    height: calc(0.83*571px);
-  }
-
-  .right-side {
-    width: calc(0.75*345px);
-    margin-top: calc(0.83*43px);
-  }
-
-  .coworking-adress-container {
-    gap: calc(0.75*25px);
-    font-size: calc(0.75*20px);
-    line-height: calc(0.83*177.69%);
-    margin-bottom: calc(0.83*15px);
-  }
-
-  .coworking-time-container {
-    gap: calc(0.75*24px);
-    font-size: calc(0.75*20px);
-    line-height: calc(0.83*177.69%);
-    margin-bottom: calc(0.83*70px);
-  }
-
-  .tags {
-    margin-bottom: calc(0.83*70px);
-  }
-
-  .tags p {
-    font-size: calc(0.75*24px);
-    line-height: calc(0.83*33px);
-    margin-bottom: calc(0.83*27px);
-  }
-
-  .coworking-tags {
-    gap: calc(0.75*15px);
-  }
-
-  .coworking-tag {
-    padding: calc(0.83*1px) calc(0.75*20px);
-    font-size: calc(0.75*20px);
-    line-height: calc(0.83*177.69%);
-  }
-
-  .contacts p {
-    font-size: calc(0.75*24px);
-    line-height: calc(0.83*33px);
-    margin-bottom: calc(0.83*37px);
-  }
-
-  .phone-information {
-    gap: calc(0.75*22.5px);
-  }
-
-  .phone-information span {
-    font-size: calc(0.75*20px);
-    line-height: calc(0.83*177.69%);
-  }
-
-  .add-review {
-    width: calc(0.75*1147px);
-    margin-bottom: calc(0.83*26px);
-  }
-
-  .reviews-title {
-    font-size: calc(0.75*24px);
-    line-height: calc(0.83*33px);
-    margin-bottom: calc(0.83*26px);
-  }
-
-  .review-input-field {
-    width: calc(0.75*1150px);
-    height: calc(0.83*62px);
-    margin-bottom: calc(0.83*35px);
-  }
-
-  .review-input-field input {
-    width: calc(100% - calc(0.75*20px));
-    font-size: calc(0.75*22px);
-    line-height: calc(0.83*177.69%);
-    padding-left: calc(0.75*20px);
-  }
-
-  .btn-review {
-    width: calc(0.75*250px);
-    height: calc(0.83*54px);
-    margin-left: calc(0.75*900px);
-    font-size: calc(0.75*15px);
-    line-height: calc(0.83*28px);
-  }
-
-  .sorting-reviews {
-    margin-bottom: calc(0.75*37px);
-    font-size: calc(0.75*20px);
-    line-height: calc(0.83*177.69%);
-  }
-
-  .sorting-reviews span {
-    margin-right: calc(0.75*23px);
-  }
-
-  .sorting-reviews .sort-by-date {
-    width: calc(0.75*100px);
-    margin-right: calc(0.75*29px);
-  }
-
-  .arrow {
-    top: calc(0.6*11px);
-    width: calc(0.75*16px);
-    height: calc(0.75*16px);
-  }
-
-  .sorting-reviews .sort-by-date span {
-    margin-right: calc(0.75*5px);
-  }
-
-  .review {
-    margin-bottom: calc(0.83*51px);
-  }
-
-  .review-title-container {
-    margin-bottom: calc(0.83*10px);
-  }
-
-  .review .avatar {
-    margin-right: calc(0.75*27px);
-    width: calc(0.75*70px);
-    height: calc(0.75*70px);
-  }
-
-  .review-name-date {
-    margin-bottom: calc(0.75*5px);
-  }
-
-  .review-name {
-    font-size: calc(0.75*22px);
-    line-height: calc(0.83*30px);
-    margin-right: calc(0.75*8px);
-  }
-
-  .review-time {
-    padding-top: calc(0.83*5px);
-    font-size: calc(0.75*15px);
-    line-height: calc(0.83*177.69%);
-  }
-
-  .rating {
-    width: calc(0.75*161px);
-    height: calc(0.83*24px);
-  }
-
-  .review-description {
-    width: calc(0.75*1120px);
-    font-size: calc(0.75*22px);
-    line-height: calc(0.83*177.69%);
-  }
-}
-
-@media screen and (max-width: 1370px) {
-  .return-to-main {
-    width: calc(0.71*250px);
-    margin-left: calc(0.71*180px);
-    margin-bottom: calc(0.71*65px);
-    margin-top: calc(0.71*18px);
-  }
-
-  .return-button {
-    margin-right: calc(0.71*18px);
-    width: calc(0.71*16px);
-    height: calc(0.71*16px);
-  }
-
-  .return-to-main span {
-    font-size: calc(0.71*15px);
-  }
-
-  .line {
-    height: calc(0.71*700px);
-    left: calc(0.71*1266.71px);
-    top: calc(0.71*900px);
-  }
-
-  .information {
-    margin-left: calc(0.71*280px);
-  }
-
-  .main-information {
-    width: calc(0.71*1360px);
-    margin-bottom: calc(0.71*43px);
-  }
-
-  .title-container {
-    margin-bottom: calc(0.71*44px);
-  }
-
-  .title {
-    font-size: calc(0.71*28px);
-    line-height: calc(0.71*38px);
-    margin-right: calc(0.71*5px);
-  }
-
-  .img-good-place {
-    margin-right: calc(0.71*27px);
-    width: calc(0.71*22px);
-    height: calc(0.71*22px);
-    margin-top: calc(0.71*2px);
-  }
-
-  .img-star {
-    width: calc(0.71*22px);
-    height: calc(0.71*21.02px);
-  }
-
-  .img-coworking-address {
-    width: calc(0.71*20px);
-    height: calc(0.71*24px);
-  }
-
-  .img-coworking-time {
-    width: calc(0.71*22px);
-    height: calc(0.71*22px);
-  }
-
-  .img-coworking-phone {
-    width: calc(0.71*22.5px);
-    height: calc(0.71*27px);
-  }
-
-  .coworking-rating {
-    font-size: calc(0.71*24px);
-    line-height: calc(0.71*177.69%);
-    margin-right: calc(0.71*11px);
-  }
-
-  .photo-container {
-    width: calc(0.71*1320px);
-    height: calc(0.71*522px);
-    margin-bottom: calc(0.71*55px);
-  }
-
-  .first-photo {
-    width: calc(0.71*950px);
-    height: calc(0.71*522px);
-  }
-
-  .second-photo {
-    margin-left: calc(0.71*52px);
-    width: calc(0.71*310px);
-    height: calc(0.71*250px);
-    margin-bottom: calc(0.71*21px);
-  }
-
-  .third-photo {
-    margin-left: calc(0.71*52px);
-    width: calc(0.71*310px);
-    height: calc(0.71*250px);
-  }
-
-  .flex-description {
-    gap: calc(0.71*54px);
-  }
-
-  .left-side {
-    width: calc(0.71*962px);
-  }
-
-  .coworking-description {
-    font-size: calc(0.71*22px);
-    line-height: calc(0.71*177.69%);
-    margin-bottom: calc(0.71*5px);
-  }
-
-  .coworking-map p {
-    font-size: calc(0.71*24px);
-    line-height: calc(0.71*33px);
-    margin-bottom: calc(0.71*38px);
-  }
-
-  .coworking-map .map {
-    margin-bottom: calc(0.71*63px);
-  }
-
-  .map-container {
-    width: calc(0.71*950px);
-    height: calc(0.71*571px);
-  }
-
-  .right-side {
-    width: calc(0.71*345px);
-    margin-top: calc(0.71*43px);
-  }
-
-  .coworking-adress-container {
-    gap: calc(0.71*25px);
-    font-size: calc(0.71*20px);
-    line-height: calc(0.71*177.69%);
-    margin-bottom: calc(0.71*15px);
-  }
-
-  .coworking-time-container {
-    gap: calc(0.71*24px);
-    font-size: calc(0.71*20px);
-    line-height: calc(0.71*177.69%);
-    margin-bottom: calc(0.71*70px);
-  }
-
-  .tags {
-    margin-bottom: calc(0.71*70px);
-  }
-
-  .tags p {
-    font-size: calc(0.71*24px);
-    line-height: calc(0.71*33px);
-    margin-bottom: calc(0.71*27px);
-  }
-
-  .coworking-tags {
-    gap: calc(0.71*15px);
-  }
-
-  .coworking-tag {
-    padding: calc(0.71*1px) calc(0.71*20px);
-    font-size: calc(0.71*20px);
-    line-height: calc(0.71*177.69%);
-  }
-
-  .contacts p {
-    font-size: calc(0.71*24px);
-    line-height: calc(0.71*33px);
-    margin-bottom: calc(0.71*37px);
-  }
-
-  .phone-information {
-    gap: calc(0.71*22.5px);
-  }
-
-  .phone-information span {
-    font-size: calc(0.71*20px);
-    line-height: calc(0.71*177.69%);
-  }
-
-  .add-review {
-    width: calc(0.71*1147px);
-    margin-bottom: calc(0.71*26px);
-  }
-
-  .reviews-title {
-    font-size: calc(0.71*24px);
-    line-height: calc(0.71*33px);
-    margin-bottom: calc(0.71*26px);
-  }
-
-  .review-input-field {
-    width: calc(0.71*1150px);
-    height: calc(0.71*62px);
-    margin-bottom: calc(0.71*35px);
-  }
-
-  .review-input-field input {
-    width: calc(100% - calc(0.71*20px));
-    font-size: calc(0.71*22px);
-    line-height: calc(0.71*177.69%);
-    padding-left: calc(0.71*20px);
-  }
-
-  .btn-review {
-    width: calc(0.71*250px);
-    height: calc(0.71*54px);
-    margin-left: calc(0.71*900px);
-    font-size: calc(0.71*15px);
-    line-height: calc(0.71*28px);
-  }
-
-  .sorting-reviews {
-    margin-bottom: calc(0.71*37px);
-    font-size: calc(0.71*20px);
-    line-height: calc(0.71*177.69%);
-  }
-
-  .sorting-reviews span {
-    margin-right: calc(0.71*23px);
-  }
-
-  .sorting-reviews .sort-by-date {
-    width: calc(0.71*100px);
-    margin-right: calc(0.71*29px);
-  }
-
-  .arrow {
-    top: calc(0.4*11px);
-    width: calc(0.71*16px);
-    height: calc(0.71*16px);
-  }
-
-  .sorting-reviews .sort-by-date span {
-    margin-right: calc(0.71*5px);
-  }
-
-  .review {
-    margin-bottom: calc(0.71*51px);
-  }
-
-  .review-title-container {
-    margin-bottom: calc(0.71*10px);
-  }
-
-  .review .avatar {
-    margin-right: calc(0.71*27px);
-    width: calc(0.71*70px);
-    height: calc(0.71*70px);
-  }
-
-  .review-name-date {
-    margin-bottom: calc(0.71*5px);
-  }
-
-  .review-name {
-    font-size: calc(0.71*22px);
-    line-height: calc(0.71*30px);
-    margin-right: calc(0.71*8px);
-  }
-
-  .review-time {
-    padding-top: calc(0.71*5px);
-    font-size: calc(0.71*15px);
-    line-height: calc(0.71*177.69%);
-  }
-
-  .rating {
-    width: calc(0.71*161px);
-    height: calc(0.71*24px);
-  }
-
-  .review-description {
-    width: calc(0.71*1120px);
-    font-size: calc(0.71*22px);
-    line-height: calc(0.71*177.69%);
+  /* NEW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+  .answer-submit-container {
+    display: flex;
+    flex-direction: column;
+    width: 59.739583333333336vw;
+  }
+
+  .answer-btn {
+    width: 9.84375vw;
+    height: 5.0vh;
+    border-radius: 10px;
+    background: #BEDAC3;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.16);
+    color: #FFF;
+    font-family: Open Sans;
+    font-size: 0.78125vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2.5925925925925926vh;
+  }
+
+  .answer-btn:hover,
+  .delete-btn:hover {
+    background-color: #EDFAED;
+    outline: 1px solid #6A6D79;
+    color: black;
+  }
+
+  .answer-btn:active,
+  .delete-btn:active {
+    background: #8EBD9D !important;
+  }
+
+  .answer-container {
+    margin-top: 4.62962962962963vh;
+    margin-bottom: 1.3888888888888888vh;
+    width: 59.739583333333336vw;
+    height: 17.77777777777778vh;
+    border-radius: 10px;
+    background: rgba(190, 218, 195, 0.70);
+  }
+
+  .answer-container textarea {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: none;
+    background: transparent;
+    resize: none;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 1.1458333333333333vw;
+    font-weight: 300;
+    line-height: 177.688%;
+    font-family: Open Sans;
+  }
+
+  .submit-answer-btn {
+    width: 9.84375vw;
+    height: 5.0vh;
+    border-radius: 10px;
+    background: #E0E0D6;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.16);
+
+    color: #919298;
+    font-size: 0.78125vw;
+    font-weight: 600;
+    line-height: 2.5925925925925926vh;
+    margin-left: auto;
+  }
+
+  .submit-answer-btn:hover {
+    background-color: #EDFAED;
+    outline: 1px solid #6A6D79;
+  }
+
+  .submit-answer-btn:active {
+    background: #8EBD9D !important;
+  }
+
+  .delete-btn {
+    margin-left: 1.5625vw;
+    width: 9.84375vw;
+    height: 5.0vh;
+    border-radius: 10px;
+    background: #E0E0D6;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.16);
+    color: #919298;
+    font-size: 0.78125vw;
+    font-weight: 600;
+    line-height: 2.5925925925925926vh;
   }
 }

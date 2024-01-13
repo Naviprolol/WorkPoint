@@ -1,0 +1,71 @@
+<app-header></app-header>
+<div class="return-to-main">
+  <a routerLink="/admin/roles">
+    <img src="assets/img/return-button.svg" alt="return-button" class="return-button">
+  </a>
+  <span>Вернуться назад</span>
+</div>
+
+<div class="content-container" *ngIf="user">
+  <div class="top-block">
+    <div class="flex-box">
+      <img src={{user.photo_user}} alt="avatar" class="avatar"
+        [ngStyle]="user.role_id === 3 ? {'border': '2px solid #5E9C76'} : {}" onerror="this.src='assets/img/logo.svg'">
+      <div>
+        <h1 class="user-name">{{user.surname + ' ' + user.name}}</h1>
+        <h2 class="user-number">{{user.phone}}</h2>
+      </div>
+    </div>
+    <h3>О себе</h3>
+  </div>
+  <div class="bottom-block">
+    <div class="information-container">
+      <div class="information">
+        <div class="flex-box">
+          <div class="left">Фамилия</div>
+          <div class="right">{{user.surname}}</div>
+        </div>
+        <div class="flex-box">
+          <div class="left">Имя</div>
+          <div class="right">{{user.name}}</div>
+        </div>
+        <div class="flex-box">
+          <div class="left">Номер телефона</div>
+          <div class="right">{{user.phone}}</div>
+        </div>
+        <div class="flex-box">
+          <div class="left">Город</div>
+          <div class="right">{{user.city}}</div>
+        </div>
+        <div class="flex-box">
+          <div class="left">ID пользователя</div>
+          <div class="right">{{user.id}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="change-status-btn change-status-btn-user"
+    (click)="[changeStatus(), showPopupAndRedirect()]" *ngIf="user.role_id === 1 || user.role_id === 2">Сделать
+    администратором</button>
+  <button type="button" class=" change-status-btn change-status-btn-admin"
+    (click)="[changeStatus(), showPopupAndRedirect()]" *ngIf="user.role_id === 3">Снять роль
+    администратора</button>
+
+  <div class="overlay" *ngIf="showPopup"></div>
+
+  <div class="popup" *ngIf="showPopup">
+    <div class="image-container" *ngIf="flag">
+      <img src="assets/admin/change-role-to-admin.svg" *ngIf="flag" alt="Роль изменена на админа">
+      <div class="image-text">
+        Пользователь {{user.surname + ' ' + user.name}} назначен администратором
+      </div>
+    </div>
+    <div class="image-container" *ngIf="!flag">
+      <img src="assets/admin/change-role-to-default.svg" *ngIf="!flag" alt="Роль изменена на стандартную">
+      <div class="image-text">
+        Пользователь {{user.surname + ' ' + user.name}} больше не является администратором
+      </div>
+    </div>
+  </div>
+</div>

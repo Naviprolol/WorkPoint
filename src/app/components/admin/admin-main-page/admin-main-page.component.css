@@ -2,53 +2,53 @@
   .container {
     display: flex;
     flex-wrap: wrap;
-    gap: 120px;
-    margin-left: 170px;
-    margin-top: 220px;
-    padding-bottom: 350px;
+    gap: 6.25vw;
+    margin-left: 8.854166666666668vw;
+    margin-top: 20.37037037037037vh;
+    padding-bottom: 32.407407vh;
   }
 
   .container .container-item {
-    width: 730px;
-    height: 570px;
+    width: 38.02083333333333vw;
+    height: 52.77777777777778vh;
     border-radius: 20px;
     background: #D1E5D2;
     position: relative;
   }
 
   .container-item .item {
-    padding-left: 70px;
+    padding-left: 3.6458333333333335vw;
     position: relative;
     height: 100%;
     /* Делаем высоту .item равной 100% */
   }
 
   .container-item .item-img {
-    width: 210px;
-    height: 180px;
-    margin-bottom: 25px;
+    width: 10.9375vw;
+    height: 16.666666666666664vh;
+    margin-bottom: 2.314814814814815vh;
   }
 
   .container-item .first {
-    padding-top: 50px;
+    padding-top: 4.6296vh;
   }
 
   .container-item .fourth {
-    padding-top: 24px;
-    width: 157.5px;
-    height: 210px;
+    padding-top: 2.2222vh;
+    width: 8.203125vw;
+    height: 19.444444444444446vh;
   }
 
   .item p {
-    font-size: 40px;
+    font-size: 2.083333333333333vw;
     font-weight: 600;
     line-height: normal;
-    margin-bottom: 25px;
+    margin-bottom: 2.314814814814815vh;
   }
 
   .item h5 {
-    max-width: 600px;
-    font-size: 24px;
+    max-width: 31.25vw;
+    font-size: 1.25vw;
     font-weight: 300;
     line-height: normal;
   }
@@ -56,10 +56,10 @@
   .item .direct-btn {
     position: absolute;
     bottom: 0;
-    margin-bottom: 35px;
+    margin-bottom: 3.2407407407407405vh;
 
-    width: 245px;
-    height: 53px;
+    width: 12.760416666666666vw;
+    height: 4.907407407407407vh;
     border-radius: 10px;
     background: #E0E0D6;
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.16);
@@ -76,134 +76,15 @@
 
   .item .direct-btn span {
     color: rgba(27, 31, 59, 0.60);
-    font-size: 15px;
+    font-size: 0.78125vw;
     font-weight: 600;
-    line-height: 28px;
+    line-height: 2.5925925925925926vh;
   }
 
   .item .direct-btn img {
     position: absolute;
     right: 10px;
-    /* Задаем нужное значение справа */
     top: 50%;
     transform: translateY(-50%);
-  }
-}
-
-@media screen and (max-width: 1450px) {
-  .container {
-    gap: calc(0.75*120px);
-    margin-left: calc(0.75*170px);
-    margin-top: calc(0.83*220px);
-    padding-bottom: calc(0.83*350px);
-  }
-
-  .container .container-item {
-    width: calc(0.75*730px);
-    height: calc(0.83*570px);
-  }
-
-  .container-item .item {
-    padding-left: calc(0.75*70px);
-  }
-
-  .container-item .item-img {
-    width: calc(0.75*210px);
-    height: calc(0.83*180px);
-    margin-bottom: calc(0.83*25px);
-  }
-
-  .container-item .first {
-    padding-top: calc(0.83*50px);
-  }
-
-  .container-item .fourth {
-    padding-top: calc(0.83*24px);
-    width: calc(0.75*157.5px);
-    height: calc(0.83*210px);
-  }
-
-  .item p {
-    font-size: calc(0.75*40px);
-    margin-bottom: calc(0.83*25px);
-  }
-
-  .item h5 {
-    max-width: calc(0.75*600px);
-    font-size: calc(0.75*24px);
-  }
-
-  .item .direct-btn {
-    margin-bottom: calc(0.83*35px);
-    width: calc(0.75*245px);
-    height: calc(0.83*53px);
-  }
-
-  .item .direct-btn span {
-    font-size: calc(0.75*15px);
-    line-height: calc(0.83*28px);
-  }
-
-  .item .direct-btn img {
-    right: calc(0.75*10px);
-  }
-}
-
-@media screen and (max-width: 1370px) {
-  .container {
-    gap: calc(0.71*120px);
-    margin-left: calc(0.71*170px);
-    margin-top: calc(0.71*220px);
-    padding-bottom: calc(0.71*350px);
-  }
-
-  .container .container-item {
-    width: calc(0.71*730px);
-    height: calc(0.71*570px);
-  }
-
-  .container-item .item {
-    padding-left: calc(0.71*70px);
-  }
-
-  .container-item .item-img {
-    width: calc(0.71*210px);
-    height: calc(0.71*180px);
-    margin-bottom: calc(0.71*25px);
-  }
-
-  .container-item .first {
-    padding-top: calc(0.71*50px);
-  }
-
-  .container-item .fourth {
-    padding-top: calc(0.71*24px);
-    width: calc(0.71*157.5px);
-    height: calc(0.71*210px);
-  }
-
-  .item p {
-    font-size: calc(0.71*40px);
-    margin-bottom: calc(0.71*25px);
-  }
-
-  .item h5 {
-    max-width: calc(0.71*600px);
-    font-size: calc(0.71*24px);
-  }
-
-  .item .direct-btn {
-    margin-bottom: calc(0.71*35px);
-    width: calc(0.71*245px);
-    height: calc(0.71*53px);
-  }
-
-  .item .direct-btn span {
-    font-size: calc(0.71*15px);
-    line-height: calc(0.71*28px);
-  }
-
-  .item .direct-btn img {
-    right: calc(0.71*10px);
   }
 }

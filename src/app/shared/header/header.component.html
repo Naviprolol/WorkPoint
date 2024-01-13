@@ -1,4 +1,4 @@
-<div class="header-container">
+<div class="header-container" *ngIf="user">
   <div class="header-left-side">
     <div class="logo-img">
 
@@ -36,6 +36,9 @@
         <div *ngIf="user">
           <a routerLink="/ad-business/places" class="dropdown-link"
             *ngIf="user.role_id == 2 || user.role_id == 3">Продвижение</a>
+        </div>
+        <div *ngIf="user">
+          <a routerLink="/admin/roles" class="dropdown-link" *ngIf="user.role_id === 3">Управление пользователями</a>
         </div>
         <a href="#" class="dropdown-link" (click)="logout($event)">Выход</a>
       </div>

@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders, HttpParams } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { IAd, ICoworking, Message } from "../interfaces/interfaces";
+import { IAd, ICoworking, Message, Review, User } from "../interfaces/interfaces";
 import { Observable } from "rxjs";
 
 @Injectable({
@@ -23,5 +23,27 @@ export class AdminService {
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`)
 
     return this.http.post<IAd[]>(`https://www.1506815-cq40245.tw1.ru/admin/check_ad?id_ad=${id_ad}&status_place=${status_place}`, { headers })
+  }
+
+  getAllUsers(): Observable<User[]> {
+    const token = localStorage.getItem('auth-token')
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`)
+
+    return this.http.get<User[]>(`https://www.1506815-cq40245.tw1.ru/admin/users`, { headers })
+  }
+
+  changeUserRole(user_id: number, role_id: number): Observable<User[]> {
+    const token = localStorage.getItem('auth-token')
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`)
+    console.log(headers)
+
+    return this.http.post<User[]>(`https://www.1506815-cq40245.tw1.ru/admin/role?user_id=${user_id}&role_id=${role_id}`, {}, { headers })
+  }
+
+  deleteReview(id_review: number): Observable<Review> {
+    const token = localStorage.getItem('auth-token')
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`)
+
+    return this.http.delete<Review>(`https://www.1506815-cq40245.tw1.ru/admin/delete_review?id_review=${id_review}`, { headers })
   }
 }

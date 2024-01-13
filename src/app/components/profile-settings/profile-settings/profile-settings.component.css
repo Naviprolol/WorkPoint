@@ -9,47 +9,47 @@
 
   .return-to-main {
     display: flex;
-    width: 180px;
-    margin-left: 168px;
-    margin-bottom: 65px;
-    margin-top: 18px;
+    width: 9.375vw;
+    margin-left: 8.75vw;
+    margin-bottom: 6.018518518518518vh;
+    margin-top: 1.6666666666666667vh;
     align-items: center;
   }
 
   .return-button {
-    margin-right: 18px;
+    margin-right: 0.9375vw;
     margin-top: auto;
     margin-bottom: auto;
-    width: 16px;
-    height: 16px;
+    width: 0.8333333333333334vw;
+    height: 1.4814814814814816vh;
   }
 
   .return-to-main span {
-    font-size: 15px;
-    line-height: 20px;
+    font-size: 0.78125vw;
+    line-height: 1.8518518518518516vh;
     color: rgba(27, 31, 59, 0.65);
   }
 
   .profile-settings {
-    margin-bottom: 160px;
+    margin-bottom: 14.814814814814813vh;
   }
 
   .main-top-content {
     display: flex;
-    margin-left: 202px;
+    margin-left: 10.520833333333334vw;
   }
 
   .profile-navigation {
-    width: 238px;
-    margin-right: 60px;
-    margin-top: 31px;
+    width: 12.395833333333334vw;
+    margin-right: 3.125vw;
+    margin-top: 2.8703703703703702vh;
 
   }
 
   .profile-navigation li {
-    font-size: 20px;
+    font-size: 1.0416666666666665vw;
     line-height: 177.69%;
-    margin-bottom: 16px;
+    margin-bottom: 1.4814814814814816vh;
   }
 
   .profile-navigation li:last-child {
@@ -58,16 +58,16 @@
 
   .top-information {
     display: flex;
-    width: 500px;
-    height: 150px;
-    margin-bottom: 38px;
+    width: 26.041666666666668vw;
+    height: 13.88888888888889vh;
+    margin-bottom: 3.5185185185185186vh;
   }
 
   .photo-container {
     position: relative;
-    width: 150px;
-    height: 150px;
-    margin-right: 42px;
+    width: 7.8125vw;
+    height: 7.8125vw;
+    margin-right: 2.1875vw;
     border-radius: 50%;
     overflow: hidden;
   }
@@ -83,51 +83,51 @@
 
   .top-information h2 {
     font-weight: 600;
-    font-size: 34px;
+    font-size: 1.7708333333333333vw;
     line-height: 177.69%;
-    margin-bottom: 10px;
+    margin-bottom: 0.9259259259259258vh;
   }
 
   .top-information span {
-    font-size: 20px;
+    font-size: 1.0416666666666665vw;
     line-height: 177.69%;
   }
 
   .progress-information {
     display: flex;
     gap: 75px;
-    margin-left: 520px;
-    margin-bottom: 40px;
-    width: 1075.53px;
+    margin-left: 27.083333333333332vw;
+    margin-bottom: 3.7037037037037033vh;
+    width: 56.0171875vw;
     background: rgba(190, 218, 195, 0.7);
     border-radius: 20px;
   }
 
   .progress-donuts {
-    padding: 50px 0px 80px 102px;
+    padding: 4.62962vh 0px 7.407407vh 5.3125vw;
   }
 
   .progress-information__span {
-    width: 560px;
+    width: 29.166666666666668vw;
     text-align: center;
   }
 
   .progress-information__span p {
-    font-size: 40px;
+    font-size: 2.083333333333333vw;
     font-weight: 700;
-    line-height: 54px;
+    line-height: 5.0vh;
     letter-spacing: 0em;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 4.62962962962963vh;
     color: rgba(27, 31, 59, 0.8);
-    width: 560px;
-    margin-bottom: 90px;
+    width: 29.166666666666668vw;
+    margin-bottom: 8.333333333333332vh;
   }
 
   .progress-information__btn {
-    font-size: 15px;
-    width: 188.49px;
-    height: 54px;
+    font-size: 0.78125vw;
+    width: 9.817187500000001vw;
+    height: 5.0vh;
     background: #E0E0D6;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
@@ -136,12 +136,12 @@
   }
 
   .donut {
-    width: 251px;
-    height: 251px;
+    width: 13.0729vw;
+    height: 13.0729vw;
   }
 
   .about-information {
-    margin-left: 520px;
+    margin-left: 27.083333333333332vw;
   }
 
   .display-flex {
@@ -152,10 +152,10 @@
   .title {
     font-style: normal;
     font-weight: 700;
-    font-size: 28px;
-    line-height: 38px;
+    font-size: 1.4583333333333333vw;
+    line-height: 3.5185185185185186vh;
     color: #000000;
-    margin-bottom: 54px;
+    margin-bottom: 5.0vh;
   }
 
   input {
@@ -163,101 +163,96 @@
   }
 
   .input-field {
-    width: 500px;
-    height: 57px;
+    width: 26.041666666666668vw;
+    height: 5.277777777777778vh;
     border-radius: 10px;
     background: #E0E0D6;
 
   }
 
   .input-field input {
-    width: 460px;
-    height: 57px;
+    width: 23.958333333333336vw;
+    height: 5.277777777777778vh;
     font-weight: 300;
-    font-size: 15px;
-    line-height: 28px;
-    padding-left: 28px;
+    font-size: 0.78125vw;
+    line-height: 2.5925925925925926vh;
+    padding-left: 1.4583333333333333vw;
     background: #E0E0D6;
     border-radius: 10px;
   }
 
   .input-field.name {
-    margin-right: 49px;
-    margin-bottom: 38px;
+    margin-right: 2.5520833333333335vw;
+    margin-bottom: 3.5185185185185186vh;
   }
 
   .input-field.city {
-    margin-right: 49px;
-    margin-bottom: 38px;
+    margin-right: 2.5520833333333335vw;
+    margin-bottom: 3.5185185185185186vh;
   }
 
   .input-field.phone {
-    margin-right: 49px;
-    margin-bottom: 38px;
+    margin-right: 2.5520833333333335vw;
+    margin-bottom: 3.5185185185185186vh;
   }
 
   .progress-information-input__btn {
     cursor: pointer;
     display: flex;
-    width: 188.49px;
-    padding: 13px 52px;
+    width: 9.817187500000001vw;
+    padding: 1.203vh 2.708333vw;
     background: #E0E0D6;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 0.78125vw;
     color: rgba(27, 31, 59, 0.6);
-    margin-bottom: 40px;
+    margin-bottom: 3.7037037037037033vh;
   }
 
   .business-information {
-    margin-left: 520px;
+    margin-left: 27.083333333333332vw;
   }
 
   .business-information__text {
-    margin-bottom: 4px;
-    width: 1000.5px;
+    margin-bottom: 0.3703703703703704vh;
+    width: 52.109375vw;
     font-style: normal;
     font-weight: 300;
-    font-size: 22px;
+    font-size: 1.1458333333333333vw;
     line-height: 177.69%;
     color: #000000;
   }
 
   .business-information__btn {
-    margin-bottom: 150px;
+    margin-bottom: 13.88888888888889vh;
     cursor: pointer;
     display: flex;
-    width: 251px;
-    padding: 19px 20px;
+    width: 13.072916666666668vw;
+    padding: 1.75925925vh 1.04166vw;
     background: #E0E0D6;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 0.78125vw;
     color: rgba(27, 31, 59, 0.6);
   }
 
-
-
-
-
-
   .block {
     float: left;
-    width: 300px;
+    width: 15.625vw;
     overflow: hidden;
   }
 
   .donut-chart-block {
     overflow: hidden;
-    width: 430px;
+    width: 22.395833333333336vw;
   }
 
   .donut-chart {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 10.416666666666668vw;
+    height: 18.51851851851852vh;
     margin: 2rem auto;
     border-radius: 100%
   }
@@ -275,7 +270,7 @@
   .center span {
     color: #7a7a7a;
     display: block;
-    font-size: 36px;
+    font-size: 1.875vw;
     font-weight: 800;
     left: 50%;
     position: absolute;
@@ -322,19 +317,19 @@
   /*  slider */
   .range-slider {
     display: inline-block;
-    width: 40px;
+    width: 2.083333333333333vw;
     position: relative;
     text-align: center;
-    height: 300px;
+    height: 27.77777777777778vh;
 
   }
 
   .range-slider__thumb {
     position: absolute;
     left: 5px;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
+    width: 1.5625vw;
+    height: 2.7777777777777777vh;
+    line-height: 2.7777777777777777vh;
     background: #9C5D56;
     color: #fff;
     font-size: 60%;
@@ -347,13 +342,13 @@
     bottom: -200px;
     position: absolute;
     pointer-events: none;
-    width: 8px;
+    width: 0.4166666666666667vw;
     border-radius: 10px;
   }
 
   .goodSuccessText {
 
-    margin-left: 700px;
+    margin-left: 36.45833333333333vw;
   }
 
   .button-flex {
@@ -379,412 +374,10 @@
   }
 
   .popup img {
-    width: 555px;
-    height: 292px;
+    width: 28.90625vw;
+    height: 27.037037037037038vh;
   }
-}
 
-@media screen and (max-width: 1450px) {
-  .return-to-main {
-    width: calc(0.75*180px);
-    margin-left: calc(0.75*168px);
-    margin-bottom: calc(0.83*65px);
-    margin-top: calc(0.83*18px);
-  }
-
-  .return-button {
-    margin-right: calc(0.75*18px);
-    width: calc(0.75*16px);
-    height: calc(0.83*16px);
-  }
-
-  .return-to-main span {
-    font-size: calc(0.75*15px);
-    line-height: calc(0.83*20px);
-  }
-
-  .profile-settings {
-    margin-bottom: calc(0.83*160px);
-  }
-
-  .main-top-content {
-    margin-left: calc(0.75*202px);
-  }
-
-  .profile-navigation {
-    width: calc(0.75*238px);
-    margin-right: calc(0.75*60px);
-    margin-top: calc(0.83*31px);
-  }
-
-  .profile-navigation li {
-    font-size: calc(0.75*20px);
-    line-height: calc(0.83*177.69%);
-    margin-bottom: calc(0.83*16px);
-  }
-
-  .photo-container {
-    width: calc(0.83*150px);
-    height: calc(0.83*150px);
-    margin-right: calc(0.75*42px);
-  }
-
-  .top-information {
-    width: calc(0.75*500px);
-    height: calc(0.83*150px);
-    margin-bottom: calc(0.83*38px);
-  }
-
-  .top-information h2 {
-    font-size: calc(0.75*34px);
-    line-height: calc(0.83*177.69%);
-    margin-bottom: calc(0.83*10px);
-  }
-
-  .top-information span {
-    font-size: calc(0.75*20px);
-    line-height: calc(0.83*177.69%);
-  }
-
-  .progress-information {
-    gap: calc(0.75*75px);
-    margin-left: calc(0.75*520px);
-    margin-bottom: calc(0.83*40px);
-    width: calc(0.75*1075.53px);
-  }
-
-  .progress-donuts {
-    padding: calc(0.83*50px) 0px calc(0.83*80px) calc(0.75*102px);
-  }
-
-  .progress-information__span {
-    width: calc(0.75*560px);
-  }
-
-  .progress-information__span p {
-    font-size: calc(0.75*40px);
-    line-height: calc(0.83*54px);
-    letter-spacing: 0em;
-    margin-top: calc(0.83*50px);
-    width: calc(0.75*560px);
-    margin-bottom: calc(0.75*90px);
-  }
-
-  .progress-information__btn {
-    font-size: calc(0.75*15px);
-    width: calc(0.75*188.49px);
-    height: calc(0.83*54px);
-  }
-
-  .donut {
-    width: calc(0.75*251px);
-    height: calc(0.75*251px);
-  }
-
-  .about-information {
-    margin-left: calc(0.75*520px);
-  }
-
-  .display-flex {
-    margin-left: 0;
-  }
-
-  .title {
-    font-size: calc(0.75*28px);
-    line-height: calc(0.83*38px);
-    margin-bottom: calc(0.83*54px);
-  }
-
-  .input-field {
-    width: calc(0.75*500px);
-    height: calc(0.83*57px);
-  }
-
-  .input-field input {
-    width: calc(0.75*460px);
-    height: calc(0.83*57px);
-    font-size: calc(0.75*15px);
-    line-height: calc(0.83*28px);
-    padding-left: calc(0.75*28px);
-  }
-
-  .input-field.name {
-    margin-right: calc(0.75*49px);
-    margin-bottom: calc(0.83*38px);
-  }
-
-  .input-field.city {
-    margin-right: calc(0.75*49px);
-    margin-bottom: calc(0.83*38px);
-  }
-
-  .input-field.phone {
-    margin-right: calc(0.75*49px);
-    margin-bottom: calc(0.83*38px);
-  }
-
-  .progress-information-input__btn {
-    width: calc(0.75*188.49px);
-    padding: calc(0.83*13px) calc(0.75*52px);
-    font-size: calc(0.75*15px);
-    margin-bottom: calc(0.83*40px);
-  }
-
-  .business-information {
-    margin-left: calc(0.75*520px);
-  }
-
-  .business-information__text {
-    margin-bottom: calc(0.83*4px);
-    width: calc(0.75*1000.5px);
-    font-size: calc(0.75*22px);
-    line-height: calc(0.83*177.69%);
-  }
-
-  .business-information__btn {
-    margin-bottom: calc(0.83*150px);
-    width: calc(0.75*251px);
-    padding: calc(0.83*19px) calc(0.75*20px);
-    font-size: calc(0.75*15px);
-  }
-
-  .block {
-    width: calc(0.75*300px);
-  }
-
-  .donut-chart-block {
-    width: calc(0.75*430px);
-  }
-
-  .donut-chart {
-    width: calc(0.75*200px);
-    height: calc(0.83*200px);
-    margin: 2rem auto;
-  }
-
-  .center span {
-    font-size: calc(0.75*36px);
-  }
-
-  .item {
-    font-size: calc(0.75*1.5rem);
-  }
-
-  .popup img {
-    width: calc(0.75*555px);
-    height: calc(0.83*292px);
-  }
-}
-
-@media screen and (max-width: 1370px) {
-  .return-to-main {
-    width: calc(0.71*180px);
-    margin-left: calc(0.71*168px);
-    margin-bottom: calc(0.71*65px);
-    margin-top: calc(0.71*18px);
-  }
-
-  .return-button {
-    margin-right: calc(0.71*18px);
-    width: calc(0.71*16px);
-    height: calc(0.71*16px);
-  }
-
-  .return-to-main span {
-    font-size: calc(0.71*15px);
-    line-height: calc(0.71*20px);
-  }
-
-  .profile-settings {
-    margin-bottom: calc(0.71*160px);
-  }
-
-  .main-top-content {
-    margin-left: calc(0.71*202px);
-  }
-
-  .profile-navigation {
-    width: calc(0.71*238px);
-    margin-right: calc(0.71*60px);
-    margin-top: calc(0.71*31px);
-  }
-
-  .profile-navigation li {
-    font-size: calc(0.71*20px);
-    line-height: calc(0.71*177.69%);
-    margin-bottom: calc(0.71*16px);
-  }
-
-  .photo-container {
-    width: calc(0.71*150px);
-    height: calc(0.71*150px);
-    margin-right: calc(0.71*42px);
-  }
-
-  .top-information {
-    width: calc(0.71*500px);
-    height: calc(0.71*150px);
-    margin-bottom: calc(0.71*38px);
-  }
-
-  .top-information h2 {
-    font-size: calc(0.71*34px);
-    line-height: calc(0.71*177.69%);
-    margin-bottom: calc(0.71*10px);
-  }
-
-  .top-information span {
-    font-size: calc(0.71*20px);
-    line-height: calc(0.71*177.69%);
-  }
-
-  .progress-information {
-    gap: calc(0.71*75px);
-    margin-left: calc(0.71*520px);
-    margin-bottom: calc(0.71*40px);
-    width: calc(0.71*1075.53px);
-  }
-
-  .progress-donuts {
-    padding: calc(0.71*50px) 0px calc(0.71*80px) calc(0.71*102px);
-  }
-
-  .progress-information__span {
-    width: calc(0.71*560px);
-  }
-
-  .progress-information__span p {
-    font-size: calc(0.71*40px);
-    line-height: calc(0.71*54px);
-    letter-spacing: 0em;
-    margin-top: calc(0.71*50px);
-    width: calc(0.71*560px);
-    margin-bottom: calc(0.71*90px);
-  }
-
-  .progress-information__btn {
-    font-size: calc(0.71*15px);
-    width: calc(0.71*188.49px);
-    height: calc(0.71*54px);
-  }
-
-  .donut {
-    width: calc(0.71*251px);
-    height: calc(0.71*251px);
-  }
-
-  .about-information {
-    margin-left: calc(0.71*520px);
-  }
-
-  .display-flex {
-    margin-left: 0;
-  }
-
-  .title {
-    font-size: calc(0.71*28px);
-    line-height: calc(0.71*38px);
-    margin-bottom: calc(0.71*54px);
-  }
-
-  .input-field {
-    width: calc(0.71*500px);
-    height: calc(0.71*57px);
-  }
-
-  .input-field input {
-    width: calc(0.71*460px);
-    height: calc(0.71*57px);
-    font-size: calc(0.71*15px);
-    line-height: calc(0.71*28px);
-    padding-left: calc(0.71*28px);
-  }
-
-  .input-field.name {
-    margin-right: calc(0.71*49px);
-    margin-bottom: calc(0.71*38px);
-  }
-
-  .input-field.city {
-    margin-right: calc(0.71*49px);
-    margin-bottom: calc(0.71*38px);
-  }
-
-  .input-field.phone {
-    margin-right: calc(0.71*49px);
-    margin-bottom: calc(0.71*38px);
-  }
-
-  .progress-information-input__btn {
-    width: calc(0.71*188.49px);
-    padding: calc(0.71*13px) calc(0.71*52px);
-    font-size: calc(0.71*15px);
-    margin-bottom: calc(0.71*40px);
-  }
-
-  .business-information {
-    margin-left: calc(0.71*520px);
-  }
-
-  .business-information__text {
-    margin-bottom: calc(0.71*4px);
-    width: calc(0.71*1000.5px);
-    font-size: calc(0.71*22px);
-    line-height: calc(0.71*177.69%);
-  }
-
-  .business-information__btn {
-    margin-bottom: calc(0.71*150px);
-    width: calc(0.71*251px);
-    padding: calc(0.71*19px) calc(0.71*20px);
-    font-size: calc(0.71*15px);
-  }
-
-  .block {
-    width: calc(0.71*300px);
-  }
-
-  .donut-chart-block {
-    width: calc(0.71*430px);
-  }
-
-  .donut-chart {
-    width: calc(0.71*200px);
-    height: calc(0.71*200px);
-    margin: 2rem auto;
-  }
-
-  .center span {
-    font-size: calc(0.71*36px);
-  }
+  .profile-img {}
 
-  .item {
-    font-size: calc(0.71*1.5rem);
-  }
-
-  /*  slider */
-  .range-slider {
-    width: calc(0.71*40px);
-    height: calc(0.71*300px);
-
-  }
-
-  .range-slider__thumb {
-    left: calc(0.71*5px);
-    width: calc(0.71*30px);
-    height: calc(0.71*30px);
-    line-height: calc(0.71*30px);
-    font-size: calc(0.71*60%);
-  }
-
-  .range-slider__bar {
-    left: calc(0.71*16px);
-    bottom: calc(0.71*-200px);
-    width: calc(0.71*8px);
-  }
-
-  .popup img {
-    width: calc(0.71*555px);
-    height: calc(0.71*292px);
-  }
 }

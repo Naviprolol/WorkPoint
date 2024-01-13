@@ -27,7 +27,7 @@
             <label for="avatar"></label>
             <button type="button" (click)="triggerClick()">
               <img [src]="imagePreview || user.photo_user" alt="profile" onerror="this.src='assets/img/logo.svg'"
-                *ngIf="imagePreview || user.photo_user">
+                *ngIf="imagePreview || user.photo_user" class="profile-img">
             </button>
           </div>
           <ul>

@@ -8,6 +8,7 @@ import { AuthService } from 'src/app/servises/auth.service';
 import * as moment from 'moment';
 import { UserService } from 'src/app/servises/user.service';
 import { YaReadyEvent } from 'angular8-yandex-maps';
+import { AdminService } from 'src/app/servises/admin.service';
 
 
 @Component({
@@ -16,7 +17,7 @@ import { YaReadyEvent } from 'angular8-yandex-maps';
   styleUrls: ['./coworking-item.component.css']
 })
 export class CoworkingItemComponent implements OnInit {
-  coworking: any
+  coworking: ICoworking
   tags: any
   form: FormGroup
   review: Review
@@ -24,6 +25,8 @@ export class CoworkingItemComponent implements OnInit {
   coworkings: ICoworking[] = []
   user: User
   sortedItems: Review[] = []
+  flag: boolean = false;
+  ifOwnerPlace: boolean = false;
 
   isReviewSend: boolean = false
   UPDay: boolean = true
@@ -47,7 +50,8 @@ export class CoworkingItemComponent implements OnInit {
   constructor(private route: ActivatedRoute,
     private coworkingsService: CoworkingsService,
     private reviewService: ReviewService,
-    private userService: UserService) { }
+    private userService: UserService,
+    private adminService: AdminService) { }
 
   ngOnInit() {
 
@@ -59,6 +63,14 @@ export class CoworkingItemComponent implements OnInit {
       this.coworking.photo = this.coworking.photo.split('#')
       this.coworking.photo.pop();
       this.tags = this.coworking.tags
+
+      this.coworkingsService.getCoworkingsByToken().subscribe((coworkings) => {
+        coworkings.forEach(coworking => {
+          if (coworking.id === this.coworking.id) {
+            this.ifOwnerPlace = true;
+          }
+        });
+      })
 
       this.reviewService.getReviewsByIdPlace(this.coworking.id).subscribe((reviews) => {
         this.rating = reviews.map(review => review.rank);
@@ -79,7 +91,6 @@ export class CoworkingItemComponent implements OnInit {
 
     this.userService.getUserByToken().subscribe(user => {
       this.user = user
-      // console.log('user', this.user.name)
     });
 
     this.reviewService.getReviewsByIdPlace(coworkingIdFromRouteINT).subscribe(reviews => {
@@ -89,6 +100,8 @@ export class CoworkingItemComponent implements OnInit {
 
       this.allReviews.forEach(review => {
         review.showFullDescription = false;
+        review.isAnswer = false;
+        review.answerText = '';
         review.formattedDate = moment(review.created_at).format('DD.MM.YYYY HH:mm');
       });
     })
@@ -146,6 +159,36 @@ export class CoworkingItemComponent implements OnInit {
         this.form.enable()
       }
     );
+  }
+
+  addAnswer(review: Review) {
+    this.reviewService.addReviewAnswer(
+      this.user.id,
+      review.id,
+      this.user.name,
+      this.user.surname,
+      this.user.photo_user,
+      review.place_id,
+      review.answerText
+    ).subscribe(
+      response => {
+        console.log(response)
+        location.reload()
+      },
+      error => {
+        // Обработка ошибок
+        console.log(error);
+      })
+  }
+
+  deleteReview(review_id: number): void {
+    this.adminService.deleteReview(review_id).subscribe(response => {
+      console.log(response)
+      location.reload()
+    },
+      error => {
+        console.log(error)
+      });
   }
 
   toggleUPDay() {

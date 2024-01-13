@@ -46,41 +46,50 @@
   .count-coworkings {
     color: rgba(27, 31, 59, 0.8);
     font-weight: 700;
-    font-size: 19px;
+    font-size: 0.98958vw;
     margin-left: 33.958vw;
-    margin-top: 53px;
-    margin-bottom: 19px;
+    margin-top: 4.9074vh;
+    /* 53px -> 4.9074vh */
+    margin-bottom: 1.75925vh;
+    /* 19px -> 1.75925vh */
   }
 
   .banner-container {
     width: 72.916vw;
-    height: 413px;
+    height: 38.2407vh;
+    /* 413px -> 38.2407vh */
     margin-left: 10.4vw;
-    margin-top: 70px;
+    margin-top: 6.48148vh;
+    /* 70px -> 6.48148vh */
     border-radius: 20px;
-    margin-bottom: 140px;
+    margin-bottom: 12.9629vh;
+    /* 140px -> 12.9629vh */
   }
 
   .banner-container .item {
     width: 100%;
-    height: 413px;
+    height: 38.2407vh;
+    /* 413px -> 38.2407vh */
     border-radius: 20px;
     cursor: pointer;
   }
 
   .banner-container .banner {
     width: 72.916vw;
-    height: 413px;
+    height: 38.2407vh;
+    /* 413px -> 38.2407vh */
   }
 
   .carousel-pagination {
-    margin-top: 20px;
+    margin-top: 1.85185vh;
+    /* 20px -> 1.85185vh */
   }
 
   .banner-container p {
     font-weight: 700;
-    font-size: 48px;
-    padding-top: 43px;
+    font-size: 2.5vw;
+    padding-top: 3.98148vh;
+    /* 43px -> 3.98148vh */
     text-align: center;
   }
 
@@ -93,9 +102,10 @@
 
   .search-container {
     display: flex;
-    gap: 17px;
+    gap: 0.8854vw;
     width: 44.8958vw;
-    height: 54px;
+    height: 5vh;
+    /* 54px -> 5vh */
     background: #FBFBF5;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
@@ -105,7 +115,7 @@
 
   .search-container-input {
     width: 44.89583vw;
-    font-size: 15px;
+    font-size: 0.78125vw;
     background: #FBFBF5;
     font-weight: 300;
   }
@@ -130,50 +140,60 @@
     border-radius: 10px;
     font-weight: 600;
     color: rgba(27, 31, 59, 0.6);
-    font-size: 15px;
+    font-size: 0.78125vw;
   }
 
   .filter-container {
     background: rgba(190, 218, 195, 0.7);
     border-radius: 20px;
     width: 21.8229vw;
-    height: 1100px;
+    height: 101.85185vh;
+    /* 1100px -> 101.85185vh */
     margin-left: 8.3854vw;
-    margin-bottom: 271px;
+    margin-bottom: 25.09259vh;
+    /* 271px -> 25.09259vh */
     margin-right: 3.125vw;
   }
 
   .filter-container h1 {
     font-weight: 700;
-    font-size: 28px;
-    line-height: 38px;
-    padding-top: 55px;
-    padding-left: 56px;
-    margin-bottom: 26px;
+    font-size: 1.4583vw;
+    line-height: 3.51851vh;
+    /* 38px -> 3.51851vh */
+    padding-top: 5.09259vh;
+    /* 55px -> 5.09259vh */
+    padding-left: 2.9166vw;
+    margin-bottom: 2.4074vh;
+    /* 26px -> 2.4074vh */
   }
 
   .filter-labels {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 0.2083vw;
   }
 
   .filter-labels h2 {
     font-weight: 600;
-    font-size: 24px;
-    line-height: 33px;
-    padding-left: 56px;
-    padding-bottom: 6px;
+    font-size: 1.25vw;
+    line-height: 3.05555vh;
+    /* 33px -> 3.05555vh */
+    padding-left: 2.916vw;
+    padding-bottom: 0.55555vh;
+    /* 6px -> 0.55555vh */
   }
 
   .filter-labels h3 {
     font-weight: 600;
-    font-size: 24px;
-    line-height: 33px;
+    font-size: 1.25vw;
+    line-height: 3.055vh;
   }
 
   .filter-parking {
-    margin-top: 16px;
+    margin-top: 1.48148vh;
+    /* 16px -> 1.48148vh */
+    margin-bottom: 1.11111vh;
+    /* 12px -> 1.11111vh */
   }
 
   .custom-radio {
@@ -186,7 +206,7 @@
     display: inline-flex;
     align-items: center;
     user-select: none;
-    font-size: 24px;
+    font-size: 1.25vw;
     line-height: 177.69%;
   }
 
@@ -203,26 +223,23 @@
   }
 
   .coworking-type {
-    margin-top: 11px;
+    margin-top: 1.0185vh;
   }
 
   .coworking-time {
-    margin-top: 11px;
-  }
-
-  .filter-parking {
-    margin-bottom: 12px;
+    margin-top: 1.0185vh;
   }
 
   .filter-restzone {
-    margin-bottom: 12px;
+    margin-bottom: 1.11111vh;
+    /* 12px -> 1.11111vh */
   }
 
   .loader-icon {
     position: absolute;
     top: calc(1650px/2);
     left: calc(1920px/2);
-    font-size: 50px;
+    font-size: 2.6041vw;
     animation: fa-spin 0.7s infinite linear;
   }
 
@@ -234,265 +251,4 @@
   } */
 
 
-}
-
-@media screen and (max-width: 1450px) {
-
-  .count-coworkings {
-    font-size: calc(0.75*19px);
-    margin-left: calc(0.75*652px);
-    margin-top: calc(0.83*53px);
-    margin-bottom: calc(0.83*19px);
-  }
-
-  .banner-container {
-    width: calc(0.75*1400px);
-    height: calc(0.83*413px);
-    margin-left: calc(0.75*200px);
-    margin-top: calc(0.83*70px);
-    margin-bottom: calc(0.83*140px);
-  }
-
-  .banner-container .item {
-    height: calc(0.83*413px);
-  }
-
-  .banner-container .banner {
-    width: calc(0.75*1400px);
-    height: calc(0.83*413px);
-  }
-
-  .carousel-pagination {
-    margin-top: calc(0.83*20px);
-  }
-
-  .banner-container p {
-    font-size: calc(0.75*48px);
-    padding-top: calc(0.83*43px);
-  }
-
-  .search {
-    width: calc(0.75*1175px);
-    margin-left: calc(0.75*412px);
-  }
-
-  .search-container {
-    gap: calc(0.75*17px);
-    width: calc(0.75*862px);
-    height: calc(0.83*54px);
-  }
-
-  .search-container-input {
-    width: calc(0.75*862px);
-    font-size: calc(0.75*15px);
-  }
-
-  .search-container img {
-    margin-left: calc(0.75*28px);
-  }
-
-  .btn-find-coworking {
-    width: calc(0.75*275px);
-    font-size: calc(0.75*15px);
-  }
-
-  .filter-container {
-    width: calc(0.75*419px);
-    height: calc(0.83*1100px);
-    margin-left: calc(0.75*161px);
-    margin-bottom: calc(0.83*271px);
-    margin-right: calc(0.75*60px);
-  }
-
-  .filter-container h1 {
-    font-size: calc(0.75*28px);
-    line-height: calc(0.83*38px);
-    padding-top: calc(0.83*55px);
-    padding-left: calc(0.75*56px);
-    margin-bottom: calc(0.83*26px);
-  }
-
-  .filter-labels {
-    gap: calc(0.75*4px);
-  }
-
-  .filter-labels h2 {
-    font-size: calc(0.75*24px);
-    line-height: calc(0.83*33px);
-    padding-left: calc(0.75*56px);
-    padding-bottom: calc(0.83*6px);
-  }
-
-  .filter-labels h3 {
-    font-size: calc(0.75*24px);
-    line-height: calc(0.83*33px);
-  }
-
-  .filter-parking {
-    margin-top: calc(0.83*16px);
-  }
-
-  .custom-radio+label {
-    font-size: calc(0.75*24px);
-    line-height: calc(0.83*177.69%);
-  }
-
-  .custom-radio+label::before {
-    width: calc(0.75*22.6px);
-    height: calc(0.83*24px);
-    margin-right: calc(0.75*19px);
-    margin-left: calc(0.75*15px);
-  }
-
-  .coworking-type {
-    margin-top: calc(0.83*11px);
-  }
-
-  .coworking-time {
-    margin-top: calc(0.83*11px);
-  }
-
-  .filter-parking {
-    margin-bottom: calc(0.83*12px);
-  }
-
-  .filter-restzone {
-    margin-bottom: calc(0.83*12px);
-  }
-
-  .loader-icon {
-    top: calc(0.83*calc(1650px/2));
-    left: calc(0.75*calc(1920px/2));
-    font-size: calc(0.75*50px);
-  }
-}
-
-@media screen and (max-width: 1370px) {
-  .count-coworkings {
-    font-size: calc(0.71*19px);
-    margin-left: calc(0.71*652px);
-    margin-top: calc(0.71*53px);
-    margin-bottom: calc(0.71*19px);
-  }
-
-  .banner-container {
-    width: calc(0.71*1400px);
-    height: calc(0.71*413px);
-    margin-left: calc(0.71*200px);
-    margin-top: calc(0.71*70px);
-    margin-bottom: calc(0.71*140px);
-  }
-
-  .banner-container .item {
-    height: calc(0.71*413px);
-  }
-
-  .banner-container .banner {
-    width: calc(0.71*1400px);
-    height: calc(0.71*413px);
-  }
-
-  .carousel-pagination {
-    margin-top: calc(0.71*20px);
-  }
-
-  .banner-container p {
-    font-size: calc(0.71*48px);
-    padding-top: calc(0.71*43px);
-  }
-
-  .search {
-    width: calc(0.71*1175px);
-    margin-left: calc(0.71*412px);
-  }
-
-  .search-container {
-    gap: calc(0.71*17px);
-    width: calc(0.71*862px);
-    height: calc(0.71*54px);
-  }
-
-  .search-container-input {
-    width: calc(0.71*862px);
-    font-size: calc(0.71*15px);
-  }
-
-  .search-container img {
-    margin-left: calc(0.71*28px);
-  }
-
-  .btn-find-coworking {
-    width: calc(0.71*275px);
-    font-size: calc(0.71*15px);
-  }
-
-  .filter-container {
-    width: calc(0.71*419px);
-    height: calc(0.71*1100px);
-    margin-left: calc(0.71*161px);
-    margin-bottom: calc(0.71*271px);
-    margin-right: calc(0.71*60px);
-  }
-
-  .filter-container h1 {
-    font-size: calc(0.71*28px);
-    line-height: calc(0.71*38px);
-    padding-top: calc(0.71*55px);
-    padding-left: calc(0.71*56px);
-    margin-bottom: calc(0.71*26px);
-  }
-
-  .filter-labels {
-    gap: calc(0.71*4px);
-  }
-
-  .filter-labels h2 {
-    font-size: calc(0.71*24px);
-    line-height: calc(0.71*33px);
-    padding-left: calc(0.71*56px);
-    padding-bottom: calc(0.71*6px);
-  }
-
-  .filter-labels h3 {
-    font-size: calc(0.71*24px);
-    line-height: calc(0.71*33px);
-  }
-
-  .filter-parking {
-    margin-top: calc(0.71*16px);
-  }
-
-  .custom-radio+label {
-    font-size: calc(0.71*24px);
-    line-height: calc(0.71*177.69%);
-  }
-
-  .custom-radio+label::before {
-    width: calc(0.71*22.6px);
-    height: calc(0.71*24px);
-    margin-right: calc(0.71*19px);
-    margin-left: calc(0.71*15px);
-  }
-
-  .coworking-type {
-    margin-top: calc(0.71*11px);
-  }
-
-  .coworking-time {
-    margin-top: calc(0.71*11px);
-  }
-
-  .filter-parking {
-    margin-bottom: calc(0.71*12px);
-  }
-
-  .filter-restzone {
-    margin-bottom: calc(0.71*12px);
-  }
-
-  .loader-icon {
-    top: calc(0.71*calc(1650px/2));
-    left: calc(0.71*calc(1920px/2));
-    font-size: calc(0.71*50px);
-  }
 }

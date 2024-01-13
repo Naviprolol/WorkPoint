@@ -44,9 +44,9 @@ export interface Message {
 }
 
 export interface Review {
-  id: string
+  id: number
   user_id: number
-  place_id: string
+  place_id: number
   rank: number
   body: string
   created_at: string
@@ -55,6 +55,8 @@ export interface Review {
   user_photo: string
   formattedDate: string
   showFullDescription: boolean
+  isAnswer: boolean
+  answerText: string
 }
 
 export interface IAd {

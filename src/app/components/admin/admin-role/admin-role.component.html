@@ -1,4 +1,5 @@
 <app-header></app-header>
+<i class="fa fa-spinner fa-spin loader-icon" *ngIf="isLoading"></i>
 <div class="return-to-main">
   <a routerLink="/admin/main">
     <img src="assets/img/return-button.svg" alt="return-button" class="return-button">
@@ -6,26 +7,33 @@
   <span>Вернуться на главную</span>
 </div>
 
-<div class="content-container">
-  <div class="search">
-    <div class="search-container" id="searchInput">
-      <img src="assets/img/search.svg" alt="search">
-      <input type="text" placeholder="Введите ФИО" class="search-container-input">
-      <!-- [(ngModel)]="searchText" (keyup.enter)="filterByText()" -->
-    </div>
-    <button class="btn-find-employee" type="button">
-      Найти
-    </button>
-  </div>
-
-  <ul class="users">
-    <li class="user">
-      <img src="assets\img\map.png" alt="avatar" class="avatar">
-      <div class="user-information">
-        <h1 class="user-name">Иванов Иван Иванович</h1>
-        <h2 class="user-role">Пользователь</h2>
+<div class="wrapper">
+  <div class="content-container">
+    <div class="search">
+      <div class="search-container" id="searchInput">
+        <img src="assets/img/search.svg" alt="search">
+        <input type="text" placeholder="Введите ФИО" class="search-container-input" [(ngModel)]="searchText"
+          (keyup.enter)="filterByText()">
       </div>
-      <button type="button" class="change-status-btn">Сделать администратором</button>
-    </li>
-  </ul>
+      <button class="btn-find-employee" type="button" (click)="filterByText()">
+        Найти
+      </button>
+    </div>
+
+    <ul class="users" *ngIf="!isLoading">
+      <li class="user" *ngFor="let user of filteredUsers">
+        <ng-container *ngIf="user.photo_user">
+          <img src={{user.photo_user}} alt="avatar" class="avatar"
+            [ngStyle]="user.role_id === 3 ? {'border': '2px solid #5E9C76'} : {}"
+            onerror="this.src='assets/img/logo.svg'">
+          <div class="user-information">
+            <h1 class="user-name">{{user.surname + ' ' + user.name}}</h1>
+            <h2 class="user-role" *ngIf="user.role_id === 3">Администратор</h2>
+            <h2 class="user-role" *ngIf="user.role_id === 1 || user.role_id === 2">Пользователь</h2>
+          </div>
+          <button type="button" class="profile-btn" [routerLink]="['/admin/roles/profile', user.id]">Профиль</button>
+        </ng-container>
+      </li>
+    </ul>
+  </div>
 </div>

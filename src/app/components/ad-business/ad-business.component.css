@@ -25,24 +25,24 @@
 @media screen and (max-width: 5000px) {
   .return-to-main {
     display: flex;
-    width: 180px;
-    margin-left: 168px;
-    margin-bottom: 65px;
-    margin-top: 18px;
+    width: 9.375vw;
+    margin-left: 8.75vw;
+    margin-bottom: 6.018518518518518vh;
+    margin-top: 1.6666666666666667vh;
     align-items: center;
   }
 
   .return-button {
-    margin-right: 18px;
+    margin-right: 0.9375vw;
     margin-top: auto;
     margin-bottom: auto;
-    width: 16px;
-    height: 16px;
+    width: 0.8333333333333334vw;
+    height: 1.4814814814814816vh;
   }
 
   .return-to-main span {
-    font-size: 15px;
-    line-height: 20px;
+    font-size: 0.78125vw;
+    line-height: 1.8518518518518516vh;
     color: rgba(27, 31, 59, 0.65);
   }
 
@@ -53,20 +53,20 @@
 
   .main-top-content {
     display: flex;
-    margin-left: 202px;
-    margin-bottom: 100px;
+    margin-left: 10.520833333333334vw;
+    margin-bottom: 9.25925925925926vh;
   }
 
   .profile-navigation {
-    width: 238px;
-    margin-right: 60px;
-    margin-top: 31px;
+    width: 12.395833333333334vw;
+    margin-right: 3.125vw;
+    margin-top: 2.8703703703703702vh;
   }
 
   .profile-navigation li {
-    font-size: 20px;
+    font-size: 1.0416666666666665vw;
     line-height: 177.69%;
-    margin-bottom: 16px;
+    margin-bottom: 1.4814814814814816vh;
   }
 
   .profile-navigation li:last-child {
@@ -75,22 +75,22 @@
 
   .title {
     font-weight: 700;
-    font-size: 28px;
-    line-height: 38px;
-    margin-bottom: 32px;
+    font-size: 1.4583333333333333vw;
+    line-height: 3.5185185185185186vh;
+    margin-bottom: 2.9629629629629632vh;
   }
 
   .description {
     display: inline-block;
     font-weight: 400;
-    font-size: 24px;
-    line-height: 43px;
-    max-width: 1070px;
-    margin-bottom: 30px;
+    font-size: 1.25vw;
+    line-height: 3.981481481481482vh;
+    max-width: 55.729166666666664vw;
+    margin-bottom: 2.7777777777777777vh;
   }
 
   .all-requests-container {
-    margin-bottom: 35px;
+    margin-bottom: 3.2407407407407405vh;
   }
 
   .all-requests-container button:hover {
@@ -105,8 +105,8 @@
 
   .all-requests {
     border-radius: 10px;
-    width: 234px;
-    height: 54px;
+    width: 12.1875vw;
+    height: 5.0vh;
     text-align: center;
     background: #E0E0D6;
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.16);
@@ -114,25 +114,25 @@
 
   .all-requests p {
     color: var(--text-03, rgba(27, 31, 59, 0.40));
-    font-size: 15px;
+    font-size: 0.78125vw;
     font-weight: 600;
-    line-height: 28px;
+    line-height: 2.5925925925925926vh;
   }
 
   .subtitle {
     font-weight: 600;
-    font-size: 26px;
-    line-height: 35px;
+    font-size: 1.3541666666666667vw;
+    line-height: 3.2407407407407405vh;
     color: #000000;
-    margin-bottom: 39px;
+    margin-bottom: 3.6111111111111107vh;
   }
 
   .subtitle2 {
-    margin-top: 30px;
-    margin-bottom: 24px;
+    margin-top: 2.7777777777777777vh;
+    margin-bottom: 2.2222222222222223vh;
     font-weight: 600;
-    font-size: 20px;
-    line-height: 36px;
+    font-size: 1.0416666666666665vw;
+    line-height: 3.3333333333333335vh;
     color: #000000;
   }
 
@@ -142,11 +142,11 @@
   }
 
   .email {
-    margin-bottom: 39px;
+    margin-bottom: 3.6111111111111107vh;
   }
 
   .input-field .big-input {
-    width: 460px;
+    width: 23.958333333333336vw;
   }
 
   .input-date input[type="date"]::-webkit-calendar-picker-indicator {
@@ -160,10 +160,10 @@
   }
 
   .red-text {
-    font-size: 12px;
+    font-size: 0.625vw;
     display: inline-block;
     color: red;
-    padding-top: 10px;
+    padding-top: 0.925vh;
   }
 
   .invalid {
@@ -180,27 +180,27 @@
     display: inline-flex;
     align-items: center;
     user-select: none;
-    font-size: 24px;
+    font-size: 1.25vw;
     line-height: 177.69%;
   }
 
   .custom-radio+label::before {
     content: '';
     display: inline-block;
-    width: 22.6px;
-    height: 24px;
-    margin-right: 19px;
-    margin-left: 15px;
+    width: 1.1770833333333335vw;
+    height: 2.2222222222222223vh;
+    margin-right: 0.9895833333333333vw;
+    margin-left: 0.78125vw;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 100% 100%;
   }
 
   .card {
-    padding-top: 19px;
-    padding-left: 29px;
-    width: 309.51px;
-    height: 203px;
+    padding-top: 1.7592vh;
+    padding-left: 1.5104166666666667vw;
+    width: 16.1203125vw;
+    height: 18.796296296296298vh;
     background: #D1E5D2;
     border-radius: 20px;
     box-sizing: border-box;
@@ -208,27 +208,27 @@
 
   label {
     font-weight: 600;
-    font-size: 20px;
-    line-height: 36px;
+    font-size: 1.0416666666666665vw;
+    line-height: 3.3333333333333335vh;
     color: #000000;
   }
 
   .card__description {
     font-weight: 300;
-    font-size: 15px;
-    line-height: 27px;
+    font-size: 0.78125vw;
+    line-height: 2.5vh;
     color: #000000;
-    max-width: 276px;
-    margin-top: 21px;
+    max-width: 14.374999999999998vw;
+    margin-top: 1.9444444444444444vh;
 
   }
 
   .price {
     font-weight: 600;
-    font-size: 20px;
-    line-height: 36px;
+    font-size: 1.0416666666666665vw;
+    line-height: 3.3333333333333335vh;
     color: #000000;
-    margin-left: 110px;
+    margin-left: 5.729166666666666vw;
   }
 
   .dn {
@@ -236,28 +236,28 @@
   }
 
   .photo-baner-container {
-    margin-bottom: 45px;
+    margin-bottom: 4.166666666666666vh;
   }
 
   .photo-baner-container p {
     color: #000;
-    font-size: 20px;
+    font-size: 1.0416666666666665vw;
     font-weight: 600;
     line-height: 177.688%;
-    margin-bottom: 22px;
+    margin-bottom: 2.037037037037037vh;
   }
 
   .photo-baner {
-    width: 249px;
-    height: 56px;
+    width: 12.968750000000002vw;
+    height: 5.185185185185185vh;
     flex-shrink: 0;
   }
 
   .photo-baner .btn-photo-baner {
     display: flex;
     align-items: center;
-    width: 249px;
-    height: 56px;
+    width: 12.968750000000002vw;
+    height: 5.185185185185185vh;
     border-radius: 10px;
     background: #D1E5D2;
   }
@@ -273,22 +273,22 @@
 
   .photo-baner .btn-photo-baner h5 {
     color: #000;
-    font-size: 15px;
+    font-size: 0.78125vw;
     font-weight: 600;
     line-height: 177.688%;
-    margin-left: 43px;
+    margin-left: 2.2395833333333335vw;
   }
 
   .photo-baner .btn-photo-baner img {
-    width: 18px;
-    height: 18px;
-    margin-left: 18px;
+    width: 0.9375vw;
+    height: 1.6666666666666667vh;
+    margin-left: 0.9375vw;
   }
 
   .button-send {
-    width: 220px;
-    height: 54px;
-    font-size: 15px;
+    width: 11.458333333333332vw;
+    height: 5.0vh;
+    font-size: 0.78125vw;
     background-color: #E0E0D6;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
@@ -314,47 +314,47 @@
   }
 
   .popup img {
-    width: 555px;
-    height: 292px;
+    width: 28.90625vw;
+    height: 27.037037037037038vh;
   }
 
   .date-container p {
-    font-size: 20px;
+    font-size: 1.0416666666666665vw;
     font-weight: 600;
     line-height: 177.688%;
-    margin-bottom: 30px;
+    margin-bottom: 2.7777777777777777vh;
   }
 
   .input-containers {
     display: flex;
-    gap: 126px;
-    margin-bottom: 75px;
+    gap: 6.5625vw;
+    margin-bottom: 6.944444444444445vh;
   }
 
   .status {
-    margin-bottom: 30px;
+    margin-bottom: 2.7777777777777777vh;
   }
 
   .status-small {
-    width: 212px;
+    width: 11.041666666666666vw;
   }
 
   .status-small p {
-    width: 212px;
+    width: 11.041666666666666vw;
     color: #F00;
-    font-size: 13px;
-    line-height: 28px;
+    font-size: 0.6770833333333334vw;
+    line-height: 2.5925925925925926vh;
     position: absolute;
   }
 
   .status-big {
-    width: 480px;
+    width: 25.0vw;
   }
 
   .status .position-container {
     width: inherit;
-    height: 62px;
-    padding-left: 19px;
+    height: 5.7407407407407405vh;
+    padding-left: 0.9895833333333333vw;
     border-radius: 10px;
     background: #E0E0D6;
     box-sizing: border-box;
@@ -362,15 +362,15 @@
 
   .status .position-container .position-label,
   .status .position-container .position-label {
-    font-size: 20px;
-    line-height: 35.538px;
+    font-size: 1.0416666666666665vw;
+    line-height: 3.2905555555555557vh;
   }
 
   .status .position-container .status-label,
   .status .position-container .status-label {
-    margin-top: 5px;
+    margin-top: 0.4629629629629629vh;
     color: var(--text-03, rgba(27, 31, 59, 0.40));
-    font-size: 15px;
+    font-size: 0.78125vw;
     white-space: nowrap;
   }
 
@@ -383,7 +383,12 @@
   }
 
   .type-select__icon {
-    padding-right: 25px;
+    padding-right: 1.3020vw;
+  }
+
+  .type-select__icon img {
+    width: 1.458vw;
+    height: 1.458vw;
   }
 
   .status-label span {
@@ -402,442 +407,4 @@
   .button-send:active {
     background: #8EBD9D !important;
   }
-}
-
-@media screen and (max-width: 1450px) {
-
-  .return-to-main {
-    width: calc(0.75*180px);
-    margin-left: calc(0.75*168px);
-    margin-bottom: calc(0.83*65px);
-    margin-top: calc(0.83*18px);
-  }
-
-  .return-button {
-    margin-right: calc(0.75*18px);
-    width: calc(0.75*16px);
-    height: calc(0.83*16px);
-  }
-
-  .return-to-main span {
-    font-size: calc(0.75*15px);
-    line-height: calc(0.83*20px);
-  }
-
-  .main-top-content {
-    margin-left: calc(0.75*202px);
-    margin-bottom: calc(0.83*100px);
-  }
-
-  .profile-navigation {
-    width: calc(0.75*238px);
-    margin-right: calc(0.75*60px);
-    margin-top: calc(0.83*31px);
-  }
-
-  .profile-navigation li {
-    font-size: calc(0.75*20px);
-    line-height: calc(0.83*177.69%);
-    margin-bottom: calc(0.83*16px);
-  }
-
-  .title {
-    font-size: calc(0.75*28px);
-    line-height: calc(0.83*38px);
-    margin-bottom: calc(0.83*32px);
-  }
-
-  .description {
-    font-size: calc(0.75*24px);
-    line-height: calc(0.83*43px);
-    max-width: calc(0.75*1070px);
-    margin-bottom: calc(0.83*30px);
-  }
-
-  .all-requests-container {
-    margin-bottom: calc(0.83*35px);
-  }
-
-  .all-requests {
-    width: calc(0.75*234px);
-    height: calc(0.83*54px);
-  }
-
-  .all-requests p {
-    font-size: calc(0.75*15px);
-    line-height: calc(0.83*28px);
-  }
-
-  .subtitle {
-    font-size: calc(0.75*26px);
-    line-height: calc(0.83*35px);
-    margin-bottom: calc(0.83*39px);
-  }
-
-  .subtitle2 {
-    margin-top: calc(0.83*30px);
-    margin-bottom: calc(0.83*24px);
-    font-size: calc(0.75*20px);
-    line-height: calc(0.83*36px);
-  }
-
-  .email {
-    margin-bottom: calc(0.83*39px);
-  }
-
-  .red-text {
-    font-size: calc(0.75*12px);
-    padding-top: calc(0.83*10px);
-  }
-
-  .custom-radio+label {
-    font-size: calc(0.75*24px);
-    line-height: calc(0.83*177.69%);
-  }
-
-  .custom-radio+label::before {
-    width: calc(0.75*22.6px);
-    height: calc(0.83*24px);
-    margin-right: calc(0.75*19px);
-    margin-left: calc(0.75*15px);
-  }
-
-  .card {
-    padding-top: calc(0.83*19px);
-    padding-left: calc(0.75*29px);
-    width: calc(0.75*309.51px);
-    height: calc(0.83*203px);
-  }
-
-  label {
-    font-size: calc(0.75*20px);
-    line-height: calc(0.83*36px);
-  }
-
-  .card__description {
-    font-size: calc(0.75*15px);
-    line-height: calc(0.83*27px);
-    max-width: calc(0.75*276px);
-    margin-top: calc(0.83*21px);
-
-  }
-
-  .price {
-    font-size: calc(0.75*20px);
-    line-height: calc(0.83*36px);
-    margin-left: calc(0.75*30%);
-  }
-
-  .photo-baner-container {
-    margin-bottom: calc(0.83*45px);
-  }
-
-  .photo-baner-container p {
-    font-size: calc(0.75*20px);
-    line-height: calc(0.83*177.688%);
-    margin-bottom: calc(0.83*22px);
-  }
-
-  .photo-baner {
-    width: calc(0.75*249px);
-    height: calc(0.83*56px);
-  }
-
-  .photo-baner .btn-photo-baner {
-    width: calc(0.75*249px);
-    height: calc(0.83*56px);
-  }
-
-  .photo-baner .btn-photo-baner h5 {
-    font-size: calc(0.75*15px);
-    line-height: calc(0.83*177.688%);
-    margin-left: calc(0.75*43px);
-  }
-
-  .photo-baner .btn-photo-baner img {
-    width: calc(0.75*18px);
-    height: calc(0.75*18px);
-    margin-left: calc(0.75*18px);
-  }
-
-  .button-send {
-    width: calc(0.75*220px);
-    height: calc(0.83*54px);
-    font-size: calc(0.75*15px);
-    color: rgba(27, 31, 59, 0.4);
-  }
-
-  .popup img {
-    width: calc(0.75*555px);
-    height: calc(0.83*292px);
-  }
-
-  .date-container p {
-    font-size: calc(0.75*20px);
-    line-height: calc(0.83*177.688%);
-    margin-bottom: calc(0.83*30px);
-  }
-
-  .input-containers {
-    gap: calc(0.75*126px);
-    margin-bottom: calc(0.83*75px);
-  }
-
-  .status {
-    margin-bottom: calc(0.83*30px);
-  }
-
-  .status-small {
-    width: calc(0.75*212px);
-  }
-
-  .status-small p {
-    width: calc(0.75*212px);
-    font-size: calc(0.75*13px);
-    line-height: calc(0.83*28px);
-  }
-
-  .status-big {
-    width: calc(0.75*480px);
-  }
-
-  .status .position-container {
-    width: calc(0.75*212px);
-    height: calc(0.83*54px);
-    padding-left: calc(0.75*19px);
-  }
-
-  .status .position-container .position-label,
-  .status .position-container .position-label {
-    font-size: calc(0.75*15px);
-    line-height: calc(0.83*28px);
-  }
-
-  .status .position-container .status-label,
-  .status .position-container .status-label {
-    font-size: calc(0.75*15px);
-  }
-
-  .type-select__icon {
-    padding-right: calc(0.75*25px);
-  }
-}
-
-@media screen and (max-width: 1370px) {
-
-  .return-to-main {
-    width: calc(0.71*180px);
-    margin-left: calc(0.71*168px);
-    margin-bottom: calc(0.71*65px);
-    margin-top: calc(0.71*18px);
-  }
-
-  .return-button {
-    margin-right: calc(0.71*18px);
-    width: calc(0.71*16px);
-    height: calc(0.71*16px);
-  }
-
-  .return-to-main span {
-    font-size: calc(0.71*15px);
-    line-height: calc(0.71*20px);
-  }
-
-  .main-top-content {
-    margin-left: calc(0.71*202px);
-    margin-bottom: calc(0.71*100px);
-  }
-
-  .profile-navigation {
-    width: calc(0.71*238px);
-    margin-right: calc(0.71*60px);
-    margin-top: calc(0.71*31px);
-  }
-
-  .profile-navigation li {
-    font-size: calc(0.71*20px);
-    line-height: calc(0.71*177.69%);
-    margin-bottom: calc(0.71*16px);
-  }
-
-  .title {
-    font-size: calc(0.71*28px);
-    line-height: calc(0.71*38px);
-    margin-bottom: calc(0.71*32px);
-  }
-
-  .description {
-    font-size: calc(0.71*24px);
-    line-height: calc(0.71*43px);
-    max-width: calc(0.71*1070px);
-    margin-bottom: calc(0.71*30px);
-  }
-
-  .all-requests-container {
-    margin-bottom: calc(0.71*35px);
-  }
-
-  .all-requests {
-    width: calc(0.71*234px);
-    height: calc(0.71*54px);
-  }
-
-  .all-requests p {
-    font-size: calc(0.71*15px);
-    line-height: calc(0.71*28px);
-  }
-
-  .subtitle {
-    font-size: calc(0.71*26px);
-    line-height: calc(0.71*35px);
-    margin-bottom: calc(0.71*39px);
-  }
-
-  .subtitle2 {
-    margin-top: calc(0.71*30px);
-    margin-bottom: calc(0.71*24px);
-    font-size: calc(0.71*20px);
-    line-height: calc(0.71*36px);
-  }
-
-  .email {
-    margin-bottom: calc(0.71*39px);
-  }
-
-  .red-text {
-    font-size: calc(0.71*12px);
-    padding-top: calc(0.71*10px);
-  }
-
-  .custom-radio+label {
-    font-size: calc(0.71*24px);
-    line-height: calc(0.71*177.69%);
-  }
-
-  .custom-radio+label::before {
-    width: calc(0.71*22.6px);
-    height: calc(0.71*24px);
-    margin-right: calc(0.71*19px);
-    margin-left: calc(0.71*15px);
-  }
-
-  .card {
-    padding-top: calc(0.71*19px);
-    padding-left: calc(0.71*29px);
-    width: calc(0.71*309.51px);
-    height: calc(0.71*203px);
-  }
-
-  label {
-    font-size: calc(0.71*20px);
-    line-height: calc(0.71*36px);
-  }
-
-  .card__description {
-    font-size: calc(0.71*15px);
-    line-height: calc(0.71*27px);
-    max-width: calc(0.71*276px);
-    margin-top: calc(0.71*21px);
-
-  }
-
-  .price {
-    font-size: calc(0.71*20px);
-    line-height: calc(0.71*36px);
-    margin-left: calc(0.71*30%);
-  }
-
-  .photo-baner-container {
-    margin-bottom: calc(0.71*45px);
-  }
-
-  .photo-baner-container p {
-    font-size: calc(0.71*20px);
-    line-height: calc(0.71*177.688%);
-    margin-bottom: calc(0.71*22px);
-  }
-
-  .photo-baner {
-    width: calc(0.71*249px);
-    height: calc(0.71*56px);
-  }
-
-  .photo-baner .btn-photo-baner {
-    width: calc(0.71*249px);
-    height: calc(0.71*56px);
-  }
-
-  .photo-baner .btn-photo-baner h5 {
-    font-size: calc(0.71*15px);
-    line-height: calc(0.71*177.688%);
-    margin-left: calc(0.71*43px);
-  }
-
-  .photo-baner .btn-photo-baner img {
-    width: calc(0.71*18px);
-    height: calc(0.71*18px);
-    margin-left: calc(0.71*18px);
-  }
-
-  .button-send {
-    width: calc(0.71*220px);
-    height: calc(0.71*54px);
-    font-size: calc(0.71*15px);
-  }
-
-  .popup img {
-    width: calc(0.71*555px);
-    height: calc(0.71*292px);
-  }
-
-  .date-container p {
-    font-size: calc(0.71*20px);
-    line-height: calc(0.71*177.688%);
-    margin-bottom: calc(0.71*30px);
-  }
-
-  .input-containers {
-    gap: calc(0.71*126px);
-    margin-bottom: calc(0.71*75px);
-  }
-
-  .status {
-    margin-bottom: calc(0.71*30px);
-  }
-
-  .status-small {
-    width: calc(0.71*212px);
-  }
-
-  .status-small p {
-    width: calc(0.71*212px);
-    font-size: calc(0.71*13px);
-    line-height: calc(0.71*28px);
-  }
-
-  .status-big {
-    width: calc(0.71*480px);
-  }
-
-  .status .position-container {
-    width: calc(0.71*212px);
-    height: calc(0.71*54px);
-    padding-left: calc(0.71*19px);
-  }
-
-  .status .position-container .position-label,
-  .status .position-container .position-label {
-    font-size: calc(0.71*15px);
-    line-height: calc(0.71*28px);
-  }
-
-  .status .position-container .status-label,
-  .status .position-container .status-label {
-    font-size: calc(0.71*15px);
-  }
-
-  .type-select__icon {
-    padding-right: calc(0.71*25px);
-  }
-
 }

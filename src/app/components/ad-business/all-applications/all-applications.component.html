@@ -40,7 +40,7 @@
                 <div class="position-label"> {{ selectedDate }} </div>
               </div>
               <div class="type-select__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16" fill="none">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 16" fill="none" class="icon">
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M1.29289 5.29289C1.68342 4.90237 2.31658 4.90237 2.70711 5.29289L6 8.58579L9.29289 5.29289C9.68342 4.90237 10.3166 4.90237 10.7071 5.29289C11.0976 5.68342 11.0976 6.31658 10.7071 6.70711L6.70711 10.7071C6.31658 11.0976 5.68342 11.0976 5.29289 10.7071L1.29289 6.70711C0.902369 6.31658 0.902369 5.68342 1.29289 5.29289Z"
                     fill="#1B1F3B" fill-opacity="0.8" />
@@ -66,7 +66,7 @@
                 <div class="position-label"> {{ statusesMap[selectedStatus] }} </div>
               </div>
               <div class="type-select__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16" fill="none">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 16" fill="none" class="icon">
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M1.29289 5.29289C1.68342 4.90237 2.31658 4.90237 2.70711 5.29289L6 8.58579L9.29289 5.29289C9.68342 4.90237 10.3166 4.90237 10.7071 5.29289C11.0976 5.68342 11.0976 6.31658 10.7071 6.70711L6.70711 10.7071C6.31658 11.0976 5.68342 11.0976 5.29289 10.7071L1.29289 6.70711C0.902369 6.31658 0.902369 5.68342 1.29289 5.29289Z"
                     fill="#1B1F3B" fill-opacity="0.8" />
@@ -97,7 +97,7 @@
           </thead>
           <tbody>
             <tr *ngFor="let application of filteredApplications">
-              <td class="first-block">
+              <td class=" first-block">
                 <p class="place-name">{{application.name}}</p>
                 <p class="place-address">{{application.address}}</p>
               </td>
