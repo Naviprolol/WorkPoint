@@ -17,7 +17,6 @@ export class MainPageComponent {
   searchText: string = ''
   currentPage: number = 1;
   itemsPerPage: number = 4;
-  totelCoworkings: number;
 
   parking: boolean = false
   recreation_area: boolean = false
@@ -49,17 +48,16 @@ export class MainPageComponent {
     this.coworkingsService.getAll().subscribe(coworkings => {
       console.log(coworkings)
       coworkings.forEach(coworking => {
-        if (coworking.status === 'Одобрено') { // coworking.status !== 'Отказано' && coworking.status !== 'На проверке'
+        if (coworking.status === 'Одобрено') {
           this.coworkings.push(coworking)
         }
       });
-      this.totelCoworkings = coworkings.length
+      console.log(this.coworkings)
       this.updateFilteredCoworkings();
     });
     this.adService.getAllAds().subscribe((ads) => {
       this.ads = ads
       this.coworkingsService.getAll().subscribe((coworkings) => {
-        this.coworkings = coworkings;
         this.filterAdsByPlaceId();
         console.log(this.ads)
         this.ads.forEach(ad => {

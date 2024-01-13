@@ -143,6 +143,11 @@
               <img src="assets/img/rating5.svg" alt="rating" class="rating" *ngIf="review.rank === 5">
             </div>
           </div>
+          <button type="button" class="answer-btn" *ngIf="ifOwnerPlace"
+            (click)="review.isAnswer = !review.isAnswer">Ответить
+          </button>
+          <button type="button" class="delete-btn" *ngIf="user.role_id === 3"
+            (click)="deleteReview(review.id)">Удалить</button>
         </div>
 
         <div class="review-description" *ngIf="review.body">
@@ -155,6 +160,13 @@
             }}</p>
         </div>
 
+        <div class="answer-submit-container">
+          <div class="answer-container" *ngIf="review.isAnswer">
+            <textarea id="answer" placeholder="Ответить" [(ngModel)]="review.answerText"></textarea>
+          </div>
+          <button type="button" *ngIf="review.isAnswer" class="submit-answer-btn"
+            (click)="addAnswer(review)">Отправить</button>
+        </div>
       </div>
 
     </div>

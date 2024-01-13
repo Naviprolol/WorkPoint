@@ -2,12 +2,12 @@
   .header-container {
     display: flex;
     width: 83.33vw;
-    height: 75px;
+    height: 6.944444444444445vh;
     margin-left: 8.33vw;
-    margin-top: 50px;
+    margin-top: 4.62962962962963vh;
     border-bottom: 2px solid #e9e9e9;
     justify-content: space-between;
-    padding-bottom: 5px;
+    padding-bottom: 0.7vh;
   }
 
   .header-left-side {
@@ -25,17 +25,17 @@
   .title {
     font-family: 'Open Sans';
     font-weight: 300;
-    font-size: 48px;
-    line-height: 65px;
-    margin-right: 19px;
+    font-size: 2.5vw;
+    line-height: 6.018518518518518vh;
+    margin-right: 0.9895833333333333vw;
   }
 
   .logo-img {
     position: absolute;
-    width: 50px;
-    height: 49.74px;
+    width: 2.604166666666667vw;
+    height: 4.605555555555556vh;
     left: 7.97vw;
-    top: 60px;
+    top: 5.55555555555556vh;
 
     background: linear-gradient(341.04deg, #BEDAC3 10.49%, rgba(255, 255, 255, 0) 100.29%);
     filter: drop-shadow(0px 7.935px 19.8375px rgba(250, 196, 201, 0.2));
@@ -44,16 +44,16 @@
   }
 
   .location-img {
-    width: 14px;
-    height: 16px;
-    margin-top: 10px;
-    margin-right: 13px;
+    width: 0.7291666666666666vw;
+    height: 0.7291666666666666vw;
+    margin-top: 0.9259259259259258vh;
+    margin-right: 0.6770833333333334vw;
   }
 
   .location-name {
-    margin-top: 10px;
-    font-size: 15px;
-    line-height: 28px;
+    margin-top: 0.9259259259259258vh;
+    font-size: 0.78125vw;
+    line-height: 2.5925925925925926vh;
   }
 
   .btn-add-coworking {
@@ -61,11 +61,11 @@
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
     width: 10.989583vw;
-    height: 54px;
-    margin-right: 29px;
+    height: 5.0vh;
+    margin-right: 1.5104166666666667vw;
     font-weight: 600;
-    font-size: 15px;
-    line-height: 28px;
+    font-size: 0.78125vw;
+    line-height: 2.5925925925925926vh;
     color: rgba(27, 31, 59, 0.6);
   }
 
@@ -79,39 +79,39 @@
   }
 
   .btn-notification {
-    width: 20px;
-    height: 22px;
-    margin-right: 42px;
+    width: 1.0416666666666665vw;
+    height: 2.037037037037037vh;
+    margin-right: 2.1875vw;
   }
 
   .btn-notification-img {
-    width: 20px;
-    height: 22px;
+    width: 1.0416666666666665vw;
+    height: 2.037037037037037vh;
   }
 
   .profile-img {
     position: relative;
-    margin-right: 17px;
-    width: 80px;
-    height: 80px;
+    margin-right: 0.8854166666666666vw;
+    width: 4.166666666666666vw;
+    height: 4.1666vw;
     border-radius: 50%;
     overflow: hidden;
   }
 
   .profile-img-img {
-    width: 100%;
-    height: 100%;
+    width: 4.1666vw;
+    height: 4.1666vw;
   }
 
   .profile-name {
-    font-size: 15px;
-    line-height: 28px;
+    font-size: 0.78125vw;
+    line-height: 2.5925925925925926vh;
     color: rgba(27, 31, 59, 0.8);
   }
 
   .sign-in {
-    margin-right: 30px;
-    font-size: 20px;
+    margin-right: 1.5625vw;
+    font-size: 1.0416666666666665vw;
   }
 
   .sign-in:hover {
@@ -119,7 +119,7 @@
   }
 
   .name {
-    margin-right: 7px;
+    margin-right: 0.3645833333333333vw;
   }
 
   .dropdown {
@@ -128,7 +128,7 @@
 
   .dropdown-menu {
     position: absolute;
-    margin-top: 30px;
+    margin-top: 2.7777777777777777vh;
     background: #FBFBF5;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 7px;
@@ -149,7 +149,7 @@
     color: #494C62;
     padding: 11px 11px;
     opacity: 0.7;
-    font-size: 16px;
+    font-size: 0.8333333333333334vw;
   }
 
   .dropdown-menu a:hover {
@@ -157,220 +157,17 @@
   }
 
   .btn-settings {
-    height: 10px;
-    width: 10px;
+    height: 0.5208333333333333vw;
+    width: 0.5208333333333333vw;
     position: relative;
   }
 
   .btn-settings-img {
-    height: 10px;
-    width: 10px;
+    height: 0.5208333333333333vw;
+    width: 0.5208333333333333vw;
   }
 
   .settings li {
     position: relative;
-  }
-
-  /* .settings li a {
-    display: block;
-  } */
-}
-
-@media screen and (max-width: 1450px) {
-  .header-container {
-    width: calc(0.75*1600px);
-    height: calc(0.83*75px);
-    margin-left: calc(0.75*160px);
-    margin-top: calc(0.83*50px);
-    padding-bottom: calc(0.83*5px);
-  }
-
-  .title {
-    font-size: calc(0.75*48px);
-    line-height: calc(0.83*65px);
-    margin-right: calc(0.75*19px);
-  }
-
-  .logo-img {
-    width: calc(0.75*50px);
-    height: calc(0.83*49.74px);
-    left: calc(0.75*153px);
-    top: calc(0.83*60px);
-  }
-
-  .location-img {
-    width: calc(0.75*14px);
-    height: calc(0.83*16px);
-    margin-top: calc(0.83*10px);
-    margin-right: calc(0.75*13px);
-  }
-
-  .location-name {
-    margin-top: calc(0.83*10px);
-    font-size: calc(0.75*15px);
-    line-height: calc(0.83*28px);
-  }
-
-  .btn-add-coworking {
-    width: calc(0.75*211px);
-    height: calc(0.83*54px);
-    margin-right: calc(0.75*29px);
-    font-size: calc(0.75*15px);
-    line-height: calc(0.83*28px);
-  }
-
-  .btn-notification {
-    width: calc(0.75*20px);
-    height: calc(0.83*22px);
-    margin-right: calc(0.75*42px);
-  }
-
-  .btn-notification-img {
-    width: calc(0.75*20px);
-    height: calc(0.83*22px);
-  }
-
-  .profile-img {
-    margin-right: calc(0.75*17px);
-    width: calc(0.83*80px);
-    height: calc(0.83*80px);
-  }
-
-  .profile-img-img {
-    width: calc(0.83*80px);
-    height: calc(0.83*80px);
-  }
-
-  .profile-name {
-    font-size: calc(0.75*15px);
-    line-height: calc(0.83*28px);
-  }
-
-  .sign-in {
-    margin-right: calc(0.75*30px);
-    font-size: calc(0.75*20px);
-  }
-
-  .name {
-    margin-right: calc(0.75*7px);
-  }
-
-  .dropdown-menu {
-    margin-top: calc(0.83*30px);
-  }
-
-  .dropdown-menu a {
-    padding: calc(0.83*11px) calc(0.75*11px);
-    font-size: calc(0.75*16px);
-  }
-
-  .btn-settings {
-    height: calc(0.83*10px);
-    width: calc(0.83*10px);
-  }
-
-  .btn-settings-img {
-    height: calc(0.83*10px);
-    width: calc(0.83*10px);
-  }
-}
-
-@media screen and (max-width: 1370px) {
-  .header-container {
-    width: calc(0.71*1600px);
-    height: calc(0.71*75px);
-    margin-left: calc(0.71*160px);
-    margin-top: calc(0.71*50px);
-    padding-bottom: calc(0.71*5px);
-  }
-
-  .title {
-    font-size: calc(0.71*48px);
-    line-height: calc(0.71*65px);
-    margin-right: calc(0.71*19px);
-  }
-
-  .logo-img {
-    width: calc(0.71*50px);
-    height: calc(0.71*49.74px);
-    left: calc(0.71*153px);
-    top: calc(0.71*60px);
-  }
-
-  .location-img {
-    width: calc(0.71*14px);
-    height: calc(0.71*16px);
-    margin-top: calc(0.71*10px);
-    margin-right: calc(0.71*13px);
-  }
-
-  .location-name {
-    margin-top: calc(0.71*10px);
-    font-size: calc(0.71*15px);
-    line-height: calc(0.71*28px);
-  }
-
-  .btn-add-coworking {
-    width: calc(0.71*211px);
-    height: calc(0.71*54px);
-    margin-right: calc(0.71*29px);
-    font-size: calc(0.71*15px);
-    line-height: calc(0.71*28px);
-  }
-
-  .btn-notification {
-    width: calc(0.71*20px);
-    height: calc(0.71*22px);
-    margin-right: calc(0.71*42px);
-  }
-
-  .btn-notification-img {
-    width: calc(0.71*20px);
-    height: calc(0.71*22px);
-  }
-
-  .profile-img {
-    margin-right: calc(0.71*17px);
-    width: calc(0.71*80px);
-    height: calc(0.71*80px);
-  }
-
-  .profile-img-img {
-    width: calc(0.71*80px);
-    height: calc(0.71*80px);
-  }
-
-  .profile-name {
-    font-size: calc(0.71*15px);
-    line-height: calc(0.71*28px);
-    margin-top: 3px;
-  }
-
-  .sign-in {
-    margin-right: calc(0.71*30px);
-    font-size: calc(0.71*20px);
-  }
-
-  .name {
-    margin-right: calc(0.71*7px);
-  }
-
-  .dropdown-menu {
-    margin-top: calc(0.71*30px);
-  }
-
-  .dropdown-menu a {
-    padding: calc(0.71*11px) calc(0.71*11px);
-    font-size: calc(0.71*16px);
-  }
-
-  .btn-settings {
-    height: calc(0.71*10px);
-    width: calc(0.71*10px);
-  }
-
-  .btn-settings-img {
-    height: calc(0.71*10px);
-    width: calc(0.71*10px);
   }
 }

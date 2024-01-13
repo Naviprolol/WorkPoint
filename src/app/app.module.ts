@@ -7,9 +7,7 @@ import { AppComponent } from './app.component';
 import { MainPageComponent } from './components/main-webpage/main-page/main-page.component';
 import { CoworkingsListComponent } from './components/main-webpage/coworkings-list/coworkings-list.component';
 import { HeaderComponent } from './shared/header/header.component';
-import { BannerComponent } from './components/main-webpage/banner/banner.component';
 import { FooterComponent } from './shared/footer/footer.component';
-import { FilterComponent } from './components/main-webpage/filter/filter.component';
 import { FindCoworkingPipe } from './pipes/find-coworking.pipe';
 import { FilterCoworkingPipe } from './pipes/filter-coworking.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -40,6 +38,7 @@ import { AdPlacesComponent } from './components/ad-business/places/places.compon
 import { AppRequestComponent } from './components/admin/requests-to-app/app-request/app-request.component';
 import { AdminBannersComponent } from './components/admin/admin-banners/admin-banners.component';
 import { AdminRoleComponent } from './components/admin/admin-role/admin-role.component';
+import { ProfileComponent } from './components/admin/admin-role/profile/profile.component';
 
 const mapConfig: YaConfig = {
   apikey: '4d882b8c-882e-4fd7-8097-d924a789563f',
@@ -52,9 +51,7 @@ const mapConfig: YaConfig = {
     MainPageComponent,
     CoworkingsListComponent,
     HeaderComponent,
-    BannerComponent,
     FooterComponent,
-    FilterComponent,
     FindCoworkingPipe,
     FilterCoworkingPipe,
     ProfileSettingsComponent,
@@ -74,6 +71,7 @@ const mapConfig: YaConfig = {
     AppRequestComponent,
     AdminBannersComponent,
     AdminRoleComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,24 +1,24 @@
 @media screen and (max-width: 5000px) {
   .return-to-main {
     display: flex;
-    width: 180px;
-    margin-left: 168px;
-    margin-bottom: 65px;
-    margin-top: 18px;
+    width: 9.375vw;
+    margin-left: 8.75vw;
+    margin-bottom: 6.018518518518518vh;
+    margin-top: 1.6666666666666667vh;
     align-items: center;
   }
 
   .return-button {
-    margin-right: 18px;
+    margin-right: 0.9375vw;
     margin-top: auto;
     margin-bottom: auto;
-    width: 16px;
-    height: 16px;
+    width: 0.8333333333333334vw;
+    height: 1.4814814814814816vh;
   }
 
   .return-to-main span {
-    font-size: 15px;
-    line-height: 20px;
+    font-size: 0.78125vw;
+    line-height: 1.8518518518518516vh;
     color: rgba(27, 31, 59, 0.65);
   }
 
@@ -29,20 +29,20 @@
 
   .main-top-content {
     display: flex;
-    margin-left: 202px;
-    margin-bottom: 100px;
+    margin-left: 10.520833333333334vw;
+    margin-bottom: 9.25925925925926vh;
   }
 
   .profile-navigation {
-    width: 238px;
-    margin-right: 60px;
-    margin-top: 31px;
+    width: 12.395833333333334vw;
+    margin-right: 3.125vw;
+    margin-top: 2.8703703703703702vh;
   }
 
   .profile-navigation li {
-    font-size: 20px;
+    font-size: 1.0416666666666665vw;
     line-height: 177.69%;
-    margin-bottom: 16px;
+    margin-bottom: 1.4814814814814816vh;
   }
 
   .profile-navigation li:last-child {
@@ -51,26 +51,26 @@
 
   .title {
     font-weight: 700;
-    font-size: 28px;
-    line-height: 38px;
-    margin-bottom: 32px;
+    font-size: 1.4583333333333333vw;
+    line-height: 3.5185185185185186vh;
+    margin-bottom: 2.9629629629629632vh;
   }
 
   .your-places {
-    margin-bottom: 57px;
+    margin-bottom: 5.277777777777778vh;
   }
 
   .description {
     display: inline-block;
     font-weight: 400;
-    font-size: 24px;
-    line-height: 43px;
-    max-width: 1070px;
-    margin-bottom: 30px;
+    font-size: 1.25vw;
+    line-height: 3.981481481481482vh;
+    max-width: 55.729166666666664vw;
+    margin-bottom: 2.7777777777777777vh;
   }
 
   .all-requests-container {
-    margin-bottom: 98px;
+    margin-bottom: 9.074074074074074vh;
   }
 
   .all-requests-container button:hover {
@@ -85,8 +85,8 @@
 
   .all-requests {
     border-radius: 10px;
-    width: 234px;
-    height: 54px;
+    width: 12.1875vw;
+    height: 5.0vh;
     text-align: center;
     background: #E0E0D6;
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.16);
@@ -94,19 +94,19 @@
 
   .all-requests p {
     color: var(--text-03, rgba(27, 31, 59, 0.40));
-    font-size: 15px;
+    font-size: 0.78125vw;
     font-weight: 600;
-    line-height: 28px;
+    line-height: 2.5925925925925926vh;
   }
 
   .cards {
-    margin-bottom: 150px;
+    margin-bottom: 13.88888888888889vh;
   }
 
   .cards .card-li {
-    width: 1070px;
-    height: 99px;
-    margin-bottom: 30px;
+    width: 55.729166666666664vw;
+    height: 9.166666666666666vh;
+    margin-bottom: 2.7777777777777777vh;
   }
 
   .cards .card {
@@ -127,30 +127,30 @@
 
   .card .first-block__card {
     height: inherit;
-    padding-top: 16px;
-    padding-left: 27px;
+    padding-top: 1.481481vh;
+    padding-left: 1.40625vw;
     box-sizing: border-box;
   }
 
   .card-title {
-    font-size: 24px;
+    font-size: 1.25vw;
     font-weight: 700;
     line-height: normal;
-    margin-bottom: 14px;
+    margin-bottom: 1.2962962962962963vh;
   }
 
   .adress {
-    font-size: 15px;
+    font-size: 0.78125vw;
   }
 
   .third-block_card {
     margin-left: auto;
-    margin-right: 36px;
+    margin-right: 1.875vw;
   }
 
   .third-block_card .watch-application {
-    width: 240px;
-    height: 54px;
+    width: 12.5vw;
+    height: 5.0vh;
     border-radius: 10px;
     background: #FFF;
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.16);
@@ -166,9 +166,8 @@
 
   .third-block_card .watch-application span {
     color: var(--text-03, rgba(27, 31, 59, 0.40));
-    font-size: 15px;
+    font-size: 0.78125vw;
     font-weight: 600;
-    line-height: 28px;
+    line-height: 2.5925925925925926vh;
   }
-
 }

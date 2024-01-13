@@ -37,29 +37,13 @@ export class AllApplicationsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.adService.getAllAds().subscribe((ads) => {
+    this.adService.getAdsByUserId().subscribe((ads) => {
       this.applications = ads;
-      this.coworkingsService.getAll().subscribe((coworkings) => {
-        this.coworkings = coworkings;
-        this.filterAdsByPlaceId();
-        this.filteredApplications = this.applications
-        this.sortNewToOld()
-        // this.filteredApplications.forEach(app => {
-        //   if (app.date_from === '2023-12-22') {
-        //     checkTime(app)
-        //   }
-        // });
-      });
-      console.log(ads)
-    })
-  }
+      this.filteredApplications = this.applications;
+      this.sortNewToOld()
 
-  filterAdsByPlaceId(): void {
-    if (this.applications && this.coworkings) {
-      this.applications = this.applications.filter(ad => {
-        return this.coworkings.some(coworking => coworking.id === ad.id_place);
-      });
-    }
+      console.log(this.filteredApplications)
+    })
   }
 
   toggleDate(date: string): void {

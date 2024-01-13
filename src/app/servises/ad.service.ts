@@ -41,6 +41,13 @@ export class AdService {
     const token = localStorage.getItem('auth-token')
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Accept', 'application/json')
 
+    return this.http.get<IAd[]>('https://www.1506815-cq40245.tw1.ru/ad/all_ad', { headers: headers })
+  }
+
+  getAdsByUserId(): Observable<IAd[]> {
+    const token = localStorage.getItem('auth-token')
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Accept', 'application/json')
+
     return this.http.get<IAd[]>('https://www.1506815-cq40245.tw1.ru/user/add', { headers: headers })
   }
 
