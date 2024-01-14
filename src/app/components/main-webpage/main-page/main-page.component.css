@@ -56,13 +56,12 @@
 
   .banner-container {
     width: 72.916vw;
-    height: 38.2407vh;
     /* 413px -> 38.2407vh */
     margin-left: 10.4vw;
     margin-top: 6.48148vh;
     /* 70px -> 6.48148vh */
     border-radius: 20px;
-    margin-bottom: 12.9629vh;
+    margin-bottom: 2vh;
     /* 140px -> 12.9629vh */
   }
 
@@ -148,6 +147,7 @@
     border-radius: 20px;
     width: 21.8229vw;
     height: 101.85185vh;
+    min-height: 770px;
     /* 1100px -> 101.85185vh */
     margin-left: 8.3854vw;
     margin-bottom: 25.09259vh;
@@ -207,7 +207,7 @@
     align-items: center;
     user-select: none;
     font-size: 1.25vw;
-    line-height: 177.69%;
+    line-height: 3.8888vh;
   }
 
   .custom-radio+label::before {
