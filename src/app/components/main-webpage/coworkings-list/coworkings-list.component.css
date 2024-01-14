@@ -2,6 +2,7 @@
   .coworking {
     width: 58.33vw;
     height: 52.87vh;
+    min-height: 350px;
     background: rgba(190, 218, 195, 0.7);
     border-radius: 20px;
     margin-bottom: 3.426vh;
@@ -59,6 +60,7 @@
 
   .coworking-info-container {
     display: flex;
+    min-height: 250px;
   }
 
   .coworking-image img {
@@ -76,9 +78,8 @@
     font-style: normal;
     font-weight: 300;
     font-size: 1.25vw;
-    line-height: 177.69%;
+    line-height: 3.8888vh;
     margin-bottom: 3.617vh;
-    /* изменено с px на vh */
   }
 
   .coworking-adress-container {
@@ -103,9 +104,12 @@
 
   .coworking-map-and-favorite-container {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 2.8125vw;
     position: absolute;
     bottom: 0;
+    height: 5vh;
   }
 
   .coworking-map:hover {
@@ -123,13 +127,12 @@
 
   .btn-like {
     height: 1.09375vw;
-    margin-top: 20px;
   }
 
   .coworking-map {
+    height: 100%;
     border-radius: 10px;
     width: 14.3229vw;
-    height: 54px;
     text-align: center;
     background: #5E9C76;
     border: 0.5px solid #FFFFFF;
@@ -138,7 +141,7 @@
 
   .coworking-map p {
     font-size: 0.78125vw;
-    line-height: 28px;
+    line-height: 2.59259vh;
     color: #FFFFFF;
     font-weight: 600;
   }
@@ -146,5 +149,15 @@
   .btn-like .heart {
     width: 1.11979vw;
     height: 1.25vw;
+  }
+
+  .address-img {
+    width: 1.09375vw;
+    height: 1.09375vw;
+  }
+
+  .time-img {
+    width: 1.09375vw;
+    height: 1.09375vw;
   }
 }

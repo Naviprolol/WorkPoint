@@ -37,7 +37,7 @@
       <ul class="cards">
         <li class="card-li" *ngFor="let userCoworking of userCoworkings">
           <div class="card" *ngIf="userCoworking.status == 'Одобрено'">
-            <div class="first-block__card">
+            <div class="first-block__card first-block__card_accepted">
               <p class="card-title">
                 <a [routerLink]="['/main', userCoworking.id]">{{userCoworking.name}}</a>
               </p>
@@ -53,7 +53,7 @@
           </div>
 
           <div class="card denied" *ngIf="userCoworking.status == 'Отказано'">
-            <div class="first-block__card">
+            <div class="first-block__card first-block__card_denied">
               <p class="card-title">
                 <a [routerLink]="['/main', userCoworking.id]">{{userCoworking.name}}</a>
               </p>
@@ -81,7 +81,7 @@
           </div>
 
           <div class="card in-progress denied" *ngIf="userCoworking.status == 'На проверке'">
-            <div class="first-block__card">
+            <div class="first-block__card first-block__card_denied">
               <p class="card-title">
                 <a [routerLink]="['/main', userCoworking.id]">{{userCoworking.name}}</a>
               </p>

@@ -109,7 +109,14 @@
 
   .first-block__card {
     margin-left: 1.40625vw;
+  }
+
+  .first-block__card_accepted {
     min-width: 39.0625vw;
+  }
+
+  .first-block__card_denied {
+    width: 27vw;
   }
 
   .denied {
@@ -118,6 +125,7 @@
 
   .information-description {
     display: flex;
+    margin-right: 3vw;
     margin-left: 0.36458vw;
     margin-top: 1.3888vh;
     position: relative;
@@ -175,7 +183,7 @@
   }
 
   .card-title {
-    width: 27.34375vw;
+    /* width: 27.34375vw; */
     padding-top: 1.4814vh;
     font-weight: 700;
     font-size: 1.25vw;
