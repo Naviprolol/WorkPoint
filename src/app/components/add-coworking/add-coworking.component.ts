@@ -97,7 +97,6 @@ export class AddCoworkingComponent implements OnInit {
           // this.imagePreview1 = coworking.photo[0]
           // this.imagePreview2 = coworking.photo[1]
           // this.imagePreview3 = coworking.photo[2]
-          // console.log(coworking.photo)
 
           coworking.tags.forEach(tag => {
             this.selectedTags.push(tag.name);
@@ -143,7 +142,6 @@ export class AddCoworkingComponent implements OnInit {
       switch (index) {
         case 1:
           this.image1 = file;
-          console.log(this.image1)
           this.imagePreview1 = reader.result;
           break;
         case 2:
@@ -166,7 +164,6 @@ export class AddCoworkingComponent implements OnInit {
     this.form.disable()
 
     if (this.isNew) {
-      console.log(this.coworking)
 
       // create
       obs$ = this.coworkingsService.create(0, this.form.value.name, this.form.value.city, this.form.value.district,
@@ -221,13 +218,11 @@ export class AddCoworkingComponent implements OnInit {
           this.closePopup();
           this.router.navigate(['/place-settings'])
         }, 2000);
-        // console.log('Изменения сохранены')
         this.form.enable()
       },
       error => {
         console.log('ERRRRROR!')
         console.log(error)
-        console.log(this.coworking)
         this.showBadPopup = true;
         setTimeout(() => {
           this.closePopup();
