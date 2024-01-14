@@ -97,7 +97,7 @@
   .coworking-rating {
     font-weight: 400;
     font-size: 1.25vw;
-    line-height: 177.69%;
+    line-height: 3.611vh;
     margin-right: 0.5729166666666666vw;
   }
 
@@ -145,7 +145,7 @@
   .coworking-description {
     font-weight: 300;
     font-size: 1.1458333333333333vw;
-    line-height: 177.69%;
+    line-height: 3.611vh;
     margin-bottom: 0.4629629629629629vh;
   }
 
@@ -176,7 +176,7 @@
     align-items: center;
     font-weight: 400;
     font-size: 1.0416666666666665vw;
-    line-height: 177.69%;
+    line-height: 3.611vh;
     margin-bottom: 1.3888888888888888vh;
   }
 
@@ -186,7 +186,7 @@
     align-items: center;
     font-weight: 400;
     font-size: 1.0416666666666665vw;
-    line-height: 177.69%;
+    line-height: 3.611vh;
     margin-bottom: 6.481481481481481vh;
   }
 
@@ -212,7 +212,7 @@
     width: fit-content;
     padding: 1px 1.041666vw;
     font-size: 1.0416666666666665vw;
-    line-height: 177.69%;
+    line-height: 3.611vh;
     background: #E0E0D6;
     border-radius: 20px;
   }
@@ -232,7 +232,7 @@
 
   .phone-information span {
     font-size: 1.0416666666666665vw;
-    line-height: 177.69%;
+    line-height: 3.611vh;
   }
 
   .add-review {
@@ -265,7 +265,7 @@
     height: 100%;
     font-weight: 300;
     font-size: 1.1458333333333333vw;
-    line-height: 177.69%;
+    line-height: 3.611vh;
     background: inherit;
     border-radius: 10px;
     padding-left: 1.0416666666666665vw;
@@ -297,7 +297,7 @@
     display: flex;
     margin-bottom: 3.425925925925926vh;
     font-size: 1.0416666666666665vw;
-    line-height: 177.69%;
+    line-height: 3.611vh;
     align-items: center;
   }
 
@@ -356,7 +356,8 @@
   .review .avatar {
     margin-right: 1.40625vw;
     width: 3.6458333333333335vw;
-    height: 6.481481481481481vh;
+    height: 3.6458333333333335vw;
+    border-radius: 50%;
   }
 
   .review-title {
@@ -380,7 +381,7 @@
   .review-time {
     padding-top: 0.462962vh;
     font-size: 0.78125vw;
-    line-height: 177.69%;
+    line-height: 3.611vh;
     color: #535353;
   }
 
@@ -394,7 +395,7 @@
   .review-description {
     width: 58.333333333333336vw;
     font-size: 1.1458333333333333vw;
-    line-height: 177.69%;
+    line-height: 3.611vh;
     word-wrap: break-word;
   }
 
@@ -462,7 +463,7 @@
     box-sizing: border-box;
     font-size: 1.1458333333333333vw;
     font-weight: 300;
-    line-height: 177.688%;
+    line-height: 3.611vh;
     font-family: Open Sans;
   }
 
@@ -500,5 +501,10 @@
     font-size: 0.78125vw;
     font-weight: 600;
     line-height: 2.5925925925925926vh;
+  }
+
+  .answers {
+    margin-top: 1.94444vh;
+    margin-left: 5.20833vw;
   }
 }

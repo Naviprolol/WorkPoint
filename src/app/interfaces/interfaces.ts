@@ -57,6 +57,22 @@ export interface Review {
   showFullDescription: boolean
   isAnswer: boolean
   answerText: string
+  answers: Answer[]
+  review_id: number
+}
+
+export interface Answer {
+  user_name: string,
+  id: number,
+  user_photo: string,
+  body: string,
+  user_id: number,
+  review_id: number,
+  user_surname: string,
+  place_id: number,
+  created_at: string
+  formattedDate: string
+  showFullDescription: boolean
 }
 
 export interface IAd {

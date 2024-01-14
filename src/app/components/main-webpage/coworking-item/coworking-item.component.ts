@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ICoworking, Review, User } from 'src/app/interfaces/interfaces';
+import { ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
+import { Answer, ICoworking, Review, User } from 'src/app/interfaces/interfaces';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CoworkingsService } from 'src/app/servises/coworkings.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
@@ -21,10 +21,12 @@ export class CoworkingItemComponent implements OnInit {
   tags: any
   form: FormGroup
   review: Review
+  reviews: Review[] = []
   allReviews: Review[] = []
   coworkings: ICoworking[] = []
   user: User
   sortedItems: Review[] = []
+  reviewAnswers: Answer[] = []
   flag: boolean = false;
   ifOwnerPlace: boolean = false;
 
@@ -51,7 +53,8 @@ export class CoworkingItemComponent implements OnInit {
     private coworkingsService: CoworkingsService,
     private reviewService: ReviewService,
     private userService: UserService,
-    private adminService: AdminService) { }
+    private adminService: AdminService,
+    private changeDetectorRef: ChangeDetectorRef) { }
 
   ngOnInit() {
 
@@ -99,6 +102,16 @@ export class CoworkingItemComponent implements OnInit {
       this.allReviews.sort((reviewFirst: Review, reviewSecond: Review) => moment(reviewSecond.created_at).diff(moment(reviewFirst.created_at)))
 
       this.allReviews.forEach(review => {
+        this.reviewService.getReviewsByIdReview(review.id).subscribe((answers) => {
+          this.reviewAnswers = answers
+          review.answers = this.reviewAnswers
+          console.log(review)
+          answers.forEach(answer => {
+            answer.formattedDate = moment(answer.created_at).format('DD.MM.YYYY HH:mm');
+            answer.showFullDescription = false;
+          });
+        })
+
         review.showFullDescription = false;
         review.isAnswer = false;
         review.answerText = '';
@@ -176,7 +189,6 @@ export class CoworkingItemComponent implements OnInit {
         location.reload()
       },
       error => {
-        // Обработка ошибок
         console.log(error);
       })
   }

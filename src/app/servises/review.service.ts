@@ -29,6 +29,10 @@ export class ReviewService {
     return this.http.post<Review[]>(`https://www.1506815-cq40245.tw1.ru/places/get_reviews?id_place=${place_id}`, {}) // https://1506815-cq40245.tw1.ru/places/get_reviews?id_place=${place_id}
   }
 
+  getReviewsByIdReview(review_id: number): Observable<Review[]> {
+    return this.http.post<Review[]>(`https://www.1506815-cq40245.tw1.ru/places/get_reviews_answer?id_reviews=${review_id}`, {}) // https://1506815-cq40245.tw1.ru/places/get_reviews?id_place=${place_id}
+  }
+
   addReviewAnswer(user_id: number, review_id: number, user_name: string, user_surname: string, user_photo: string, place_id: number, body: string): Observable<Review> {
     const token = localStorage.getItem('auth-token')
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json');

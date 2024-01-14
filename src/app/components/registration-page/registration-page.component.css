@@ -190,7 +190,7 @@
     user-select: none;
     font-weight: 300;
     font-size: 1.25vw;
-    line-height: 177.69%;
+    line-height: 3.611vh;
   }
 
   .custom-radio+label::before {

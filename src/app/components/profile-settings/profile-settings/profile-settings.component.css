@@ -48,7 +48,7 @@
 
   .profile-navigation li {
     font-size: 1.0416666666666665vw;
-    line-height: 177.69%;
+    line-height: 3.611vh;
     margin-bottom: 1.4814814814814816vh;
   }
 
@@ -84,13 +84,13 @@
   .top-information h2 {
     font-weight: 600;
     font-size: 1.7708333333333333vw;
-    line-height: 177.69%;
+    line-height: 3.611vh;
     margin-bottom: 0.9259259259259258vh;
   }
 
   .top-information span {
     font-size: 1.0416666666666665vw;
-    line-height: 177.69%;
+    line-height: 3.611vh;
   }
 
   .progress-information {
@@ -220,7 +220,7 @@
     font-style: normal;
     font-weight: 300;
     font-size: 1.1458333333333333vw;
-    line-height: 177.69%;
+    line-height: 3.611vh;
     color: #000000;
   }
 

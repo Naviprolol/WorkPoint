@@ -40,6 +40,9 @@
         <div *ngIf="user">
           <a routerLink="/admin/roles" class="dropdown-link" *ngIf="user.role_id === 3">Управление пользователями</a>
         </div>
+        <div *ngIf="user">
+          <a routerLink="/admin/main" class="dropdown-link" *ngIf="user.role_id === 3">Администрирование</a>
+        </div>
         <a href="#" class="dropdown-link" (click)="logout($event)">Выход</a>
       </div>
     </div>

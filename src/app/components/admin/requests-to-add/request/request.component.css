@@ -58,7 +58,7 @@
   .text-left-side {
     min-width: 16.197916666666668vw;
     font-size: 1.0416666666666665vw;
-    line-height: 177.688%;
+    line-height: 3.611vh;
     /* 35.538px */
   }
 
@@ -66,14 +66,14 @@
     width: 24.895833333333332vw;
     font-size: 1.0416666666666665vw;
     font-weight: 600;
-    line-height: 177.688%;
+    line-height: 3.611vh;
     word-wrap: break-word;
     /* 35.538px */
   }
 
   .text-right-side span {
     font-size: 1.0416666666666665vw;
-    line-height: 177.688%;
+    line-height: 3.611vh;
     word-wrap: break-word;
     /* 35.538px */
   }
@@ -85,7 +85,7 @@
   .description {
     font-size: 1.1458333333333333vw;
     font-weight: 300;
-    line-height: 177.688%;
+    line-height: 3.611vh;
   }
 
   .photo-container {
