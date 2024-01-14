@@ -68,10 +68,17 @@
   }
 
   .img-good-place {
-    margin-right: 1.40625vw;
     margin-top: 0.1851851851851852vh;
     width: 1.1458333333333333vw;
     height: 2.037037037037037vh;
+  }
+
+  .img-good-place-coworking {
+    margin-right: 1.40625vw;
+  }
+
+  .img-good-place-name {
+    margin-right: 0.5vw;
   }
 
   .img-star {
@@ -372,6 +379,7 @@
   }
 
   .review-name {
+    max-width: 170px;
     font-weight: 600;
     font-size: 1.1458333333333333vw;
     line-height: 2.7777777777777777vh;

@@ -41,8 +41,6 @@ export class AllApplicationsComponent implements OnInit {
       this.applications = ads;
       this.filteredApplications = this.applications;
       this.sortNewToOld()
-
-      console.log(this.filteredApplications)
     })
   }
 

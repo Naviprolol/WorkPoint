@@ -27,7 +27,6 @@ export class AdminBannersComponent implements OnInit {
 
   ngOnInit(): void {
     this.adService.getAllAds().subscribe((ads) => {
-      console.log(ads)
       ads = ads.filter(ad => ad.status === 'Одобрено');
       this.ads = ads;
       this.coworkingsService.getAll().subscribe((coworkings) => {
@@ -37,7 +36,6 @@ export class AdminBannersComponent implements OnInit {
         this.sortNewToOld()
         this.filteredAds.sort()
       });
-      console.log(ads)
     })
   }
 

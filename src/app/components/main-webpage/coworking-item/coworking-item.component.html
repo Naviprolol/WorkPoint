@@ -11,7 +11,7 @@
   <div class="main-information">
     <div class="title-container">
       <p class="title">{{ coworking.name }}</p>
-      <img src="assets/img/good-place.svg" alt="good-place" class="img-good-place"
+      <img src="assets/img/good-place.svg" alt="good-place" class="img-good-place img-good-place-coworking"
         [ngStyle]="{ visibility: averageRating < 2 ? 'hidden' : '' }">
       <p class="coworking-rating">{{averageRating}}</p>
       <img src="assets/img/star.svg" alt="star" class="img-star">
@@ -133,6 +133,8 @@
 
             <div class="review-name-date">
               <span class="review-name">{{review.user_name + ' ' + review.user_surname}}</span>
+              <img src="assets/img/good-place.svg" alt="good-place" class="img-good-place img-good-place-name"
+                *ngIf="review.user_id === coworking.user_id">
               <time class="review-time">{{review.formattedDate}}</time> <!-- {{review.created_at}} -->
             </div>
             <div class="review-rating">
@@ -143,9 +145,9 @@
               <img src="assets/img/rating5.svg" alt="rating" class="rating" *ngIf="review.rank === 5">
             </div>
           </div>
-          <button type="button" class="answer-btn" *ngIf="ifOwnerPlace"
-            (click)="review.isAnswer = !review.isAnswer">Ответить
+          <button type="button" class="answer-btn" (click)="review.isAnswer = !review.isAnswer">Ответить
           </button>
+          <!-- *ngIf="ifOwnerPlace" -->
           <button type="button" class="delete-btn" *ngIf="user.role_id === 3"
             (click)="deleteReview(review.id)">Удалить</button>
         </div>
@@ -176,6 +178,8 @@
 
                 <div class="review-name-date">
                   <span class="review-name">{{answer.user_name + ' ' + answer.user_surname}}</span>
+                  <img src="assets/img/good-place.svg" alt="good-place" class="img-good-place"
+                    *ngIf="answer.user_id === coworking.user_id">
                   <time class="review-time">{{answer.formattedDate}}</time>
                 </div>
               </div>
