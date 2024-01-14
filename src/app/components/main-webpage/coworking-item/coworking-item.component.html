@@ -125,7 +125,7 @@
       </button>
     </div>
 
-    <div class="reviews">
+    <div class="reviews" *ngIf="user">
       <div class="review" *ngFor="let review of allReviews">
         <div class="review-title-container">
           <img src="{{review.user_photo}}" alt="avatar" class="avatar" onerror="this.src='assets/img/logo.svg'">
@@ -166,6 +166,31 @@
           </div>
           <button type="button" *ngIf="review.isAnswer" class="submit-answer-btn"
             (click)="addAnswer(review)">Отправить</button>
+        </div>
+
+        <div class="answers">
+          <div class="answer" *ngFor="let answer of review.answers">
+            <div class="review-title-container">
+              <img src="{{answer.user_photo}}" alt="avatar" class="avatar" onerror="this.src='assets/img/logo.svg'">
+              <div class="review-title">
+
+                <div class="review-name-date">
+                  <span class="review-name">{{answer.user_name + ' ' + answer.user_surname}}</span>
+                  <time class="review-time">{{answer.formattedDate}}</time>
+                </div>
+              </div>
+            </div>
+            <div class="review-description" *ngIf="answer.body">
+              <p *ngIf="answer.body.length > 244  && !answer.showFullDescription">
+                {{ answer.body.substring(0, 244) + '...' }}
+                <button (click)="answer.showFullDescription = true">Читать полностью</button>
+              </p>
+
+              <p *ngIf="(answer.body.length < 244 || answer.showFullDescription) && answer.body.length > 0">{{
+                answer.body
+                }}</p>
+            </div>
+          </div>
         </div>
       </div>
 

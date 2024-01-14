@@ -55,14 +55,14 @@
   .text-left-side {
     min-width: 21.614583333333336vw;
     font-size: 1.0416666666666665vw;
-    line-height: 177.688%;
+    line-height: 3.611vh;
   }
 
   .text-right-side {
     width: 24.895833333333332vw;
     font-size: 1.0416666666666665vw;
     font-weight: 600;
-    line-height: 177.688%;
+    line-height: 3.611vh;
     word-wrap: break-word;
   }
 
